@@ -1,0 +1,26 @@
+# ---- SECRETS: never upload ----
+env.txt
+DHAN_SUPPORT_TICKET.txt
+
+# ---- big data folders (GBs, not code) ----
+logs/
+Backup/
+Archive/
+checkpoints/
+savepoints/
+versions/
+backtest_data/
+_to_delete/
+_superseded_bats/
+_before/
+__pycache__/
+.abacusai/
+
+# ---- backup copies of code ----
+*.bak_*
+*.bak
+
+# ---- local junk ----
+*.pid
+*.pyc
+.~lock*

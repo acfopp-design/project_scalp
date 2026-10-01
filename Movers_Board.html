@@ -1,0 +1,3060 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Movers Board · :5005</title>
+<script src="https://unpkg.com/lightweight-charts@4.1.3/dist/lightweight-charts.standalone.production.js"></script>
+<style>
+  /* palette copied from the V3.5 board so colours match exactly */
+  :root{--bg:#f4f5f7;--card:#ffffff;--bd:#e3e6ea;--tx:#1c2128;--mut:#6b7280;
+        --surge:#ef4444;--fresh:#f59e0b;--freeze:#2563eb;--run:#16a34a;--ext:#9ca3af;--cons:#9333ea;
+        --up:#16a34a;--dn:#ef4444}
+  *{box-sizing:border-box;font-family:Segoe UI,Arial,sans-serif}
+  body{font:12px/1.35 Segoe UI,Arial,sans-serif;margin:0;background:var(--bg);color:var(--tx)}
+  header{display:flex;align-items:center;gap:14px;padding:8px 14px;background:#0d1b2a;color:#fff}
+  header h1{margin:0;font-size:15px}
+  header .ts{font-size:11px;opacity:.75}
+  /* three EQUAL panels, always -- matches the 3-list layout. A panel that is
+     empty keeps its column (it fills up during the session) instead of letting
+     one panel stretch across the screen and flatten its cards into one row. */
+  /* ===== EXACT :5003 two-column layout (copied from Opus_Scalp_V3.html) ===== */
+  .wrap{display:flex;padding:10px;gap:0}
+  .col{flex:0 0 50%;max-width:50%;min-width:0;padding:0 10px}
+  .col.left{border-right:2px solid var(--bd)}
+  .col h2{font-size:13px;margin:2px 4px 8px;color:#374151;font-weight:700;letter-spacing:.4px}
+  .col h2 span{color:var(--mut);font-weight:600;margin-left:4px}
+  .cnt{color:var(--mut);font-weight:600;margin-left:4px}
+  /* as many cards per row as fit -- no fixed 2-up */
+  /* ===== EXACT V3.5 (:5003) CARD — copied from Opus_Scalp_V3.html ===== */
+  /* 6 cards per row within each 50% half -- exactly like :5003 */
+  .grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:5px}
+  .card{background:var(--card);border:1px solid var(--bd);border-radius:6px;padding:3px 4px 1px;overflow:hidden;cursor:pointer;box-shadow:0 1px 2px rgba(0,0,0,.04)}
+  .card:hover{box-shadow:0 2px 8px rgba(37,99,235,.18)}
+  .card.frozen{border-color:var(--freeze);border-width:2px}
+  .card.igniting{border-color:var(--surge);border-width:2px}
+  .card.freshc{border-color:var(--run);border-width:2px}
+  .card.pinc{border-color:#b45309;border-width:2px;background:#fffbeb}
+  .row1{display:flex;justify-content:space-between;align-items:center;gap:6px}
+  .sym{font-weight:700;font-size:11px}
+  .info{font-size:9px;color:var(--mut);margin:1px 0 1px}
+  .info b{color:var(--tx)} .pos{color:var(--run)} .neg{color:var(--surge)}
+  .badge{font-size:8px;font-weight:700;padding:1px 4px;border-radius:4px;color:#fff;white-space:nowrap}
+  .b-igniting{background:var(--surge)} .b-frozen{background:var(--freeze)}
+  .b-extended{background:var(--ext)} .b-fresh{background:var(--run)}
+  .chip{font-size:8px;font-weight:700;padding:1px 4px;border-radius:3px;margin-left:4px}
+  .chip-cross{background:#111827;color:#fff}
+  .chip-dip{background:#d1fae5;color:#065f46}
+  .chip-rev{background:#fee2e2;color:#991b1b}
+  .chip-ut{background:#dcfce7;color:#166534}
+  .chip-ago{background:#e5e7eb;color:#374151}
+  .chip-new{background:#16a34a;color:#fff}
+  .chip-pin{background:#b45309;color:#fff}
+  .chip-x{background:#0d9488;color:#fff}
+  .chip-tf{background:#7c3aed;color:#fff}
+  .chart{height:66px;position:relative} .vol{height:13px} .macd{height:26px}
+  /* ---- live order-book bias strip (buyers vs sellers) ---- */
+  .dep{margin-top:2px;border-top:1px dashed var(--bd);padding-top:2px}
+  .deph{display:flex;align-items:center;gap:4px;font-size:8px;color:var(--mut);line-height:12px}
+  .depchip{font-weight:700;padding:1px 4px;border-radius:3px;color:#fff;white-space:nowrap}
+  .depimb{font-weight:700}
+  .depqty{margin-left:auto;white-space:nowrap}
+  .depbar{display:flex;height:7px;border-radius:2px;overflow:hidden;margin-top:2px;background:#eef0f3}
+  .depbar .b{background:#16a34a} .depbar .a{background:#ef4444}
+  .depwait{font-size:8px;color:var(--mut);line-height:12px}
+  .mk{position:absolute;transform:translateX(-50%);font-size:8px;font-weight:700;padding:0 3px;
+      border-radius:3px;color:#fff;white-space:nowrap;pointer-events:none;z-index:3}
+  .mk-buy{background:#0d9488} .mk-sell{background:#ef4444}
+  .zlayer{position:absolute;inset:0;pointer-events:none;overflow:hidden;z-index:2}
+  .cloud{position:absolute;inset:0;pointer-events:none;z-index:1}
+  .czone{position:absolute;background:rgba(120,120,120,.22);
+         border-top:1px dashed #ef4444;border-bottom:1px dashed #16a34a;z-index:2}
+  .empty{color:var(--mut);font-size:12px;padding:24px;text-align:center;grid-column:1/-1}
+  /* stack the two halves on narrow screens (same breakpoint as :5003) */
+  @media(max-width:1100px){.wrap{flex-direction:column}
+    .col{flex:1 1 100%;max-width:100%}
+    .col.left{border-right:none;border-bottom:2px solid var(--bd);padding-bottom:10px;margin-bottom:10px}}
+  /* NEWS tab lives on its own page -- must not inherit the 50% column rules */
+  .newswrap{padding:10px}
+  .newswrap h2{font-size:13px;margin:2px 4px 8px;color:#374151;font-weight:700;letter-spacing:.4px}
+  .subtabbar{display:flex;gap:6px;margin:0 4px 10px}
+  .subtab{font-size:11px;font-weight:700;border:1px solid var(--bd);background:#fff;color:#6b7280;
+          border-radius:6px;padding:5px 12px;cursor:pointer}
+  .subtab.on{background:#0d1b2a;color:#fff;border-color:#0d1b2a}
+  /* high-impact attention block */
+  .hibadge{background:#b91c1c;color:#fff;border-radius:9px;padding:0 6px;font-size:10px;margin-left:5px}
+  /* ---- 1-MIN ALARM ---- */
+  .alnote{font-size:11px;color:#4b5563;background:#f8fafc;border:1px solid var(--bd);
+          border-left:3px solid #b45309;border-radius:6px;padding:7px 10px;margin:0 4px 10px;line-height:1.55}
+  .aldir{font-weight:800;font-size:11px;padding:2px 7px;border-radius:4px;color:#fff;white-space:nowrap}
+  .aldir.up{background:#15803d} .aldir.dn{background:#b91c1c}
+  .albig{font-weight:800;font-size:15px;font-variant-numeric:tabular-nums}
+  .almoney{font-weight:800;font-size:14px;color:#0f172a;font-variant-numeric:tabular-nums}
+  .alrng{height:6px;background:#eef1f4;border-radius:3px;overflow:hidden;margin-top:3px}
+  .alrng i{display:block;height:100%}
+  tr.alrow-up{background:#f0fdf4} tr.alrow-dn{background:#fef2f2}
+  tr.alhot{box-shadow:inset 3px 0 0 #b45309}
+  .alsep td{background:#fafafa;border-top:2px solid #e5e7eb;color:#b91c1c;
+            font-weight:700;font-size:11px;padding:6px 10px}
+  /* ---- RUNNER: up, near its high, and the high is RECENT ----
+     Flashes for as long as the stock keeps running and stops the moment it
+     gives back more than 1% from its session high. Deliberately louder than
+     any other card state -- this is the one thing meant to pull your eye. */
+  /* ---- Morning Watchlist ---- */
+  .wlnote{font-size:11.5px;color:#374151;background:#f8fafc;border:1px solid var(--bd);
+          border-left:3px solid #b45309;border-radius:6px;padding:9px 11px;margin:0 4px 10px;line-height:1.6}
+  .wlbtn{margin-left:8px;font-size:10.5px;font-weight:700;border:1px solid var(--bd);
+         background:#fff;border-radius:5px;padding:3px 9px;cursor:pointer}
+  .wlbtn:hover{background:#f3f4f6}
+  .wlmute{margin-left:8px;font-size:10.5px;font-weight:600;color:var(--mut);cursor:pointer}
+  #wltbl td{vertical-align:middle}
+  /* Direction is carried by a LEFT BORDER plus a badge, not by a strong row
+     tint -- the amber NEW highlight has to stay readable on top of it. */
+  tr.wlup{box-shadow:inset 4px 0 0 #16a34a;background:#f6fdf8}
+  tr.wldn{box-shadow:inset 4px 0 0 #dc2626;background:#fef7f7}
+  tr.wlunk{box-shadow:inset 4px 0 0 #cbd5e1}
+  .wldir{font-weight:800;font-size:10.5px;letter-spacing:.03em;padding:2px 7px;
+         border-radius:4px;white-space:nowrap;border:1px solid}
+  .wldir.wlup{background:#dcfce7;color:#14532d;border-color:#86efac;box-shadow:none}
+  .wldir.wldn{background:#fee2e2;color:#7f1d1d;border-color:#fca5a5;box-shadow:none}
+  .wldir.wlunk{background:#f1f5f9;color:#475569;border-color:#cbd5e1;box-shadow:none}
+  .wlrank{display:inline-flex;align-items:center;justify-content:center;
+          width:26px;height:26px;border-radius:50%;font-weight:800;font-size:14px;color:#fff}
+  .wlrank1{background:#15803d} .wlrank2{background:#2563eb} .wlrank3{background:#7c3aed}
+  tr.wltop td{font-size:13px}
+  tr.wltop .wlsym{font-size:15px}
+  .wlnew{background:#fef3c7 !important}
+  @keyframes wlflash{0%,100%{background:#fef3c7}50%{background:#fde68a}}
+  .wlnew.wlfire{animation:wlflash 1s ease-in-out infinite}
+  .wltag{font-size:9.5px;font-weight:800;letter-spacing:.05em;padding:2px 6px;
+         border-radius:4px;background:#b45309;color:#fff;white-space:nowrap}
+  .wlsym{font-weight:800;font-size:14px;cursor:pointer}
+  .wlsym:hover{text-decoration:underline}
+  .wlwhat{font-size:12.5px;color:#111827}
+  .wlsize{font-weight:800;font-size:14px;color:#15803d}
+  .wlok{font-weight:700;color:#15803d} .wlthin{font-weight:700;color:#b91c1c}
+  /* ---- collapsible rules block ----
+     The rules are worth reading ONCE. Kept expanded they cost ~90px of vertical
+     space on every refresh, which is a whole row of cards. Collapsed by default;
+     the state is remembered per scanner. */
+  .rulehead{display:flex;align-items:center;gap:7px;margin:0 4px 6px;cursor:pointer;
+            font-size:11px;font-weight:700;color:#475569;user-select:none}
+  .rulehead:hover{color:#0f172a}
+  .rulehead .cav{display:inline-block;transition:transform .15s;font-size:9px}
+  .rulehead.open .cav{transform:rotate(90deg)}
+  .rulebody{display:none}
+  .rulebody.open{display:block}
+  /* ---- scanner filter + sort bar (Scanner1) ---- */
+  .scfilt{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:0 4px 9px;
+          padding:7px 10px;background:#fff;border:1px solid var(--bd);border-radius:6px}
+  .scfilt label{font-size:11px;font-weight:700;color:#374151}
+  .scfilt input[type=number]{width:104px;font-size:12px;padding:3px 6px;
+          border:1px solid var(--bd);border-radius:4px;font-variant-numeric:tabular-nums}
+  .scbtn{font-size:11px;font-weight:700;border:1px solid var(--bd);background:#fff;
+         color:#374151;border-radius:5px;padding:4px 10px;cursor:pointer}
+  .scbtn:hover{background:#f3f4f6}
+  .scbtn.on{background:#0d1b2a;color:#fff;border-color:#0d1b2a}
+  .scquick{font-size:10.5px;font-weight:700;border:1px solid var(--bd);background:#f8fafc;
+           color:#475569;border-radius:4px;padding:2px 7px;cursor:pointer}
+  .scquick:hover{background:#e2e8f0}
+  .sccount{margin-left:auto;font-size:11px;color:var(--mut);font-weight:600}
+  /* ---- Scanner1 (RLB) ---- */
+  .s1rules{font-size:11px;color:#374151;background:#f8fafc;border:1px solid var(--bd);
+           border-left:3px solid #0d9488;border-radius:6px;padding:8px 10px;margin:0 4px 10px}
+  .s1c{display:inline-block;background:#fff;border:1px solid var(--bd);border-radius:4px;
+       padding:2px 7px;margin:3px 4px 0 0;font-weight:600}
+  .s1c.s1own{background:#ecfeff;border-color:#a5f3fc;color:#0e7490}
+  .s1warn{margin-top:8px;padding-top:7px;border-top:1px dashed var(--bd);
+          color:#7f1d1d;line-height:1.55;font-size:11px}
+  .s1why{display:flex;flex-wrap:wrap;gap:3px;margin-top:3px}
+  .s1why span{font-size:8px;font-weight:700;background:#ecfdf5;color:#065f46;
+              border:1px solid #a7f3d0;border-radius:3px;padding:1px 3px}
+  .card.watching{opacity:.62;filter:saturate(.55);outline:1px dashed #94a3b8}
+  .watchbar{font-size:9.5px;line-height:1.35;padding:2px 5px;margin-top:2px;
+            background:#f1f5f9;color:#475569;border-radius:3px;
+            border-left:3px solid #94a3b8}
+  .watchbar b{color:#334155}
+  #view-blast .grid{grid-template-columns:repeat(6,minmax(0,1fr));gap:5px}
+  @media(max-width:1100px){#view-blast .grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+  #view-scanner1 .grid{grid-template-columns:repeat(6,minmax(0,1fr));gap:5px}
+  @media(max-width:1100px){#view-scanner1 .grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+  @keyframes hipulse{0%,100%{box-shadow:0 0 0 0 rgba(185,28,28,.45)}50%{box-shadow:0 0 0 5px rgba(185,28,28,0)}}
+  #dnhero{margin:0 4px 10px}
+  .herottl{font-size:11px;font-weight:700;color:#b91c1c;letter-spacing:.5px;margin-bottom:5px}
+  .herogrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:7px}
+  .herocard{border:2px solid;border-radius:7px;padding:6px 8px;background:#fff;cursor:pointer;animation:hipulse 2.6s infinite}
+  .herocard.up{border-color:#15803d;background:#f0fdf4}
+  .herocard.dn{border-color:#b91c1c;background:#fef2f2}
+  .herotop{display:flex;align-items:baseline;gap:7px}
+  .herosym{font-weight:700;font-size:13px}
+  .heropct{font-weight:700;font-size:15px}
+  .herowhen{margin-left:auto;font-size:9px;color:var(--mut)}
+  .herottl2{font-size:10.5px;color:#374151;margin-top:2px;line-height:1.35}
+  .tierpill{font-size:9px;font-weight:700;padding:1px 5px;border-radius:3px;color:#fff}
+  .tabbar{display:flex;gap:6px;padding:8px 14px 0}
+  .tab{border:1px solid var(--bd);background:#fff;border-radius:7px;padding:5px 14px;font-size:12px;font-weight:600;cursor:pointer;color:#374151}
+  .tab.on{background:#0d1b2a;color:#fff;border-color:#0d1b2a}
+  .ntbl{width:100%;border-collapse:collapse;font-size:12px}
+  .ntbl th,.ntbl td{padding:7px 10px;border-bottom:1px solid var(--bd);text-align:left;vertical-align:top}
+  .ntbl th{background:#eef2f7;font-size:11px}
+  .nsym{font-weight:700;cursor:pointer} .nsym:hover{text-decoration:underline}
+  .npos{color:var(--up)} .nneg{color:var(--dn)}
+  .nnews a{color:#1d4ed8;text-decoration:none} .nnews a:hover{text-decoration:underline}
+  .nsrc{color:var(--mut);font-size:10px;margin-left:6px}
+  .nfresh{color:#b45309;font-size:9px;font-weight:700;margin-left:6px}
+  .lchip{font-size:9px;background:#eef2f7;border:1px solid var(--bd);border-radius:4px;padding:1px 5px;margin-right:3px}
+  .buychip{font-size:9px;font-weight:700;color:#fff;background:var(--up);border-radius:4px;padding:1px 5px}
+  /* live-data snapshot clock (top-right) */
+  #snapbox{margin-left:14px;text-align:right;line-height:1.15;min-width:104px}
+  .snaplbl{font-size:8px;letter-spacing:.9px;color:#93c5fd;font-weight:700}
+  .snapval{font-size:19px;font-weight:700;color:#fff;font-variant-numeric:tabular-nums}
+  .snapage{font-size:9px;color:#93c5fd}
+  .snapval.stale{color:#fca5a5}
+  @keyframes snapflash{0%{color:#4ade80}100%{color:#fff}}
+  .snapval.tick{animation:snapflash 1.1s ease-out}
+
+/* --- SECTORS tab ------------------------------------------------------- */
+.secchip{display:inline-block;border:1px solid #cbd5e1;border-radius:3px;
+  padding:1px 4px;margin:1px 3px 1px 0;font-size:9.5px;font-weight:700;
+  cursor:pointer;background:var(--pan)}
+.secchip:hover{filter:brightness(0.95)}
+.secmkt{background:var(--pan);border:1px solid var(--bor);border-radius:5px;
+  padding:6px 8px;margin:0 0 8px 0;font-size:10.5px;line-height:1.5}
+.secmkt>b{font-size:9px;letter-spacing:.5px;color:var(--mut);margin-right:6px}
+.secmkti{margin-right:14px}
+.secmkti a{color:inherit;text-decoration:none}
+.secmkti a:hover{text-decoration:underline}
+.secmkti i{color:var(--mut);font-style:normal;font-size:9px}
+/* --- PAPER TRADING tab -------------------------------------------------- */
+.ptbar{display:flex;align-items:center;gap:14px;flex-wrap:wrap;
+  background:var(--pan);border:1px solid var(--bor);border-radius:6px;
+  padding:9px 12px;margin:0 0 10px 0}
+.ptbar label{font-size:10.5px;font-weight:700;color:var(--mut);
+  display:flex;align-items:center;gap:6px}
+.ptbar input{width:104px;padding:5px 7px;font-size:12.5px;font-weight:700;
+  font-family:inherit;border:1px solid var(--bor);border-radius:4px;
+  background:var(--bg);color:var(--fg);text-align:right}
+.ptbar input:focus{outline:2px solid #2563eb;outline-offset:-1px}
+.ptgo{padding:6px 16px;font-size:11.5px;font-weight:800;font-family:inherit;
+  letter-spacing:.4px;border:1px solid #15803d;border-radius:4px;
+  background:#16a34a;color:#fff;cursor:pointer}
+.ptgo:hover{background:#15803d}
+.ptgo:active{transform:translateY(1px)}
+.ptbusy{font-size:10.5px;font-weight:700;color:#b45309}
+
+.ptsum{background:var(--pan);border:1px solid var(--bor);border-radius:6px;
+  padding:10px 12px;margin:0 0 10px 0}
+.ptsumhead{font-size:10px;font-weight:800;letter-spacing:.8px;color:var(--mut);
+  display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;margin-bottom:8px}
+.ptrule{font-weight:400;letter-spacing:0;font-size:10px}
+.ptgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(118px,1fr));
+  gap:8px;margin-bottom:8px}
+.ptcell{border:1px solid var(--bor);border-radius:5px;padding:6px 8px;background:var(--bg)}
+.ptcellbig{border-width:2px}
+.ptlab{font-size:9px;font-weight:800;letter-spacing:.4px;color:var(--mut);
+  text-transform:uppercase}
+.ptbig{font-size:16px;font-weight:800;line-height:1.25;margin-top:2px}
+.ptsub{font-size:9.5px;color:var(--mut)}
+.ptnotes{font-size:10.5px;line-height:1.65;border-top:1px solid var(--bor);padding-top:7px}
+.ptwarn{color:#b45309;font-weight:700}
+.pthint{color:var(--mut);font-weight:400}
+.ptrule2{color:var(--mut);font-size:9.5px;margin-top:4px}
+
+.ptalt{background:var(--pan);border:1px solid var(--bor);border-radius:6px;
+  padding:8px 12px;margin:0 0 10px 0;font-size:10.5px;overflow-x:auto}
+.ptalttbl{border-collapse:collapse;margin-top:6px;font-size:10.5px}
+.ptalttbl th{text-align:left;font-weight:700;color:var(--mut);padding:2px 10px 2px 0;
+  white-space:nowrap}
+.ptalttbl td{text-align:right;padding:2px 10px;min-width:62px;border-left:1px solid var(--bor)}
+.ptalttbl td.pton{background:#dcfce7;color:#14532d;font-weight:800}
+.ptpo{display:inline-block;background:#fef3c7;border:1px solid #d97706;color:#78350f;
+  font-weight:800;font-size:8.5px;border-radius:3px;padding:0 4px;margin-top:2px}
+.ptleg{display:inline-block;background:#ede9fe;border:1px solid #7c3aed;color:#4c1d95;font-weight:800;font-size:8.5px;border-radius:3px;padding:0 3px;margin-left:4px}
+.pttot td{border-top:2px solid var(--bor);background:var(--pan)}
+.ptstop{padding:6px 14px;font-size:11.5px;font-weight:800;font-family:inherit;
+  letter-spacing:.4px;border:1px solid #b91c1c;border-radius:4px;
+  background:#ef4444;color:#fff;cursor:pointer}
+.ptstop:hover{background:#b91c1c}
+.ptreset{padding:6px 12px;font-size:11px;font-weight:700;font-family:inherit;
+  border:1px solid var(--bor);border-radius:4px;background:var(--pan);
+  color:var(--mut);cursor:pointer}
+.ptgo:disabled,.ptstop:disabled,.ptreset:disabled{opacity:.4;cursor:not-allowed}
+.lpdot{font-size:10.5px;font-weight:800;color:#dc2626;animation:lpblink 1.4s infinite}
+@keyframes lpblink{0%,100%{opacity:1}50%{opacity:.3}}
+.lprun{font-size:10px;font-weight:800;color:#15803d;letter-spacing:0}
+.lpoff{font-size:10px;font-weight:800;color:var(--mut);letter-spacing:0}
+.lpprog{display:inline-block;background:#dbeafe;border:1px solid #2563eb;color:#1e3a8a;
+  font-weight:800;font-size:9px;border-radius:3px;padding:1px 5px}
+.lpdone{display:inline-block;background:#f1f5f9;border:1px solid #94a3b8;color:#334155;
+  font-weight:800;font-size:9px;border-radius:3px;padding:1px 5px}
+</style>
+</head>
+<body>
+<header>
+  <h1>MOVERS BOARD <span style="font-size:11px;color:#93c5fd">· display only · you decide the trade · :5005</span></h1>
+  <span class="ts" id="hts">connecting…</span>
+  <span class="ts" style="margin-left:auto">
+    candles: <b style="color:#67e8f9">CYAN</b> above OTT band ·
+    <b style="color:#86efac">GREEN</b>/<b style="color:#fca5a5">RED</b> inside ·
+    <b style="color:#d8b4fe">PURPLE</b> below &nbsp;|&nbsp;
+    click any card → opens that stock in TradingView</span>
+  <div id="snapbox" title="timestamp of the data currently on screen — updates only when the data itself changes">
+    <div class="snaplbl">DATA SNAPSHOT</div>
+    <div class="snapval" id="snapts">--:--:--</div>
+    <div class="snapage" id="snapage"></div>
+  </div>
+</header>
+<div class="tabbar">
+  <button class="tab on" data-view="board">📈 BOARD</button>
+  <button class="tab" data-view="super">🚀 SUPER STOCKS <span id="spbadge" class="hibadge" style="display:none"></span></button>
+  <button class="tab" data-view="superlab" title="A separate copy of the Super Stocks rules, for tuning. Changing anything here cannot move the tab you trade from — and the paper-trading engines read THIS one.">🧬 SUPER LAB <span id="lbbadge" class="hibadge" style="display:none"></span></button>
+  <button class="tab" data-view="paper">🧪 PAPER TRADING</button>
+  <button class="tab" data-view="live">🔴 LIVE PAPER TRADING <span id="lpbadge" class="hibadge" style="display:none"></span></button>
+  <button class="tab" data-view="tiers" title="The SAME engine at other capitals. Read-only, separate process, no Dhan API calls. The Rs 1,00,000 tab is untouched.">💰 CAPITAL TIERS</button>
+  <span id="buildid" style="margin-left:auto;font-size:9.5px;color:var(--mut)"></span>
+  <button class="tab" data-view="watchlist">🔔 MORNING WATCHLIST <span id="wlbadge" class="hibadge" style="display:none"></span></button>
+  <button class="tab" data-view="news">📰 NEWS</button>
+  <button class="tab" data-view="alarm">🚨 1-MIN ALARM <span id="albadge" class="hibadge" style="display:none"></span></button>
+  <button class="tab" data-view="preopen">🌅 PRE-MARKET</button>
+  <button class="tab" data-view="predictor">🎯 PREMARKET PREDICTOR <span id="pdbadge" class="hibadge" style="display:none"></span></button>
+</div>
+<div id="view-board">
+  <div class="wrap">
+    <div class="col left"><h2>🟢 BUY TRIGGERED <span class="cnt" id="n_bt"></span>
+        <span style="font-weight:400;font-size:10.5px;color:var(--mut);margin-left:6px">
+          buyers in control / buy bias &nbsp;+&nbsp; MA×EMA buy cross on <b>30-second</b> bars &nbsp;·&nbsp;
+          <b>nearest cross first</b>
+        </span></h2>
+      <div class="grid" id="g_bt"><div class="empty">loading…</div></div></div>
+    <div class="col right"><h2>📊 OVERALL STOCKS <span class="cnt" id="n_ov"></span>
+        <span style="font-weight:400;font-size:10.5px;color:var(--mut);margin-left:6px">
+          Movers + By Volume, de-duplicated
+        </span></h2>
+      <div class="grid" id="g_ov"><div class="empty">loading…</div></div></div>
+  </div>
+</div>
+<!-- ===================== SUPER STOCKS =====================
+     Scanned from the WHOLE 2,455-stock universe, not from Dhan's ScanX
+     lists. Same card renderer as BOARD -- only the selection differs. -->
+<div id="view-super" style="display:none">
+  <div id="sp_warn" class="spwarn" style="display:none"></div>
+  <div class="wrap">
+    <div class="col left"><h2>🔥 NO-DIP &amp; ABOVE HOTT <span class="cnt" id="n_sphot"></span>
+        <span style="font-weight:400;font-size:10.5px;color:var(--mut);margin-left:6px">
+          📌 no-dip runners, and anything trading <b>above the green HOTT line</b>
+          — the same line that colours a candle cyan</span></h2>
+      <div class="grid" id="g_sphot"><div class="empty">loading…</div></div></div>
+    <div class="col right"><h2>🚀 SUPER STOCKS <span class="cnt" id="n_sprest"></span>
+        <span style="font-weight:400;font-size:10.5px;color:var(--mut);margin-left:6px"
+              id="sp_sub"></span></h2>
+      <div class="grid" id="g_sprest"><div class="empty">loading…</div></div></div>
+  </div>
+</div>
+<style>
+ #view-super .col{flex:1 1 50%;max-width:50%}
+ #view-super .grid{grid-template-columns:repeat(4,minmax(0,1fr))}
+ @media(max-width:1500px){#view-super .grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+ @media(max-width:1100px){#view-super .col{flex:1 1 100%;max-width:100%}
+                          #view-super .grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+ .spwarn{background:rgba(210,153,34,.12);border-left:3px solid #d29922;padding:8px 11px;
+         border-radius:4px;margin:0 0 10px;font-size:12px;color:#8a6d10}
+ /* a stock moving RIGHT NOW gets a live edge -- this tab is about urgency */
+ #g_sphot .card.sphot, #g_sprest .card.sphot{border-color:#f97316;border-width:2px;
+                      box-shadow:0 0 0 2px rgba(249,115,22,.18)}
+</style>
+
+<div id="view-alarm" style="display:none">
+  <div class="newswrap">
+    <h2>🚨 1-min alarm — what is igniting RIGHT NOW
+      <span id="alts" style="font-weight:400;color:var(--mut);font-size:11px"></span></h2>
+    <div class="alnote">
+      Two numbers only: <b>how far it has moved from TODAY'S OPEN</b>, and <b>how much money traded in the last minute</b>.
+      Day&nbsp;% is not used — it hides a stock igniting now behind yesterday's gap.
+      <br><b>This does not predict.</b> It detects, about 60 seconds in. You are buying after the first move, not before it.
+      Reference: Motherson 07-Aug went ₹155.17 → ₹163.17 (+5.2%) in two minutes with a <i>flat</i> pre-market and no news —
+      but at 09:16 it was already +2.6% from its open on ₹6.5&nbsp;Cr in one minute. That is what this catches.
+    </div>
+    <table class="ntbl" id="altbl">
+      <thead><tr>
+        <th style="width:86px" title="0-100: money trading now + is it still moving + can you get out + where it sits in its own range">Quality</th>
+        <th style="width:78px">Dir</th>
+        <th style="width:104px">Stock</th>
+        <th style="width:104px" title="Move since today's 09:15 opening price — NOT since yesterday's close">From open</th>
+        <th style="width:112px" title="Rupees traded in the last ~60 seconds. This is the ignition.">₹ last min</th>
+        <th style="width:88px" title="Price change over the same ~60 seconds">Last 60s</th>
+        <th style="width:96px">Price</th>
+        <th style="width:96px" title="Where the price sits in today's range. 100% = at the day's high.">Day range</th>
+        <th style="width:92px" title="Total rupees traded today — tradeability">Turnover</th>
+      </tr></thead>
+      <tbody id="albody"><tr><td colspan="9" class="empty">waiting for the market to open…</td></tr></tbody>
+    </table>
+  </div>
+</div>
+<div id="view-watchlist" style="display:none">
+  <div id="wlrelax" style="display:none;margin:0 4px 8px;font-size:11.5px;color:#7f1d1d;background:#fef2f2;border:1px solid #fecaca;border-left:4px solid #b91c1c;border-radius:6px;padding:9px 12px"></div>
+  <div class="newswrap">
+    <h2>🔔 Morning Watchlist — where to look at the open
+      <span id="wlts" style="font-weight:400;color:var(--mut);font-size:11px"></span></h2>
+    <div class="wlnote">
+      Three questions only: <b>what happened · how big · can I trade it</b>.
+      Everything else about the news is deliberately not here.
+      <b>It keeps updating all session</b> — LUMAXTECH published Q1 at 09:41 and ran 3.8%,
+      which no pre-open list could have caught. Anything arriving after 09:15 is
+      flagged <b>NEW</b> and sounds an alarm.
+      <br><b>Ranks 1·2·3 are conviction in the setup — not odds of profit.</b>
+      Before 09:15 the rank uses the news alone. After the open it <b>re-ranks on the actual
+      tape</b>: a bullish name that is falling gets penalised hard enough to drop out of the
+      top 3, because people with money on it have already disagreed with the headline.
+      <br><b>This tells you where to look, never what will hold.</b>
+      On 11-Aug KSHINTL would have ranked near the top and still faded from +5.65% to +0.76%
+      by 09:26, while INDSWFTLAB held +7.5%. Nothing knowable before the open separated them.
+      <button id="wltest" class="wlbtn">🔔 test alarm</button>
+      <label class="wlmute"><input type="checkbox" id="wlmute"> mute</label>
+    </div>
+    <table class="ntbl" id="wltbl">
+      <thead><tr>
+        <th style="width:54px">Rank</th>
+        <th style="width:60px"></th>
+        <th style="width:96px">Direction</th>
+        <th style="width:130px">Stock</th>
+        <th>What happened</th>
+        <th style="width:110px">How big</th>
+        <th style="width:120px">Can I trade it</th>
+        <th style="width:96px">Now</th>
+        <th style="width:96px">Published</th>
+      </tr></thead>
+      <tbody id="wlbody"><tr><td colspan="9" class="empty">loading…</td></tr></tbody>
+    </table>
+  </div>
+</div>
+<div id="view-predictor" style="display:none">
+  <div class="newswrap">
+    <h2>🎯 Premarket Predictor — the 09:00 call vs what actually happened
+      <span id="pdts" style="font-weight:400;color:var(--mut);font-size:11px"></span></h2>
+    <div class="rulehead" data-rule="r_pd"><span class="cav">▶</span>how this is scored</div>
+    <div class="rulebody" id="r_pd">
+      <div class="s1rules">
+        <b>Window:</b> news published between the previous session's close (15:30) and today's
+        open (09:15) — the window that explains today's gaps.
+        <span class="s1c">Impact = predicted direction</span>
+        <span class="s1c">Chance = % likelihood, <b>text only, final before 09:08</b></span>
+        <span class="s1c">Severity = 0–100, how BIG the news is</span>
+        <div class="s1warn" style="border-left-color:#1d4ed8;background:#eff6ff">
+          <b>Chance is a MEASURED FREQUENCY, not a model — and it is self-calibrating.</b>
+          It reports how often calls of this type have actually been right on the
+          <i>tradeable</i> (open→close) move, from your own accumulated outcomes, with the
+          sample size and 95% interval printed underneath. As sessions accumulate it corrects
+          itself. It uses nothing that arrives after 09:08, so the number at 20:00 the night
+          before is the number at 09:10.
+          <br><br>
+          <b>Why it is not a clever model: three attempts to find an edge all failed.</b>
+          <span class="s1c">text severity → 55% / 54% / 55% across bands — no discrimination</span>
+          <span class="s1c">fixing the headline classifier → 52 calls changed, 7 fixed / 7 broken</span>
+          <span class="s1c">fade-the-gap on 96 gaps ≥2% → −0.232%/trade, 43% wins</span>
+          Good news on a small-cap resolves near a coin flip on the leg you can actually trade.
+          Rather than dress a fitted guess up as a probability, this reports the observed rate
+          and its uncertainty.
+          <br><br>
+          <b>Read the interval, not the number.</b> "57% · 47–67% · n=89" means the true rate
+          could be anywhere in that band. The old scale printed <b>92%</b> on the same data
+          whose measured rate is <b>54%</b>, and its 80–100 bucket was its <i>worst</i>
+          performer. Range is clamped to 35–70 because nothing observed has ever justified more.
+          <br><br>
+          <b>Severity leads the sort, not Chance.</b> Chance now takes only a few distinct
+          values, so it tells you how much to trust a call; severity tells you which headline
+          is bigger.
+          <br><br>
+          <b>CONFIRMS / CONTRADICTS</b> under Chance is the pre-open auction, reported
+          separately. Folding it in lifted the day-% hit rate 78%→93% but the tradeable rate
+          only 53%→55%: it was predicting the opening gap and taking credit for it.
+        </div>
+        <div class="s1warn" style="border-left-color:#64748b;background:#f8fafc">
+          <b>Two reality numbers, not one — and they disagree a lot.</b>
+          <b>Day %</b> is prev-close→now, which <i>includes the opening gap</i>. But the gap
+          happened before 09:15, so you could not have traded it. <b>Tradeable %</b> is
+          open→now — the only part a 09:00 call could actually have captured.
+          Across the 6 recorded sessions the day-% hit rate is <b>80%</b> and the tradeable
+          hit rate is <b>54%</b>. The 26-point difference is gap that was already priced in.
+          <br><br>
+          <b>Verdicts:</b> <b>HIT</b> = right way and bigger than the ₹10–11 round-trip cost
+          (0.105%). <b>TOO SMALL</b> = right way, under cost — correct but unprofitable.
+          <b>GAP-FADED</b> = opened the right way then reversed. <b>MISS</b> = wrong way.
+          <br><br>
+          Historic sessions were <b>backfilled from the board's own logs</b>, so only stocks
+          that appeared on the board that day carry a reality figure (~20 of 60 per session).
+          From now on the live scorer fills every call every 5 minutes.
+        </div>
+      </div>
+    </div>
+    <div class="scfilt" id="f_pd"></div>
+    <div id="pdsum" style="margin:0 4px 9px"></div>
+    <table class="ntbl" id="pdtbl">
+      <thead><tr>
+        <th style="width:88px">When</th>
+        <th style="width:104px">Stock</th>
+        <th style="width:74px" title="Predicted direction">Impact</th>
+        <th style="width:62px" title="Predicted % likelihood of moving that way">Chance</th>
+        <th style="width:74px" title="0-100 from magnitude, event type and company size">Severity</th>
+        <th style="width:86px">Event</th>
+        <th style="width:250px">Headline</th>
+        <th style="width:112px" title="Day % includes the opening gap; tradeable % is open-to-now">Reality</th>
+        <th style="width:200px">Gap in the prediction</th>
+        <th>Fix to close the gap</th></tr></thead>
+      <tbody id="pdbody"><tr><td colspan="10" class="empty">loading…</td></tr></tbody>
+    </table>
+  </div>
+</div>
+<div id="view-superlab" style="display:none">
+  <div class="lbnote">🧬 <b>SUPER LAB</b> — a separate copy of the Super Stocks rules
+    (<code>superstocks_lab.py</code>), split from the live module on 01-Sep.
+    <b>Nothing changed here can move the SUPER STOCKS tab you trade from.</b>
+    Paper Trading and Live Paper Trading read <i>this</i> tab, so trading rules can be
+    tuned without touching your board. <span id="lb_diff"></span></div>
+  <div class="wrap">
+    <div class="col left"><h2>🔥 NO-DIP &amp; ABOVE HOTT <span class="cnt" id="n_lbhot"></span></h2>
+      <div class="grid" id="g_lbhot"><div class="empty">loading…</div></div></div>
+    <div class="col right"><h2>🧬 SUPER LAB <span class="cnt" id="n_lbrest"></span>
+        <span style="font-weight:400;font-size:10.5px;color:var(--mut);margin-left:6px"
+              id="lb_sub"></span></h2>
+      <div class="grid" id="g_lbrest"><div class="empty">loading…</div></div></div>
+  </div>
+</div>
+<style>
+ #view-superlab .col{flex:1 1 50%;max-width:50%}
+ #view-superlab .grid{grid-template-columns:repeat(4,minmax(0,1fr))}
+ @media(max-width:1500px){#view-superlab .grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+ @media(max-width:1100px){#view-superlab .col{flex:1 1 100%;max-width:100%}
+                          #view-superlab .grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+ .lbnote{background:rgba(124,58,237,.10);border-left:3px solid #7c3aed;padding:8px 11px;
+         border-radius:4px;margin:0 0 10px;font-size:11.5px;line-height:1.5}
+ .lbnote code{font-size:11px}
+ #g_lbhot .card.sphot, #g_lbrest .card.sphot{border-color:#f97316;border-width:2px}
+</style>
+<div id="view-paper" style="display:none">
+  <div class="newswrap">
+    <!-- PAPER TRADING. Back-tests the board's OWN signals on today's recorded
+         tape. Every entry and exit price below is a price the tick builder
+         wrote to bars30_YYYYMMDD.jsonl during the session -- nothing here is
+         interpolated, and no trade is entered before its signal fired. -->
+    <h2>🧪 Paper Trading <span id="ptts" style="font-weight:400;color:var(--mut);font-size:11px"></span></h2>
+
+    <div class="ptbar">
+      <label>Capital ₹ <input id="pt_cap" type="text" value="100000" inputmode="numeric"></label>
+      <label>Leverage × <input id="pt_lev" type="text" value="5" inputmode="decimal"
+             title="Dhan MIS intraday. 5 means Rs 1,00,000 controls Rs 5,00,000. Set 1 for cash."></label>
+      <label>Target % <input id="pt_tgt" type="text" value="10" inputmode="decimal"
+             title="Your yardstick. It does not change how the engine trades — the summary reports whether the session's real P&L reached it."></label>
+      <button id="pt_go" class="ptgo">▶ BACK TRADE</button>
+      <span id="pt_busy" class="ptbusy" style="display:none">running…</span>
+    </div>
+
+    <div id="pt_summary"></div>
+    <div id="pt_alt"></div>
+
+    <table class="ntbl" id="pttbl">
+      <thead><tr>
+        <th style="width:24px">#</th>
+        <th style="width:118px">Stock</th>
+        <th style="width:74px" title="When the board first carded this stock. The trade is entered on the NEXT recorded price, never this one.">Signal</th>
+        <th style="width:74px">Entry</th>
+        <th style="width:80px">Buy ₹</th>
+        <th style="width:74px">Exit</th>
+        <th style="width:80px">Sell ₹</th>
+        <th style="width:62px">Qty</th>
+        <th style="width:88px">Value ₹</th>
+        <th style="width:82px">Gross ₹</th>
+        <th style="width:70px" title="Dhan intraday, both legs: brokerage min(Rs 20, 0.03%) per order, STT 0.025% on the sell, exchange 0.00297%, SEBI 0.0001%, stamp 0.003% on the buy, GST 18% on brokerage+exchange+SEBI. Hover a row's figure for the split.">Charges ₹</th>
+        <th style="width:88px">Net ₹</th>
+        <th style="width:104px">Exit reason</th>
+      </tr></thead>
+      <tbody id="ptbody"><tr><td colspan="13" class="empty">
+        Enter a capital amount and press <b>BACK TRADE</b>. The engine replays today's
+        signals from 09:15 to right now on the prices actually recorded.
+      </td></tr></tbody>
+    </table>
+  </div>
+</div>
+<div id="view-tiers" style="display:none">
+  <div class="newswrap">
+    <h2>💰 Capital Tiers <span id="tr_ts" style="font-weight:400;color:var(--mut);font-size:11px"></span></h2>
+    <div style="font-size:11px;color:var(--mut);margin:-4px 0 8px">
+      The SAME engine, signals and exits as Live Paper Trading &mdash; only capital,
+      slots and leg size differ. Computed by a separate process that makes
+      <b>no Dhan API calls</b> and cannot affect the ₹1,00,000 run.
+      <b>Net (real)</b> is after the slippage estimate.
+    </div>
+
+    <div class="subtabbar" id="tr_subs"></div>
+
+    <div id="tr_overview">
+      <table style="width:100%;border-collapse:collapse;font-size:12px">
+        <thead><tr style="text-align:right;color:var(--mut);border-bottom:1px solid var(--bd)">
+          <th style="text-align:left;padding:6px 8px">Capital</th><th>Slots</th><th>Leg</th>
+          <th>Trades</th><th>Win %</th><th>Net</th><th>Slippage</th>
+          <th>Net (real)</th><th>Return</th></tr></thead>
+        <tbody id="trbody"><tr><td colspan="9" style="padding:10px;color:var(--mut)">waiting for the first snapshot&hellip;</td></tr></tbody>
+      </table>
+    </div>
+
+    <div id="tr_detail" style="display:none">
+      <div id="tr_summary"></div>
+      <table class="ntbl" id="trdtbl">
+        <thead><tr>
+        <th style="width:24px">#</th>
+        <th style="width:118px">Stock</th>
+        <th style="width:88px" title="In-Progress = still holding, priced at the last sweep. Completed = closed, P&L is final.">Status</th>
+        <th style="width:74px" title="When the card appeared on Super Stocks.">Signal</th>
+        <th style="width:74px">Entry</th>
+        <th style="width:80px">Buy ₹</th>
+        <th style="width:74px">Exit</th>
+        <th style="width:80px" title="For an open position this is the LAST SWEPT price, not a fill.">Sell ₹</th>
+        <th style="width:58px">Qty</th>
+        <th style="width:84px">Value ₹</th>
+        <th style="width:80px">Gross ₹</th>
+        <th style="width:66px" title="Dhan intraday, both legs. On an open position this is what it would cost to close now. Hover a row for the split.">Charges ₹</th>
+        <th style="width:86px">Net ₹</th>
+        <th style="width:96px">Exit reason</th>
+      </tr></thead>
+        <tbody id="tr_body"><tr><td colspan="14" class="empty">select a tier</td></tr></tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<div id="view-live" style="display:none">
+  <div class="newswrap">
+    <!-- LIVE PAPER TRADING. Same rules as the back-test, traded FORWARD: it can
+         only act on prices that have already printed, so it never gets the
+         benefit of knowing where a bar closed. Prices come from the sweep the
+         Board already runs — this tab makes no request to Dhan. -->
+    <h2>🔴 Live Paper Trading <span id="lpts" style="font-weight:400;color:var(--mut);font-size:11px"></span></h2>
+
+    <div class="ptbar">
+      <label>Capital ₹ <input id="lp_cap" type="text" value="100000" inputmode="numeric"></label>
+      <label>Leverage × <input id="lp_lev" type="text" value="5" inputmode="decimal"
+             title="Dhan MIS intraday. 5 means Rs 1,00,000 controls Rs 5,00,000. Set 1 for cash."></label>
+      <label>Target % <input id="lp_tgt" type="text" value="10" inputmode="decimal"
+             title="Your yardstick. It does not change how the engine trades — the summary reports whether the running P&L has reached it."></label>
+      <button id="lp_go" class="ptgo">▶ START LIVE PAPER TRADE</button>
+      <button id="lp_stop" class="ptstop">■ STOP LIVE TRADING</button>
+      <button id="lp_reset" class="ptreset" title="Clear the book and start over. Only available once trading is stopped.">⟲ CLEAR</button>
+      <span id="lp_dot" class="lpdot" style="display:none">● LIVE</span>
+    </div>
+
+    <div id="lp_summary"></div>
+
+    <table class="ntbl" id="lptbl">
+      <thead><tr>
+        <th style="width:24px">#</th>
+        <th style="width:118px">Stock</th>
+        <th style="width:88px" title="In-Progress = still holding, priced at the last sweep. Completed = closed, P&L is final.">Status</th>
+        <th style="width:74px" title="When the card appeared on Super Stocks.">Signal</th>
+        <th style="width:74px">Entry</th>
+        <th style="width:80px">Buy ₹</th>
+        <th style="width:74px">Exit</th>
+        <th style="width:80px" title="For an open position this is the LAST SWEPT price, not a fill.">Sell ₹</th>
+        <th style="width:58px">Qty</th>
+        <th style="width:84px">Value ₹</th>
+        <th style="width:80px">Gross ₹</th>
+        <th style="width:66px" title="Dhan intraday, both legs. On an open position this is what it would cost to close now. Hover a row for the split.">Charges ₹</th>
+        <th style="width:86px">Net ₹</th>
+        <th style="width:96px">Exit reason</th>
+      </tr></thead>
+      <tbody id="lpbody"><tr><td colspan="14" class="empty">
+        Not running. Set your capital and press <b>START LIVE PAPER TRADE</b> — the engine
+        will take positions as stocks appear on Super Stocks, using live prices, and
+        mark them to market every few seconds.
+      </td></tr></tbody>
+    </table>
+  </div>
+</div>
+<div id="view-news" style="display:none">
+  <div class="newswrap">
+    <div class="subtabbar">
+      <button class="subtab" id="tab_why" data-sub="why">🏭 SECTORS <span id="secbadge" class="hibadge" style="display:none"></span></button>
+      <button class="subtab" id="tab_close" data-sub="close">🌙 SINCE LAST CLOSE <span id="dnbadge" class="hibadge" style="display:none"></span></button>
+    </div>
+
+    <div id="sub-close" style="display:none">
+      <div id="dnhero"></div>
+      <h2>🌙 Since last close — Dhan news that explains today's gaps
+        <span id="dnts" style="font-weight:400;color:var(--mut);font-size:11px"></span></h2>
+      <table class="ntbl" id="dntbl">
+        <thead><tr>
+          <th style="width:98px">When</th><th style="width:112px">Stock</th>
+          <th style="width:132px" title="0-100. Built from the size of the surprise, the rupee scale of the event, whether it is a hard event at all, and whether the stock can actually be traded. Sentiment is NOT used — it returns positive for ~77% of the feed.">Impact ▾</th>
+          <th style="width:86px" title="Day turnover in rupees. Below ₹5 Cr you cannot get ₹10k in and out in 2-5 min without the spread eating the move.">Turnover</th>
+          <th style="width:84px">Move today</th><th style="width:70px">On board</th>
+          <th>Headline</th></tr></thead>
+        <tbody id="dnbody"><tr><td colspan="7" class="empty">loading…</td></tr></tbody>
+      </table>
+    </div>
+
+    <div id="sub-why">
+    <!-- SECTORS. Replaces WHY THEY'RE MOVING, which asked a question it could
+         not answer: 97% of Sri's movers are small-caps with no coverage, so the
+         column read "no Dhan news" almost every row. This table starts from
+         PRICE across the whole 752-stock NSE-mapped universe (read off the
+         alarm's existing sweep, so it costs no request) and answers a question
+         that always has an answer: is the stock moving alone, or is the whole
+         sector moving -- and is it STILL moving? Headlines are attached where
+         they exist instead of being the thing the tab depends on. -->
+    <h2>🏭 Sectors <span id="secliv" style="font-weight:400;color:var(--mut);font-size:11px"></span></h2>
+    <div id="secmkt"></div>
+    <table class="ntbl" id="sectbl">
+      <thead><tr>
+        <th style="width:26px" title="Ranked by conviction = size of the move x how much of the sector is participating. A +9% single stock in a flat sector ranks BELOW a sector where every name is +3%, because only the second one is a sector move.">#</th>
+        <th style="width:150px">Sector</th>
+        <th style="width:76px" title="Average day % of every mapped stock in this sector, off the live full-market sweep.">Move now</th>
+        <th style="width:120px" title="How many of the sector's stocks are up 1%+ against how many are down 1%+. A big average carried by one stock is not a sector move.">Breadth</th>
+        <th style="width:120px" title="Sector average now vs ~10 minutes ago. This is the only honest answer to 'is the sentiment continuing' — it is measured, not predicted.">Still going?</th>
+        <th style="width:78px" title="Day turnover across the sector, in rupees crore.">Turnover</th>
+        <th style="width:210px">Stocks impacted</th>
+        <th title="Headlines from the open web (Google News aggregating Moneycontrol, ET, Mint, Business Standard, Reuters and the rest), from the PREVIOUS SESSION CLOSE to now.">News since last close</th>
+      </tr></thead>
+      <tbody id="secbody"><tr><td colspan="8" class="empty">loading…</td></tr></tbody>
+    </table>
+    </div>
+  </div>
+</div>
+<div id="view-preopen" style="display:none">
+  <div class="newswrap">
+    <div class="subtabbar">
+      <button class="subtab on" data-psub="setup">🎯 NEWS SETUP (before open)</button>
+      <button class="subtab" data-psub="book">📖 ORDER BOOK (09:00–09:15)</button>
+    </div>
+
+    <div id="psub-setup">
+      <h2>🎯 Pre-market setup — severity of overnight news
+        <span id="pmts" style="font-weight:400;color:var(--mut);font-size:11px"></span></h2>
+      <div id="pmtrack" style="font-size:11px;color:var(--mut);margin:0 4px 8px"></div>
+      <table class="ntbl">
+        <thead><tr>
+          <th style="width:96px">Chance</th><th style="width:52px">Sev</th>
+          <th style="width:104px">Stock</th>
+          <th style="width:92px">Event</th><th style="width:74px">Magnitude</th>
+          <th style="width:120px">Parameters</th>
+          <th style="width:52px">Size</th><th style="width:116px">Pre-open</th>
+          <th>Headline</th></tr></thead>
+        <tbody id="pmbody"><tr><td colspan="9" class="empty">loading…</td></tr></tbody>
+      </table>
+    </div>
+
+    <div id="psub-book" style="display:none">
+    <h2>📖 Pre-open order book 09:00–09:15
+      <span id="pots" style="font-weight:400;color:var(--mut);font-size:11px"></span></h2>
+    <table class="ntbl" id="potbl">
+      <thead><tr>
+        <th style="width:26px">#</th><th style="width:120px">Stock</th>
+        <th style="width:90px">Ind. price</th><th style="width:70px">Gap</th>
+        <th style="width:150px">Buy / Sell qty</th><th style="width:70px">Imb</th>
+        <th style="width:100px">Order value</th><th style="width:130px">Demand since 09:00</th>
+        <th style="width:150px">Verdict</th></tr></thead>
+      <tbody id="pobody"><tr><td colspan="9" class="empty">loading…</td></tr></tbody>
+    </table>
+    </div>
+  </div>
+</div>
+<script>
+/* ================= EXACT V3.5 (:5003) CARD RENDERER =================
+   Ported verbatim from Opus_Scalp_V3.html: same card markup, same info line
+   (Price / Chg / Vol / UC / angle / vol-surge / chips), same badges, same
+   64px candle panel with EMA-9 (blue) + SMA-12 (amber) + UAlgo cloud +
+   consolidation zones + Buy/Sell pills, and the same 24px MACD panel.   */
+const charts={};
+const CH_H=66, VOL_H=13, MACD_H=26;
+const CLOUD_ALPHA=0.20;
+/* ================= OTT (Optimized Trend Tracker) + CM MACD =================
+   Both are computed HERE, in the browser, from chart.c -- deliberately, not on
+   the server. The V3.5 payload is shared byte-for-byte with the :5003 board, so
+   adding fields to it there would change that board too. chart.c is already on
+   the wire; recomputing 40 bars of EMA per card costs nothing.               */
+const OTT_LEN=9, OTT_PCT=0.6;
+function _vidya(src,n){                 // VAR / VIDYA moving average (CMO-weighted)
+  const out=[]; let prev=null;
+  for(let i=0;i<src.length;i++){
+    const x=src[i];
+    if(x==null){ out.push(prev); continue; }
+    if(prev==null){ prev=x; out.push(prev); continue; }
+    let up=0,dn=0;
+    for(let j=Math.max(1,i-8);j<=i;j++){
+      const a=src[j],b=src[j-1]; if(a==null||b==null) continue;
+      const d=a-b; if(d>0) up+=d; else dn-=d;
+    }
+    const cmo=(up+dn)?Math.abs((up-dn)/(up+dn)):0, k=2/(n+1);
+    prev = k*cmo*x + (1-k*cmo)*prev; out.push(prev);
+  }
+  return out;
+}
+/* Returns the UPPER and LOWER edge of the OTT band per bar. The band is the
+   envelope between the VAR line and the OTT trailing line -- a close OUTSIDE it
+   is a trend break, a close inside it is chop. */
+function ottBands(src,len,pct){
+  const V=_vidya(src,len||OTT_LEN); const P=(pct==null?OTT_PCT:pct);
+  const up=[],lo=[]; let ls=null,ss=null,dir=1;
+  for(let i=0;i<V.length;i++){
+    const v=V[i];
+    if(v==null){ up.push(null); lo.push(null); continue; }
+    const f=v*P*0.01; let L=v-f, S=v+f;
+    if(i&&V[i-1]!=null&&ls!=null&&V[i-1]>ls) L=Math.max(L,ls);
+    if(i&&V[i-1]!=null&&ss!=null&&V[i-1]<ss) S=Math.min(S,ss);
+    ls=L; ss=S;
+    if(dir===-1 && v>ss) dir=1; else if(dir===1 && v<ls) dir=-1;
+    const MT=(dir===1?L:S);
+    const ott = (v>MT) ? MT*(200+P)/200 : MT*(200-P)/200;
+    up.push(Math.max(v,ott)); lo.push(Math.min(v,ott));
+  }
+  return {up,lo};
+}
+/* ================= HOTT / LOTT =============================================
+   Anil Ozeksi's Optimized Trend Tracker applied to the rolling HIGHEST and
+   LOWEST price instead of the close (KivancOzbilgic's HOTT LOTT on
+   TradingView). Drawn on every card as two thin lines:
+
+        HOTT  green, above    LOTT  red, below    between them = flat zone
+
+   WHY IT IS HERE AND NOT IN DHAN
+     Dhan does not offer this script as an addable indicator, so the board is
+     the only place it can exist -- and the only place it can run on every
+     stock at once instead of one chart at a time.
+
+   WHY IT IS WORTH THE PIXELS -- measured on 14 of this board's own sessions,
+   2,724 crosses, scored as "gained 0.5% within 10 minutes":
+
+        cross up through HOTT, 09:15-09:20    65%   (n=190)
+        cross up through HOTT, 09:20-09:25    57%
+        cross up through HOTT, 09:30-09:45    38%
+        cross up through HOTT, after 10:00    26%   <- WORSE than doing nothing
+        baseline, any moment                  29%
+
+     The second-strongest signal ever measured in this project, and only in the
+     opening minutes. DELIBERATELY NOT A BADGE: a badge would shout at 10:15,
+     where the same cross is actively misleading. A line lets the trader see
+     the cross and apply his own sense of the clock.
+
+   HONEST LIMIT
+     Implemented from the published description, not copied from the script,
+     and validated on synthetic series -- it will not pixel-match TradingView.
+                                                                            */
+// Read from KivancOzbilgic's published script, 26-Aug, NOT guessed:
+//     OTT Period                  2
+//     OTT Optimization Coeff      0.6      <- I had guessed 1.4
+//     Highest and Lowest Length   10       <- I had guessed 20
+// The first version of this used 1.4 / 20 from memory of the standard OTT
+// defaults. Both were wrong, and a 1.4% band is more than twice as wide as a
+// 0.6% one -- the lines would have sat visibly further from price than they do
+// on TradingView.
+const HL_LEN=10, HOTT_LEN=2, HOTT_PCT=0.6;
+// THE PLOT IS LAGGED BY TWO BARS. The script plots nz(HOTT[2]) and colours
+// bars on close > HOTT[2] -- not the current value. Without this the line sits
+// two bars to the left of where TradingView draws it, and every cross appears
+// two bars early. This is the difference that would have made the board
+// disagree with his chart while both were "correct".
+const HOTT_LAG=2;
+function _ottLine(src,len,pct){
+  const V=_vidya(src,len); const P=pct;
+  const out=[]; let ls=null,ss=null,dir=1;
+  for(let i=0;i<V.length;i++){
+    const v=V[i];
+    if(v==null){ out.push(null); continue; }
+    const f=v*P*0.01; let L=v-f, S=v+f;
+    if(ls!=null && v>ls) L=Math.max(L,ls);
+    if(ss!=null && v<ss) S=Math.min(S,ss);
+    if(dir===-1 && ss!=null && v>ss) dir=1;
+    else if(dir===1 && ls!=null && v<ls) dir=-1;
+    const MT=(dir===1?L:S);
+    out.push((v>MT) ? MT*(200+P)/200 : MT*(200-P)/200);
+    ls=L; ss=S;
+  }
+  return out;
+}
+function hottLott(c,h,l){
+  const H=[],L=[];
+  for(let i=0;i<c.length;i++){
+    const lo=Math.max(0,i-HL_LEN+1); let hi=-Infinity, lw=Infinity;
+    for(let j=lo;j<=i;j++){
+      const a=(h&&h[j]!=null)?h[j]:c[j], b=(l&&l[j]!=null)?l[j]:c[j];
+      if(a!=null&&a>hi)hi=a; if(b!=null&&b<lw)lw=b;
+    }
+    H.push(isFinite(hi)?hi:null); L.push(isFinite(lw)?lw:null);
+  }
+  const up0=_ottLine(H,HOTT_LEN,HOTT_PCT), dn0=_ottLine(L,HOTT_LEN,HOTT_PCT);
+  // Shift by HOTT_LAG so bar i shows the value the script plots at bar i.
+  // NOTE: no HOTT/LOTT swap. An earlier version swapped them when they
+  // inverted, which looked tidier but is NOT what the script does -- and a
+  // "tidier than the original" indicator is a different indicator.
+  const up=[],lo=[];
+  for(let i=0;i<up0.length;i++){
+    const j=i-HOTT_LAG;
+    up.push(j>=0?up0[j]:null);
+    lo.push(j>=0?dn0[j]:null);
+  }
+  return {up,lo};
+}
+
+/* ---- YOUR candle-colour rule, driven by the HOTT/LOTT lines ----
+     close ABOVE the green HOTT line -> CYAN
+     close BELOW the red   LOTT line -> PURPLE
+     between the two (the flat zone) -> plain GREEN / RED by bar direction
+   The lines you see and the colours you read now come from the SAME band.  */
+// CYAN was '#0891b2' -- a dark teal that read as muted blue-green on the white
+// chart and was easy to miss. The author's script uses pure #00FFFF. Pure cyan
+// alone washes out on white, so the BODY is bright and the BORDER is a deeper
+// teal: bright enough to spot instantly, still defined at 60px card size.
+const C_CYAN='#00E5FF', C_CYAN_EDGE='#00838F',
+      C_GREEN='#16a34a', C_PURPLE='#9333ea', C_RED='#ef4444';
+function candleCol(close,open,up,lo){
+  if(close==null) return C_GREEN;
+  if(up!=null && close>up) return C_CYAN;
+  if(lo!=null && close<lo) return C_PURPLE;
+  return (open!=null && close>=open) ? C_GREEN : C_RED;
+}
+/* CM MACD (ChrisMoody): the histogram carries FOUR colours, not two -- above
+   zero rising / above zero falling / below zero falling / below zero rising.
+   The pair of pale colours is the early warning that momentum is rolling over
+   while the histogram is still on the "good" side of zero. */
+function cmHistCol(v,prev){
+  if(v==null) return '#9ca3af';
+  const p=(prev==null?v:prev);
+  return v>=0 ? (v>=p?'#0e9594':'#7fc4c4') : (v<p?'#d32f2f':'#e8a6a4');
+}
+let cloudCols={0:'#06b6d4',1:'#06b6d4',2:'#ef4444',3:'#ef4444'};  // PU, PD, NU, ND
+/* Charts are laid out one frame AFTER the DOM insert so each canvas gets its
+   real pixel width. requestAnimationFrame does that -- but Chrome does not fire
+   rAF in a BACKGROUND tab, so a board left on a second monitor / behind another
+   window would sit with empty chart panes until you clicked back. Fall back to
+   a timeout when the tab is hidden. (Verified: document.hidden=true -> rAF did
+   not fire within 600ms; the panes stayed empty.) */
+function nextFrame(fn){ if(document.hidden) setTimeout(fn,0); else requestAnimationFrame(fn); }
+function hexA(hex,a){ const n=parseInt(String(hex).slice(1),16); return `rgba(${(n>>16)&255},${(n>>8)&255},${n&255},${a})`; }
+function fmtVol(v){ if(v==null) return '-'; if(v>=1e7) return (v/1e7).toFixed(2)+'Cr'; if(v>=1e5) return (v/1e5).toFixed(1)+'L'; if(v>=1e3) return (v/1e3).toFixed(1)+'k'; return v; }
+const TV_LAYOUT="Za9vW3Or", TV_SYMMAP={};
+function openTV(sym){
+  const s=(sym||"").toUpperCase();
+  const tvsym = TV_SYMMAP[s] || ("NSE:"+s.replace(/[^A-Z0-9]/g,"_"));
+  window.open(`https://in.tradingview.com/chart/${TV_LAYOUT}/?symbol=${tvsym}`,"_blank","noopener");
+}
+// numeric chart time (epoch secs) — prefers chart.tsec, else derives from HH:MM
+function TT(ch,i){
+  if(!ch) return null;
+  if(ch.tsec && ch.tsec[i]!=null) return ch.tsec[i];
+  if(!ch.__ts){
+    const lab=ch.t||[], now=new Date();
+    const Y=now.getFullYear(), M=now.getMonth(), D=now.getDate();
+    const out=[]; let last=null;
+    for(let k=0;k<lab.length;k++){
+      const s=lab[k]; let e=null;
+      if(typeof s==="number" && isFinite(s)) e=s;
+      else if(typeof s==="string"){ const m=s.match(/^(\d{1,2}):(\d{2})$/);
+        if(m) e=Math.floor(new Date(Y,M,D,+m[1],+m[2],0).getTime()/1000); }
+      if(e!=null){ if(last!=null && e<=last) e=last+60; last=e; }
+      out.push(e);
+    }
+    ch.__ts=out;
+  }
+  return (ch.__ts[i]!=null)?ch.__ts[i]:null;
+}
+function badgeOf(r){
+  if(r.frozen) return ["FROZEN","b-frozen","frozen"];
+  if(r.entry)  return ["🎯 ENTRY","b-igniting","igniting"];
+  return ["WATCH","b-extended",""];
+}
+/* ---- order-book bias: :5003's exact consImb / verdict / tier logic ---- */
+let DEPTH={};
+function dfmt(n){const a=Math.abs(n);return a>=1e7?(n/1e7).toFixed(2)+'Cr':a>=1e5?(n/1e5).toFixed(1)+'L':a>=1e3?(n/1e3).toFixed(1)+'k':Math.round(n);}
+function consImb(d){
+  if(!d) return null;
+  const b=d.tot_buy||0, a=d.tot_sell||0;
+  if(b<=0 || a<=0) return null;               // one-sided/stale book = unknown, not +100%
+  return (b-a)/(b+a)*100;
+}
+function depthTier(r,d){
+  // backend already ranked the book (and the board is SORTED by it) -- mirror it.
+  //
+  // GATE ON biasRank, NOT ON biasImb. The verdict is decided by FLOW (CVD) and
+  // VWAP; the order-book imbalance only CONFIRMS it. biasImb is null whenever
+  // the book is one-sided -- which is every stock after 15:30, and plenty of
+  // thin names intraday. Gating the badge on it meant the board sorted itself by
+  // a verdict it then refused to display, showing "BOOK ?" on all 49 cards while
+  // the backend was sending "Buy bias" for every one of them.
+  if(r && r.biasRank!=null){
+    const m={0:'#15803d',1:'#16a34a',2:'#b91c1c',3:'#ef4444',4:'#9ca3af'};
+    const lab={0:'⇈ BUYERS IN CONTROL',1:'↑ Buy bias',2:'⇊ SELLERS IN CONTROL',
+               3:'↓ Sell bias',4:'– balanced'}[r.biasRank];
+    if(lab) return {lab:lab,col:m[r.biasRank]||'#9ca3af',imb:r.biasImb};
+  }
+  const p=consImb(d);
+  const above=(r.chart&&r.chart.c&&r.vwap!=null)?(r.price>=r.vwap):null;
+  const vel=r.vel_pct_min;
+  const flat=(vel!=null && Math.abs(vel)<0.05);
+  const bookPos=(p!=null&&p>=12), bookNeg=(p!=null&&p<=-12);
+  if(p==null) return {lab:'BOOK ?',col:'#9ca3af',imb:null};
+  if(flat && p!=null && Math.abs(p)<12) return {lab:'– FLAT',col:'#9ca3af',imb:p};
+  if(p>=25)  return {lab:'⇈ BUYERS IN CONTROL',col:'#15803d',imb:p};
+  if(bookPos)return {lab:'↑ Buy bias',col:'#16a34a',imb:p};
+  if(p<=-25) return {lab:'⇊ SELLERS IN CONTROL',col:'#b91c1c',imb:p};
+  if(bookNeg)return {lab:'↓ Sell bias',col:'#ef4444',imb:p};
+  return {lab:'– balanced',col:'#9ca3af',imb:p};
+}
+function depthHtml(r){
+  const d=DEPTH[r.sym];
+  const t=depthTier(r,d);
+  // The VERDICT chip always shows -- it comes from flow + VWAP and does not need
+  // a live book. The quantities and the B/A bar are the book's confirmation and
+  // only appear when the book is actually there.
+  const chip=`<span class="depchip" style="background:${t.col}">${t.lab}</span>`
+    +`<span class="depimb" style="color:${t.col}">${t.imb!=null?(t.imb>=0?'+':'')+t.imb.toFixed(0)+'%':''}</span>`;
+  if(!d||!(d.tot_buy||d.tot_sell))
+    return `<div class="dep"><div class="deph">${chip}
+      <span class="depqty" style="opacity:.6">book —</span></div></div>`;
+  const tot=(d.tot_buy+d.tot_sell)||1;
+  const bp=(d.tot_buy/tot*100), ap=(d.tot_sell/tot*100);
+  return `<div class="dep">
+    <div class="deph">${chip}
+      <span class="depqty">B ${dfmt(d.tot_buy)} / A ${dfmt(d.tot_sell)}</span></div>
+    <div class="depbar"><div class="b" style="width:${bp}%"></div><div class="a" style="width:${ap}%"></div></div>
+  </div>`;
+}
+function refreshDepthStrips(){
+  for(const k in charts){
+    const card=document.getElementById(k); if(!card) continue;
+    const holder=card.querySelector(".dep"); const r=card._row;
+    if(holder&&r){ const tmp=document.createElement("div"); tmp.innerHTML=depthHtml(r);
+      holder.replaceWith(tmp.firstElementChild); }
+  }
+}
+function pollDepth(){
+  fetch('/depth').then(r=>r.json()).then(j=>{ if(j&&j.ok){ DEPTH=j.data||{}; refreshDepthStrips(); } }).catch(()=>{});
+}
+function mkCard(panel,r){
+  const key=panel+'_'+r.sym;
+  const div=document.createElement('div'); div.id=key;
+  let [btxt,bcls,cardcls]=badgeOf(r);
+  if(r.pinned){ btxt="📌 NO-DIP"; bcls="b-fresh"; cardcls="pinc"; }
+  div.className="card "+cardcls;
+  div.title="Open "+r.sym+" in TradingView"; div.onclick=()=>openTV(r.sym);
+  const sign=(r.day_pct>=0?"+":"");
+  let chips="";
+  /* EARLY = this stock was found by the full-universe sweep, not by Dhan's
+     gainer lists. Shown so you can see promotion working: on 20-Aug, 72 stocks
+     were already up >=2% the first time the scanx lists surfaced them. */
+  if(r.early) chips+=`<span class="chip" style="background:#1d4ed8;color:#fff;font-weight:800">`
+    +`EARLY${r.early_from_open!=null?(' +'+r.early_from_open+'%'):''}</span>`;
+  if(r.pinned) chips+=`<span class="chip chip-pin">${r.nodip}b${r.streakPct!=null?' +'+r.streakPct+'%':''}</span>`;
+  /* MOM chip on every card, not just Scanner1 -- it is now the sort key for
+     the NO-DIP block on every grid, so it has to be visible wherever cards are.
+     Hidden when the stock is not yet in the rolling snapshots (momentum 0). */
+  {
+    const m=momOf(r);
+    if(m>0) chips+=`<span class="chip" style="background:${staleOf(r)?'#f1f5f9':(m>=70?'#dcfce7':(m>=45?'#fef9c3':'#f8fafc'))};`
+      +`color:${staleOf(r)?'#64748b':(m>=70?'#166534':(m>=45?'#854d0e':'#475569'))}">MOM ${m}</span>`;
+    if(staleOf(r)) chips+=`<span class="chip" style="background:#e2e8f0;color:#475569">STALE</span>`;
+  }
+  // cross_sec is computed on the 30-SECOND series by the backend. Prefer it;
+  // fall back to the scorer's crossAge (which is in BARS, not minutes -- it
+  // used to be printed as "1m" for a 30-second-old cross, which was wrong).
+  if(r.cross_sec!=null){
+    const s=r.cross_sec;
+    const txt = s<60 ? (s+'s ago') : (Math.floor(s/60)+'m'+(s%60?(' '+(s%60)+'s'):'')+' ago');
+    const hot = s<=60;
+    chips+=`<span class="chip chip-x" style="${hot?'background:#15803d':''}">✚BUY ${txt}</span>`;
+  } else if(r.crossBuy){
+    let ca='';
+    if(r.crossAge!=null){
+      const secs=r.crossAge*((r.tf==='30s')?30:60);
+      ca=' '+(secs<60?(secs+'s'):(Math.round(secs/60)+'m'));
+    }
+    chips+=`<span class="chip chip-x">✚EMA×MA${ca}</span>`;
+  }
+  if(!r.frozen && (r.igniting||r.fresh||r.entry)) chips+=`<span class="chip chip-new">↑NEW</span>`;
+  if(r.ut_in_buy) chips+=`<span class="chip chip-ut">TREND↑</span>`;
+  if(r.cross_time) chips+=`<span class="chip chip-cross">⚡${r.cross_time}</span>`;
+  if(r.dip_state==="DIP-OK") chips+=`<span class="chip chip-dip">DIP-OK</span>`;
+  else if(r.dip_state==="REVERSAL") chips+=`<span class="chip chip-rev">REVERSAL</span>`;
+  if(r.tf==='30s') chips+=`<span class="chip chip-tf">30s</span>`;
+  let uc="";
+  if(r.ucl){const d=((r.ucl-r.price)/r.price*100);const near=isFinite(d)&&d<=1;
+    uc=` &nbsp; <b class="${near?'neg':''}">UC ₹${r.ucl}${isFinite(d)?` (${d.toFixed(1)}%)`:''}</b>`;}
+  div.innerHTML=`<div class="row1"><span class="sym">${r.sym}</span><span class="badge ${bcls}">${btxt}</span></div>
+    <div class="info">Price <b>₹${r.price}</b> &nbsp; Chg <b class="${r.day_pct>=0?'pos':'neg'}">${sign}${r.day_pct}%</b>`
+    +` &nbsp; Vol <b>${fmtVol(r.day_vol)}</b>${uc} &nbsp; ∠${r.ema_angle??'-'}° x${r.vol_surge_x??'-'} ${chips}</div>`
+    +`<div class="chart"></div><div class="vol"></div><div class="macd"></div>`
+    +depthHtml(r);
+  div._row=r;
+  return {div,key};
+}
+/* drawCharts(id, card, ch, dims)
+   dims lets the SAME renderer drive both the 152px mini card and the 640px
+   expand overlay -- one code path, so what you click is provably what you saw.
+   dims.lines=true turns on the MACD/signal lines, which are only legible in the
+   big view; on the mini they collapse into one smudge, so they stay off.     */
+function drawCharts(id,card,ch,dims){
+  if(!ch||!ch.c)return;
+  const D=Object.assign({ch:CH_H,vol:VOL_H,macd:MACD_H,lines:true,dot:2},dims||{});
+  // Bars VISIBLE on a card. 20 x 30s = the last 10 minutes, which is the horizon
+  // he trades on. The server sends more than this on purpose -- see the range
+  // code below.
+  const VIS_BARS = 20;
+  const pcEl=card.querySelector(".chart"), vcEl=card.querySelector(".vol"),
+        mcEl=card.querySelector(".macd");
+  const W=()=> (pcEl.clientWidth||card.clientWidth||240);
+  if(!charts[id]){
+    const base={autoSize:true,layout:{background:{color:'transparent'},textColor:'#6b7280'},
+      grid:{vertLines:{visible:false},horzLines:{visible:false}},
+      leftPriceScale:{visible:false},rightPriceScale:{visible:false,scaleMargins:{top:0.02,bottom:0.02}},
+      handleScroll:false,handleScale:false,crosshair:{horzLine:{visible:false},vertLine:{visible:false}},
+      timeScale:{visible:false}};
+    const NOLINE={priceLineVisible:false,lastValueVisible:false};
+    const pc=LightweightCharts.createChart(pcEl,{...base,height:D.ch});
+    // OTT band edges FIRST so they sit behind the candles
+    const ou=pc.addLineSeries({color:'rgba(100,116,139,.55)',lineWidth:1,
+      lineStyle:2,lineType:0,...NOLINE});                                 // upper edge
+    const od=pc.addLineSeries({color:'rgba(100,116,139,.55)',lineWidth:1,
+      lineStyle:2,lineType:0,...NOLINE});                                 // lower edge
+    // HOTT (green) and LOTT (red) -- thin solid lines, drawn BEFORE the candles
+    // so they sit behind them. Kept separate from the grey OTT envelope above
+    // rather than replacing it: the two say different things and the grey one
+    // is what the candle colours are computed from.
+    const hu=pc.addLineSeries({color:'rgba(22,163,74,.85)',lineWidth:1,
+      lineType:0,...NOLINE});                                             // HOTT
+    const hl=pc.addLineSeries({color:'rgba(220,38,38,.85)',lineWidth:1,
+      lineType:0,...NOLINE});                                             // LOTT
+    const cs=pc.addCandlestickSeries({borderVisible:false,...NOLINE});    // colours are PER BAR
+    const e9=pc.addLineSeries({color:'#2563eb',lineWidth:1,...NOLINE});   // EMA-9 (blue)
+    const sm=pc.addLineSeries({color:'#1f2937',lineWidth:1,...NOLINE});   // MA-12 (near-black)
+    const vc=vcEl?LightweightCharts.createChart(vcEl,{...base,height:D.vol}):null;
+    const vh=vc?vc.addHistogramSeries({...NOLINE}):null;
+    const mc=LightweightCharts.createChart(mcEl,{...base,height:D.macd});
+    // ONE PRICE SCALE FOR ALL THREE MACD SERIES -- fixed 31-Aug-2026.
+    //
+    // They used to sit on two overlay scales: histogram on 'h', the two lines on
+    // 'l', each autoscaling independently. The reasoning was that the histogram
+    // would otherwise collapse to a hairline. What it actually produced was a
+    // pane where the lines have NO relationship to the zero line or to the
+    // histogram underneath them -- a nearly flat MACD/signal pair gets stretched
+    // to fill the whole pane, so it reads as a wild swing. Checked against his
+    // Dhan chart on ICIL: the numbers agreed to four decimals while the drawing
+    // did not, which is the worst combination -- a chart that is wrong in a way
+    // the values cannot reveal.
+    //
+    // hist = line - signal, so all three are the same units and belong on the
+    // same axis. That is what Dhan does, and now what this does. The histogram
+    // is smaller in amplitude, exactly as it is on his screen, and still legible.
+    const mh=mc.addHistogramSeries({priceScaleId:'m',...NOLINE});
+    // ZERO LINE. "Is the MACD line above or below zero" is one of the two things
+    // he actually reads off this pane, and until now there was no zero to read
+    // it against -- the pane autoscales, so the middle of the box is NOT zero
+    // and eyeballing it was guesswork.
+    mh.createPriceLine({price:0,color:'#94a3b8',lineWidth:1,lineStyle:1,
+                        axisLabelVisible:false});
+    // Colours match Dhan's MACD pane so the two can be compared at a glance:
+    // blue MACD line, orange signal.
+    const ml=mc.addLineSeries({priceScaleId:'m',color:D.lines?'#2563eb':'rgba(0,0,0,0)',lineWidth:1,...NOLINE});
+    const ms=mc.addLineSeries({priceScaleId:'m',color:D.lines?'#d97706':'rgba(0,0,0,0)',lineWidth:1,...NOLINE});
+    mc.priceScale('m').applyOptions({scaleMargins:{top:0.12,bottom:0.12}});
+    const cloud=document.createElement("canvas"); cloud.className="cloud"; pcEl.appendChild(cloud);
+    const zlayer=document.createElement("div"); zlayer.className="zlayer"; pcEl.appendChild(zlayer);
+    charts[id]={pc,cs,e9,sm,ou,od,hu,hl,vc,vh,mc,mh,ml,ms,zlayer,cloud};
+  }
+  // A chart created while its tab is display:none has clientWidth 0. Sizing to
+  // 0 and then calling fitContent() leaves the series squeezed into a sliver at
+  // the right edge, and it never recovers when the tab is later shown. Bail out
+  // and let the visibility pass redraw it properly.
+  if (W() < 40) { charts[id] && (charts[id]._pending = ch); return; }
+  const o=charts[id]; o._ch=ch; o._dims=D;
+  const cd=[],ed=[],sd=[],hd=[],ld=[],gd=[],ud=[],dd=[],vd=[],mk=[],hud=[],hld=[];
+  // OTT band for THIS window, then the per-bar colour decision
+  const B=ottBands(ch.c,OTT_LEN,OTT_PCT);
+  const HL=hottLott(ch.c,ch.h,ch.l);   // green HOTT / red LOTT
+  const vmax=Math.max(1,...(ch.v||[]).map(x=>+x||0));
+  for(let i=0;i<ch.c.length;i++){
+    const tm=TT(ch,i); if(tm==null) continue;
+    // CANDLE COLOUR NOW COMES FROM THE HOTT/LOTT LINES, not the grey close-OTT
+    // envelope -- so what you SEE (the green and red lines) is what DECIDES the
+    // colour. Previously the lines and the colours came from two different
+    // bands, which meant a candle could turn cyan without visibly crossing the
+    // green line, and vice versa. That is confusing and it was wrong.
+    //
+    // This is also exactly what the author's script does:
+    //     close > HOTT[2] -> turquoise ; close < LOTT[2] -> fuchsia ; else plain
+    // with his cyan/purple in place of turquoise/fuchsia.
+    const col=candleCol(ch.c[i],ch.o?ch.o[i]:null,HL.up[i],HL.lo[i]);
+    // A cyan candle gets a deeper teal border and wick. Everything else keeps a
+    // single colour, as before.
+    const edge = (col===C_CYAN) ? C_CYAN_EDGE : col;
+    if(ch.o[i]!=null)cd.push({time:tm,open:ch.o[i],high:ch.h[i],low:ch.l[i],close:ch.c[i],
+                              color:col,wickColor:edge,borderColor:edge});
+    if(B.up[i]!=null)ud.push({time:tm,value:B.up[i]});
+    if(HL.up[i]!=null)hud.push({time:tm,value:HL.up[i]});
+    if(HL.lo[i]!=null)hld.push({time:tm,value:HL.lo[i]});
+    if(B.lo[i]!=null)dd.push({time:tm,value:B.lo[i]});
+    if(ch.v && ch.v[i]!=null)vd.push({time:tm,value:(+ch.v[i]||0)/vmax,color:col+'59'});
+    if(ch.ema9 && ch.ema9[i]!=null)ed.push({time:tm,value:ch.ema9[i]});
+    if(ch.sma12 && ch.sma12[i]!=null)sd.push({time:tm,value:ch.sma12[i]});
+    if(ch.macdHist && ch.macdHist[i]!=null)
+      hd.push({time:tm,value:ch.macdHist[i],color:cmHistCol(ch.macdHist[i],i?ch.macdHist[i-1]:null)});
+    if(ch.macdLine && ch.macdLine[i]!=null)ld.push({time:tm,value:ch.macdLine[i]});
+    if(ch.macdSignal && ch.macdSignal[i]!=null)gd.push({time:tm,value:ch.macdSignal[i]});
+    // CM MACD crossover dot -- the exact bar the line crossed its signal
+    if(i && ch.macdLine && ch.macdSignal){
+      const a=ch.macdLine[i-1], b=ch.macdSignal[i-1], x=ch.macdLine[i], y=ch.macdSignal[i];
+      if([a,b,x,y].every(v=>v!=null)){
+        const p0=a-b, p1=x-y;
+        if((p0<=0&&p1>0)||(p0>=0&&p1<0))
+          mk.push({time:tm,position:'inBar',shape:'circle',
+                   color:(p1>0?'#0e9594':'#d32f2f'),size:D.dot>=3?2:1});
+      }
+    }
+  }
+  const uniq=a=>{a.sort((x,y)=>x.time-y.time);const r=[];let lt=null;for(const p of a){if(p.time!==lt){r.push(p);lt=p.time;}else r[r.length-1]=p;}return r;};
+  if(!cd.length) return;
+  try{
+    o.pc.resize(W(),D.ch); if(o.vc) o.vc.resize(W(),D.vol); o.mc.resize(W(),D.macd);
+    o.ou.setData(uniq(ud)); o.od.setData(uniq(dd));
+    o.hu.setData(uniq(hud)); o.hl.setData(uniq(hld));
+    o.cs.setData(uniq(cd));o.e9.setData(uniq(ed));o.sm.setData(uniq(sd));
+    // no volume on the wire (older backend, or a stock with none) -> collapse the
+    // pane rather than leaving a dead 13px strip under every card
+    if(vcEl) vcEl.style.display = vd.length ? '' : 'none';
+    if(o.vh) o.vh.setData(uniq(vd));
+    o.mh.setData(uniq(hd));o.ml.setData(uniq(ld));o.ms.setData(uniq(gd));
+    o.ml.applyOptions({color:D.lines?'#1f2937':'rgba(0,0,0,0)'});
+    o.ms.applyOptions({color:D.lines?'#d97706':'rgba(0,0,0,0)'});
+    try{ o.ml.setMarkers(uniq(mk)); }catch(e){}
+    // WHAT IS ON SCREEN vs WHAT IS COMPUTED -- deliberately different.
+    //
+    // He scalps in seconds to a few minutes: "past history doesn't matter, what
+    // matters is the signal crossing the MACD line and whether they are above or
+    // below zero". So the pane shows the last VIS_BARS only.
+    //
+    // But the card's own indicators are computed IN THE BROWSER from the array
+    // it was sent -- the OTT envelope and the HOTT/LOTT lines need ~10 bars of
+    // warm-up, and consolidation zones more. Cutting the DATA to 10 minutes
+    // would leave the first third of every line wrong-but-drawn, which is worse
+    // than showing less. So the server keeps sending a longer array and only the
+    // VIEW is narrowed. All three panes get the same range or they stop lining
+    // up with each other.
+    const _n = cd.length;
+    if(_n > VIS_BARS){
+      const _r = {from:_n-VIS_BARS-0.5, to:_n-0.5};
+      o.pc.timeScale().setVisibleLogicalRange(_r);
+      if(o.vc) o.vc.timeScale().setVisibleLogicalRange(_r);
+      o.mc.timeScale().setVisibleLogicalRange(_r);
+    } else {
+      o.pc.timeScale().fitContent(); if(o.vc) o.vc.timeScale().fitContent();
+      o.mc.timeScale().fitContent();
+    }
+    nextFrame(()=>{try{
+      o.pc.resize(W(),D.ch); if(o.vc) o.vc.resize(W(),D.vol); o.mc.resize(W(),D.macd);
+      drawCloud(o,ch);drawZones(o,ch);drawMarkers(o,ch);}catch(e){}});
+  }catch(e){}
+}
+function drawCloud(o,ch){
+  const cv=o.cloud; if(!cv) return;
+  const el=cv.parentElement, w=el.clientWidth||240, hgt=el.clientHeight||CH_H, dpr=window.devicePixelRatio||1;
+  cv.width=w*dpr; cv.height=hgt*dpr; cv.style.width=w+"px"; cv.style.height=hgt+"px";
+  const cx=cv.getContext("2d"); cx.setTransform(dpr,0,0,dpr,0,0); cx.clearRect(0,0,w,hgt);
+  const hi=ch.cloudHi||[], lo=ch.cloudLo||[], st=ch.cloudState||[];
+  if(hi.length<2) return;
+  const tsc=o.pc.timeScale();
+  for(let i=0;i<hi.length-1;i++){
+    const x1=tsc.timeToCoordinate(TT(ch,i)), x2=tsc.timeToCoordinate(TT(ch,i+1));
+    const th=hi[i]!=null?o.cs.priceToCoordinate(hi[i]):null, th2=hi[i+1]!=null?o.cs.priceToCoordinate(hi[i+1]):null;
+    const bl=lo[i]!=null?o.cs.priceToCoordinate(lo[i]):null, bl2=lo[i+1]!=null?o.cs.priceToCoordinate(lo[i+1]):null;
+    if([x1,x2,th,th2,bl,bl2].some(v=>v==null||!isFinite(v))) continue;
+    const s=st[i]; if(s==null) continue;
+    cx.beginPath(); cx.moveTo(x1,th); cx.lineTo(x2,th2); cx.lineTo(x2,bl2); cx.lineTo(x1,bl); cx.closePath();
+    cx.fillStyle = hexA(cloudCols[s]||'#06b6d4', CLOUD_ALPHA);
+    cx.fill();
+  }
+}
+function drawZones(o,ch){
+  const lay=o.zlayer; if(!lay) return;
+  lay.innerHTML="";
+  const zs=ch.czones||[]; if(!zs.length) return;
+  const tsc=o.pc.timeScale();
+  zs.forEach(z=>{
+    const t1=TT(ch,z.s), t2=TT(ch,z.e);
+    if(t1==null||t2==null) return;
+    let x1=tsc.timeToCoordinate(t1), x2=tsc.timeToCoordinate(t2);
+    let yT=o.cs.priceToCoordinate(z.top), yB=o.cs.priceToCoordinate(z.bottom);
+    if([x1,x2,yT,yB].some(v=>v==null||!isFinite(v))) return;
+    if(x2<x1){const t=x1;x1=x2;x2=t;}
+    const d=document.createElement("div"); d.className="czone";
+    d.style.left=x1+"px"; d.style.width=Math.max(2,x2-x1)+"px";
+    d.style.top=yT+"px"; d.style.height=Math.max(2,yB-yT)+"px";
+    lay.appendChild(d);
+  });
+}
+function drawMarkers(o,ch){
+  const lay=o.zlayer; if(!lay) return;
+  const tsc=o.pc.timeScale();
+  const _mk=(ch.markers||{});
+  (ch.utBuy||_mk.buy||[]).forEach(i=>{
+    const x=tsc.timeToCoordinate(TT(ch,i)); const y=(ch.l[i]!=null)?o.cs.priceToCoordinate(ch.l[i]):null;
+    if(x==null||y==null||!isFinite(x)||!isFinite(y)) return;
+    const d=document.createElement("div"); d.className="mk mk-buy"; d.textContent="Buy";
+    d.style.left=x+"px"; d.style.top=(y+2)+"px"; lay.appendChild(d);
+  });
+  (ch.utSell||_mk.sell||[]).forEach(i=>{
+    const x=tsc.timeToCoordinate(TT(ch,i)); const y=(ch.h[i]!=null)?o.cs.priceToCoordinate(ch.h[i]):null;
+    if(x==null||y==null||!isFinite(x)||!isFinite(y)) return;
+    const d=document.createElement("div"); d.className="mk mk-sell"; d.textContent="Sell";
+    d.style.left=x+"px"; d.style.top=(y-12)+"px"; lay.appendChild(d);
+  });
+}
+/* ---- DATA SNAPSHOT CLOCK ----
+   Shows the timestamp of the data ACTUALLY on screen. It only moves when the
+   payload changes (prices/order/badges), so a static clock means the tape has
+   not moved -- not that the page is broken. Also reports how old it is.      */
+let _snapSig=null, _snapTs=null, _snapAt=0, _pollAt=0, _pollErr=0;
+function stampSnapshot(state){
+  const sig=JSON.stringify(['bt','ov'].map(k=>(state[k]||[]).map(c=>
+      c.sym+':'+c.price+':'+c.day_pct+':'+c.biasRank+':'+(c.pinned?1:0)+':'+(c.crossBuy?1:0))));
+  if(sig===_snapSig) return;                 // nothing changed -> keep old stamp
+  _snapSig=sig; _snapTs=state.ts||'--:--:--'; _snapAt=Date.now();
+  const el=document.getElementById('snapts');
+  if(el){ el.textContent=_snapTs; el.classList.remove('tick'); void el.offsetWidth; el.classList.add('tick'); }
+}
+function tickSnapAge(){
+  const a=document.getElementById('snapage'), v=document.getElementById('snapts');
+  if(!a||!_snapAt) return;
+  const s=Math.round((Date.now()-_snapAt)/1000);
+  // SAY WHICH OF THE THREE IT IS. An old stamp has three quite different
+  // causes and they were indistinguishable: the tape has not moved, the page
+  // has stopped asking (a hidden tab), or the board is unreachable. Reporting
+  // "2m ago" for all three sends you hunting the wrong one -- which is exactly
+  // what happened at 09:47.
+  const sincePoll = _pollAt ? Math.round((Date.now()-_pollAt)/1000) : null;
+  let txt = s<2 ? 'just now' : (s<90 ? s+'s ago' : Math.round(s/60)+'m ago');
+  if(_pollErr>2)                     txt += ' · board unreachable';
+  else if(sincePoll!=null && sincePoll>20) txt += ' · page not polling';
+  a.textContent = txt;
+  // Red only when the PAGE is current and the data still is not moving.
+  if(v) v.classList.toggle('stale', s>30 && sincePoll!=null && sincePoll<=20);
+}
+setInterval(tickSnapAge,1000);
+const _sig={};
+function render(state){
+  try{ const b=document.getElementById('buildid');
+       if(b&&state&&state.build) b.textContent='build '+state.build; }catch(e){}
+
+  stampSnapshot(state);
+  const tfi=state.tf;
+  document.getElementById('hts').textContent='updated '+(state.ts||'–')
+    +(tfi?('  ·  30s charts: '+tfi.on30s+'/'+tfi.total+(tfi.on30s<tfi.total?'  (rest on 1m until '+tfi.need+' bars build)':'')):'')
+    +(state.note?('  ·  ⚠ '+state.note):'');
+  // AI-Board is drawn by THIS function, with THIS renderer. Same cards,
+  // same charts, same badges as the Board tab -- only the contents differ.
+  paintSuper(state);
+  // SUPER STOCKS is drawn by THIS function with THIS renderer, so a card
+  // there is identical to a card on the Board.
+  // ---- SUPER STOCKS IS TWO COLUMNS (01-Sep-2026) ----------------------
+  // LEFT  = 📌 no-dip runners, plus anything trading ABOVE THE HOTT LINE.
+  // RIGHT = everything else that qualified.
+  //
+  // HOTT is computed in the BROWSER, not on the server -- it is the same
+  // hottLott() call that decides whether a candle is drawn cyan. So the split
+  // uses the identical function the chart draws with, and a card on the left
+  // is exactly a card whose latest close is above the green line you can see.
+  // Anything without enough bars to have a HOTT value yet goes right; it is
+  // never assumed to be above a line that does not exist.
+  // SUPER LAB draws with the SAME renderer as SUPER STOCKS -- one card layout,
+  // two data sources. A second copy of this logic would drift from the first.
+  if(curView==='super' || curView==='superlab'){
+    const _lab = (curView==='superlab');
+    const all=(_lab ? state.superlab : state.super)||[], hot=[], rest=[];
+    all.forEach(c=>{
+      let above=false;
+      try{
+        const ch=c.chart||{};
+        if(ch.c && ch.c.length){
+          const HL=hottLott(ch.c,ch.h,ch.l);
+          const i=ch.c.length-1;
+          above = (HL.up[i]!=null && ch.c[i]!=null && ch.c[i]>HL.up[i]);
+        }
+      }catch(e){}
+      // a WATCH card is not "surging", so it only reaches the left column on
+      // the no-dip badge, never on the HOTT test alone
+      if(c.pinned || (above && c.state!=='watch')) hot.push(c); else rest.push(c);
+    });
+    state.__sphot=hot; state.__sprest=rest;
+  }
+  const map = (curView==='super')    ? {__sphot:'g_sphot',  __sprest:'g_sprest'}
+            : (curView==='superlab') ? {__sphot:'g_lbhot',  __sprest:'g_lbrest'}
+                                     : {bt:'g_bt',ov:'g_ov'};
+  if(curView!=='board' && curView!=='super' && curView!=='superlab') return;
+  for(const k in map){
+    // Only rebuild a panel when its content actually changed (symbols, order,
+    // last bar or cross state). Otherwise a 5s poll would destroy/recreate every
+    // chart and flicker constantly.
+    const cards=state[k]||[];
+    const sig=cards.map(c=>c.sym+':'+c.crossBuy+':'+c.crossAge+':'+c.pinned+':'+c.tf+':'+((c.chart&&c.chart.c)?c.chart.c[c.chart.c.length-1]:0)+':'+c.price).join('|');
+    ['bt','ov','super','__sphot','__sprest'].forEach(kk=>{
+      const e=document.getElementById('n_'+kk.replace(/^__/,''));
+      if(e) e.textContent='· '+((state[kk]||[]).length); });
+    if(_sig[k]===sig) continue;
+    _sig[k]=sig;
+    const grid=document.getElementById(map[k]);
+    for(const key in charts){ if(key.startsWith(k+'_')){ try{charts[key].pc.remove();
+      if(charts[key].vc) charts[key].vc.remove(); charts[key].mc.remove();}catch(e){} delete charts[key]; } }
+    grid.innerHTML='';
+    if(!cards.length){ grid.innerHTML='<div class="empty">No qualifying stocks.</div>'; continue; }
+    const frag=document.createDocumentFragment(); const todo=[];
+    cards.forEach((c,i)=>{ const {div,key}=mkCard(k,c); div.style.order=i; frag.appendChild(div); todo.push([key,c]); });
+    grid.appendChild(frag);
+    // draw AFTER layout so each chart gets its real pixel width
+    nextFrame(()=>todo.forEach(([key,c])=>{
+      try{ drawCharts(key,document.getElementById(key),c.chart); }catch(e){}
+    }));
+  }
+}
+/* coming back to the tab: force a full repaint so nothing on screen is a chart
+   that was sized while the tab had no layout */
+document.addEventListener('visibilitychange',()=>{
+  if(document.hidden) return;
+  for(const k in _sig) delete _sig[k];
+  // FETCH, don't just redraw. Chrome clamps timers in a hidden tab to about
+  // once a MINUTE and can freeze them entirely after five, so a board left in
+  // a background window stops polling -- the server is fine, the page simply
+  // is not asking. Redrawing lastState here only re-painted the same stale
+  // numbers, which is why the snapshot clock could read "2m ago" while the
+  // board was cycling every 5 seconds.
+  poll();
+  try{ if(curView==='super') pollDepth(); }catch(e){}
+});
+/* ---- SUPER STOCKS: header, empty state, and the live ring ---------------
+   No separate card renderer -- render() above draws g_sphot and g_sprest
+   with mkCard(), so a Super Stocks card is identical to a Board card.
+   This only paints what is unique to the tab.                            */
+function paintSuper(state){
+  const m=(state&&state.super_meta)||{}, rows=(state&&state.super)||[];
+  /* THE FUNNEL. An empty tab used to read the same whether the market was
+     quiet or the module was broken -- and for two days it was broken and read
+     as quiet. Now every stage is on screen, so a zero has a location. */
+  const sub=document.getElementById('sp_sub'), f=m.funnel||{};
+  if(sub) sub.textContent = m.scanned
+      ? (m.scanned+' scanned  →  '+(f.up2||0)+' up 2% from open  →  '
+         +(f.climbing||0)+' still climbing  →  '+(f.bursting||0)+' bursting now'
+         +'  ·  '+(m.rows||0)+' on screen'
+         +'  ·  orange ring = moving right now, no ring = held, fading out')
+      : 'scanning the whole market…';
+  const w=document.getElementById('sp_warn');
+  if(w){
+    if(m.err){ w.style.display=''; w.textContent='Super Stocks error: '+m.err; }
+    else if(m.why_empty){ w.style.display=''; w.textContent=m.why_empty; }
+    else w.style.display='none';
+  }
+  const b=document.getElementById('spbadge');
+  if(b){ const n=rows.filter(r=>r.hot).length; b.style.display=n?'':'none'; b.textContent=n; }
+  // orange ring on anything moving in the last minute
+  try{
+    rows.forEach(r=>{ const el=document.getElementById('super_'+r.sym);
+      if(el) el.classList.toggle('sphot', !!r.hot); });
+  }catch(e){}
+}
+
+let lastState=null, NEWS={}, curView='board';
+function poll(){ fetch('/state').then(r=>r.json()).then(s=>{ lastState=s;
+  _pollAt=Date.now(); _pollErr=0;
+  if(curView==='news') pollSectors(); else render(s); })
+  .catch(()=>{ _pollErr++; }); }
+function fmtAge(m){ if(m==null) return ''; if(m<60) return m+'m ago'; const h=Math.floor(m/60); return h<24?h+'h ago':Math.floor(h/24)+'d ago'; }
+/* ---- Dhan overnight news (previous close -> now) ---- */
+function sentChip(s){
+  if(s==='positive') return '<span style="background:#dcfce7;color:#166534;font-weight:700;padding:1px 6px;border-radius:3px">▲ positive</span>';
+  if(s==='negative') return '<span style="background:#fee2e2;color:#991b1b;font-weight:700;padding:1px 6px;border-radius:3px">▼ negative</span>';
+  return '<span style="background:#eef2f7;color:#5f5e5a;padding:1px 6px;border-radius:3px">neutral</span>';
+}
+/* ---- IMPACT column ----
+   Replaces the sentiment column, which could not rank anything: it returned
+   `positive` for 54 of 70 rows. The score is shown WITH its parts so a bad
+   ranking is traceable to the term that caused it. */
+function impactCell(n){
+  const sc=(n.score==null?0:n.score);
+  const col = sc>=60?'#15803d' : sc>=40?'#b45309' : sc>=20?'#6b7280' : '#9ca3af';
+  const p=n.parts||{};
+  const dir=(n.dir==='DOWN');
+  const bar='<div style="height:4px;background:#eef1f4;border-radius:2px;overflow:hidden;margin-top:3px">'
+    +'<i style="display:block;height:100%;width:'+sc+'%;background:'+col+'"></i></div>';
+  let chips='';
+  if(p.pct)  chips+='<span class="lchip" title="largest % change quoted">'+p.pct+'%</span>';
+  if(p.cr)   chips+='<span class="lchip" title="largest rupee figure in the story">₹'+
+                    (p.cr>=1000?(p.cr/1000).toFixed(1)+'k':p.cr)+'cr</span>';
+  if(p.hard) chips+='<span class="lchip" style="background:#eef7ee;border-color:#cfe9d8" title="hard event: results / order / approval / rating">hard</span>';
+  return '<div style="display:flex;align-items:baseline;gap:5px">'
+    +'<span style="font-weight:800;font-size:15px;color:'+col+'">'+sc+'</span>'
+    +'<span style="font-weight:700;font-size:10px;color:'+(dir?'#b91c1c':'#15803d')+'">'
+      +(dir?'▼ DOWN':'▲ UP')+'</span></div>'
+    +bar+'<div style="margin-top:3px">'+chips+'</div>';
+}
+function toverCell(n){
+  const t=n.tover_cr;
+  if(t==null) return '<span style="color:#9ca3af;font-size:11px" title="no quote — tradeability unknown">—</span>';
+  const ok=t>=5, good=t>=25;
+  const col = good?'#15803d' : ok?'#b45309' : '#b91c1c';
+  return '<span style="font-weight:700;color:'+col+';white-space:nowrap">₹'
+    +(t>=100?Math.round(t):t.toFixed(1))+' Cr</span>'
+    +(ok?'':'<div style="font-size:9px;font-weight:700;color:#b91c1c">TOO THIN</div>');
+}
+function renderDhanNews(j){
+  const b=document.getElementById('dnbody'); if(!b) return;
+  const t=document.getElementById('dnts'), s=j.summary||{};
+  // ---- SYNC: this same payload feeds WHY THEY'RE MOVING -------------------
+  // Both sub-tabs now read ONE source. Previously WHY pulled a separate web
+  // feed (Opus2_news), so the same stock could read "no recent news found" on
+  // one sub-tab while the other had a scored Dhan headline for it. Keyed by
+  // symbol here, off the payload already fetched -- no second request.
+  NEWS={};
+  (j.items||[]).forEach(n=>{ const k=(n.sym||'').toUpperCase(); if(k) NEWS[k]=n; });
+  if(curView==='news' && curSub!=='close') pollSectors();
+  if(t) t.textContent='· since '+(s.since||'last close')+' · '+(s.shown||0)+' stocks'
+        +' (from '+(s.count||0)+' items)'
+        +' · ranked by '+(s.live?'actual move':'IMPACT (market shut — no move yet)')
+        +' · '+(s.tradeable||0)+' scalpable / '+(s.thin||0)+' too thin'
+        +' · neutral + filings dropped'+(s.err?(' · '+s.err):'');
+  const items=j.items||[];
+  // ---- attention block: what the market actually reacted to ----
+  const hero=document.getElementById('dnhero');
+  const badge=document.getElementById('dnbadge');
+  const hi=items.filter(x=>x.tier===0);
+  if(badge){ if(hi.length){ badge.style.display=''; badge.textContent=hi.length+' 🔥'; }
+             else badge.style.display='none'; }
+  if(hero){
+    // OVERNIGHT the market has not reacted yet, so day_pct is +0.00% on every
+    // row and printing it made all eight hero cards look identically dead.
+    // Lead with the IMPACT score instead and only show the move once there is
+    // a real one to show.
+    const moved = hi.some(n=>Math.abs(n.day_pct||0) > 0.05);
+    hero.innerHTML = hi.length
+      ? '<div class="herottl">🔥 HIGH IMPACT — '
+        +(moved?'the market moved on these':'ranked before the open — no move yet')
+        +'</div><div class="herogrid">'
+        + hi.slice(0,8).map(n=>{
+            const up=(n.dir!=='DOWN');
+            const dp=n.day_pct;
+            const lead = moved && dp!=null
+              ? ((dp>=0?'+':'')+dp.toFixed(2)+'%')
+              : (n.score==null?'–':n.score);
+            const tv = n.tover_cr!=null
+              ? ('₹'+(n.tover_cr>=100?Math.round(n.tover_cr):n.tover_cr.toFixed(1))+' Cr')
+              : 'turnover ?';
+            return '<div class="herocard '+(up?'up':'dn')+'" onclick="openTV(\''+(n.sym||'')+'\')">'
+              +'<div class="herotop"><span class="herosym">'+(n.sym||'')+'</span>'
+              +'<span class="heropct" style="color:'+(up?'#15803d':'#b91c1c')+'">'+lead+'</span>'
+              +'<span class="herowhen">'+n.when+'</span></div>'
+              +'<div class="herottl2">'+String(n.title||'').replace(/</g,'&lt;')+'</div>'
+              +'<div style="font-size:9px;color:var(--mut);margin-top:3px">'
+                +(moved?'impact '+(n.score==null?'–':n.score)+' · ':'')
+                +tv+' traded · '+(up?'expect UP':'expect DOWN')+'</div></div>';
+          }).join('')+'</div>'
+      : '';
+  }
+  if(!items.length){ b.innerHTML='<tr><td colspan="9" class="empty">'
+      +((s&&s.err)||'no high-impact news since the last close')+'</td></tr>'; return; }
+  let h='', thinHeaderDone=false;
+  items.slice(0,150).forEach(n=>{
+    const dp=n.day_pct, up=(dp||0)>=0;
+    const thin=(n.tradeable===false);
+    // one separator the moment we cross into names you cannot actually scalp,
+    // so the untradeable tail is obviously a different thing and not just
+    // "lower ranked news"
+    if(thin && !thinHeaderDone){
+      thinHeaderDone=true;
+      h+='<tr><td colspan="7" style="background:#fafafa;border-top:2px solid #e5e7eb;'
+        +'color:#b91c1c;font-weight:700;font-size:11px;padding:6px 10px">'
+        +'▼ BELOW ₹5 Cr DAY TURNOVER — not scalpable with ₹10,000 regardless of the headline</td></tr>';
+    }
+    const bg = thin ? '#fcfcfc'
+             : n.tier===0 ? (up?'#f0fdf4':'#fef2f2')
+             : (n.on_board?'#fffbeb':'');
+    const pill = n.tier===0
+      ? '<span class="tierpill" style="background:'+(up?'#15803d':'#b91c1c')+'">HIGH</span>'
+      : (n.tier===1?'<span class="tierpill" style="background:#b45309">MED</span>':'');
+    h+='<tr'+(bg?' style="background:'+bg+(thin?';opacity:.55':'')+'"':'')+'>'
+      +'<td style="white-space:nowrap">'+n.when+'</td>'
+      +'<td><span class="nsym" onclick="openTV(\''+(n.sym||'')+'\')">'+(n.sym||'')+'</span></td>'
+      +'<td style="min-width:118px">'+impactCell(n)+' '+pill+'</td>'
+      +'<td>'+toverCell(n)+'</td>'
+      +'<td class="'+(up?'npos':'nneg')+'" style="font-weight:700;white-space:nowrap">'
+        +(dp!=null?((up?'+':'')+dp.toFixed(2)+'%'):'–')+'</td>'
+      +'<td>'+(n.on_board?'<span class="buychip">ON BOARD</span>':'')+'</td>'
+      +'<td>'+String(n.title||'').replace(/</g,'&lt;')
+          +'<div style="color:var(--mut);font-size:10px;margin-top:1px">'
+          +String(n.text||'').slice(0,170).replace(/</g,'&lt;')+'</div></td>'
+      +'</tr>';
+  });
+  b.innerHTML=h;
+}
+function pollDhanNews(){
+  fetch('/dhannews').then(r=>r.json()).then(j=>{ if(j) renderDhanNews(j); }).catch(()=>{});
+}
+/* WHICH SUB-TAB OPENS FIRST DEPENDS ON THE CLOCK.
+   "Why they're moving" lists BOARD MOVERS annotated with news, so before 09:15
+   it is empty by construction -- there are no movers yet. Opening on it at
+   08:10 makes the whole News tab look broken when in fact 375 headlines are
+   sitting one click away under SINCE LAST CLOSE. */
+function _preOpenNow(){
+  const n=new Date(), hm=n.getHours()*60+n.getMinutes();
+  return n.getDay()>=1 && n.getDay()<=5 ? hm < 9*60+15 : true;
+}
+let curSub = _preOpenNow() ? 'close' : 'why';
+document.addEventListener('DOMContentLoaded',()=>{
+  const w=document.getElementById('tab_why'), c=document.getElementById('tab_close');
+  const sw=document.getElementById('sub-why'), sc=document.getElementById('sub-close');
+  if(w&&c){ (curSub==='close'?c:w).classList.add('on'); }
+  if(sw&&sc){ sw.style.display=(curSub==='why')?'':'none'; sc.style.display=(curSub==='close')?'':'none'; }
+});
+document.querySelectorAll('.subtab').forEach(b=>b.addEventListener('click',()=>{
+  curSub=b.dataset.sub;
+  document.querySelectorAll('.subtab').forEach(x=>x.classList.toggle('on',x===b));
+  document.getElementById('sub-why').style.display=(curSub==='why')?'':'none';
+  document.getElementById('sub-close').style.display=(curSub==='close')?'':'none';
+  if(curSub==='close') pollDhanNews(); else pollSectors();
+}));
+/* SECTORS -- the replacement for WHY THEY'RE MOVING.
+
+   WHY THE OLD TAB WENT
+     It matched board movers against Dhan's news feed by symbol. Measured on
+     01-Sep: 280 movers, 32 with any headline, 10 with a curated one. The tab
+     was not buggy -- "no news" was the CORRECT answer 97% of the time, because
+     small-caps that move 6% before 10:00 are not covered by anyone. A table
+     that is right and useless is still useless.
+
+   WHAT THIS ANSWERS INSTEAD
+     Every row is measured, never guessed:
+       Move now     average day % of the sector's mapped stocks, off the same
+                    full-market sweep the alarm already runs -- no extra request
+       Breadth      how many are up 1%+ vs down 1%+, so one runaway stock cannot
+                    fake a sector move
+       Still going? the sector's average NOW against ~10 minutes ago. This is
+                    the "does the sentiment continue" column, and it is a
+                    measurement, not a forecast
+       News         headlines from the open web since the PREVIOUS SESSION
+                    CLOSE, so last night's 21:40 story is still on screen at
+                    09:08 when he reads the board
+
+   HONEST LIMIT, ON SCREEN
+     NSE's classification covers 752 stocks; the board's universe is 2,455. An
+     unmapped stock is never folded into a sector it might not belong to, and
+     the coverage number is printed in the header rather than hidden. */
+function secTone(r){
+  const n=(r.news_n||0); if(!n) return '<span style="color:var(--mut)">—</span>';
+  const p=r.news_pos||0, g=r.news_neg||0;
+  if(p>g) return '<span style="color:#15803d;font-weight:700">'+p+' pos</span>'+(g?' <span style="color:#b91c1c">'+g+' neg</span>':'');
+  if(g>p) return '<span style="color:#b91c1c;font-weight:700">'+g+' neg</span>'+(p?' <span style="color:#15803d">'+p+' pos</span>':'');
+  return '<span style="color:var(--mut)">'+n+' neutral</span>';
+}
+function secStill(r){
+  // null = we have not been running 10 minutes yet. Say that, rather than
+  // showing a confident arrow built on one snapshot.
+  if(r.continuing==null||r.delta==null)
+    return '<span style="color:var(--mut)" title="needs ~10 minutes of history">building…</span>';
+  const d=r.delta, s=(d>0?'+':'')+d.toFixed(2)+'%';
+  if(r.continuing) return '<span style="color:#15803d;font-weight:800">▲ still going</span>'
+      +'<div style="font-size:9px;color:#15803d">'+s+' in 10m</div>';
+  if(d<-0.05) return '<span style="color:#b91c1c;font-weight:800">▼ fading</span>'
+      +'<div style="font-size:9px;color:#b91c1c">'+s+' in 10m</div>';
+  return '<span style="color:#6b7280;font-weight:700">— flat</span>'
+      +'<div style="font-size:9px;color:#6b7280">'+s+' in 10m</div>';
+}
+function secPct(v){
+  const c=(v>0.05)?'#15803d':((v<-0.05)?'#b91c1c':'#6b7280');
+  return '<b style="font-size:13px;color:'+c+'">'+(v>0?'+':'')+Number(v).toFixed(2)+'%</b>';
+}
+function secStocks(r){
+  // Long only, 09:15-10:30 -- the names that matter are the ones going UP, so
+  // they lead. The worst two are kept because a sector split hard both ways is
+  // NOT a sector move and he should be able to see that at a glance.
+  const up=(r.top||[]).filter(x=>x[1]>0).slice(0,5);
+  const dn=(r.worst||[]).filter(x=>x[1]<0).slice(0,2);
+  if(!up.length&&!dn.length) return '<span style="color:var(--mut)">—</span>';
+  const chip=(x,good)=>'<span class="secchip" style="border-color:'+(good?'#16a34a':'#ef4444')
+      +';color:'+(good?'#14532d':'#7f1d1d')+'" onclick="openTV(\''+x[0]+'\')">'
+      +x[0]+' <b>'+(x[1]>0?'+':'')+x[1]+'%</b></span>';
+  return up.map(x=>chip(x,true)).join('')+dn.map(x=>chip(x,false)).join('');
+}
+function secNews(r){
+  const n=r.news||[];
+  if(!n.length) return '<span style="color:var(--mut)">no headline for this sector since last close — '
+      +'the move is price only</span>';
+  return n.slice(0,3).map(h=>{
+    const col=(h.sentiment==='positive')?'#15803d':((h.sentiment==='negative')?'#b91c1c':'#6b7280');
+    const t=String(h.title||'').replace(/</g,'&lt;');
+    const a=h.url?('<a href="'+h.url+'" target="_blank" rel="noopener" style="color:inherit;text-decoration:none">'+t+'</a>'):t;
+    return '<div style="margin-bottom:3px;line-height:1.25">'
+      +'<span style="color:'+col+';font-weight:800;font-size:9px">●</span> '+a
+      +'<span class="nsrc">'+(h.src||'')+(h.when?(' · '+h.when):'')
+      +(h.via?(' · via '+h.via):'')+'</span></div>';
+  }).join('');
+}
+function renderSectors(j){
+  const body=document.getElementById('secbody'); if(!body) return;
+  const rows=j.rows||[], m=j.meta||{};
+  const ts=document.getElementById('secliv');
+  if(ts){
+    let bits=[rows.length+' sectors moving', (m.mapped||0)+' stocks mapped by NSE'];
+    if(m.headlines!=null) bits.push(m.headlines+' headlines since '+(m.cutoff||'last close'));
+    if(m.span_min) bits.push(m.span_min+'m of history');
+    if(m.err) bits.push('⚠ '+m.err);
+    ts.textContent='· '+bits.join(' · ');
+  }
+  // market-wide strip: the driver that belongs to no single sector
+  const mk=document.getElementById('secmkt');
+  if(mk){
+    const items=(j.market||[]).slice(0,4);
+    mk.innerHTML = items.length
+      ? '<div class="secmkt"><b>MARKET</b>'+items.map(h=>{
+          const col=(h.sentiment==='positive')?'#15803d':((h.sentiment==='negative')?'#b91c1c':'#6b7280');
+          const t=String(h.title||'').replace(/</g,'&lt;');
+          return '<span class="secmkti"><span style="color:'+col+'">●</span> '
+            +(h.url?('<a href="'+h.url+'" target="_blank" rel="noopener">'+t+'</a>'):t)
+            +' <i>'+(h.src||'')+'</i></span>';
+        }).join('')+'</div>'
+      : '';
+  }
+  const badge=document.getElementById('secbadge');
+  if(badge){
+    const hot=rows.filter(r=>r.continuing===true).length;
+    badge.style.display=hot?'':'none'; badge.textContent=hot;
+  }
+  if(!rows.length){
+    body.innerHTML='<tr><td colspan="8" class="empty">'
+      +(m.err?('sector view unavailable — '+m.err)
+             :(_preOpenNow()
+                ? 'The market has not opened. Sector breadth is measured off live prices, '
+                  +'so this fills from 09:15. Overnight news is under <b>🌙 SINCE LAST CLOSE</b>.'
+                : 'no sector is moving enough to call yet — a sector needs 3+ mapped stocks'))
+      +'</td></tr>'; return;
+  }
+  let html='';
+  rows.forEach((r,i)=>{
+    // A sector still going gets a green rail, the way a NO-DIP card does.
+    const rail=(r.continuing===true)?'border-left:3px solid #16a34a':
+               ((r.continuing===false&&r.delta<-0.05)?'border-left:3px solid #ef4444':'');
+    html+='<tr style="'+rail+'">'
+      +'<td>'+(i+1)+'</td>'
+      +'<td><b>'+r.sector+'</b><div style="font-size:9px;color:var(--mut)">'+r.n+' stocks</div></td>'
+      +'<td>'+secPct(r.avg_pct)+'</td>'
+      +'<td><b style="color:#15803d">'+r.up+' up</b> / <b style="color:#b91c1c">'+r.dn+' dn</b>'
+        +'<div style="font-size:9px;color:var(--mut)">'+r.breadth+'% of '+r.n+'</div></td>'
+      +'<td>'+secStill(r)+'</td>'
+      +'<td>₹'+(r.tover_cr!=null?r.tover_cr:'–')+' Cr</td>'
+      +'<td>'+secStocks(r)+'</td>'
+      +'<td>'+secNews(r)+'<div style="margin-top:2px">'+secTone(r)+'</div></td>'
+      +'</tr>';
+  });
+  body.innerHTML=html;
+}
+let _secBusy=false;
+function pollSectors(){
+  if(_secBusy) return; _secBusy=true;
+  fetch('/sectors').then(r=>r.json()).then(j=>{ _secBusy=false;
+    if(j&&j.ok!==false) renderSectors(j);
+    else { const b=document.getElementById('secbody');
+      if(b) b.innerHTML='<tr><td colspan="8" class="empty">'+((j&&j.err)||'sector feed error')+'</td></tr>'; }
+  }).catch(()=>{ _secBusy=false; });
+}
+/* Poll only while the tab is actually on screen. The old news poll ran forever
+   in the background; there is no reason to hold a request open for a table
+   nobody is looking at. */
+setInterval(function(){
+  const v=document.getElementById('view-news');
+  if(v&&v.style.display!=='none'&&curSub==='why') pollSectors();
+}, 15000);
+/* ===================== PRE-MARKET (09:00-09:15) ===================== */
+function poVerdictStyle(v){
+  if(v==='STRONG GAP-UP')   return '#15803d';
+  if(v==='GAP-UP')          return '#16a34a';
+  if(v==='STRONG GAP-DOWN') return '#b91c1c';
+  if(v==='GAP-DOWN')        return '#ef4444';
+  return '#9ca3af';
+}
+function poTrend(r){
+  const x=(r.trend_x!=null)?(' ×'+r.trend_x):'';
+  if(r.trend==='rising')  return '<span style="color:#15803d;font-weight:700">▲ buying'+x+'</span>';
+  if(r.trend==='selling') return '<span style="color:#b91c1c;font-weight:700">▼ selling'+x+'</span>';
+  if(r.trend==='fading')  return '<span style="color:#6b7280">▽ fading'+x+'</span>';
+  if(r.trend==='easing')  return '<span style="color:#6b7280">△ easing'+x+'</span>';
+  if(r.trend==='new')     return '<span style="color:#6b7280">new</span>';
+  return '<span style="color:#6b7280">— flat'+x+'</span>';
+}
+function renderPreopen(j){
+  const body=document.getElementById('pobody'); if(!body) return;
+  const ts=document.getElementById('pots');
+  if(ts) ts.textContent = (j.window?('· live '+(j.ts||'')):'· window closed')+(j.note?(' · '+j.note):'');
+  const rows=j.rows||[];
+  if(!rows.length){
+    body.innerHTML='<tr><td colspan="9" class="empty">'
+      +(j.window?'no qualifying gaps yet — waiting for the book to build'
+                :'pre-open runs 09:00–09:15. Nothing to show outside that window.')
+      +'</td></tr>'; return;
+  }
+  let h='';
+  rows.forEach((r,i)=>{
+    const up=(r.side==='UP');
+    h+='<tr>'
+      +'<td>'+(i+1)+'</td>'
+      +'<td><span class="nsym" onclick="openTV(\''+r.sym+'\')">'+r.sym+'</span></td>'
+      +'<td>₹'+r.price+'</td>'
+      +'<td class="'+(up?'npos':'nneg')+'" style="font-weight:700">'+(r.pct>=0?'+':'')+r.pct+'%</td>'
+      +'<td>'+dfmt(r.buy_qty)+' / '+dfmt(r.sell_qty)+'</td>'
+      +'<td class="'+(up?'npos':'nneg')+'" style="font-weight:700">'+(r.imb!=null?r.imb+'×':'–')+'</td>'
+      +'<td>₹'+dfmt(up?r.bid_val:r.ask_val)+'</td>'
+      +'<td>'+poTrend(r)+'</td>'
+      +'<td><span style="background:'+poVerdictStyle(r.verdict)+';color:#fff;padding:1px 6px;border-radius:3px;font-weight:700;font-size:10px">'+r.verdict+'</span></td>'
+      +'</tr>';
+  });
+  body.innerHTML=h;
+}
+function pollPreopen(){
+  fetch('/preopen').then(r=>r.json()).then(renderPreopen).catch(()=>{});
+}
+/* ================= PREMARKET PREDICTOR =================
+   The 09:00 call against reality. Deliberately shows BOTH reality numbers:
+   day % (which flatters, because it contains the un-tradeable opening gap) and
+   the open-to-now move, which is the only part a 09:00 call could have caught.
+   A tab that showed only day % would report 80% accuracy on data whose honest
+   tradeable accuracy is 54%. */
+let PD_DAY=null, PD_FILTER='all';
+function pdVerdictStyle(v){
+  if(v==='HIT')            return ['#dcfce7','#14532d','#16a34a'];
+  if(v==='HIT (weak)')     return ['#ecfccb','#3f6212','#84cc16'];
+  if(v==='HIT (gap only)') return ['#fef9c3','#854d0e','#eab308'];
+  if(v==='TOO SMALL')      return ['#f1f5f9','#475569','#94a3b8'];
+  if(v==='GAP-FADED')      return ['#ffedd5','#9a3412','#f97316'];
+  if(v==='MISS')           return ['#fee2e2','#7f1d1d','#ef4444'];
+  return ['#f8fafc','#94a3b8','#e2e8f0'];
+}
+function renderPredictor(j){
+  const b=document.getElementById('pdbody'); if(!b) return;
+  const s=(j&&j.summary)||{}, all=(j&&j.rows)||[];
+  PD_DAY=(j&&j.day)||null;
+  /* ---- day picker + verdict filter ---- */
+  const bar=document.getElementById('f_pd');
+  if(bar){
+    const days=(j&&j.days)||[], today=(j&&j.today)||null;
+    const fmt=d=>d?(d.slice(6,8)+'-'+['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'][+d.slice(4,6)-1]):'';
+    bar.innerHTML='<label>Session</label>'
+      +days.map(d=>'<button class="scbtn'+(d===PD_DAY?' on':'')+'" data-pdday="'+d+'">'
+        +(d===today?'TODAY · ':'')+fmt(d)+'</button>').join('')
+      +'<span style="width:10px"></span><label>Show</label>'
+      +['all','MISS','GAP-FADED','TOO SMALL','HIT'].map(f=>
+         '<button class="scbtn'+(f===PD_FILTER?' on':'')+'" data-pdf="'+f+'">'+f+'</button>').join('');
+    bar.querySelectorAll('[data-pdday]').forEach(x=>x.onclick=()=>{
+      PD_DAY=x.getAttribute('data-pdday'); pollPredictor(); });
+    bar.querySelectorAll('[data-pdf]').forEach(x=>x.onclick=()=>{
+      PD_FILTER=x.getAttribute('data-pdf'); renderPredictor(_pdlast); });
+  }
+  const ts=document.getElementById('pdts');
+  if(ts) ts.textContent='· '+(s.total||0)+' calls · '+(s.scored||0)+' scored'
+      +(s.hit_pct!=null?('  ·  day% hit '+s.hit_pct+'%'):'')
+      +(s.hit_intraday_pct!=null?('  ·  TRADEABLE hit '+s.hit_intraday_pct+'%'):'')
+      +(s.err?('  ·  '+s.err):'');
+  /* ---- headline summary: the recurring fix is the actionable output ---- */
+  const sum=document.getElementById('pdsum');
+  if(sum){
+    const v=s.verdicts||{};
+    const chips=Object.keys(v).sort((a,b)=>v[b]-v[a]).map(k=>{
+      const [bg,fg,bd]=pdVerdictStyle(k);
+      return '<span style="display:inline-block;background:'+bg+';color:'+fg+';border:1px solid '+bd
+        +';border-radius:4px;padding:2px 7px;font-size:11px;font-weight:700;margin-right:5px">'
+        +k+' '+v[k]+'</span>';}).join('');
+    sum.innerHTML = (s.scored
+      ? '<div style="font-size:11.5px;color:#374151;background:#f8fafc;border:1px solid var(--bd);'
+        +'border-left:4px solid #0d1b2a;border-radius:6px;padding:9px 12px;line-height:1.7">'
+        +chips
+        +(s.hit_pct!=null && s.hit_intraday_pct!=null
+          ? '<br><b>Day % says '+s.hit_pct+'% right. Tradeable says '+s.hit_intraday_pct+'%.</b> '
+            +'The difference is opening gap you could not have captured.'
+          : '')
+        +(s.top_fix?('<br><b>Most common fix ('+s.top_fix_n+'×):</b> '+s.top_fix):'')
+        /* Candidate features are measured continuously and only enter the score
+           once they clear the base rate on >=25 outcomes. Reporting "none yet"
+           is the honest state, not a bug. */
+        +((s.edges&&s.edges.length)
+          ? ('<br><b style="color:#15803d">Features that have earned their way in:</b> '
+             +s.edges.map(e=>e.feature+' '+e.p+'% ('+e.ci[0]+'–'+e.ci[1]+'%, n='+e.n+')').join(' · '))
+          : ('<br><span style="color:var(--mut)">No candidate feature has yet cleared the base '
+             +'rate on ≥25 outcomes'+(s.calib_n!=null?(' — '+s.calib_n+' scored so far'):'')
+             +'. Run-up, margin position and inflection are being recorded and measured; '
+             +'they enter Chance only when the data supports it.</span>'))
+        +'</div>'
+      : '<div class="s1rules"'+(s.live?' style="border-left-color:#2563eb"':'')+'>'
+        +(s.live
+          ? '<b style="color:#1d4ed8">● LIVE'
+            +(s.for_session?(' — for '+s.for_session):'')+'.</b> '+(s.err||'')
+          : (s.err||'No reality figures for this session yet — the scorer fills '
+             +'these from 09:20 onward, every 5 minutes.'))
+        +'</div>');
+  }
+  let rows=all;
+  if(PD_FILTER!=='all') rows=all.filter(r=>(r.verdict||'').indexOf(PD_FILTER)===0);
+  const badge=document.getElementById('pdbadge');
+  if(badge){ const nm=all.filter(r=>r.verdict==='MISS').length;
+    if(nm){ badge.style.display=''; badge.textContent=nm+' miss'; } else badge.style.display='none'; }
+  if(!rows.length){ b.innerHTML='<tr><td colspan="10" class="empty">'
+      +(all.length ? 'no rows match this filter'
+                   : (s.err || 'no calls recorded for this session'))
+      +'</td></tr>'; return; }
+  let html='';
+  rows.forEach(r=>{
+    const up=(r.direction==='UP');
+    const imp = r.direction
+      ? '<span style="font-weight:800;font-size:11px;color:'+(up?'#15803d':'#b91c1c')+'">'
+        +(up?'▲ BULL':'▼ BEAR')+'</span>'
+      : '<span style="color:var(--mut)">–</span>';
+    const sev=r.severity||0;
+    const sevLbl = sev>=70?'HIGH':(sev>=40?'MED':'LOW');
+    const sevCol = sev>=70?'#b91c1c':(sev>=40?'#b45309':'#64748b');
+    const ch=r.chance;
+    const act=r.actual_pct, intr=r.intraday_pct;
+    const reality = (act==null)
+      ? '<span style="color:var(--mut)">pending</span>'
+      : '<span class="'+(act>=0?'npos':'nneg')+'" style="font-weight:800">'+(act>=0?'+':'')+act+'%</span>'
+        +'<div style="font-size:9px;color:var(--mut)">day%</div>'
+        +(intr!=null?('<span class="'+(intr>=0?'npos':'nneg')+'" style="font-weight:700;font-size:11px">'
+            +(intr>=0?'+':'')+intr+'%</span><div style="font-size:9px;color:var(--mut)">tradeable</div>'):'');
+    const [bg,fg,bd]=pdVerdictStyle(r.verdict);
+    html+='<tr>'
+      +'<td style="font-size:10.5px;color:var(--mut)">'+(r.when||'–')+'</td>'
+      +'<td><span class="nsym" onclick="openTV(\''+r.sym+'\')">'+(r.sym||'–')+'</span>'
+        +'<div style="margin-top:2px"><span style="display:inline-block;background:'+bg+';color:'+fg
+        +';border:1px solid '+bd+';border-radius:3px;padding:1px 5px;font-size:9px;font-weight:800">'
+        +(r.verdict||'PENDING')+'</span></div></td>'
+      +'<td>'+imp+'</td>'
+      +'<td style="font-weight:800">'+(ch!=null?ch+'%':'–')
+        /* The interval is not decoration. 57% on 89 samples means the true rate
+           is somewhere in 47-67% — printing 57% alone implies precision that
+           does not exist. */
+        +((r.chance_lo!=null&&r.chance_hi!=null)
+          ? ('<div style="font-size:8.5px;font-weight:600;color:var(--mut)" title="'
+             +(r.chance_basis||'')+'">'+r.chance_lo+'–'+r.chance_hi+'%'
+             +(r.chance_n?(' · n='+r.chance_n):'')+'</div>') : '')
+        /* The auction's opinion sits BESIDE the chance, never inside it — it
+           predicts the opening gap, which is the part you cannot trade. */
+        +(r.confirm?('<div style="margin-top:2px;font-size:8.5px;font-weight:800;'
+          +'color:'+(/^CONF/i.test(r.confirm)?'#15803d':'#b91c1c')+'" title="'
+          +String(r.confirm_detail||'').replace(/"/g,'')+'">'+r.confirm+'</div>'):'')
+        +'</td>'
+      +'<td><b style="color:'+sevCol+'">'+sevLbl+'</b>'
+        +'<div style="font-size:9px;color:var(--mut)">'+sev+'/100</div></td>'
+      +'<td style="font-size:11px">'+(r.event||'–')+'</td>'
+      /* CONTEXT the headline does not carry. This is the whole reason the
+         forensics were done: PAT -63% reads as bad until you see revenue +9.6%
+         and a margin sitting at the bottom of its own 3-year range. */
+      +'<td style="font-size:11px">'+String(r.title||'').replace(/</g,'&lt;')
+        +(function(){
+           const b=[];
+           if(r.sales_yoy!=null) b.push('<b>rev '+(r.sales_yoy>=0?'+':'')+r.sales_yoy+'%</b>');
+           if(r.opm_now!=null) b.push('OPM '+r.opm_now+'%'
+             +(r.opm_pos_pct!=null?(' <span style="color:'+(r.opm_pos_pct<=25?'#b91c1c':(r.opm_pos_pct>=75?'#15803d':'#64748b'))
+               +'">('+r.opm_pos_pct+'% of own range)</span>'):''));
+           if(r.runup_3d!=null) b.push('ran '+(r.runup_3d>=0?'+':'')+r.runup_3d+'% in 3d');
+           if(r.pos_20d!=null) b.push(r.pos_20d+'% of 20d range');
+           if(r.inflection) b.push('<b style="color:#15803d">INFLECTION</b>');
+           if(r.sector) b.push('<span style="color:var(--mut)">'+r.sector+'</span>');
+           return b.length?('<div style="margin-top:3px;font-size:9.5px;color:#475569">'
+                            +b.join(' · ')+'</div>'):'';
+         })()
+        +'</td>'
+      +'<td>'+reality+'</td>'
+      +'<td style="font-size:11px;color:#374151">'+String(r.gap||'').replace(/</g,'&lt;')+'</td>'
+      +'<td style="font-size:11px;color:#7f1d1d">'+String(r.fix||'').replace(/</g,'&lt;')+'</td>'
+      +'</tr>';
+  });
+  b.innerHTML=html;
+}
+let _pdlast=null;
+function pollPredictor(){
+  fetch('/predictor'+(PD_DAY?('?day='+PD_DAY):''))
+    .then(r=>r.json()).then(j=>{ _pdlast=j; renderPredictor(j); }).catch(()=>{});
+}
+/* ---- pre-market NEWS SETUP (severity before the open) ---- */
+function sevBar(v){
+  const col = v>=60?'#b91c1c' : v>=40?'#b45309' : '#9ca3af';
+  const lab = v>=60?'HIGH' : v>=40?'MED' : 'low';
+  return '<div style="font-weight:700;color:'+col+'">'+v+'</div>'
+        +'<div style="font-size:8px;color:'+col+'">'+lab+'</div>';
+}
+function renderPremkt(j){
+  const b=document.getElementById('pmbody'); if(!b) return;
+  const ts=document.getElementById('pmts'), tr=document.getElementById('pmtrack');
+  if(ts) ts.textContent='· '+(j.ts||'')+(j.phase?(' · '+j.phase):'');
+  const t=j.track||{};
+  if(tr) tr.innerHTML = t.ready
+    ? 'measured 5-min hit-rate — 80+ '+((t['80+']||{}).rate??'–')+'% · 60-79 '+((t['60-79']||{}).rate??'–')
+      +'% · 40-59 '+((t['40-59']||{}).rate??'–')+'% <span style="color:#9ca3af">('
+      +t.samples+' calls / '+t.sessions+' sessions · '+(t.scalpable_pct??'–')+'% offered a ≥0.5% scalp)</span>'
+    : '<span style="color:#b45309">chance = model score (news + pre-open book). '
+      +(t.note||'')+'</span>';
+  const rows=j.rows||[];
+  if(!rows.length){ b.innerHTML='<tr><td colspan="9" class="empty">no scored overnight news yet</td></tr>'; return; }
+  let h='';
+  rows.slice(0,60).forEach(r=>{
+    const ch=r.chance||0, up=(r.direction==='UP');
+    const bg = ch>=70?(up?'#f0fdf4':'#fef2f2') : (ch>=50?'#fffbeb':'');
+    const dcol = up?'#15803d':(r.direction==='DOWN'?'#b91c1c':'#9ca3af');
+    let mag='–';
+    if(r.mag_pct!=null) mag=r.mag_pct+'%';
+    else if(r.mag_amount_cr!=null) mag='₹'+Math.round(r.mag_amount_cr)+'Cr';
+    const P=r.params||{};
+    const pstr=Object.keys(P).map(k=>{
+      const v=P[k], c=v==='up'?'#15803d':(v==='down'?'#b91c1c':'#9ca3af');
+      const a=v==='up'?'▲':(v==='down'?'▼':'~');
+      return '<span style="color:'+c+';font-size:9px;margin-right:4px">'+a+k+'</span>';
+    }).join('')||'<span style="color:var(--mut);font-size:9px">–</span>';
+    let pre='<span style="color:var(--mut)">—</span>';
+    if(r.pre_gap!=null){
+      const gu=r.pre_gap>=0;
+      pre='<span style="font-weight:700;color:'+(gu?'#15803d':'#b91c1c')+'">'
+         +(gu?'+':'')+r.pre_gap+'%</span>'
+         +(r.pre_imb!=null?' <span style="font-size:9px;color:var(--mut)">'+r.pre_imb+'×</span>':'')
+         +(r.confirmed===false?'<div style="font-size:9px;color:#b91c1c">✗ book disagrees</div>':'');
+    }
+    h+='<tr'+(bg?' style="background:'+bg+'"':'')+'>'
+      +'<td><div style="font-size:17px;font-weight:700;color:'+dcol+';line-height:1.1">'+ch+'%</div>'
+        +'<div style="font-size:9px;font-weight:700;color:'+dcol+'">'+(r.direction||'')+'</div></td>'
+      +'<td style="text-align:center">'+sevBar(r.severity)+'</td>'
+      +'<td><span class="nsym" onclick="openTV(\''+(r.sym||'')+'\')">'+(r.sym||'')+'</span></td>'
+      +'<td>'+(r.event||'')+'</td>'
+      +'<td style="font-weight:700">'+mag+'</td>'
+      +'<td>'+pstr+'</td>'
+      +'<td>'+(r.size||'')+'</td>'
+      +'<td>'+pre+'</td>'
+      +'<td>'+String(r.title||'').replace(/</g,'&lt;')
+        +'<div style="font-size:9px;color:var(--mut)">'+(r.when||'')+'</div></td>'
+      +'</tr>';
+  });
+  b.innerHTML=h;
+}
+function pollPremkt(){
+  fetch('/premarket').then(r=>r.json()).then(j=>{ if(j) renderPremkt(j); }).catch(()=>{});
+}
+let curPsub='setup';
+document.querySelectorAll('.subtab[data-psub]').forEach(b=>b.addEventListener('click',()=>{
+  curPsub=b.dataset.psub;
+  document.querySelectorAll('.subtab[data-psub]').forEach(x=>x.classList.toggle('on',x===b));
+  document.getElementById('psub-setup').style.display=(curPsub==='setup')?'':'none';
+  document.getElementById('psub-book').style.display=(curPsub==='book')?'':'none';
+  if(curPsub==='setup') pollPremkt(); else pollPreopen();
+}));
+document.querySelectorAll('.tab').forEach(b=>b.addEventListener('click',()=>{
+  curView=b.dataset.view;
+  document.querySelectorAll('.tab').forEach(x=>x.classList.toggle('on',x===b));
+  document.getElementById('view-board').style.display=(curView==='board')?'':'none';
+  document.getElementById('view-news').style.display=(curView==='news')?'':'none';
+  document.getElementById('view-predictor').style.display=(curView==='predictor')?'':'none';
+  document.getElementById('view-super').style.display=(curView==='super')?'':'none';
+  document.getElementById('view-superlab').style.display=(curView==='superlab')?'':'none';
+  document.getElementById('view-paper').style.display=(curView==='paper')?'':'none';
+  document.getElementById('view-live').style.display=(curView==='live')?'':'none';
+  document.getElementById('view-tiers').style.display=(curView==='tiers')?'':'none';
+  document.getElementById('view-alarm').style.display=(curView==='alarm')?'':'none';
+  document.getElementById('view-preopen').style.display=(curView==='preopen')?'':'none';
+  document.getElementById('view-watchlist').style.display=(curView==='watchlist')?'':'none';
+  if(curView==='super'){ if(lastState){ _sig.super=null; render(lastState); } }
+  if(curView==='superlab'){ if(lastState){ _sig.super=null; render(lastState); } }
+  if(curView==='paper'){ /* nothing auto-runs: he presses BACK TRADE */ }
+  if(curView==='tiers'){ pollTiers(); }
+  if(curView==='live'){ pollLive(); }
+  else if(curView==='watchlist'){ pollWatchlist(); }
+  else if(curView==='news'){ pollDhanNews(); pollSectors(); }
+  else if(curView==='predictor'){ pollPredictor(); }
+  else if(curView==='alarm'){ pollAlarm(); }
+  else if(curView==='preopen'){ pollPremkt(); pollPreopen(); }
+  else if(lastState){ _sig.bt=null; _sig.ov=null; _sig.super=null; render(lastState); }  // force redraw on tab switch
+}));
+// keep charts sized to their card when the window/columns change
+let _rz;
+window.addEventListener('resize',()=>{ clearTimeout(_rz); _rz=setTimeout(()=>{
+  for(const id in charts){ const o=charts[id], card=document.getElementById(id);
+    if(!o||!card) continue;
+    const w=(card.querySelector(".chart")||card).clientWidth||card.clientWidth||200;
+    try{ o.pc.resize(w,CH_H); o.mc.resize(w,MACD_H);
+         o.pc.timeScale().fitContent(); o.mc.timeScale().fitContent();
+         drawCloud(o,o._ch); drawZones(o,o._ch); drawMarkers(o,o._ch); }catch(e){}
+  }
+},180); });
+poll(); setInterval(poll,5000);
+/* The old 25s /news poll is gone -- WHY THEY'RE MOVING now reads the Dhan feed
+   that pollDhanNews already fetches, so there is no second news request. */
+/* ================= 1-MIN ALARM =================
+   Two numbers, nothing else: move from TODAY'S OPEN, and rupees traded in the
+   last ~60s. Day % is deliberately absent -- a stock that gapped +4% and has
+   since done nothing scores identically to one igniting right now, which is
+   exactly the confusion that hid Motherson. */
+function alMoney(cr){
+  if(cr==null) return '–';
+  return '₹'+(cr>=100?Math.round(cr):cr.toFixed(2))+' Cr';
+}
+function renderAlarm(j){
+  const b=document.getElementById('albody'); if(!b) return;
+  const s=(j&&j.summary)||{}, rows=(j&&j.rows)||[];
+  const t=document.getElementById('alts');
+  if(t) t.textContent = s.live
+      ? '· scanning '+(s.swept||0)+' of '+(s.universe||0)+' NSE EQ stocks'
+        +' · window '+(s.window_s||60)+'s'
+        +' · '+(s.up||0)+' firing up / '+(s.down||0)+' down'
+        +' · floor ₹'+(s.min_val_cr||0.5)+' Cr per minute & '+(s.min_move||1)+'% from open'
+        +' · '+(s.ts||'')
+      : '· market closed — the alarm only means anything between 09:15 and 15:30';
+  const badge=document.getElementById('albadge');
+  if(badge){ const up=s.up||0;
+    if(up){ badge.style.display=''; badge.textContent=up; } else badge.style.display='none'; }
+  if(!rows.length){
+    b.innerHTML='<tr><td colspan="9" class="empty">'
+      +(s.err? ('error: '+s.err)
+        : (s.live? 'nothing igniting — no stock has traded ₹'+(s.min_val_cr||0.5)
+                   +' Cr in the last minute while more than '+(s.min_move||1)+'% from its open'
+                 : 'waiting for 09:15'))
+      +'</td></tr>';
+    return;
+  }
+  let h='', sepDone=false;
+  rows.forEach(r=>{
+    if(r.dir==='DOWN' && !sepDone){
+      sepDone=true;
+      h+='<tr class="alsep"><td colspan="9">▼ FALLING — short side, same two rules inverted</td></tr>';
+    }
+    const up=(r.dir==='UP');
+    // "hot" = the ignition is still accelerating in the last 60s, not just today
+    const hot=(up? r.pct_60s>=0.3 : r.pct_60s<=-0.3);
+    const col=up?'#15803d':'#b91c1c';
+    const e=(r.edge==null?null:Math.round(r.edge*100));
+    const q=r.quality;
+    const qc = q>=80?'#15803d' : q>=68?'#2563eb' : '#b45309';
+    h+='<tr class="'+(up?'alrow-up':'alrow-dn')+(hot?' alhot':'')+'">'
+      +'<td><div style="display:flex;align-items:baseline;gap:5px">'
+        +'<span style="font-weight:800;font-size:17px;color:'+qc+'">'+(q==null?'–':q)+'</span>'
+        +'<span style="font-size:8.5px;font-weight:700;color:'+qc+'">'
+          +(q>=80?'PRIME':(q>=68?'STRONG':'OK'))+'</span></div>'
+        +'<div style="height:4px;background:#eef1f4;border-radius:2px;overflow:hidden;margin-top:3px">'
+        +'<i style="display:block;height:100%;width:'+(q||0)+'%;background:'+qc+'"></i></div>'
+        +'<div style="font-size:8px;color:var(--mut);margin-top:2px" '
+        +'title="money now / still moving / can exit / position in range">'
+        +'₹'+(r.q_money||0)+' ·↗'+(r.q_thrust||0)+' ·◈'+(r.q_depth||0)+' ·◐'+(r.q_pos||0)+'</div></td>'
+      +'<td><span class="aldir '+(up?'up':'dn')+'">'+(up?'▲ UP':'▼ DOWN')+'</span></td>'
+      +'<td><span class="nsym" onclick="openTV(\''+r.sym+'\')">'+r.sym+'</span></td>'
+      +'<td class="albig" style="color:'+col+'">'+(r.pct_open>=0?'+':'')+r.pct_open+'%'
+        +'<div style="font-size:9px;font-weight:500;color:var(--mut)">open ₹'+r.open+'</div></td>'
+      +'<td class="almoney">'+alMoney(r.val_1m_cr)+'</td>'
+      +'<td style="font-weight:700;color:'+(r.pct_60s>=0?'#15803d':'#b91c1c')+'">'
+        +(r.pct_60s>=0?'+':'')+r.pct_60s+'%'+(hot?' 🔥':'')+'</td>'
+      +'<td style="font-weight:700">₹'+r.price+'</td>'
+      +'<td>'+(e==null?'–':e+'%')
+        +'<div class="alrng"><i style="width:'+(e==null?0:e)+'%;background:'+col+'"></i></div></td>'
+      +'<td style="color:'+(r.tover_cr>=25?'#15803d':'#b45309')+';font-weight:700">₹'+r.tover_cr+' Cr</td>'
+      +'</tr>';
+  });
+  b.innerHTML=h;
+}
+function pollAlarm(){
+  fetch('/alarm').then(r=>r.json()).then(renderAlarm).catch(()=>{});
+}
+/* ================= Scanner1 (RLB) =================
+   Cards are built by the SAME mkCard()/drawCharts() the board uses, off payloads
+   built by the SAME build_card() on the server. Nothing about the card is
+   re-implemented here -- only WHICH stocks are in the list differs, which is
+   exactly what was asked for. A separate `_s1sig` guard stops the 20s poll from
+   destroying and rebuilding every chart when nothing has changed. */
+/* An empty scanner has three very different causes and they must not look the
+   same. "Still building bars" is a countdown, not a fault -- the tick builder
+   needs ~13 minutes of 30s bars after a restart before either scanner CAN
+   return anything, and showing a bare "nothing found" there made a warming-up
+   board look broken. */
+function emptyWhy(j,s,noneMsg){
+  if(j&&j.err) return 'error: '+j.err;
+  if(s&&s.err) return 'error: '+s.err;
+  const w=s&&s.warmup;
+  if(w && s.min_bars && w.ready===0){
+    return 'building 30-second bars — '+w.tracked+' stocks tracked, '
+      +w.polls+' polls so far. Needs '+s.min_bars+' bars ('
+      +Math.round(s.min_bars*0.5)+' min) before it can score anything.';
+  }
+  if(w && s.min_bars && w.ready < 10){
+    return 'warming up — only '+w.ready+' of '+w.tracked
+      +' stocks have the '+s.min_bars+' bars needed yet';
+  }
+  if(s&&s.scanning) return 'scanning…';
+  return noneMsg;
+}
+/* ================= MORNING WATCHLIST =================
+   The alarm is the point of this tab. A name arriving AFTER 09:15 is one that no
+   pre-open list could have caught -- LUMAXTECH published Q1 at 09:41 and ran
+   3.8% -- so it has to interrupt you rather than wait to be noticed.
+
+   Sound is generated with the Web Audio API rather than an audio file so there
+   is nothing to ship and nothing to go missing. Browsers refuse to start audio
+   until the user has interacted with the page, so the context is resumed on the
+   first click anywhere and the tab carries a "test alarm" button to prove it
+   works BEFORE you are relying on it. */
+let _wlAudio=null, _wlAlerted={}, _wlSig=null;
+function wlCtx(){
+  if(!_wlAudio){ try{ _wlAudio=new (window.AudioContext||window.webkitAudioContext)(); }catch(e){} }
+  if(_wlAudio && _wlAudio.state==='suspended'){ _wlAudio.resume().catch(()=>{}); }
+  return _wlAudio;
+}
+document.addEventListener('click',()=>wlCtx(),{once:false});
+function wlBeep(times){
+  const mu=document.getElementById('wlmute');
+  if(mu && mu.checked) return;
+  const ctx=wlCtx(); if(!ctx) return;
+  const n=times||5;
+  for(let i=0;i<n;i++){
+    const t0=ctx.currentTime+i*0.42;
+    const o=ctx.createOscillator(), g=ctx.createGain();
+    o.type='square';
+    o.frequency.setValueAtTime(880,t0);
+    o.frequency.setValueAtTime(1320,t0+0.16);
+    g.gain.setValueAtTime(0.0001,t0);
+    g.gain.exponentialRampToValueAtTime(0.35,t0+0.03);   // loud, then decay
+    g.gain.exponentialRampToValueAtTime(0.0001,t0+0.34);
+    o.connect(g); g.connect(ctx.destination);
+    o.start(t0); o.stop(t0+0.36);
+  }
+}
+function renderWatchlist(j){
+  /* A RELAXED list is provisional and must say so. The tab going blank was bad;
+     a blank-looking-clean list built on dropped filters would be worse. */
+  try{
+    const s=(j&&j.summary)||{}, note=document.getElementById('wlrelax');
+    if(note){
+      if(s.relaxed){
+        note.style.display='';
+        note.innerHTML='<b>⚠ Provisional list.</b> Every candidate failed the '
+          +(s.relaxed===1?'<b>liquidity</b> check':'<b>liquidity and price</b> checks')
+          +', so those floors were dropped to avoid showing you nothing. '
+          +'Verify turnover before trading these.';
+      } else note.style.display='none';
+    }
+  }catch(e){}
+
+  const b=document.getElementById('wlbody'); if(!b) return;
+  const s=(j&&j.summary)||{}, rows=(j&&j.rows)||[];
+  const t=document.getElementById('wlts');
+  if(t) t.textContent=(j&&j.ok)
+    ? '· '+(s.raw||0)+' news items → '+(s.kept||0)+' qualify → showing '+(s.shown||0)
+      +'  ·  ▲ '+(s.bull||0)+' bullish / ▼ '+(s.bear||0)+' bearish'
+      +(s.new_since_open?('  ·  '+s.new_since_open+' NEW since the open'):'')
+      +(s.ts?('  ·  '+s.ts):'')
+    : '· '+((j&&j.err)||'watchlist not loaded');
+  const badge=document.getElementById('wlbadge');
+  if(badge){ const n=s.new_since_open||0;
+    if(n){ badge.style.display=''; badge.textContent=n; } else badge.style.display='none'; }
+  // ---- ALARM: fire once per newly-arrived symbol, never repeat for the same one
+  const fresh=rows.filter(r=>r.alarm && !_wlAlerted[r.sym]);
+  if(fresh.length){
+    fresh.forEach(r=>{ _wlAlerted[r.sym]=1; });
+    wlBeep(6);
+    try{ document.title='🔔 '+fresh.map(r=>r.sym).join(', ')+' — Movers Board'; }catch(e){}
+  }
+  if(!rows.length){
+    b.innerHTML='<tr><td colspan="9" class="empty">'
+      +((j&&j.err)?('error: '+j.err)
+        :'nothing qualifies yet — needs a hard event, a stated size, and enough turnover')
+      +'</td></tr>';
+    return;
+  }
+  let h='';
+  rows.forEach(r=>{
+    const isNew=!!r.is_new, fire=!!r.alarm;
+    const tov=(r.tover_cr==null)?null:r.tover_cr;
+    const dp=r.day_pct;
+    const up=r.dir==='UP', dn=r.dir==='DOWN';
+    const dcls = up?'wlup' : (dn?'wldn' : 'wlunk');
+    const dtxt = up?'▲ BULLISH' : (dn?'▼ BEARISH' : '– unclear');
+    const top=r.top;
+    h+='<tr class="'+dcls+(isNew?(' wlnew'+(fire?' wlfire':'')):'')+(top?' wltop':'')+'">'
+      +'<td>'+(top?('<span class="wlrank wlrank'+top+'">'+top+'</span>')
+                  :'<span style="color:#cbd5e1;font-size:11px">–</span>')+'</td>'
+      +'<td>'+(isNew?'<span class="wltag">NEW</span>':'')+'</td>'
+      +'<td><span class="wldir '+dcls+'" title="'+(r.dir_why||'')+'">'+dtxt+'</span></td>'
+      +'<td><span class="wlsym" onclick="openTV(\''+r.sym+'\')">'+r.sym+'</span></td>'
+      +'<td class="wlwhat">'+String(r.what||'').replace(/</g,'&lt;')+'</td>'
+      +'<td class="wlsize" style="color:'+(dn?'#b91c1c':(up?'#15803d':'#6b7280'))+'">'
+        +(r.size||'–')+'</td>'
+      +'<td>'+(tov==null?'<span style="color:#9ca3af">—</span>'
+              :('<span class="'+(r.thin?'wlthin':'wlok')+'">₹'+tov+' Cr</span>'))
+        +(r.thin?'<div style="font-size:9px;font-weight:700;color:#b45309" '
+            +'title="tradeable at your size, but a wide spread can cost more than brokerage">'
+            +'THIN — check spread</div>':'')
+        +'<div style="font-size:9.5px;color:var(--mut)">'
+          +(r.price?('₹'+r.price+' · '):'')
+          +(r.tov_live?'today':'prev day')+'</div></td>'
+      +'<td style="font-weight:800;color:'+((dp||0)>=0?'#15803d':'#b91c1c')+'">'
+        +(dp==null?'–':((dp>=0?'+':'')+dp.toFixed(2)+'%'))+'</td>'
+      +'<td style="font-size:11px;color:var(--mut);white-space:nowrap">'+(r.when||'')+'</td>'
+      +'</tr>';
+  });
+  b.innerHTML=h;
+}
+function pollWatchlist(){
+  fetch('/watchlist').then(r=>r.json()).then(renderWatchlist).catch(()=>{});
+}
+/* ================= SCANNER FILTER + SORT =================
+   Applied in the BROWSER, on rows the backend already returned. Filtering
+   server-side would mean a round trip for every keystroke and would make the
+   card charts rebuild constantly; this way changing the volume threshold or the
+   sort is instant. Settings persist in localStorage so they survive a reload.  */
+/* Collapsible rule blocks. Default CLOSED -- the rules are read once, but they
+   cost ~90px on every refresh, which is a whole row of cards. State remembered. */
+function ruleToggle(id, open){
+  const b=document.getElementById(id);
+  const h=document.querySelector('.rulehead[data-rule="'+id+'"]');
+  if(!b||!h) return;
+  b.classList.toggle('open',open); h.classList.toggle('open',open);
+  try{ localStorage.setItem('rule_'+id, open?'1':'0'); }catch(e){}
+}
+document.addEventListener('click',e=>{
+  const h=e.target.closest && e.target.closest('.rulehead');
+  if(!h) return;
+  const id=h.getAttribute('data-rule');
+  ruleToggle(id, !document.getElementById(id).classList.contains('open'));
+});
+window.addEventListener('DOMContentLoaded',()=>{
+  ['r_s1','r_pd'].forEach(id=>{
+    let open=false;
+    try{ open=localStorage.getItem('rule_'+id)==='1'; }catch(e){}
+    ruleToggle(id, open);
+  });
+});
+/* Scanner1 defaults to MOMENTUM, not Day %. Day % ranks by distance already
+   travelled, so it puts the most exhausted stock at the top of the list. */
+const SCF={s1:{minvol:0,sort:'momentum',dir:-1}};
+const SCF_V=2;   /* bump to retire saved preferences when the defaults change */
+try{
+  const s=localStorage.getItem('scfilt');
+  if(s && (+localStorage.getItem('scfilt_v')||0)===SCF_V) Object.assign(SCF,JSON.parse(s));
+}catch(e){}
+function scSave(){ try{ localStorage.setItem('scfilt',JSON.stringify(SCF));
+                        localStorage.setItem('scfilt_v',SCF_V); }catch(e){} }
+function scFmtVol(v){
+  if(v==null) return '–';
+  if(v>=1e7) return (v/1e7).toFixed(2)+' Cr';
+  if(v>=1e5) return (v/1e5).toFixed(2)+' L';
+  if(v>=1e3) return (v/1e3).toFixed(1)+' k';
+  return String(v);
+}
+/* pull volume / day% off whichever payload block this scanner uses */
+function scVal(c,key){
+  const x=c.uc||c.bm||{};
+  if(key==='volume')  return (x.volume!=null?x.volume:(c.day_vol!=null?c.day_vol:0));
+  if(key==='day_pct') return (x.day_pct!=null?x.day_pct:(c.day_pct!=null?c.day_pct:0));
+  if(key==='tover')   return (x.tover_cr!=null?x.tover_cr:0);
+  if(key==='momentum')return (x.momentum!=null?x.momentum:0);
+  return 0;
+}
+/* ONE ordering rule, shared by every card grid in the UI.
+   📌 NO-DIP cards form a block at the TOP, ordered by momentum among
+   themselves. Everything below keeps whatever priority that grid already had.
+   Returns a negative/positive number, or 0 when neither card is pinned and the
+   caller should apply its own comparison. */
+function nodipFirst(a,b){
+  const ap=a.pinned?1:0, bp=b.pinned?1:0;
+  if(ap!==bp) return bp-ap;                      // pinned block first
+  if(!ap) return 0;                              // neither pinned -> grid decides
+  /* Inside the block: a finished streak (STALE) sinks BEFORE momentum is
+     considered, else a pinned-but-dead card outranks one still moving. */
+  const as=staleOf(a)?1:0, bs=staleOf(b)?1:0;
+  if(as!==bs) return as-bs;
+  const am=momOf(a), bm=momOf(b);
+  return (am===bm) ? 0 : (bm-am);
+}
+/* momentum/stale live at the top level on board cards and under .uc on scanner
+   rows -- read both so one helper serves every grid. */
+function momOf(c){ return (c.momentum!=null?c.momentum:((c.uc||{}).momentum||0)); }
+function staleOf(c){ return (c.stale!=null?c.stale:((c.uc||{}).stale||false)); }
+function scApply(which,rows){
+  const f=SCF[which];
+  let out=rows.filter(c=>scVal(c,'volume')>=(f.minvol||0));
+  out.sort((a,b)=>{
+    /* NO-DIP block on top. Then Scanner1's OWN pre-existing rule: STALE always
+       sinks, whatever the sort -- a stock that has stopped moving is not a
+       candidate no matter how big its day % or turnover happens to be. That
+       global stale sink is Scanner1's alone; the Board does not get it, so its
+       unpinned ordering stays exactly as it was. */
+    const nd=nodipFirst(a,b); if(nd) return nd;
+    const as=staleOf(a)?1:0, bs=staleOf(b)?1:0;
+    if(as!==bs) return as-bs;
+    const av=scVal(a,f.sort), bv=scVal(b,f.sort);
+    return (av===bv) ? 0 : ((av<bv?-1:1)*f.dir);
+  });
+  return out;
+}
+function scBar(which,total,shown){
+  const f=SCF[which];
+  const el=document.getElementById('f_'+which);
+  if(!el) return;
+  const mk=(key,lab)=>'<button class="scbtn'+(f.sort===key?' on':'')+'" '
+      +'data-sc="'+which+'" data-sort="'+key+'">'+lab
+      +(f.sort===key?(f.dir<0?' ▼':' ▲'):'')+'</button>';
+  el.innerHTML='<label>Volume &gt;</label>'
+    +'<input type="number" id="v_'+which+'" value="'+(f.minvol||0)+'" min="0" step="100000">'
+    +'<button class="scquick" data-sc="'+which+'" data-vol="0">any</button>'
+    +'<button class="scquick" data-sc="'+which+'" data-vol="200000">2 L</button>'
+    +'<button class="scquick" data-sc="'+which+'" data-vol="500000">5 L</button>'
+    +'<button class="scquick" data-sc="'+which+'" data-vol="1000000">10 L</button>'
+    +'<button class="scquick" data-sc="'+which+'" data-vol="5000000">50 L</button>'
+    +'<span style="width:10px"></span><label>Sort</label>'
+    + mk('momentum','Momentum')
+    + mk('volume','Volume') + mk('day_pct','Day %') + mk('tover','₹ Turnover')
+    +'<span class="sccount">showing '+shown+' of '+total+'</span>';
+  const inp=document.getElementById('v_'+which);
+  if(inp) inp.oninput=()=>{ SCF[which].minvol=Math.max(0,+inp.value||0); scSave();
+                            rerenderS1(); };
+  el.querySelectorAll('[data-sort]').forEach(b=>b.onclick=()=>{
+    const k=b.getAttribute('data-sort');
+    if(SCF[which].sort===k) SCF[which].dir*=-1; else { SCF[which].sort=k; SCF[which].dir=-1; }
+    scSave(); rerenderS1();
+  });
+  el.querySelectorAll('[data-vol]').forEach(b=>b.onclick=()=>{
+    SCF[which].minvol=+b.getAttribute('data-vol'); scSave();
+    rerenderS1();
+  });
+}
+let _s1last=null;
+function rerenderS1(){ /* Scanner1 tab removed 01-Sep -- kept as a no-op so the
+   timeframe switcher does not need to know it is gone. */ }
+/* One renderer for BOTH halves of the Scanner1 tab. The cards are built by the
+   same mkCard()/drawCharts() the board uses, so nothing about a card differs
+   between the two columns -- only which stocks are in each. */
+function renderS1Grid(prefix, gridId, rows, emptyMsg){
+  const g=document.getElementById(gridId); if(!g) return;
+  for(const k in charts){
+    if(k.startsWith(prefix+'_')){
+      try{ charts[k].pc.remove(); if(charts[k].vc) charts[k].vc.remove(); charts[k].mc.remove(); }
+      catch(e){}
+      delete charts[k];
+    }
+  }
+  g.innerHTML='';
+  if(!rows.length){ g.innerHTML='<div class="empty">'+emptyMsg+'</div>'; return; }
+  const frag=document.createDocumentFragment(), todo=[];
+  rows.forEach((c,i)=>{
+    const {div,key}=mkCard(prefix,c);
+    div.style.order=i;
+    // ---- WATCH state (01-Sep-2026) -----------------------------------
+    // A card that stops qualifying is no longer erased -- it is dimmed and
+    // labelled. Measured over 293 real disappearances, 58% went on to make
+    // +0.5% within ten minutes, so hiding them threw away more than it
+    // protected. The ribbon says WHY it is in watch and what price would
+    // count as a genuine breakdown, so it is never mistaken for a live pick.
+    if(c.state==='watch'){
+      div.classList.add('watching');
+      const wb=document.createElement('div');
+      wb.className='watchbar';
+      const px=(c.watch_px!=null)?c.watch_px:c.price;
+      const stop=(px!=null)?(px*0.99).toFixed(2):'--';
+      wb.innerHTML='<b>WATCH</b> '+(c.watch_why||'stopped climbing')
+        +' &nbsp;·&nbsp; out below <b>'+stop+'</b>'
+        +(c.watch_since!=null?(' &nbsp;·&nbsp; '+c.watch_since+'s'):'');
+      div.appendChild(wb);
+    }
+    const r=c.uc||{};
+    // ---- MOMENTUM strip -------------------------------------------------
+    // The whole point of this line: ~100 stocks pass the UC filters and day %
+    // cannot separate them, because it measures how far a stock has ALREADY
+    // gone, not whether it is still going. This shows whether it is moving NOW.
+    const m=r.momentum;
+    if(m!=null){
+      const ms=document.createElement('div');
+      const col = r.stale ? '#94a3b8' : (m>=70?'#16a34a':(m>=45?'#ca8a04':'#64748b'));
+      const bg  = r.stale ? '#f1f5f9' : (m>=70?'#dcfce7':(m>=45?'#fef9c3':'#f8fafc'));
+      ms.style.cssText='margin-top:3px;font-size:8.5px;font-weight:700;padding:2px 4px;'
+        +'border-radius:3px;border:1px solid '+col+';background:'+bg+';color:'+col
+        +';display:flex;align-items:center;gap:4px';
+      const bar='<span style="flex:0 0 34px;height:4px;border-radius:2px;background:#e2e8f0;'
+        +'display:inline-block;overflow:hidden"><span style="display:block;height:4px;'
+        +'width:'+Math.max(0,Math.min(100,m))+'%;background:'+col+'"></span></span>';
+      const W=r.mom_win??30;   /* window is set by the backend, never hardcoded here */
+      const t60=(r.thrust_pct!=null)?((r.thrust_pct>=0?'+':'')+r.thrust_pct.toFixed(2)+'%'):'–';
+      const mx =(r.money_x!=null)?(r.money_x.toFixed(1)+'x'):'–';
+      ms.innerHTML='<span>MOM '+m+'</span>'+bar
+        +'<span style="font-weight:600">'+W+'s '+t60+'</span>'
+        +'<span style="font-weight:600">₹ '+mx+'</span>'
+        +(r.stale?'<span style="margin-left:auto;background:#e2e8f0;border-radius:2px;'
+                  +'padding:0 3px;color:#475569">STALE</span>':'');
+      ms.title='Momentum '+m+'/100 — thrust '+(r.m_thrust??0)+' + money '+(r.m_money??0)
+        +' + range '+(r.m_range??0)+' + from-open '+(r.m_open??0)+' + liquidity '+(r.m_liq??0)
+        +'\n'+W+'s move '+t60+' (measured over '+(r.win_sec??'?')+'s), ₹'+(r.money_cr??'–')
+        +' Cr traded = '+mx+' its own average '+W+'s'
+        +(r.stale?'\nSTALE: not moving and the money has left — the move is over.':'');
+      div.appendChild(ms);
+    }
+    const w=document.createElement('div'); w.className='s1why';
+    w.innerHTML='<span style="background:#eef2ff;border-color:#c7d2fe;color:#3730a3">'
+        +(r.day_pct>=0?'+':'')+(r.day_pct??'–')+'% day</span>'
+      +'<span>vol '+scFmtVol(r.volume)+'</span>'
+      +'<span>₹'+(r.tover_cr??'–')+' Cr</span>'
+      +'<span>'+((r.range_pos!=null)?('range '+Math.round(r.range_pos*100)+'%'):('low ₹'+(r.day_lo??'–')))+'</span>';
+    div.appendChild(w);
+    // Cross state. Both columns hold the same stocks now, so the LEFT column is
+    // only useful if a live buy cross is instantly distinguishable from "no
+    // cross" -- hence a green strip when it is live, a grey one when it is not.
+    const cs=document.createElement('div');
+    const live=!!(c.buy_trig && c.cross_sec!=null);
+    const fresh=live && c.cross_sec<=60;
+    cs.style.cssText='margin-top:3px;font-size:8.5px;font-weight:700;padding:2px 4px;'
+      +'border-radius:3px;border:1px solid '
+      +(fresh?'#16a34a;background:#dcfce7;color:#14532d'
+        :(live?'#86efac;background:#f0fdf4;color:#166534'
+              :'#e2e8f0;background:#f8fafc;color:#94a3b8'));
+    if(live){
+      const s=c.cross_sec;
+      cs.textContent='✚ BUY cross '+(s<60?(s+'s'):(Math.floor(s/60)+'m'
+        +(s%60?(' '+(s%60)+'s'):'')))+' ago  ·  '+(c.cross_tf||'');
+      if(prefix==='s1buy') div.style.boxShadow='inset 3px 0 0 '+(fresh?'#16a34a':'#86efac');
+    } else {
+      cs.textContent='no live buy cross';
+    }
+    div.appendChild(cs);
+    // Distance to the upper circuit. Stocks actually locked at UC are now
+    // dropped by the backend -- they cannot be bought -- so this only ever
+    // reports headroom, and warns when that headroom is nearly gone.
+    const uc=document.createElement('div');
+    const room=r.uc_room_pct, near=(room!=null && room<=2);
+    uc.style.cssText='margin-top:3px;font-size:8.5px;font-weight:700;padding:2px 4px;'
+      +'border-radius:3px;border:1px solid '
+      +(near?'#fed7aa;background:#ffedd5;color:#9a3412'
+            :'#cbd5e1;background:#f1f5f9;color:#334155');
+    uc.textContent = (room!=null)
+      ? ('UC ₹'+(r.uc??'–')+'  ·  '+room+'% away'+(near?'  ·  nearly locked':''))
+      : 'upper circuit unknown';
+    div.appendChild(uc);
+    frag.appendChild(div); todo.push([key,c]);
+  });
+  g.appendChild(frag);
+  nextFrame(()=>todo.forEach(([key,c])=>{
+    try{ drawCharts(key,document.getElementById(key),c.chart); }catch(e){}
+  }));
+}
+let _s1sig=null;
+function renderScanner1(j){
+  const g=document.getElementById('g_s1'); if(!g) return;
+  _s1last=j;
+  const s=(j&&j.summary)||{}, all=(j&&j.rows)||[];
+  const rows=scApply('s1',all);
+  scBar('s1', all.length, rows.length);
+  // ---- LEFT HALF: the SAME stocks as the right, re-ordered by how recently
+  // the buy cross fired. Nothing is hidden -- a stock with no live cross simply
+  // sinks to the bottom rather than vanishing, so the two columns always hold
+  // the same set and only the ordering differs.
+  const buys=rows.slice().sort((a,b)=>{
+    const nd=nodipFirst(a,b); if(nd) return nd;     // 📌 NO-DIP block on top
+    const av=(a.buy_trig&&a.cross_sec!=null)?a.cross_sec:1e9;
+    const bv=(b.buy_trig&&b.cross_sec!=null)?b.cross_sec:1e9;
+    if(av!==bv) return av-bv;                       // freshest cross first
+    return (b.day_pct||0)-(a.day_pct||0);           // then biggest mover
+  });
+  renderS1Grid('s1buy','g_s1buy',buys,
+    emptyWhy(j,s,'nothing passes the UC filters right now'));
+  const nTrig=rows.filter(c=>c.buy_trig&&c.cross_sec!=null).length;
+  const nb=document.getElementById('n_s1buy'), na=document.getElementById('n_s1all');
+  if(nb) nb.textContent='· '+rows.length+'  ·  '+nTrig+' crossed';
+  if(na) na.textContent='· '+rows.length;
+  const t=document.getElementById('s1ts');
+  if(t) t.textContent = (j&&j.ok)
+    ? '· '+(s.universe||0)+' EQ stocks → '+(s.stage1||0)+' scanned → '
+      +(s.passed||0)+' pass'
+      +(s.ts?(' · '+s.ts):'')
+      +(s.snap_age!=null?(' · quotes '+s.snap_age+'s old'):'')
+      +(s.scanning?' · scanning…':'')
+    : '· '+((j&&j.err)||'scanner not loaded');
+  const badge=document.getElementById('s1badge');
+  if(badge){ const n=rows.length;
+    if(n){ badge.style.display=''; badge.textContent=n; } else badge.style.display='none'; }
+  const sig=rows.map(c=>c.sym+':'+c.price+':'+(c.buy_trig?1:0)+':'+c.cross_sec
+    +':'+((c.uc||{}).momentum)+':'+((c.uc||{}).stale?1:0)
+    +':'+((c.chart&&c.chart.c)?c.chart.c.length:0)).join('|');
+  if(_s1sig===sig) return;
+  _s1sig=sig;
+  // RIGHT HALF: the full UC list. Same renderer as the left half.
+  renderS1Grid('s1','g_s1',rows,emptyWhy(j,s,'nothing passes the UC filters right now'));
+}
+let _bxsig=null;
+function renderBlast(j){
+  const g=document.getElementById('g_bx'); if(!g) return;
+  const s=(j&&j.summary)||{}, rows=(j&&j.rows)||[];
+  const w=document.getElementById('bx_warn');
+  if(w){
+    const msg = (j&&j.ok===false) ? ((j.err||'tab not loaded')) : (s.why_empty||'');
+    if(msg && !rows.length){ w.style.display=''; w.textContent=msg; }
+    else w.style.display='none';
+  }
+  const t=document.getElementById('bxts');
+  if(t) t.textContent = '· daily values for '+(s.warm||0)+' stocks'
+    + (s.scanned!=null?(' · '+s.scanned+' scanned'):'')
+    + (s.qualified!=null?(' → '+s.qualified+' qualify'):'')
+    + (s.ts?(' · '+s.ts):'')
+    + (s.stale_daily?(' · using '+s.stale_daily+' daily values'):'');
+  const n=document.getElementById('n_bx'); if(n) n.textContent='· '+rows.length;
+  const b=document.getElementById('bxbadge');
+  if(b){ if(rows.length){ b.style.display=''; b.textContent=rows.length; } else b.style.display='none'; }
+  const sig=rows.map(c=>c.sym+':'+c.price+':'+((c.imb||{}).fresh)
+    +':'+((c.chart&&c.chart.c)?c.chart.c.length:0)).join('|');
+  if(_bxsig===sig) return;
+  _bxsig=sig;
+  renderS1Grid('bx','g_bx',rows,
+    s.why_empty || 'nothing passes the Momentum Blast filters right now');
+}
+function pollBlast(){
+  fetch('/scanxblast').then(r=>r.json()).then(renderBlast).catch(()=>{});
+}
+function pollScanner1(){
+  fetch('/scanner1').then(r=>r.json()).then(renderScanner1).catch(()=>{});
+}
+
+pollAlarm();
+setInterval(()=>{ pollAlarm(); },5000);   // badge stays live even on other tabs
+pollDepth(); setInterval(()=>{ if(curView==='board') pollDepth(); },5000);
+/* Scanner1 polls at 5s. This is only affordable because it does not sweep the
+   market itself -- it reads the single shared snapshot the alarm refreshes every
+   5s. A separate sweep would queue behind Dhan's 1 req/sec limit. */
+/* Predictor polls on EVERY tab so the MISS badge stays current -- the whole
+   point is to notice a bad call without having to go looking for it. */
+pollPredictor(); setInterval(pollPredictor,60000);
+/* The watchlist polls on EVERY tab, not only its own. A name arriving at 09:41
+   has to reach you while you are looking at the board -- an alarm that fires
+   only when you happen to be on the right tab is not an alarm. */
+pollWatchlist();
+setInterval(pollWatchlist,15000);
+{ const b=document.getElementById('wltest');
+  if(b) b.onclick=()=>{ wlCtx(); wlBeep(3); }; }
+pollPreopen(); setInterval(()=>{ if(curView==='preopen') pollPreopen(); },10000);
+pollPremkt(); setInterval(()=>{ if(curView==='preopen') pollPremkt(); },30000);
+// poll regardless of which sub-tab is showing, so the 🔥 count on the
+// SINCE LAST CLOSE button is already correct when you switch to it
+pollDhanNews(); setInterval(pollDhanNews,120000);
+
+/* ===================== PAPER TRADING ===================== */
+/* Back-tests the board's OWN signals on today's recorded tape.
+
+   HONESTY RULES BUILT INTO WHAT THIS DRAWS
+     - The engine picks the slot count that MAKES THE MOST MONEY, because that
+       is what Sri asked for. A result that is really one lucky trade must
+       therefore say so on screen, so the summary always shows what the session
+       made WITHOUT its single best trade. If those two numbers are far apart,
+       the strategy is a coin that landed well, not an edge.
+     - The whole slot ladder is printed underneath, so the chosen row can be
+       compared against the ones it beat instead of being taken on trust.
+     - Signals that could not be traded are counted and shown. A backtest that
+       silently drops a third of its inputs is telling you a story. */
+const _ptCSS = 1;
+function ptNum(id, dflt){
+  const el = document.getElementById(id); if(!el) return dflt;
+  const v = parseFloat(String(el.value).replace(/[, ₹]/g, ''));
+  return isFinite(v) ? v : dflt;
+}
+function ptRs(v, dp){
+  if(v==null) return '–';
+  const n = Number(v);
+  return (n<0?'−':'') + Math.abs(n).toLocaleString('en-IN',
+    {minimumFractionDigits: dp||0, maximumFractionDigits: dp||0});
+}
+function ptCol(v){ return (v>0)?'#15803d':((v<0)?'#b91c1c':'#6b7280'); }
+
+function ptSummary(s){
+  const hit = s.target_hit;
+  // The target is a yardstick, not a constraint -- he said so. It is reported,
+  // never used to bend the strategy, and a miss is stated as plainly as a hit.
+  const tcol = hit ? '#15803d' : '#b45309';
+  const frag = (s.net > 0 && s.ex_best < s.net * 0.4);
+  return '<div class="ptsum">'
+    + '<div class="ptsumhead">EXECUTIVE SUMMARY'
+      + '<span class="ptrule">' + s.window + ' · ' + s.trades + ' trades · '
+      + s.slots + ' position' + (s.slots>1?'s':'') + ' at a time · ₹'
+      + ptRs(s.per_slot) + ' per position</span></div>'
+    + '<div class="ptgrid">'
+      + ptCell('Capital', '₹' + ptRs(s.capital))
+      + ptCell('Leverage', s.leverage + '×', 'exposure ₹' + ptRs(s.exposure))
+      + ptCell('Gross P&L', '₹' + ptRs(s.gross), null, ptCol(s.gross))
+      + ptCell('Dhan charges', '−₹' + ptRs(s.charges), 'both legs, all components')
+      + ptCell('NET P&L', '₹' + ptRs(s.net), s.net_pct + '% of capital', ptCol(s.net), true)
+      + ptCell('Win rate', s.wins + ' / ' + s.trades,
+               s.win_pct + '% · ' + s.losses + ' losing')
+      + ptCell('Your target', s.target_pct + '%', '₹' + ptRs(s.target_rs))
+      + ptCell(hit ? '✓ TARGET HIT' : '✗ TARGET MISSED',
+               (s.target_gap>=0?'+':'−') + '₹' + ptRs(Math.abs(s.target_gap)),
+               hit ? 'ahead of target' : 'short of target', tcol, true)
+    + '</div>'
+    + '<div class="ptnotes">'
+      + '<div><b>Without the single best trade:</b> '
+        + '<span style="color:' + ptCol(s.ex_best) + ';font-weight:800">₹'
+        + ptRs(s.ex_best) + '</span> (' + s.ex_best_pct + '%)'
+        + (frag ? ' <span class="ptwarn">⚠ FRAGILE — most of the result is one trade '
+                  + '(' + (s.best?s.best.sym:'') + ', ₹' + ptRs(s.best?s.best.net:0)
+                  + '). One session is not an edge.</span>' : '')
+      + '</div>'
+      + '<div><b>Best:</b> ' + (s.best ? s.best.sym + ' ₹' + ptRs(s.best.net) : '–')
+        + ' &nbsp;·&nbsp; <b>Worst:</b> '
+        + (s.worst ? s.worst.sym + ' ₹' + ptRs(s.worst.net) : '–') + '</div>'
+      + '<div><b>Signals:</b> ' + s.signals + ' carded · '
+        + s.preopen_calls + ' pre-open STRONG GAP-UP calls, '
+        + s.preopen_confirmed + ' confirmed here · '
+        + s.displaced + ' position' + (s.displaced===1?'':'s') + ' displaced by a stronger signal</div>'
+      + '<div><b>Not traded:</b> ' + (s.skipped.no_price||0)
+        + ' had no recorded price within 90s of the signal · '
+        + (s.skipped.no_bars||0) + ' had no bars at all · '
+        + (s.skipped.crowded_out||0) + ' arrived with every position full · '
+        + (s.cooldown_skips||0) + ' were the same stock too soon after its last exit · '
+        + (s.skipped.too_cheap||0) + ' below ₹20'
+        + '<span class="pthint"> — the first two are a data-coverage gap in the tick '
+        + 'builder, not a market condition.</span></div>'
+      + '<div><b>Split chosen by:</b> ' + (s.objective||'') + '. '
+        + 'Highest raw profit was ' + s.max_net_slots + ' position'
+        + (s.max_net_slots>1?'s':'') + ' at ₹' + ptRs(s.max_net)
+        + ' (ex-best ₹' + ptRs(s.max_net_ex_best) + ')'
+        + ((s.max_net_slots===s.slots) ? ' — the same split, so it wins on both counts.'
+                                       : ' — not chosen, it leans harder on one trade.')
+        + ((s.slots===1) ? ' <span class="ptwarn">⚠ One position at a time means the whole '
+           + 'margin sits in one name: a −1% stop is ₹' + ptRs(s.per_slot*0.01) + '.</span>' : '')
+        + '</div>'
+      + '<div class="ptrule2"><b>Rule:</b> ' + s.rule + '</div>'
+    + '</div></div>';
+}
+function ptCell(label, big, sub, col, strong){
+  return '<div class="ptcell' + (strong?' ptcellbig':'') + '">'
+    + '<div class="ptlab">' + label + '</div>'
+    + '<div class="ptbig"' + (col?(' style="color:'+col+'"'):'') + '>' + big + '</div>'
+    + (sub ? '<div class="ptsub">' + sub + '</div>' : '') + '</div>';
+}
+function ptAlternatives(s){
+  const a = s.alternatives || []; if(a.length < 2) return '';
+  return '<div class="ptalt"><b>Slot ladder</b> '
+    + '<span class="pthint">every split the engine tried, so the chosen one can be '
+    + 'compared rather than trusted. “ex-best” strips each run\'s biggest trade.</span>'
+    + '<table class="ptalttbl"><tr><th>positions at a time</th>'
+    + a.map(r=>'<td' + (r.slots===s.slots?' class="pton"':'') + '>' + r.slots + '</td>').join('')
+    + '</tr><tr><th>trades</th>' + a.map(r=>'<td' + (r.slots===s.slots?' class="pton"':'') + '>' + r.n + '</td>').join('')
+    + '</tr><tr><th>net ₹</th>' + a.map(r=>'<td' + (r.slots===s.slots?' class="pton"':'')
+        + ' style="color:' + ptCol(r.net) + ';font-weight:700">' + ptRs(r.net) + '</td>').join('')
+    + '</tr><tr><th>ex-best ₹</th>' + a.map(r=>'<td' + (r.slots===s.slots?' class="pton"':'')
+        + ' style="color:' + ptCol(r.ex_best) + '">' + ptRs(r.ex_best) + '</td>').join('')
+    + '</tr></table></div>';
+}
+function ptWhy(t){
+  const m = {target:['#15803d','🎯 target'], stop:['#b91c1c','🛑 stop'],
+             time:['#b45309','⏱ time cap'], displaced:['#7c3aed','⇄ displaced'],
+             'session end':['#6b7280','■ session end'],
+             'last print':['#6b7280','■ last print']};
+  const x = m[t.why] || ['#6b7280', t.why];
+  return '<span style="color:' + x[0] + ';font-weight:700">' + x[1] + '</span>'
+    + '<div style="font-size:9px;color:var(--mut)">held ' + Math.round(t.held/60) + 'm</div>';
+}
+function renderPaper(j){
+  const body = document.getElementById('ptbody');
+  const sum = document.getElementById('pt_summary');
+  const alt = document.getElementById('pt_alt');
+  const ts = document.getElementById('ptts');
+  if(!body) return;
+  if(!j || j.ok === false){
+    if(sum) sum.innerHTML = ''; if(alt) alt.innerHTML = '';
+    body.innerHTML = '<tr><td colspan="13" class="empty">'
+      + ((j && j.err) || 'back-test failed') + '</td></tr>';
+    return;
+  }
+  const s = j.summary, tr = j.trades || [];
+  if(sum) sum.innerHTML = ptSummary(s);
+  if(alt) alt.innerHTML = ptAlternatives(s);
+  if(ts) ts.textContent = '· replayed ' + s.window + ' on prices recorded today · '
+      + 'no request to Dhan';
+  if(!tr.length){ body.innerHTML = '<tr><td colspan="13" class="empty">no fillable trade</td></tr>'; return; }
+  let h = '', run = 0;
+  tr.forEach((t, i) => {
+    run += t.net;
+    const c = t.charges || {};
+    const tip = 'brokerage ₹' + (c.brokerage||0) + ' · STT ₹' + (c.stt||0)
+      + ' · exchange ₹' + (c.exchange||0) + ' · SEBI ₹' + (c.sebi||0)
+      + ' · stamp ₹' + (c.stamp||0) + ' · GST ₹' + (c.gst||0);
+    h += '<tr' + (t.net>0?' style="border-left:3px solid #16a34a"':(t.net<0?' style="border-left:3px solid #ef4444"':'')) + '>'
+      + '<td>' + (i+1) + '</td>'
+      + '<td><span class="nsym" onclick="openTV(\'' + t.sym + '\')">' + t.sym + '</span>'
+        + ((t.leg > 1) ? '<span class="ptleg" title="Second entry in the same stock. Only allowed after 15 minutes out of the book AND on a signal at least as strong as the first.">#' + t.leg + '</span>' : '')
+        + (t.preopen ? '<div class="ptpo" title="The pre-open tab called this a STRONG GAP-UP at '
+            + t.preopen + ', before the open. Super Stocks then confirmed it.">🌅 pre-open '
+            + t.preopen + '</div>' : '')
+        + '<div style="font-size:9px;color:var(--mut)">urgency ' + (t.urgency!=null?t.urgency:'–') + '</div></td>'
+      + '<td>' + t.sig_hms + '</td>'
+      + '<td>' + t.in_hms + '</td>'
+      + '<td style="text-align:right">' + ptRs(t.in, 2) + '</td>'
+      + '<td>' + t.out_hms + '</td>'
+      + '<td style="text-align:right">' + ptRs(t.out, 2) + '</td>'
+      + '<td style="text-align:right">' + t.qty + '</td>'
+      + '<td style="text-align:right">' + ptRs(t.value) + '</td>'
+      + '<td style="text-align:right;color:' + ptCol(t.gross) + '">' + ptRs(t.gross) + '</td>'
+      + '<td style="text-align:right" title="' + tip + '">' + ptRs(t.chg) + '</td>'
+      + '<td style="text-align:right;font-weight:800;color:' + ptCol(t.net) + '">' + ptRs(t.net)
+        + '<div style="font-size:9px;font-weight:400;color:var(--mut)">run ' + ptRs(run) + '</div></td>'
+      + '<td>' + ptWhy(t) + '</td></tr>';
+  });
+  const g = tr.reduce((a,t)=>a+t.gross,0), ch = tr.reduce((a,t)=>a+t.chg,0);
+  h += '<tr class="pttot"><td></td><td><b>TOTAL</b></td><td colspan="6"></td>'
+    + '<td></td><td style="text-align:right;color:' + ptCol(g) + '"><b>' + ptRs(g) + '</b></td>'
+    + '<td style="text-align:right"><b>' + ptRs(ch) + '</b></td>'
+    + '<td style="text-align:right;color:' + ptCol(s.net) + '"><b>' + ptRs(s.net) + '</b></td>'
+    + '<td><b>' + s.wins + 'W / ' + s.losses + 'L</b></td></tr>';
+  body.innerHTML = h;
+}
+let _ptBusy = false;
+function runPaper(){
+  if(_ptBusy) return; _ptBusy = true;
+  const b = document.getElementById('pt_busy'); if(b) b.style.display = '';
+  const q = 'capital=' + ptNum('pt_cap', 100000)
+          + '&leverage=' + ptNum('pt_lev', 5)
+          + '&target=' + ptNum('pt_tgt', 10);
+  fetch('/papertrade?' + q).then(r=>r.json()).then(j=>{
+    _ptBusy = false; if(b) b.style.display = 'none'; renderPaper(j);
+  }).catch(e=>{
+    _ptBusy = false; if(b) b.style.display = 'none';
+    renderPaper({ok:false, err:'board unreachable — ' + e});
+  });
+}
+document.addEventListener('DOMContentLoaded', ()=>{
+  const g = document.getElementById('pt_go');
+  if(g) g.addEventListener('click', runPaper);
+  ['pt_cap','pt_lev','pt_tgt'].forEach(id=>{
+    const el = document.getElementById(id);
+    if(el) el.addEventListener('keydown', ev=>{ if(ev.key === 'Enter') runPaper(); });
+  });
+});
+
+/* ===================== LIVE PAPER TRADING ===================== */
+/* Forward paper trading. Same rules as the Paper Trading tab, but it can only
+   act on prices that have already printed — it never sees where a bar closed
+   before deciding. When the two tabs disagree, that gap is the honest cost of
+   not knowing the future, and it is worth more than either number alone.
+
+   An OPEN position is drawn from the last swept price, and its charges are what
+   it would cost to close right now. That is marked to market, not a fill, and
+   the Status column says so on every row. */
+function lpStatus(t){
+  if(t.status === 'In-Progress'){
+    const p = (t.live_pct != null) ? t.live_pct : 0;
+    return '<span class="lpprog">◐ In-Progress</span>'
+      + '<div style="font-size:9px;font-weight:700;color:' + ptCol(p) + '">'
+      + (p>0?'+':'') + p + '% now</div>';
+  }
+  return '<span class="lpdone">✓ Completed</span>'
+    + '<div style="font-size:9px;color:var(--mut)">held ' + Math.round((t.held||0)/60) + 'm</div>';
+}
+function lpSummary(s){
+  const hit = s.target_hit, tcol = hit ? '#15803d' : '#b45309';
+  const state = s.active
+    ? '<span class="lprun">● RUNNING since ' + (s.started||'') + '</span>'
+    : (s.started ? '<span class="lpoff">■ STOPPED at ' + (s.stopped||'') + '</span>'
+                 : '<span class="lpoff">not started</span>');
+  return '<div class="ptsum">'
+    + '<div class="ptsumhead">EXECUTIVE SUMMARY &nbsp; ' + state
+      + '<span class="ptrule">' + s.trades + ' trades · ' + s.open_n + ' open · '
+      + s.done_n + ' closed · ' + s.slots + ' position' + (s.slots>1?'s':'')
+      + ' at a time · ₹' + ptRs(s.per_slot) + ' each'
+      + (s.last_tick ? (' · marked to market ' + s.last_tick) : '') + '</span></div>'
+    + '<div class="ptgrid">'
+      + ptCell('Capital', '₹' + ptRs(s.capital))
+      + ptCell('Leverage', s.leverage + '×', 'exposure ₹' + ptRs(s.exposure))
+      + ptCell('Booked P&L', '₹' + ptRs(s.realised), s.done_n + ' closed', ptCol(s.realised))
+      + ptCell('Open P&L', '₹' + ptRs(s.unrealised), s.open_n + ' still running', ptCol(s.unrealised))
+      + ptCell('Dhan charges', '−₹' + ptRs(s.charges), 'both legs')
+      + ptCell('NET P&L', '₹' + ptRs(s.net), s.net_pct + '% of capital', ptCol(s.net), true)
+      + ptCell('Win rate', s.wins + ' / ' + s.done_n, s.win_pct + '% of closed trades')
+      + ptCell(hit ? '✓ TARGET HIT' : '✗ TARGET NOT YET',
+               (s.target_gap>=0?'+':'−') + '₹' + ptRs(Math.abs(s.target_gap)),
+               'target ' + s.target_pct + '% = ₹' + ptRs(s.target_rs), tcol, true)
+    + '</div>'
+    + '<div class="ptnotes">'
+      + '<div><b>Best:</b> ' + (s.best ? s.best.sym + ' ₹' + ptRs(s.best.net) : '–')
+        + ' &nbsp;·&nbsp; <b>Worst:</b> ' + (s.worst ? s.worst.sym + ' ₹' + ptRs(s.worst.net) : '–')
+        + (s.done_n > 1 ? (' &nbsp;·&nbsp; <b>Closed P&L without the best trade:</b> '
+            + '<span style="color:' + ptCol(s.ex_best) + ';font-weight:800">₹'
+            + ptRs(s.ex_best) + '</span> (' + s.ex_best_pct + '%)') : '')
+        + '</div>'
+      + '<div><b>Not taken:</b> ' + (s.skipped.crowded_out||0)
+        + ' arrived with every position full · ' + (s.skipped.cooldown||0)
+        + ' were a stock already held or too soon after its last exit · '
+        + (s.skipped.too_cheap||0) + ' below ₹20 · '
+        + '<b>' + s.displaced + '</b> displaced by a stronger signal</div>'
+      + (s.open_n ? '<div class="ptwarn">⚠ ' + s.open_n + ' position'
+          + (s.open_n>1?'s are':' is') + ' still open — that P&L is marked to the last '
+          + 'swept price, not a fill, and it will move.</div>' : '')
+      + '<div class="ptrule2"><b>Rule:</b> ' + s.rule + '</div>'
+      + (s.err ? '<div class="ptwarn">⚠ ' + s.err + '</div>' : '')
+    + '</div></div>';
+}
+/* `ids` lets the CAPITAL TIERS tab reuse this exact renderer. Omitted = the
+   Rs 1,00,000 Live Paper Trading tab, unchanged. */
+function renderLive(j, ids){
+  ids = ids || {};
+  const body=document.getElementById(ids.body||'lpbody'),
+        sum =document.getElementById(ids.sum ||'lp_summary');
+  const ts  =document.getElementById(ids.ts  ||'lpts'),
+        dot =document.getElementById(ids.dot ||'lp_dot');
+  if(!body) return;
+  if(!j || j.ok === false){
+    if(sum) sum.innerHTML='';
+    body.innerHTML='<tr><td colspan="14" class="empty">'+((j&&j.err)||'live paper trading unavailable')+'</td></tr>';
+    return;
+  }
+  const s=j.summary, tr=j.trades||[];
+  if(sum) sum.innerHTML=lpSummary(s);
+  if(dot) dot.style.display = s.active ? '' : 'none';
+  /* Only the Rs 1,00,000 tab owns these controls. When the CAPITAL TIERS tab
+     reuses this renderer it passes ids, and must NOT touch the live tab's
+     START/STOP or capital boxes -- a tier snapshot always has active=true and
+     would otherwise grey out the real tab's Start button. */
+  if(!ids.body){
+    const go=document.getElementById('lp_go'), st=document.getElementById('lp_stop'),
+          rs=document.getElementById('lp_reset');
+    if(go) go.disabled = !!s.active;
+    if(st) st.disabled = !s.active;
+    if(rs) rs.disabled = !!s.active;
+    ['lp_cap','lp_lev','lp_tgt'].forEach(id=>{
+      const el=document.getElementById(id); if(el) el.disabled = !!s.active; });
+  }
+  if(ts) ts.textContent = ids.body
+      ? ('· capital ₹' + (s.capital||0).toLocaleString('en-IN')
+         + ' · ' + (s.slots||0) + ' slots × ₹' + Math.round((s.per_slot||0)).toLocaleString('en-IN')
+         + ' · recomputed from the tape the board already fetched')
+      : ('· ' + (s.active ? 'trading live' : 'idle')
+         + ' · prices from the sweep the board already runs — no request to Dhan'
+         + (s.ticks ? (' · ' + s.ticks + ' marks') : ''));
+  if(!tr.length){
+    body.innerHTML='<tr><td colspan="14" class="empty">'
+      + (s.active ? 'running — waiting for a Super Stocks card to trade'
+                  : 'no trades yet. Press START LIVE PAPER TRADE.')
+      + '</td></tr>';
+    return;
+  }
+  let h='', run=0;
+  tr.forEach((t,i)=>{
+    run += t.net;
+    const c=t.charges||{};
+    const tip='brokerage ₹'+(c.brokerage||0)+' · STT ₹'+(c.stt||0)+' · exchange ₹'+(c.exchange||0)
+      +' · SEBI ₹'+(c.sebi||0)+' · stamp ₹'+(c.stamp||0)+' · GST ₹'+(c.gst||0)
+      +(t.status==='In-Progress'?' — what it would cost to close now':'');
+    const rail = (t.status==='In-Progress') ? ' style="border-left:3px solid #2563eb"'
+      : (t.net>0?' style="border-left:3px solid #16a34a"'
+                :(t.net<0?' style="border-left:3px solid #ef4444"':''));
+    h+='<tr'+rail+'>'
+      +'<td>'+(i+1)+'</td>'
+      +'<td><span class="nsym" onclick="openTV(\'' + t.sym + '\')">'+t.sym+'</span>'
+        +((t.leg>1)?'<span class="ptleg" title="Second entry in the same stock.">#'+t.leg+'</span>':'')
+        +(t.preopen?'<div class="ptpo">🌅 pre-open</div>':'')
+        +'<div style="font-size:9px;color:var(--mut)">urgency '+(t.urgency!=null?t.urgency:'–')
+          + ((t.status==='In-Progress' && t.defending!=null)
+              ? (' · <span title="What this slot is currently worth on the Super Stocks tab. A stronger card can take the slot off it. 0 means the stock has left the tab altogether." style="color:'
+                 + ((t.defending<=0)?'#b91c1c':'var(--mut)') + '">holding at ' + t.defending
+                 + (t.off_tab? (' · off tab ' + Math.round(t.off_tab) + 's') : '') + '</span>')
+              : '')
+          +'</div></td>'
+      +'<td>'+lpStatus(t)+'</td>'
+      +'<td>'+(t.sig_hms||'')+'</td>'
+      +'<td>'+(t.in_hms||'')+'</td>'
+      +'<td style="text-align:right">'+ptRs(t.in,2)+'</td>'
+      +'<td>'+(t.out_hms||'—')+'</td>'
+      +'<td style="text-align:right">'+ptRs(t.out,2)+'</td>'
+      +'<td style="text-align:right">'+t.qty+'</td>'
+      +'<td style="text-align:right">'+ptRs(t.value)+'</td>'
+      +'<td style="text-align:right;color:'+ptCol(t.gross)+'">'+ptRs(t.gross)+'</td>'
+      +'<td style="text-align:right" title="'+tip+'">'+ptRs(t.chg)+'</td>'
+      +'<td style="text-align:right;font-weight:800;color:'+ptCol(t.net)+'">'+ptRs(t.net)
+        +'<div style="font-size:9px;font-weight:400;color:var(--mut)">run '+ptRs(run)+'</div></td>'
+      +'<td>'+((t.status==='In-Progress')
+          ? '<span style="color:#2563eb;font-weight:700">— holding</span>'
+          : ptWhy(t))+'</td></tr>';
+  });
+  h+='<tr class="pttot"><td></td><td><b>TOTAL</b></td><td colspan="8"></td>'
+    +'<td style="text-align:right;color:'+ptCol(s.gross)+'"><b>'+ptRs(s.gross)+'</b></td>'
+    +'<td style="text-align:right"><b>'+ptRs(s.charges)+'</b></td>'
+    +'<td style="text-align:right;color:'+ptCol(s.net)+'"><b>'+ptRs(s.net)+'</b></td>'
+    +'<td><b>'+s.wins+'W / '+s.losses+'L</b></td></tr>';
+  body.innerHTML=h;
+}
+let _lpBusy=false;
+function pollLive(action){
+  if(_lpBusy && !action) return;
+  _lpBusy=true;
+  let q = action ? ('?action='+action) : '';
+  if(action==='start'){
+    q += '&capital='+ptNum('lp_cap',100000)
+       + '&leverage='+ptNum('lp_lev',5)
+       + '&target='+ptNum('lp_tgt',10);
+  }
+  fetch('/livepaper'+q).then(r=>r.json()).then(j=>{ _lpBusy=false; renderLive(j); })
+    .catch(e=>{ _lpBusy=false; renderLive({ok:false, err:'board unreachable — '+e}); });
+}
+document.addEventListener('DOMContentLoaded', ()=>{
+  const g=document.getElementById('lp_go'), st=document.getElementById('lp_stop'),
+        rs=document.getElementById('lp_reset');
+  if(g)  g.addEventListener('click', ()=>pollLive('start'));
+  if(st) st.addEventListener('click', ()=>pollLive('stop'));
+  if(rs) rs.addEventListener('click', ()=>pollLive('reset'));
+});
+/* Marked to market every 3 seconds while the tab is on screen. The engine keeps
+   running server-side whether or not anyone is looking — closing the tab does
+   not stop the trading, only the Stop button does. */
+setInterval(function(){
+  const v=document.getElementById('view-live');
+  if(v && v.style.display!=='none') pollLive();
+}, 3000);
+</script>
+<script>
+/* CAPITAL TIERS. Overview + one sub-tab per tier. Selecting a tier renders it
+   with renderLive() -- the SAME function the Rs 1,00,000 tab uses -- so the
+   trade list, columns and summary are identical. Read-only: this tab never
+   posts an action and never touches the live tab's controls. */
+var _trCap = 0, _trIdx = null;
+function _trInr(n){ if(n===null||n===undefined||isNaN(n))return '-';
+  return (n<0?'-':'')+'\u20b9'+Math.abs(Math.round(n)).toLocaleString('en-IN'); }
+function _trLabel(c){ return c<100000 ? (Math.round(c/1000)+'K') : ((c/100000).toFixed(c%100000?1:0)+'L'); }
+
+function trSubs(){
+  var bar=document.getElementById('tr_subs'); if(!bar||!_trIdx) return;
+  var html='<button class="subtab'+(_trCap===0?' on':'')+'" data-cap="0">OVERVIEW</button>';
+  html+=(_trIdx.tiers||[]).map(function(t){
+    return '<button class="subtab'+(_trCap===t.capital?' on':'')+'" data-cap="'+t.capital+'">'+
+      _trLabel(t.capital)+(t.capital===100000?' ★':'')+'</button>'; }).join('');
+  bar.innerHTML=html;
+  bar.querySelectorAll('.subtab').forEach(function(b){
+    b.addEventListener('click',function(){ _trCap=parseInt(b.dataset.cap,10)||0; trShow(); });
+  });
+}
+function trOverview(){
+  var b=document.getElementById('trbody'); if(!b||!_trIdx) return;
+  var T=_trIdx.tiers||[];
+  if(!T.length){ b.innerHTML='<tr><td colspan="9" style="padding:10px;color:var(--mut)">'+
+    ((_trIdx&&_trIdx.err)||'no data yet')+'</td></tr>'; return; }
+  var best=Math.max.apply(null,T.map(function(t){return t.net_real;}));
+  b.innerHTML=T.map(function(t){
+    var ret=t.capital?(t.net_real/t.capital*100):0;
+    var col=(t.net_real<0)?'color:#b91c1c':'color:#047857';
+    return '<tr style="text-align:right;border-bottom:1px solid #f1f5f9;'+
+      (t.net_real===best?'background:#ecfdf5':'')+'">'+
+      '<td style="text-align:left;padding:6px 8px;'+(t.capital===100000?'font-weight:800':'')+'">'+
+        _trInr(t.capital)+(t.capital===100000?' <span style="font-size:10px;color:var(--mut)">(live tab)</span>':'')+'</td>'+
+      '<td>'+t.slots+'</td><td>'+_trInr(t.leg)+'</td><td>'+t.trades+'</td>'+
+      '<td>'+(t.win_pct||0)+'%</td><td>'+_trInr(t.net)+'</td>'+
+      '<td style="color:#b45309">-'+_trInr(t.slip_cost)+'</td>'+
+      '<td style="'+col+';font-weight:700">'+_trInr(t.net_real)+'</td>'+
+      '<td style="'+col+'">'+ret.toFixed(1)+'%</td></tr>';
+  }).join('');
+}
+function trShow(){
+  trSubs();
+  var ov=document.getElementById('tr_overview'), dt=document.getElementById('tr_detail');
+  if(_trCap===0){ if(ov)ov.style.display=''; if(dt)dt.style.display='none'; trOverview(); return; }
+  if(ov)ov.style.display='none'; if(dt)dt.style.display='';
+  fetch('/tiers?cap='+_trCap).then(function(r){return r.json();})
+    .then(function(j){ renderLive(j,{body:'tr_body',sum:'tr_summary',ts:'tr_ts'}); })
+    .catch(function(e){ renderLive({ok:false,err:'board unreachable — '+e},
+                                   {body:'tr_body',sum:'tr_summary',ts:'tr_ts'}); });
+}
+function pollTiers(){
+  fetch('/tiers').then(function(r){return r.json();})
+    .then(function(d){ _trIdx=d; trShow(); }).catch(function(){});
+}
+(function(){ function loop(){
+  var v=document.getElementById('view-tiers');
+  if(v&&v.style.display!=='none') pollTiers();
+  setTimeout(loop,20000); } loop(); })();
+</script>
+</body>
+</html>

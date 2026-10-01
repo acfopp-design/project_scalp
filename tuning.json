@@ -1,0 +1,5 @@
+{
+ "PIN_MIN_BARS": 5,
+ "DIP_GRACE": 3,
+ "IGNITE_PCT": 0.007
+}

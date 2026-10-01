@@ -1,0 +1,8 @@
+# Dhan WEB chart feed (ticks.dhan.co/getData) -- captured from the browser 31-Aug-2026.
+# This is the endpoint Dhan's own chart uses. It is NOT the official /v2/charts API,
+# which returns DH-905 on this account.
+# DHAN_CHART_JWT expires roughly every 24h; recapture it the same way as the scanx JWT.
+DHAN_CHART_JWT=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJkaGFuIiwiZXhwIjoxNzg4MjMzMzQ0LCJjbGllbnRfaWQiOiIxMTA5Nzk4NjYwIn0.OlGnAJGJaBQcDdEo0hXqpEWev2I3gk7xDqklyIcadCosbHhBaaMmA_wz5WPleyeVhojqrvPxQsCBRz0jHRs6rA
+DHAN_CHART_CID=9632772723
+DHAN_CHART_BID=DHN1804
+DHAN_CHART_SRC=T
