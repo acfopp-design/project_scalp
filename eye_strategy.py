@@ -146,7 +146,7 @@ LAST_ENTRY = "1400"
 #   To actually trade shorts you must reserve a slot or rank them separately.
 #   Note also the 23-Sep walk-forward: shorts lost at EVERY slot count
 #   (17 of 19 were losers), so proving they help comes first.
-SHORTS = True
+SHORTS = False   # Sri's Dhan account is LONG-ONLY -- never emit short signals (01-Oct)
 
 # MIN_LEG 4 -> 10, 23-Sep. The single biggest thing wrong with the logic, found
 # by asking what today's 6 winners had at ENTRY that the 10 losers did not. Not

@@ -26,6 +26,7 @@
   "ENTRY_MAX_DIPS": 2,
   "PHASE_ENABLED": false,
   "MIN_PRICE": 50.0,
+  "TIME_CAP": 900.0,
   "HYBRID_GIVE_PCT": 1.0,
   "HYBRID_ALIVE_SEC": 60.0,
   "ENTRY_NEEDS_VWAP": false,
