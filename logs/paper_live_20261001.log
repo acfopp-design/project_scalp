@@ -1,0 +1,1580 @@
+[09:05:36] surge: scanning the whole NSE equity universe every 2s
+[09:05:36] surge scanner ON -- the engine no longer waits for the board
+[09:05:36] paper_live 20261001: warm-up 268 symbols. Waiting for START.
+[09:05:36] quote_feed: started -- one bulk quote per second, 30s bars
+[09:05:37] leverage: MIS sheet 4899 scrips (3077 at 1x)
+[09:07:05] leverage: 268 fetched, 0 failed, 38 of 268 are 1x (Rule A)
+[09:07:08] feed: 0 symbols fetched, 4 failed, 1s
+[09:07:08] circuit bands failed: UnboundLocalError cannot access local variable 'tape' where it is not associated with a value
+[09:07:08] live_exec: PAPER routing in force (mode=PAPER, armed=False)
+[09:07:09] no-dip watchlist 9 names | 0 in funnel (of 0 with bars, 0 warm) | 0 closed | flat | NET Rs 0
+[09:07:30] feed: 0 symbols fetched, 4 failed, 1s
+[09:07:30] circuit bands: 9 of 9 names
+[09:07:31] no-dip watchlist 9 names | 0 in funnel (of 0 with bars, 0 warm) | 0 closed | flat | NET Rs 0
+[09:07:52] feed: 0 symbols fetched, 4 failed, 1s
+[09:07:53] no-dip watchlist 9 names | 0 in funnel (of 0 with bars, 0 warm) | 0 closed | flat | NET Rs 0
+[09:08:14] feed: 0 symbols fetched, 4 failed, 1s
+[09:08:16] feed: 0 symbols fetched, 5 failed, 1s
+[09:08:17] no-dip watchlist 9 names | 0 in funnel (of 0 with bars, 0 warm) | 0 closed | flat | NET Rs 0
+[09:08:38] feed: 0 symbols fetched, 4 failed, 1s
+[09:08:39] no-dip watchlist 9 names | 0 in funnel (of 0 with bars, 0 warm) | 0 closed | flat | NET Rs 0
+[09:09:00] feed: 0 symbols fetched, 4 failed, 1s
+[09:09:01] no-dip watchlist 9 names | 0 in funnel (of 0 with bars, 0 warm) | 0 closed | flat | NET Rs 0
+[09:09:23] feed: 0 symbols fetched, 4 failed, 1s
+[09:09:23] no-dip watchlist 9 names | 0 in funnel (of 0 with bars, 0 warm) | 0 closed | flat | NET Rs 0
+[09:09:45] feed: 0 symbols fetched, 4 failed, 1s
+[09:09:46] feed: 0 symbols fetched, 5 failed, 1s
+[09:09:47] no-dip watchlist 9 names | 0 in funnel (of 0 with bars, 0 warm) | 0 closed | flat | NET Rs 0
+[09:10:08] feed: 0 symbols fetched, 4 failed, 1s
+[09:10:09] no-dip watchlist 9 names | 0 in funnel (of 0 with bars, 0 warm) | 0 closed | flat | NET Rs 0
+[09:10:30] feed: 0 symbols fetched, 4 failed, 1s
+[09:10:31] no-dip watchlist 9 names | 0 in funnel (of 0 with bars, 0 warm) | 0 closed | flat | NET Rs 0
+[09:10:54] feed: 0 symbols fetched, 5 failed, 1s
+[09:10:54] circuit bands: 10 of 10 names
+[09:10:54] no-dip watchlist 10 names | 0 in funnel (of 0 with bars, 0 warm) | 0 closed | flat | NET Rs 0
+[09:11:16] feed: 0 symbols fetched, 5 failed, 1s
+[09:11:18] feed: 0 symbols fetched, 5 failed, 1s
+[09:11:18] no-dip watchlist 10 names | 0 in funnel (of 0 with bars, 0 warm) | 0 closed | flat | NET Rs 0
+[09:11:40] feed: 0 symbols fetched, 5 failed, 1s
+[09:11:41] no-dip watchlist 10 names | 0 in funnel (of 0 with bars, 0 warm) | 0 closed | flat | NET Rs 0
+[09:12:02] feed: 0 symbols fetched, 5 failed, 1s
+[09:12:03] no-dip watchlist 10 names | 0 in funnel (of 0 with bars, 0 warm) | 0 closed | flat | NET Rs 0
+[09:12:25] feed: 0 symbols fetched, 5 failed, 1s
+[09:12:25] no-dip watchlist 10 names | 0 in funnel (of 0 with bars, 0 warm) | 0 closed | flat | NET Rs 0
+[09:12:47] feed: 0 symbols fetched, 5 failed, 1s
+[09:12:49] feed: 0 symbols fetched, 5 failed, 1s
+[09:12:49] no-dip watchlist 10 names | 0 in funnel (of 0 with bars, 0 warm) | 0 closed | flat | NET Rs 0
+[09:13:11] feed: 0 symbols fetched, 5 failed, 1s
+[09:13:12] no-dip watchlist 10 names | 0 in funnel (of 0 with bars, 0 warm) | 0 closed | flat | NET Rs 0
+[09:13:34] feed: 0 symbols fetched, 5 failed, 1s
+[09:13:34] no-dip watchlist 10 names | 0 in funnel (of 0 with bars, 0 warm) | 0 closed | flat | NET Rs 0
+[09:13:56] feed: 0 symbols fetched, 5 failed, 1s
+[09:13:57] no-dip watchlist 10 names | 0 in funnel (of 0 with bars, 0 warm) | 0 closed | flat | NET Rs 0
+[09:14:19] feed: 0 symbols fetched, 5 failed, 1s
+[09:14:20] feed: 0 symbols fetched, 5 failed, 1s
+[09:14:21] no-dip watchlist 10 names | 0 in funnel (of 0 with bars, 0 warm) | 0 closed | flat | NET Rs 0
+[09:14:43] feed: 0 symbols fetched, 5 failed, 1s
+[09:14:44] no-dip watchlist 10 names | 0 in funnel (of 0 with bars, 0 warm) | 0 closed | flat | NET Rs 0
+[09:15:06] feed: 0 symbols fetched, 5 failed, 1s
+[09:15:07] no-dip watchlist 10 names | 0 in funnel (of 0 with bars, 0 warm) | 0 closed | flat | NET Rs 0
+[09:15:29] feed: 2 symbols fetched, 3 failed, 1s
+[09:15:30] no-dip watchlist 10 names | 0 in funnel (of 0 with bars, 0 warm) | 0 closed | flat | NET Rs 0
+[09:15:53] feed: 3 symbols fetched, 2 failed, 2s
+[09:15:55] feed: 2 symbols fetched, 3 failed, 3s
+[09:15:56] no-dip watchlist 10 names | 0 in funnel (of 0 with bars, 0 warm) | 0 closed | flat | NET Rs 0
+[09:16:18] feed: 3 symbols fetched, 2 failed, 1s
+[09:16:19] no-dip watchlist 10 names | 0 in funnel (of 0 with bars, 0 warm) | 0 closed | flat | NET Rs 0
+[09:16:41] feed: 3 symbols fetched, 2 failed, 1s
+[09:16:42] no-dip watchlist 10 names | 0 in funnel (of 0 with bars, 0 warm) | 0 closed | flat | NET Rs 0
+[09:17:04] feed: 3 symbols fetched, 2 failed, 1s
+[09:17:05] no-dip watchlist 10 names | 0 in funnel (of 0 with bars, 0 warm) | 0 closed | flat | NET Rs 0
+[09:17:28] feed: 6 symbols fetched, 2 failed, 2s
+[09:17:31] feed: 4 symbols fetched, 2 failed, 2s
+[09:17:34] surge: 2 new (IPCALAB, SUYOG)
+[09:17:42] quote batch 1: 429 -- backing off 2.5s, one retry
+[09:17:54] quote batch 1 HTTP 429: {"data":{"805":"Too many requests. Further requests may result in the user being blocked."},"status":"failed"}
+[09:17:54] circuit bands: 10 of 14 names
+[09:17:55] no-dip watchlist 21 names | 0 in funnel (of 19 with bars, 0 warm) | 0 closed | flat | NET Rs 0
+[09:18:20] feed: 11 symbols fetched, 2 failed, 4s
+[09:18:27] quote batch 1: 429 -- backing off 2.5s, one retry
+[09:18:39] circuit bands: 20 of 21 names
+[09:18:40] no-dip watchlist 21 names | 9 in funnel (of 41 with bars, 9 warm) | 0 closed | flat | NET Rs 0
+[09:19:04] surge: 8 new (AARTIPHARM, ELECTCAST, ENRIN, ICICIPRULI, INDSWFTLAB, MOTISONS)
+[09:19:04] feed: 11 symbols fetched, 2 failed, 4s
+[09:19:05] no-dip watchlist 33 names | 14 in funnel (of 51 with bars, 14 warm) | 0 closed | flat | NET Rs 0
+[09:19:29] surge: 3 new (LEMONTREE, LUMAXTECH, STYLEBAAZA)
+[09:19:32] feed: 16 symbols fetched, 2 failed, 5s
+[09:19:41] circuit band REJECTED for ELECTCAST: price 78.08 outside band 2.4-3.6 (wrong scrip?)
+[09:19:41] circuit bands: 31 of 33 names (1 rejected as implausible)
+[09:19:42] no-dip watchlist 36 names | 19 in funnel (of 57 with bars, 19 warm) | 0 closed | flat | NET Rs 0
+[09:19:57] surge: 1 new (ATHERENERG)
+[09:20:08] feed: 16 symbols fetched, 2 failed, 5s
+[09:20:14] feed: 16 symbols fetched, 2 failed, 5s
+[09:20:23] quote batch 1: 429 -- backing off 2.5s, one retry
+[09:20:31] surge: 1 new (KIRIINDUS)
+[09:20:35] quote batch 1 HTTP 429: {"data":{"805":"Too many requests. Further requests may result in the user being blocked."},"status":"failed"}
+[09:20:35] circuit bands: 31 of 37 names
+[09:20:37] no-dip watchlist 41 names | 24 in funnel (of 69 with bars, 24 warm) | 0 closed | flat | NET Rs 0
+[09:21:04] feed: 19 symbols fetched, 1 failed, 6s
+[09:21:12] quote batch 1: 429 -- backing off 2.5s, one retry
+[09:21:24] circuit band REJECTED for ELECTCAST: price 78 outside band 2.4-3.6 (wrong scrip?)
+[09:21:24] circuit bands: 41 of 43 names (1 rejected as implausible)
+[09:21:25] no-dip watchlist 46 names | 30 in funnel (of 93 with bars, 30 warm) | 0 closed | holding KARAMTARA | NET Rs -65
+[09:21:53] feed: 19 symbols fetched, 1 failed, 6s
+[09:21:57] surge: 6 new (AEROFLEX, CARTRADE, GENUSPOWER, JSLL, VENUSREM, VERANDA)
+[09:22:05] circuit band REJECTED for ELECTCAST: price 78.41 outside band 2.4-3.6 (wrong scrip?)
+[09:22:05] circuit bands: 44 of 46 names (1 rejected as implausible)
+[09:22:07] no-dip watchlist 52 names | 32 in funnel (of 95 with bars, 32 warm) | 0 closed | holding KARAMTARA | NET Rs 114
+[09:22:34] surge: 2 new (DEEPA, SKYGOLD)
+[09:22:35] feed: 19 symbols fetched, 1 failed, 6s
+[09:22:46] circuit band REJECTED for ELECTCAST: price 77.63 outside band 2.4-3.6 (wrong scrip?)
+[09:22:46] circuit bands: 50 of 52 names (1 rejected as implausible)
+[09:22:48]   KARAMTARA    09:20:30->09:22:00 417.10->420.40 +0.79% eye exit    Rs 340
+[09:22:48] no-dip watchlist 54 names | 33 in funnel (of 97 with bars, 33 warm) | 1 closed | holding ENRIN | NET Rs 2,867
+[09:23:03] surge: 11 new (ABSLAMC, AVALON, BHARATFORG, BOSCHLTD, INDRAMEDCO, JGCHEM)
+[09:23:15] feed: 19 symbols fetched, 1 failed, 6s
+[09:23:29] surge: 10 new (ANANDRATHI, ANTELOPUS, BALAMINES, ESCORTS, JUNIORBEES, KOPRAN)
+[09:23:29] feed: 41 symbols fetched, 3 failed, 13s
+[09:23:41] circuit band REJECTED for ELECTCAST: price 77.41 outside band 2.4-3.6 (wrong scrip?)
+[09:23:41] circuit bands: 63 of 65 names (1 rejected as implausible)
+[09:23:44]   ENRIN        09:21:00->09:23:00 3294.10->3311.50 +0.53% eye exit    Rs 1,170
+[09:23:44] no-dip watchlist 74 names | 44 in funnel (of 121 with bars, 44 warm) | 2 closed | flat | NET Rs 1,510
+[09:23:57] surge: 13 new (ATLANTAELE, AUTOBEES, AXISBANK, CHENNPETRO, INDUSTOWER, MANINDS)
+[09:24:11] feed: 19 symbols fetched, 1 failed, 6s
+[09:24:19] circuit band REJECTED for ELECTCAST: price 77.37 outside band 2.4-3.6 (wrong scrip?)
+[09:24:19] circuit bands: 86 of 88 names (1 rejected as implausible)
+[09:24:20] no-dip watchlist 88 names | 46 in funnel (of 122 with bars, 46 warm) | 2 closed | flat | NET Rs 1,510
+[09:24:23] surge: 5 new (ELECON, FIVESTAR, GRASIM, JINDALSAW, REDINGTON)
+[09:24:45] surge: 15 new (ACUTAAS, ADANIPORTS, AEQUS, APOLLOTYRE, FERMENTA, GABRIEL)
+[09:24:47] feed: 19 symbols fetched, 1 failed, 6s
+[09:24:56] circuit band REJECTED for ELECTCAST: price 76.52 outside band 2.4-3.6 (wrong scrip?)
+[09:24:56] circuit bands: 91 of 93 names (1 rejected as implausible)
+[09:24:58] no-dip watchlist 108 names | 48 in funnel (of 124 with bars, 48 warm) | 2 closed | flat | NET Rs 1,510
+[09:25:19] surge: 4 new (BOSCH-HCIL, CLEANMAX, KPL, SHADOWFAX)
+[09:25:20] no-dip watchlist 112 names | 48 in funnel (of 124 with bars, 48 warm) | 2 closed | flat | NET Rs 1,510
+[09:25:42] no-dip watchlist 112 names | 47 in funnel (of 123 with bars, 47 warm) | 2 closed | flat | NET Rs 1,510
+[09:25:44] surge: 10 new (BAJAJ-AUTO, CHOLAFIN, DYNAMATECH, FORTIS, NEULANDLAB, NUVOCO)
+[09:26:03] no-dip watchlist 122 names | 47 in funnel (of 123 with bars, 47 warm) | 2 closed | flat | NET Rs 1,510
+[09:26:16] surge: 2 new (BECTORFOOD, PNCINFRA)
+[09:26:30] feed: 19 symbols fetched, 1 failed, 6s
+[09:26:41] circuit band REJECTED for ELECTCAST: price 76.32 outside band 2.4-3.6 (wrong scrip?)
+[09:26:41] circuit bands: 122 of 124 names (1 rejected as implausible)
+[09:26:43] no-dip watchlist 124 names | 50 in funnel (of 132 with bars, 50 warm) | 2 closed | flat | NET Rs 1,510
+[09:26:53] surge: 6 new (ATULAUTO, COROMANDEL, ELLEN, LXCHEM, SGMART, STEELCAS)
+[09:27:04] no-dip watchlist 130 names | 50 in funnel (of 132 with bars, 50 warm) | 2 closed | flat | NET Rs 1,510
+[09:27:25] no-dip watchlist 130 names | 50 in funnel (of 132 with bars, 50 warm) | 2 closed | flat | NET Rs 1,510
+[09:27:26] surge: 2 new (KERNEX, NUVAMA)
+[09:27:47] no-dip watchlist 132 names | 54 in funnel (of 144 with bars, 54 warm) | 2 closed | flat | NET Rs 1,510
+[09:28:02] surge: 5 new (AXISCADES, CMPDI, HINDCOPPER, VAML, WABAG)
+[09:28:14] feed: 19 symbols fetched, 1 failed, 6s
+[09:28:27] surge: 10 new (AEGISLOG, AMBUJACEM, AUGMONT, CASTROLIND, CGPOWER, CLEAN)
+[09:28:48] feed: 114 symbols fetched, 2 failed, 33s
+[09:28:52] surge: 7 new (IIFL, LUMINO, M&M, MPIMANIPAL, MUNJALAU, PRASOLCHEM)
+[09:29:00] circuit band REJECTED for ELECTCAST: price 75.76 outside band 2.4-3.6 (wrong scrip?)
+[09:29:00] circuit bands: 135 of 137 names (1 rejected as implausible)
+[09:29:03] no-dip watchlist 153 names | 68 in funnel (of 191 with bars, 68 warm) | 2 closed | flat | NET Rs 1,510
+[09:29:20] surge: 5 new (ADANIENSOL, LLOYDSME, MOLBIO, PAISALO, SJS)
+[09:29:24] no-dip watchlist 156 names | 68 in funnel (of 192 with bars, 68 warm) | 2 closed | flat | NET Rs 1,510
+[09:29:51] surge: 1 new (NAZARA)
+[09:29:52] feed: 19 symbols fetched, 1 failed, 6s
+[09:30:03] quote batch 1: 429 -- backing off 2.5s, one retry
+[09:30:15] quote batch 1 HTTP 429: {"data":{"805":"Too many requests. Further requests may result in the user being blocked."},"status":"failed"}
+[09:30:15] circuit bands: 135 of 156 names
+[09:30:16] no-dip watchlist 157 names | 71 in funnel (of 194 with bars, 71 warm) | 2 closed | holding MOLBIO | NET Rs 1,566
+[09:30:38] no-dip watchlist 157 names | 71 in funnel (of 194 with bars, 71 warm) | 2 closed | holding MOLBIO | NET Rs 1,566
+[09:31:00] no-dip watchlist 157 names | 71 in funnel (of 194 with bars, 71 warm) | 2 closed | holding MOLBIO | NET Rs 1,566
+[09:31:12] surge: 7 new (BLUESTONE, FINCABLES, GVT&D, KISSHT, MAHABANK, NOCIL)
+[09:31:27] feed: 19 symbols fetched, 1 failed, 6s
+[09:31:37] circuit band REJECTED for ELECTCAST: price 76.2 outside band 2.4-3.6 (wrong scrip?)
+[09:31:37] circuit bands: 162 of 164 names (1 rejected as implausible)
+[09:31:40]   MOLBIO       09:29:00->09:31:00 1354.30->1372.60 +1.35% eye exit    Rs 607
+[09:31:40] no-dip watchlist 164 names | 71 in funnel (of 194 with bars, 71 warm) | 3 closed | flat | NET Rs 2,116
+[09:31:41] surge: 5 new (BPCL, EPL, LALPATHLAB, PROSTARM, TBOTEK)
+[09:32:01] no-dip watchlist 170 names | 72 in funnel (of 194 with bars, 72 warm) | 3 closed | flat | NET Rs 2,116
+[09:32:06] surge: 5 new (ASHOKLEY, EIEL, LINDEINDIA, OMNI, YATHARTH)
+[09:32:24] no-dip watchlist 174 names | 76 in funnel (of 202 with bars, 76 warm) | 3 closed | flat | NET Rs 2,116
+[09:32:39] surge: 1 new (APLLTD)
+[09:32:47] no-dip watchlist 175 names | 76 in funnel (of 205 with bars, 76 warm) | 3 closed | flat | NET Rs 2,116
+[09:33:12] surge: 2 new (HEROMOTOCO, MON100)
+[09:33:14] feed: 19 symbols fetched, 1 failed, 6s
+[09:33:24] circuit band REJECTED for ELECTCAST: price 75.95 outside band 2.4-3.6 (wrong scrip?)
+[09:33:24] circuit bands: 173 of 175 names (1 rejected as implausible)
+[09:33:27] no-dip watchlist 177 names | 81 in funnel (of 209 with bars, 81 warm) | 3 closed | flat | NET Rs 2,116
+[09:33:49]   AUGMONT      09:33:00->09:33:00 1189.90->1189.00 -0.08% circuit guard Rs -325
+[09:33:49] no-dip watchlist 177 names | 82 in funnel (of 210 with bars, 82 warm) | 4 closed | flat | NET Rs 1,791
+[09:34:11] no-dip watchlist 178 names | 87 in funnel (of 214 with bars, 87 warm) | 4 closed | flat | NET Rs 1,791
+[09:34:32] no-dip watchlist 178 names | 87 in funnel (of 216 with bars, 87 warm) | 4 closed | flat | NET Rs 1,791
+[09:34:46] surge: 4 new (ABB, KEI, STARHEALTH, TDPOWERSYS)
+[09:34:59] feed: 20 symbols fetched, 0 failed, 6s
+[09:35:27] surge: 3 new (CGCL, DRREDDY, POLYCAB)
+[09:35:46] feed: 159 symbols fetched, 2 failed, 46s
+[09:35:55] circuit band REJECTED for ELECTCAST: price 75.41 outside band 2.4-3.6 (wrong scrip?)
+[09:35:55] circuit bands: 180 of 182 names (1 rejected as implausible)
+[09:36:05]   PACEDIGITK   09:24:30->09:34:30 176.63->172.80 -2.17% eye exit    Rs 5,284
+[09:36:05]   TARIL        09:26:00->09:31:00 293.40->292.90 -0.17% eye exit    Rs -562
+[09:36:05]   TARIL        09:32:30->09:34:30 294.40->292.40 -0.68% eye exit    Rs -1,833
+[09:36:05] no-dip watchlist 186 names | 98 in funnel (of 233 with bars, 98 warm) | 7 closed | flat | NET Rs 4,680
+[09:36:20] surge: 2 new (PIXTRANS, RATNAVEER)
+[09:36:34] feed: 20 symbols fetched, 0 failed, 6s
+[09:36:43] circuit band REJECTED for ELECTCAST: price 75.66 outside band 2.4-3.6 (wrong scrip?)
+[09:36:43] circuit bands: 185 of 187 names (1 rejected as implausible)
+[09:36:52] surge: 3 new (AUROPHARMA, DPABHUSHAN, KIRLOSENG)
+[09:36:52] no-dip watchlist 187 names | 99 in funnel (of 235 with bars, 99 warm) | 7 closed | flat | NET Rs 4,680
+[09:37:16] surge: 2 new (FIRSTCRY, VEDL)
+[09:37:17] no-dip watchlist 190 names | 99 in funnel (of 235 with bars, 99 warm) | 7 closed | flat | NET Rs 4,680
+[09:37:41] surge: 5 new (ETERNAL, PFC, PSUBNKBEES, UNIMECH, ZEEL)
+[09:37:42] no-dip watchlist 192 names | 99 in funnel (of 235 with bars, 99 warm) | 7 closed | holding DPABHUSHAN | NET Rs 5,334
+[09:38:03] surge: 2 new (ENGINERSIN, INOXGREEN)
+[09:38:10] feed: 21 symbols fetched, 0 failed, 6s
+[09:38:18] circuit band REJECTED for ELECTCAST: price 75.44 outside band 2.4-3.6 (wrong scrip?)
+[09:38:18] circuit bands: 195 of 197 names (1 rejected as implausible)
+[09:38:21] no-dip watchlist 199 names | 101 in funnel (of 235 with bars, 101 warm) | 7 closed | holding DPABHUSHAN,GVT&D | NET Rs 4,465
+[09:38:29] surge: 4 new (BHEL, DHOOTTRANS, FCL, MUKANDLTD)
+[09:38:47] no-dip watchlist 202 names | 101 in funnel (of 235 with bars, 101 warm) | 7 closed | holding DPABHUSHAN,GVT&D | NET Rs 4,465
+[09:38:52] surge: 8 new (ADANIGREEN, CSBBANK, HAVELLS, MFSL, RBLBANK, SBC)
+[09:39:11]   DPABHUSHAN   09:37:00->09:38:30 1827.60->1832.00 +0.24% eye exit    Rs 463
+[09:39:11] no-dip watchlist 210 names | 102 in funnel (of 237 with bars, 102 warm) | 8 closed | holding GVT&D | NET Rs 4,513
+[09:39:12] surge: 6 new (BHARTIHEXA, CRISIL, JSWINFRA, JUBLPHARMA, JYOTICNC, LOKESHMACH)
+[09:39:32] no-dip watchlist 216 names | 103 in funnel (of 237 with bars, 103 warm) | 8 closed | holding GVT&D | NET Rs 4,513
+[09:39:32] surge: 2 new (HEMIPROP, SHILPAMED)
+[09:39:53] surge: 3 new (OIL, SAMMAANCAP, SANSERA)
+[09:39:59] feed: 20 symbols fetched, 0 failed, 6s
+[09:40:06] circuit band REJECTED for ELECTCAST: price 75.36 outside band 2.4-3.6 (wrong scrip?)
+[09:40:06] circuit bands: 216 of 218 names (1 rejected as implausible)
+[09:40:12]   GVT&D        09:38:00->09:39:30 4331.80->4325.40 -0.15% eye exit    Rs -499
+[09:40:12] no-dip watchlist 221 names | 108 in funnel (of 243 with bars, 108 warm) | 9 closed | flat | NET Rs 4,644
+[09:40:15] surge: 2 new (JINDALSTEL, TENNIND)
+[09:40:33] surge: 3 new (CONTROLPR, CUMMINSIND, SUNTV)
+[09:40:41] no-dip watchlist 226 names | 112 in funnel (of 248 with bars, 112 warm) | 9 closed | flat | NET Rs 4,644
+[09:40:52] surge: 2 new (SSWL, STEAMHOUSE)
+[09:41:06]   RATNAVEER    09:38:00->09:40:30 342.70->342.90 +0.06% eye exit    Rs 10
+[09:41:06] no-dip watchlist 229 names | 113 in funnel (of 249 with bars, 113 warm) | 10 closed | flat | NET Rs 4,654
+[09:41:09] surge: 2 new (HINDOILEXP, NH)
+[09:41:34] feed: 20 symbols fetched, 0 failed, 6s
+[09:41:49] surge: 3 new (BSLNIFTY, NETWORK18, RRKABEL)
+[09:42:34] feed: 207 symbols fetched, 2 failed, 60s
+[09:42:42] quote batch 1: 429 -- backing off 2.5s, one retry
+[09:42:50] surge: 1 new (IOC)
+[09:42:54] circuit band REJECTED for ELECTCAST: price 75.33 outside band 2.4-3.6 (wrong scrip?)
+[09:42:54] circuit bands: 228 of 231 names (1 rejected as implausible)
+[09:43:03] no-dip watchlist 235 names | 124 in funnel (of 279 with bars, 124 warm) | 10 closed | flat | NET Rs 4,654
+[09:43:19] surge: 3 new (CENTUM, LALITHAA, PFOCUS)
+[09:43:30] feed: 20 symbols fetched, 0 failed, 6s
+[09:43:40] circuit band REJECTED for ELECTCAST: price 75.3 outside band 2.4-3.6 (wrong scrip?)
+[09:43:40] circuit bands: 235 of 238 names (1 rejected as implausible)
+[09:43:48] surge: 2 new (GSFC, HBLENGINE)
+[09:43:52] no-dip watchlist 238 names | 124 in funnel (of 279 with bars, 124 warm) | 10 closed | flat | NET Rs 4,654
+[09:44:12] surge: 9 new (BHAGERIA, INDOTECH, KROSS, MARKSANS, MARUTI, RAIN)
+[09:44:22] no-dip watchlist 249 names | 124 in funnel (of 279 with bars, 124 warm) | 10 closed | holding NAZARA | NET Rs 5,024
+[09:44:43] surge: 2 new (OLECTRA, SAIL)
+[09:44:50] no-dip watchlist 251 names | 126 in funnel (of 281 with bars, 126 warm) | 10 closed | holding NAZARA | NET Rs 5,024
+[09:45:18] feed: 21 symbols fetched, 0 failed, 6s
+[09:45:28] quote batch 1: 429 -- backing off 2.5s, one retry
+[09:45:40] quote batch 1 HTTP 429: {"data":{"805":"Too many requests. Further requests may result in the user being blocked."},"status":"failed"}
+[09:45:40] circuit bands: 235 of 251 names
+[09:45:41]   NAZARA       09:43:30->09:45:00 395.20->395.50 +0.08% eye exit    Rs 54
+[09:45:41] no-dip watchlist 251 names | 126 in funnel (of 281 with bars, 126 warm) | 11 closed | flat | NET Rs 4,708
+[09:46:05] surge: 2 new (GPPL, POLICYBZR)
+[09:46:08] no-dip watchlist 253 names | 125 in funnel (of 283 with bars, 125 warm) | 11 closed | flat | NET Rs 4,708
+[09:46:28] paper_live.py changed on disk -- exiting so the new code can take over
+[09:46:52] quote_feed: started -- one bulk quote per second, 30s bars
+[09:46:52] surge: scanning the whole NSE equity universe every 2s
+[09:46:52] surge scanner ON -- the engine no longer waits for the board
+[09:46:52] paper_live 20261001: warm-up 268 symbols. Waiting for START.
+[09:46:54] leverage: MIS sheet 4899 scrips (3077 at 1x)
+[09:47:02] feed: 20 symbols fetched, 0 failed, 6s
+[09:47:04] surge: 151 new (AASTHA, AAVAS, ADANIENSOL, AEGISLOG, AEROFLEX, ARDEE)
+[09:47:06] quote batch 1: 429 -- backing off 2.5s, one retry
+[09:47:16] circuit bands failed: UnboundLocalError cannot access local variable 'tape' where it is not associated with a value
+[09:47:20] live_exec: PAPER routing in force (mode=PAPER, armed=False)
+[09:47:20]   KARAMTARA    09:20:30->09:22:00 417.10->420.40 +0.79% eye exit    Rs 340
+[09:47:20]   ENRIN        09:21:00->09:23:00 3294.10->3311.50 +0.53% eye exit    Rs 1,170
+[09:47:20]   PACEDIGITK   09:24:30->09:34:30 176.63->172.80 -2.17% eye exit    Rs 5,284
+[09:47:20]   INDUSTOWER   09:25:00->09:27:30 376.55->376.00 -0.15% eye exit    Rs -500
+[09:47:20]   TARIL        09:26:00->09:31:00 293.40->292.90 -0.17% eye exit    Rs -562
+[09:47:20]   MOLBIO       09:29:00->09:31:00 1354.30->1372.60 +1.35% eye exit    Rs 607
+[09:47:20]   DPABHUSHAN   09:29:00->09:46:30 1805.60->1819.30 +0.76% eye exit    Rs 1,755
+[09:47:20]   TARIL        09:32:30->09:34:30 294.40->292.40 -0.68% eye exit    Rs -1,833
+[09:47:20]   AUGMONT      09:33:00->09:33:00 1189.90->1189.00 -0.08% circuit guard Rs -325
+[09:47:20]   DPABHUSHAN   09:37:00->09:38:30 1827.60->1832.00 +0.24% eye exit    Rs 463
+[09:47:20]   GVT&D        09:38:00->09:39:30 4331.80->4325.40 -0.15% eye exit    Rs -499
+[09:47:20]   RATNAVEER    09:38:00->09:40:30 342.70->342.90 +0.06% eye exit    Rs 10
+[09:47:20]   NAZARA       09:43:30->09:45:00 395.20->395.50 +0.08% eye exit    Rs 54
+[09:47:20] no-dip watchlist 181 names | 74 in funnel (of 277 with bars, 74 warm) | 13 closed | holding TBOTEK | NET Rs 5,193
+[09:47:28] surge: 5 new (GALAXYSURF, HNDFDS, KPEL, SUBEXLTD, THANGAMAYL)
+[09:47:42] no-dip watchlist 185 names | 74 in funnel (of 277 with bars, 74 warm) | 13 closed | holding TBOTEK | NET Rs 5,193
+[09:47:52] surge: 2 new (MUKANDLTD, VIDYAWIRES)
+[09:48:08] no-dip watchlist 187 names | 73 in funnel (of 276 with bars, 73 warm) | 13 closed | holding GALAXYSURF | NET Rs 6,228
+[09:48:16] surge: 5 new (CONTROLPR, GOODLUCK, NEPHROPLUS, SKFINDIA, TTML)
+[09:48:37] feed: 20 symbols fetched, 0 failed, 6s
+[09:48:45] quote batch 1: 429 -- backing off 2.5s, one retry
+[09:48:53] surge: 7 new (ABDL, FILATEX, SONACOMS, SYMBIOTEC, TVSMOTOR, VINDHYATEL)
+[09:48:57] quote batch 1 HTTP 429: {"data":{"805":"Too many requests. Further requests may result in the user being blocked."},"status":"failed"}
+[09:48:57] circuit bands: 0 of 192 names
+[09:49:06]   GALAXYSURF   09:46:30->09:48:00 2415.60->2417.00 +0.06% eye exit    Rs 9
+[09:49:06] no-dip watchlist 199 names | 75 in funnel (of 277 with bars, 75 warm) | 14 closed | flat | NET Rs 5,971
+[09:49:32] no-dip watchlist 199 names | 74 in funnel (of 276 with bars, 74 warm) | 14 closed | holding SHILPAMED | NET Rs 5,835
+[09:49:38] surge: 2 new (GENESYS, RPEL)
+[09:49:56] no-dip watchlist 201 names | 74 in funnel (of 276 with bars, 74 warm) | 14 closed | flat | NET Rs 5,971
+[09:50:11] surge: 9 new (CENTUM, HARSHA, HINDPETRO, MOREALTY, MOTHERSON, PCJEWELLER)
+[09:50:24] feed: 20 symbols fetched, 0 failed, 6s
+[09:50:32] quote batch 1: 429 -- backing off 2.5s, one retry
+[09:50:34] retired the previous engine (pid 39620)
+[09:50:38] surge scanner ON -- the engine no longer waits for the board
+[09:50:38] surge: scanning the whole NSE equity universe every 2s
+[09:50:38] paper_live 20261001: warm-up 268 symbols. Waiting for START.
+[09:50:38] quote_feed: started -- one bulk quote per second, 30s bars
+[09:50:40] leverage: MIS sheet 4899 scrips (3077 at 1x)
+[09:50:48] feed: 20 symbols fetched, 0 failed, 6s
+[09:50:56] quote batch 1: 429 -- backing off 2.5s, one retry
+[09:51:09] quote batch 1 HTTP 429: {"data":{"805":"Too many requests. Further requests may result in the user being blocked."},"status":"failed"}
+[09:51:09] circuit bands: 0 of 210 names
+[09:51:11] live_exec: PAPER routing in force (mode=PAPER, armed=False)
+[09:51:11]   KARAMTARA    09:20:30->09:22:00 417.10->420.40 +0.79% eye exit    Rs 340
+[09:51:11]   ENRIN        09:21:00->09:23:00 3294.10->3311.50 +0.53% eye exit    Rs 1,170
+[09:51:11]   PACEDIGITK   09:24:30->09:34:30 176.63->172.80 -2.17% eye exit    Rs 5,284
+[09:51:11]   INDUSTOWER   09:25:00->09:27:30 376.55->376.00 -0.15% eye exit    Rs -500
+[09:51:11]   TARIL        09:26:00->09:31:00 293.40->292.90 -0.17% eye exit    Rs -562
+[09:51:11]   MOLBIO       09:29:00->09:31:00 1354.30->1372.60 +1.35% eye exit    Rs 607
+[09:51:11]   DPABHUSHAN   09:29:00->09:46:30 1805.60->1819.30 +0.76% eye exit    Rs 1,755
+[09:51:11]   TARIL        09:32:30->09:34:30 294.40->292.40 -0.68% eye exit    Rs -1,833
+[09:51:11]   AUGMONT      09:33:00->09:33:00 1189.90->1189.00 -0.08% circuit guard Rs -325
+[09:51:11]   DPABHUSHAN   09:37:00->09:38:30 1827.60->1832.00 +0.24% eye exit    Rs 463
+[09:51:11]   GVT&D        09:38:00->09:39:30 4331.80->4325.40 -0.15% eye exit    Rs -499
+[09:51:11]   RATNAVEER    09:38:00->09:40:30 342.70->342.90 +0.06% eye exit    Rs 10
+[09:51:11]   NAZARA       09:43:30->09:45:00 395.20->395.50 +0.08% eye exit    Rs 54
+[09:51:11]   GALAXYSURF   09:46:30->09:48:00 2415.60->2417.00 +0.06% eye exit    Rs 9
+[09:51:11] no-dip watchlist 210 names | 80 in funnel (of 284 with bars, 80 warm) | 14 closed | holding WELSPUNLIV | NET Rs 5,996
+[09:51:17] surge: 109 new (AAVAS, ADANIENSOL, AEROFLEX, ASHOKA, ASHOKLEY, ASKAUTOLTD)
+[09:51:35] no-dip watchlist 151 names | 69 in funnel (of 277 with bars, 69 warm) | 14 closed | flat | NET Rs 5,971
+[09:51:42] surge: 46 new (AASTHA, ARIS, ATLANTAELE, AUGMONT, AUTOBEES, CGPOWER)
+[09:51:59] no-dip watchlist 185 names | 73 in funnel (of 277 with bars, 73 warm) | 14 closed | flat | NET Rs 5,971
+[09:52:06] surge: 7 new (BLUEDART, CSBBANK, GHCLTEXTIL, GRASIM, RSYSTEMS, SUBEXLTD)
+[09:52:25] feed: 20 symbols fetched, 0 failed, 6s
+[09:52:31] surge: 3 new (ARDEE, RAYMOND, TENNIND)
+[09:52:35] circuit band REJECTED for ELECTCAST: price 75.2 outside band 2.4-3.6 (wrong scrip?)
+[09:52:35] circuit bands: 189 of 192 names (1 rejected as implausible)
+[09:52:39]   SHILPAMED    09:48:30->09:51:30 1073.10->1073.00 -0.01% eye exit    Rs -159
+[09:52:39] no-dip watchlist 195 names | 74 in funnel (of 277 with bars, 74 warm) | 15 closed | holding ATLANTAELE | NET Rs 5,166
+[09:52:59] surge: 4 new (ELGIEQUIP, RIR, RPGLIFE, SOLARWORLD)
+[09:53:01] no-dip watchlist 199 names | 74 in funnel (of 277 with bars, 74 warm) | 15 closed | flat | NET Rs 5,812
+[09:53:25] no-dip watchlist 199 names | 74 in funnel (of 277 with bars, 74 warm) | 15 closed | flat | NET Rs 5,812
+[09:53:38] surge: 1 new (RAIN)
+[09:53:46] no-dip watchlist 200 names | 74 in funnel (of 277 with bars, 74 warm) | 15 closed | flat | NET Rs 5,812
+[09:54:12] feed: 20 symbols fetched, 0 failed, 6s
+[09:54:22] circuit band REJECTED for ELECTCAST: price 75.07 outside band 2.4-3.6 (wrong scrip?)
+[09:54:22] circuit bands: 197 of 200 names (1 rejected as implausible)
+[09:54:24] no-dip watchlist 200 names | 74 in funnel (of 277 with bars, 74 warm) | 15 closed | flat | NET Rs 5,812
+[09:54:31] surge: 4 new (ARCIL, IVALUE, ORCHPHARMA, STEAMHOUSE)
+[09:54:47] no-dip watchlist 204 names | 94 in funnel (of 352 with bars, 94 warm) | 15 closed | flat | NET Rs 5,812
+[09:54:56] surge: 7 new (AEQUS, APTUS, BLEL, OLAELEC, SAIL, VISL)
+[09:55:11] no-dip watchlist 210 names | 100 in funnel (of 364 with bars, 100 warm) | 15 closed | flat | NET Rs 5,812
+[09:55:21] surge: 12 new (AMBUJACEM, CANFINHOME, CARTRADE, EBGNG, GENUSPOWER, HDFCLIFE)
+[09:55:32] no-dip watchlist 222 names | 104 in funnel (of 364 with bars, 104 warm) | 15 closed | flat | NET Rs 5,812
+[09:55:59] feed: 20 symbols fetched, 0 failed, 6s
+[09:56:01] surge: 4 new (ADANIGREEN, SBILIFE, TMCV, WAAREEENER)
+[09:56:42] surge: 1 new (LICHSGFIN)
+[09:56:57] feed: 199 symbols fetched, 1 failed, 57s
+[09:57:07] quote batch 1: 429 -- backing off 2.5s, one retry
+[09:57:19] quote batch 1 HTTP 429: {"data":{"805":"Too many requests. Further requests may result in the user being blocked."},"status":"failed"}
+[09:57:19] circuit bands: 197 of 222 names
+[09:57:25]   KISSHT       09:44:00->09:45:30 380.10->377.35 -0.72% eye exit    Rs -1,942
+[09:57:25]   GKSL         09:46:00->09:54:00 194.05->194.28 +0.12% eye exit    Rs 160
+[09:57:25]   THOMASCOTT   09:49:00->09:55:30 288.80->306.00 +5.96% eye exit    Rs 14,738
+[09:57:25] no-dip watchlist 227 names | 110 in funnel (of 383 with bars, 110 warm) | 18 closed | holding PIXTRANS | NET Rs 21,197
+[09:57:51] feed: 20 symbols fetched, 0 failed, 6s
+[09:58:00] circuit band REJECTED for ELECTCAST: price 74.8 outside band 2.4-3.6 (wrong scrip?)
+[09:58:00] circuit bands: 224 of 227 names (1 rejected as implausible)
+[09:58:05]   PIXTRANS     09:54:30->09:57:30 1849.40->1876.30 +1.45% eye exit    Rs 3,495
+[09:58:05] no-dip watchlist 227 names | 110 in funnel (of 383 with bars, 110 warm) | 19 closed | holding WELSPUNLIV | NET Rs 22,202
+[09:58:25] surge: 1 new (LLOYDSENT)
+[09:58:29] no-dip watchlist 228 names | 110 in funnel (of 383 with bars, 110 warm) | 19 closed | flat | NET Rs 22,263
+[09:58:51] no-dip watchlist 228 names | 110 in funnel (of 383 with bars, 110 warm) | 19 closed | flat | NET Rs 22,263
+[09:58:57] surge: 1 new (RECLTD)
+[09:59:16] no-dip watchlist 229 names | 110 in funnel (of 383 with bars, 110 warm) | 19 closed | flat | NET Rs 22,263
+[09:59:42] feed: 20 symbols fetched, 0 failed, 6s
+[09:59:46] surge: 4 new (EICHERMOT, JKPAPER, MARUTI, PFOCUS)
+[09:59:51] circuit band REJECTED for ELECTCAST: price 74.98 outside band 2.4-3.6 (wrong scrip?)
+[09:59:51] circuit bands: 226 of 229 names (1 rejected as implausible)
+[09:59:56] no-dip watchlist 233 names | 111 in funnel (of 386 with bars, 111 warm) | 19 closed | holding WELSPUNLIV | NET Rs 22,033
+[10:00:20] no-dip watchlist 233 names | 111 in funnel (of 387 with bars, 111 warm) | 19 closed | holding WELSPUNLIV | NET Rs 22,033
+[10:00:32] surge: 4 new (COFORGE, DELTACORP, KTKBANK, RBLBANK)
+[10:00:42] no-dip watchlist 237 names | 113 in funnel (of 387 with bars, 113 warm) | 19 closed | holding WELSPUNLIV | NET Rs 22,033
+[10:01:03] no-dip watchlist 237 names | 113 in funnel (of 387 with bars, 113 warm) | 19 closed | holding WELSPUNLIV | NET Rs 22,033
+[10:01:21] surge: 2 new (KAJARIACER, LTM)
+[10:01:30] feed: 20 symbols fetched, 0 failed, 6s
+[10:01:41] circuit band REJECTED for ELECTCAST: price 75.32 outside band 2.4-3.6 (wrong scrip?)
+[10:01:41] circuit bands: 236 of 239 names (1 rejected as implausible)
+[10:01:49]   WELSPUNLIV   09:59:30->10:01:00 237.00->237.24 +0.10% eye exit    Rs 117
+[10:01:49] no-dip watchlist 239 names | 112 in funnel (of 386 with bars, 112 warm) | 20 closed | flat | NET Rs 22,381
+[10:01:49] surge: 5 new (JSWSTEEL, KIRIINDUS, KOTAKBANK, LIQUID1, STARHEALTH)
+[10:02:14] surge: 6 new (BEPL, IMFA, MAHABANK, PREMIERENE, REDINGTON, TCS)
+[10:02:15] no-dip watchlist 243 names | 112 in funnel (of 387 with bars, 112 warm) | 20 closed | holding DPABHUSHAN | NET Rs 21,849
+[10:02:37] no-dip watchlist 249 names | 114 in funnel (of 387 with bars, 114 warm) | 20 closed | holding DPABHUSHAN | NET Rs 21,849
+[10:02:47] surge: 2 new (BSE, NETWEB)
+[10:03:04] feed: 21 symbols fetched, 0 failed, 6s
+[10:03:12] surge: 2 new (ABB, HINDPETRO)
+[10:03:37] surge: 4 new (BLUESTARCO, HDFCBANK, MANORAMA, MFSL)
+[10:04:02] surge: 1 new (AEGISVOPAK)
+[10:04:10] feed: 227 symbols fetched, 1 failed, 65s
+[10:04:20] circuit band REJECTED for ELECTCAST: price 75.3 outside band 2.4-3.6 (wrong scrip?)
+[10:04:20] circuit bands: 248 of 251 names (1 rejected as implausible)
+[10:04:32] no-dip watchlist 256 names | 122 in funnel (of 406 with bars, 122 warm) | 20 closed | holding DPABHUSHAN | NET Rs 21,849
+[10:04:36] surge: 1 new (BHEL)
+[10:04:59] feed: 21 symbols fetched, 0 failed, 6s
+[10:05:08] quote batch 1: 429 -- backing off 2.5s, one retry
+[10:05:20] quote batch 1 HTTP 429: {"data":{"805":"Too many requests. Further requests may result in the user being blocked."},"status":"failed"}
+[10:05:20] circuit bands: 248 of 257 names
+[10:05:28]   DPABHUSHAN   10:01:30->10:04:30 1882.00->1878.00 -0.21% eye exit    Rs -663
+[10:05:28] no-dip watchlist 257 names | 123 in funnel (of 406 with bars, 123 warm) | 21 closed | flat | NET Rs 21,717
+[10:05:57] no-dip watchlist 257 names | 123 in funnel (of 406 with bars, 123 warm) | 21 closed | flat | NET Rs 21,717
+[10:05:57] surge: 3 new (INDIGO, SIEMENS, TATACONSUM)
+[10:06:22] surge: 5 new (3MINDIA, AEGISLOG, FIVESTAR, OMNI, ROLEXRINGS)
+[10:06:25] no-dip watchlist 260 names | 124 in funnel (of 407 with bars, 124 warm) | 21 closed | flat | NET Rs 21,717
+[10:06:52] feed: 20 symbols fetched, 0 failed, 6s
+[10:06:55] surge: 3 new (ELECTCAST, MANAPPURAM, RENTOMOJO)
+[10:07:03] quote batch 1: 429 -- backing off 2.5s, one retry
+[10:07:16] quote batch 1 HTTP 429: {"data":{"805":"Too many requests. Further requests may result in the user being blocked."},"status":"failed"}
+[10:07:16] circuit bands: 248 of 265 names
+[10:07:24] no-dip watchlist 267 names | 128 in funnel (of 407 with bars, 128 warm) | 21 closed | holding LEMONTREE | NET Rs 21,285
+[10:07:36] surge: 2 new (BPCL, PHOENIXLTD)
+[10:07:46] no-dip watchlist 269 names | 129 in funnel (of 408 with bars, 129 warm) | 21 closed | holding LEMONTREE,ELECTCAST | NET Rs 20,788
+[10:08:10]   SACHEEROME   10:01:30->10:06:30 501.50->503.50 +0.40% eye exit    Rs 145
+[10:08:10] no-dip watchlist 269 names | 129 in funnel (of 408 with bars, 129 warm) | 22 closed | holding ELECTCAST | NET Rs 23,139
+[10:08:25] surge: 2 new (JSWINFRA, LGEINDIA)
+[10:08:37] feed: 21 symbols fetched, 0 failed, 6s
+[10:08:46] quote batch 1: 429 -- backing off 2.5s, one retry
+[10:08:58] circuit band REJECTED for ELECTCAST: price 76.5 outside band 2.4-3.6 (wrong scrip?)
+[10:08:58] circuit bands: 268 of 271 names (1 rejected as implausible)
+[10:09:03] no-dip watchlist 271 names | 132 in funnel (of 411 with bars, 132 warm) | 22 closed | flat | NET Rs 21,863
+[10:09:31] no-dip watchlist 271 names | 132 in funnel (of 411 with bars, 132 warm) | 22 closed | flat | NET Rs 21,863
+[10:09:47] surge: 1 new (EDELWEISS)
+[10:10:05] no-dip watchlist 272 names | 132 in funnel (of 413 with bars, 132 warm) | 22 closed | flat | NET Rs 21,863
+[10:10:32] feed: 20 symbols fetched, 0 failed, 6s
+[10:10:37] surge: 6 new (360ONE, APARINDS, BHARATFORG, ICICIAMC, NATCOPHARM, PFC)
+[10:11:10] surge: 4 new (DEEPA, LLOYDSENGG, PERSISTENT, ZENSARTECH)
+[10:11:34] surge: 3 new (BHARTIARTL, SAILIFE, TATAELXSI)
+[10:11:44] feed: 249 symbols fetched, 1 failed, 72s
+[10:11:55] circuit band REJECTED for ELECTCAST: price 75.88 outside band 2.4-3.6 (wrong scrip?)
+[10:11:55] circuit bands: 269 of 272 names (1 rejected as implausible)
+[10:12:03] surge: 2 new (HAVELLS, INDUSTOWER)
+[10:12:04]   GVT&D        10:01:30->10:07:30 4296.60->4312.50 +0.37% eye exit    Rs 786
+[10:12:04]   LEMONTREE    10:08:30->10:10:00 110.15->110.54 +0.35% eye exit    Rs 749
+[10:12:04] no-dip watchlist 284 names | 136 in funnel (of 419 with bars, 136 warm) | 24 closed | flat | NET Rs 23,398
+[10:12:28] surge: 4 new (AXISBANK, MANINDS, MOBIKWIK, STOVEKRAFT)
+[10:12:30] feed: 20 symbols fetched, 0 failed, 6s
+[10:12:40] circuit band REJECTED for ELECTCAST: price 76 outside band 2.4-3.6 (wrong scrip?)
+[10:12:40] circuit bands: 282 of 285 names (1 rejected as implausible)
+[10:12:48] no-dip watchlist 289 names | 137 in funnel (of 418 with bars, 137 warm) | 24 closed | flat | NET Rs 23,398
+[10:13:10] no-dip watchlist 289 names | 137 in funnel (of 418 with bars, 137 warm) | 24 closed | flat | NET Rs 23,398
+[10:13:32] no-dip watchlist 289 names | 137 in funnel (of 418 with bars, 137 warm) | 24 closed | flat | NET Rs 23,398
+[10:13:54] no-dip watchlist 289 names | 137 in funnel (of 418 with bars, 137 warm) | 24 closed | flat | NET Rs 23,398
+[10:14:21] feed: 20 symbols fetched, 0 failed, 6s
+[10:14:31] circuit band REJECTED for ELECTCAST: price 76.04 outside band 2.4-3.6 (wrong scrip?)
+[10:14:31] circuit bands: 286 of 289 names (1 rejected as implausible)
+[10:14:40] no-dip watchlist 289 names | 138 in funnel (of 419 with bars, 138 warm) | 24 closed | flat | NET Rs 23,398
+[10:14:47] surge: 5 new (ANANDRATHI, RATEGAIN, SONACOMS, VAML, VIPIND)
+[10:15:11] no-dip watchlist 294 names | 142 in funnel (of 423 with bars, 142 warm) | 24 closed | flat | NET Rs 23,398
+[10:15:14] surge: 1 new (JINDALSTEL)
+[10:15:39] surge: 4 new (LTF, OLECTRA, ONEPOINT, TATATECH)
+[10:15:41] no-dip watchlist 295 names | 145 in funnel (of 427 with bars, 145 warm) | 24 closed | flat | NET Rs 23,398
+[10:16:03] surge: 4 new (INOXINDIA, OIL, ULTRACEMCO, UNOMINDA)
+[10:16:08] feed: 20 symbols fetched, 0 failed, 6s
+[10:16:16] circuit band REJECTED for ELECTCAST: price 76.25 outside band 2.4-3.6 (wrong scrip?)
+[10:16:16] circuit bands: 296 of 299 names (1 rejected as implausible)
+[10:16:25] no-dip watchlist 303 names | 147 in funnel (of 429 with bars, 147 warm) | 24 closed | flat | NET Rs 23,398
+[10:16:31] surge: 3 new (ASTERDM, HCLTECH, KSL)
+[10:16:54] surge: 3 new (GUJENERGY, RBA, SUNTV)
+[10:16:55] no-dip watchlist 306 names | 147 in funnel (of 430 with bars, 147 warm) | 24 closed | flat | NET Rs 23,398
+[10:17:16] surge: 1 new (MRF)
+[10:17:27] no-dip watchlist 310 names | 148 in funnel (of 432 with bars, 148 warm) | 24 closed | flat | NET Rs 23,398
+[10:17:55] feed: 20 symbols fetched, 0 failed, 6s
+[10:19:09] surge: 1 new (SOLARINDS)
+[10:19:19] feed: 287 symbols fetched, 1 failed, 83s
+[10:19:30] circuit band REJECTED for ELECTCAST: price 76.17 outside band 2.4-3.6 (wrong scrip?)
+[10:19:30] circuit bands: 307 of 310 names (1 rejected as implausible)
+[10:19:38]   SACHEEROME   10:15:30->10:17:00 504.00->504.00 +0.00% eye exit    Rs -53
+[10:19:38] no-dip watchlist 311 names | 155 in funnel (of 444 with bars, 155 warm) | 25 closed | holding INDUSTOWER | NET Rs 23,537
+[10:20:05] feed: 21 symbols fetched, 0 failed, 6s
+[10:20:11] quote batch 1: 429 -- backing off 2.5s, one retry
+[10:20:23] circuit band REJECTED for ELECTCAST: price 76.3 outside band 2.4-3.6 (wrong scrip?)
+[10:20:23] circuit bands: 308 of 311 names (1 rejected as implausible)
+[10:20:35]   INDUSTOWER   10:17:30->10:19:30 381.00->382.05 +0.28% eye exit    Rs 553
+[10:20:35] no-dip watchlist 311 names | 155 in funnel (of 444 with bars, 155 warm) | 26 closed | flat | NET Rs 23,898
+[10:20:52] surge: 3 new (GMDCLTD, PINELABS, POLICYBZR)
+[10:21:00] no-dip watchlist 314 names | 156 in funnel (of 444 with bars, 156 warm) | 26 closed | flat | NET Rs 23,898
+[10:21:31] no-dip watchlist 314 names | 156 in funnel (of 444 with bars, 156 warm) | 26 closed | flat | NET Rs 23,898
+[10:21:33] surge: 1 new (CGCL)
+[10:21:58] surge: 3 new (AKUMS, CAMS, IDEA)
+[10:21:58] feed: 20 symbols fetched, 0 failed, 6s
+[10:22:10] circuit band REJECTED for ELECTCAST: price 76.25 outside band 2.4-3.6 (wrong scrip?)
+[10:22:10] circuit bands: 311 of 314 names (1 rejected as implausible)
+[10:22:22] no-dip watchlist 317 names | 156 in funnel (of 445 with bars, 156 warm) | 26 closed | flat | NET Rs 23,898
+[10:22:27] surge: 3 new (M&M, RAYMONDREL, RPOWER)
+[10:22:51] surge: 1 new (INDOMIM)
+[10:22:53] no-dip watchlist 320 names | 157 in funnel (of 446 with bars, 157 warm) | 26 closed | holding SHILPAMED | NET Rs 23,716
+[10:23:23] surge: 4 new (ATHERENERG, BEML, SHUKRAPHAR, SWIGGY)
+[10:23:26] no-dip watchlist 321 names | 157 in funnel (of 446 with bars, 157 warm) | 26 closed | holding SHILPAMED | NET Rs 24,478
+[10:23:53] feed: 21 symbols fetched, 0 failed, 6s
+[10:24:00] circuit band REJECTED for ELECTCAST: price 75.64 outside band 2.4-3.6 (wrong scrip?)
+[10:24:00] circuit bands: 322 of 325 names (1 rejected as implausible)
+[10:24:03]   SHILPAMED    10:22:00->10:23:30 1078.90->1086.00 +0.66% eye exit    Rs 1,504
+[10:24:03] no-dip watchlist 325 names | 159 in funnel (of 446 with bars, 159 warm) | 27 closed | holding SHUKRAPHAR | NET Rs 24,374
+[10:24:28] no-dip watchlist 325 names | 159 in funnel (of 447 with bars, 159 warm) | 27 closed | holding SHUKRAPHAR | NET Rs 24,374
+[10:24:49] surge: 1 new (GLAND)
+[10:24:55] no-dip watchlist 326 names | 159 in funnel (of 447 with bars, 159 warm) | 27 closed | holding WELSPUNLIV | NET Rs 25,091
+[10:25:18] no-dip watchlist 326 names | 159 in funnel (of 447 with bars, 159 warm) | 27 closed | holding WELSPUNLIV | NET Rs 25,091
+[10:25:38] surge: 2 new (LENSKART, SAGILITY)
+[10:25:45] feed: 20 symbols fetched, 0 failed, 6s
+[10:26:19] surge: 1 new (ABDL)
+[10:27:13] feed: 303 symbols fetched, 1 failed, 87s
+[10:27:21] quote batch 1: 429 -- backing off 2.5s, one retry
+[10:27:33] circuit band REJECTED for ELECTCAST: price 75.68 outside band 2.4-3.6 (wrong scrip?)
+[10:27:33] circuit bands: 323 of 326 names (1 rejected as implausible)
+[10:27:42]   PIXTRANS     10:16:30->10:22:30 1845.60->1845.80 +0.01% eye exit    Rs -163
+[10:27:42]   SHUKRAPHAR   10:23:00->10:25:30 64.43->64.37 -0.09% eye exit    Rs -369
+[10:27:42] no-dip watchlist 329 names | 165 in funnel (of 457 with bars, 165 warm) | 29 closed | flat | NET Rs 24,871
+[10:28:08] feed: 20 symbols fetched, 0 failed, 6s
+[10:28:18] circuit band REJECTED for ELECTCAST: price 75.66 outside band 2.4-3.6 (wrong scrip?)
+[10:28:18] circuit bands: 326 of 329 names (1 rejected as implausible)
+[10:28:33] no-dip watchlist 329 names | 165 in funnel (of 457 with bars, 165 warm) | 29 closed | holding GKSL | NET Rs 24,562
+[10:28:56] no-dip watchlist 329 names | 165 in funnel (of 457 with bars, 165 warm) | 29 closed | holding GKSL | NET Rs 24,562
+[10:29:23] surge: 4 new (AMAGI, IRCON, ITC, TATASTEEL)
+[10:29:28] no-dip watchlist 329 names | 166 in funnel (of 460 with bars, 166 warm) | 29 closed | holding GKSL | NET Rs 24,587
+[10:29:56] feed: 21 symbols fetched, 0 failed, 6s
+[10:30:08] circuit band REJECTED for ELECTCAST: price 75.74 outside band 2.4-3.6 (wrong scrip?)
+[10:30:08] circuit bands: 330 of 333 names (1 rejected as implausible)
+[10:30:20]   ROLEXRINGS   10:28:00->10:29:30 195.54->195.22 -0.16% eye exit    Rs -545
+[10:30:20] no-dip watchlist 333 names | 167 in funnel (of 459 with bars, 167 warm) | 30 closed | flat | NET Rs 24,326
+[10:30:51] no-dip watchlist 333 names | 168 in funnel (of 459 with bars, 168 warm) | 30 closed | flat | NET Rs 24,326
+[10:31:24] no-dip watchlist 333 names | 169 in funnel (of 459 with bars, 169 warm) | 30 closed | flat | NET Rs 24,326
+[10:31:30] surge: 2 new (BOSCHLTD, SHYAMMETL)
+[10:31:50] feed: 20 symbols fetched, 0 failed, 6s
+[10:31:59] quote batch 1: 429 -- backing off 2.5s, one retry
+[10:32:11] circuit band REJECTED for ELECTCAST: price 75.89 outside band 2.4-3.6 (wrong scrip?)
+[10:32:11] circuit bands: 332 of 335 names (1 rejected as implausible)
+[10:32:21] no-dip watchlist 335 names | 169 in funnel (of 459 with bars, 169 warm) | 30 closed | holding AMAGI | NET Rs 23,945
+[10:32:36] surge: 5 new (BANDHANBNK, BANKBARODA, CARRARO, FINCABLES, GABRIEL)
+[10:32:53] no-dip watchlist 340 names | 173 in funnel (of 462 with bars, 173 warm) | 30 closed | holding STLNETWORK | NET Rs 24,912
+[10:33:01] surge: 3 new (ACE, ACUTAAS, VIKRAMSOLR)
+[10:33:21]   STLNETWORK   10:31:00->10:32:30 48.50->48.76 +0.54% eye exit    Rs 1,204
+[10:33:21] no-dip watchlist 343 names | 173 in funnel (of 462 with bars, 173 warm) | 31 closed | flat | NET Rs 25,530
+[10:33:48] feed: 20 symbols fetched, 0 failed, 6s
+[10:35:21] feed: 320 symbols fetched, 1 failed, 92s
+[10:35:33] circuit band REJECTED for ELECTCAST: price 75.83 outside band 2.4-3.6 (wrong scrip?)
+[10:35:33] circuit bands: 340 of 343 names (1 rejected as implausible)
+[10:35:46] surge: 6 new (ENGINERSIN, FORTIS, HINDUNILVR, SYRMA, URBANCO, ZOTA)
+[10:35:47] no-dip watchlist 343 names | 178 in funnel (of 468 with bars, 178 warm) | 31 closed | flat | NET Rs 25,530
+[10:36:11] surge: 4 new (IDEAFORGE, MUTHOOTFIN, OPTIEMUS, TIINDIA)
+[10:36:14] feed: 20 symbols fetched, 0 failed, 6s
+[10:36:23] quote batch 1: 429 -- backing off 2.5s, one retry
+[10:36:35] quote batch 1 HTTP 429: {"data":{"805":"Too many requests. Further requests may result in the user being blocked."},"status":"failed"}
+[10:36:35] circuit bands: 340 of 349 names
+[10:36:47]   AMAGI        10:31:00->10:36:00 560.40->562.05 +0.29% eye exit    Rs 600
+[10:36:47] no-dip watchlist 353 names | 178 in funnel (of 468 with bars, 178 warm) | 32 closed | flat | NET Rs 26,130
+[10:36:52] surge: 3 new (AXISCADES, BELRISE, HIKAL)
+[10:37:15] no-dip watchlist 356 names | 179 in funnel (of 468 with bars, 179 warm) | 32 closed | flat | NET Rs 26,130
+[10:37:37] no-dip watchlist 356 names | 179 in funnel (of 468 with bars, 179 warm) | 32 closed | flat | NET Rs 26,130
+[10:38:04] feed: 20 symbols fetched, 0 failed, 6s
+[10:38:09] quote batch 1: 429 -- backing off 2.5s, one retry
+[10:38:18] surge: 2 new (GRSE, HYUNDAI)
+[10:38:22] quote batch 1 HTTP 429: {"data":{"805":"Too many requests. Further requests may result in the user being blocked."},"status":"failed"}
+[10:38:22] circuit bands: 340 of 356 names
+[10:38:30] no-dip watchlist 358 names | 179 in funnel (of 468 with bars, 179 warm) | 32 closed | holding OMNI | NET Rs 27,545
+[10:39:02]   OMNI         10:36:30->10:38:00 587.50->593.90 +1.09% eye exit    Rs 2,584
+[10:39:02] no-dip watchlist 358 names | 179 in funnel (of 468 with bars, 179 warm) | 33 closed | flat | NET Rs 28,713
+[10:39:11] surge: 1 new (SMCGLOBAL)
+[10:39:33] no-dip watchlist 359 names | 180 in funnel (of 472 with bars, 180 warm) | 33 closed | flat | NET Rs 28,713
+[10:39:52] surge: 1 new (MTNL)
+[10:40:01] feed: 20 symbols fetched, 0 failed, 6s
+[10:40:08] circuit band REJECTED for ELECTCAST: price 76.14 outside band 2.4-3.6 (wrong scrip?)
+[10:40:08] circuit bands: 357 of 360 names (1 rejected as implausible)
+[10:40:20] no-dip watchlist 360 names | 181 in funnel (of 473 with bars, 181 warm) | 33 closed | holding INOXINDIA | NET Rs 28,247
+[10:40:52] no-dip watchlist 360 names | 184 in funnel (of 478 with bars, 184 warm) | 33 closed | holding INOXINDIA | NET Rs 28,118
+[10:41:25]   INOXINDIA    10:39:00->10:40:30 2111.70->2107.80 -0.18% eye exit    Rs -596
+[10:41:25] no-dip watchlist 360 names | 184 in funnel (of 478 with bars, 184 warm) | 34 closed | flat | NET Rs 28,118
+[10:41:26] surge: 2 new (SSRETAIL, TIMEX)
+[10:41:52] feed: 20 symbols fetched, 0 failed, 6s
+[10:42:16] surge: 3 new (LALPATHLAB, NACLIND, THERMAX)
+[10:42:49] surge: 2 new (FEDERALBNK, IOLCP)
+[10:43:13] surge: 2 new (JIOFIN, SHAREINDIA)
+[10:43:30] feed: 339 symbols fetched, 1 failed, 97s
+[10:43:42] circuit band REJECTED for ELECTCAST: price 76.13 outside band 2.4-3.6 (wrong scrip?)
+[10:43:42] circuit bands: 359 of 362 names (1 rejected as implausible)
+[10:43:57]   BEML         10:36:00->10:39:30 1981.60->1977.40 -0.21% eye exit    Rs -665
+[10:43:57]   RATNAVEER    10:39:00->10:41:30 340.70->340.80 +0.03% eye exit    Rs -62
+[10:43:57]   LTF          10:40:00->10:41:30 267.95->267.55 -0.15% eye exit    Rs -509
+[10:43:57] no-dip watchlist 369 names | 190 in funnel (of 484 with bars, 190 warm) | 37 closed | flat | NET Rs 26,882
+[10:44:07] surge: 2 new (ROSSTECH, SYMBIOTEC)
+[10:44:25] feed: 20 symbols fetched, 0 failed, 6s
+[10:44:30] surge: 6 new (INDIASHLTR, JSFB, KEI, NUVAMA, SBIFUNDS, SHRIPISTON)
+[10:44:34] quote batch 1: 429 -- backing off 2.5s, one retry
+[10:44:46] quote batch 1 HTTP 429: {"data":{"805":"Too many requests. Further requests may result in the user being blocked."},"status":"failed"}
+[10:44:46] circuit bands: 359 of 371 names
+[10:44:58] no-dip watchlist 377 names | 191 in funnel (of 486 with bars, 191 warm) | 37 closed | holding BHEL | NET Rs 26,570
+[10:45:23] no-dip watchlist 377 names | 191 in funnel (of 486 with bars, 191 warm) | 37 closed | holding BHEL | NET Rs 26,570
+[10:45:55] no-dip watchlist 377 names | 191 in funnel (of 486 with bars, 191 warm) | 37 closed | holding BHEL | NET Rs 26,570
+[10:46:16] surge: 2 new (MOTHERSON, SKIPPER)
+[10:46:22] feed: 20 symbols fetched, 0 failed, 6s
+[10:46:33] circuit band REJECTED for ELECTCAST: price 75.82 outside band 2.4-3.6 (wrong scrip?)
+[10:46:33] circuit bands: 374 of 377 names (1 rejected as implausible)
+[10:46:42]   BHEL         10:43:00->10:46:00 426.55->425.90 -0.15% eye exit    Rs -517
+[10:46:42]   SMCGLOBAL    10:44:30->10:46:00 102.24->97.50 -4.64% eye exit    Rs -11,722
+[10:46:42] no-dip watchlist 379 names | 195 in funnel (of 488 with bars, 195 warm) | 39 closed | flat | NET Rs 14,643
+[10:46:45] surge: 1 new (APLAPOLLO)
+[10:47:08] surge: 2 new (BIKAJI, KIRLOSBROS)
+[10:47:14] no-dip watchlist 380 names | 194 in funnel (of 487 with bars, 194 warm) | 39 closed | holding PIXTRANS,RBLBANK | NET Rs 14,513
+[10:47:39] surge: 1 new (PAGEIND)
+[10:47:41] no-dip watchlist 382 names | 196 in funnel (of 489 with bars, 196 warm) | 39 closed | holding PIXTRANS | NET Rs 14,709
+[10:48:08] feed: 21 symbols fetched, 0 failed, 6s
+[10:48:20] quote batch 1: 429 -- backing off 2.5s, one retry
+[10:48:32] circuit band REJECTED for ELECTCAST: price 75.86 outside band 2.4-3.6 (wrong scrip?)
+[10:48:32] circuit band REJECTED for MOTHERSON: price 159.6 outside band 80000.0-120000.0 (wrong scrip?)
+[10:48:32] circuit bands: 379 of 383 names (2 rejected as implausible)
+[10:48:38]   AMAGI        10:46:30->10:48:00 564.80->564.35 -0.08% eye exit    Rs -335
+[10:48:38] no-dip watchlist 383 names | 197 in funnel (of 490 with bars, 197 warm) | 40 closed | holding SKIPPER | NET Rs 14,218
+[10:49:01] surge: 1 new (ELECON)
+[10:49:10] no-dip watchlist 384 names | 197 in funnel (of 490 with bars, 197 warm) | 40 closed | holding SKIPPER | NET Rs 14,218
+[10:49:26] surge: 1 new (KPIGREEN)
+[10:49:43]   RBLBANK      10:46:30->10:49:00 414.95->415.80 +0.20% eye exit    Rs 376
+[10:49:43]   SKIPPER      10:47:30->10:49:00 549.00->551.80 +0.51% eye exit    Rs 1,138
+[10:49:43] no-dip watchlist 385 names | 199 in funnel (of 494 with bars, 199 warm) | 42 closed | flat | NET Rs 15,822
+[10:50:07] surge: 1 new (POWERINDIA)
+[10:50:10] feed: 20 symbols fetched, 0 failed, 6s
+[10:51:29] surge: 1 new (COROMANDEL)
+[10:51:54] surge: 3 new (EXIDEIND, INFY, VSTTILLERS)
+[10:51:55] feed: 361 symbols fetched, 2 failed, 104s
+[10:52:06] circuit band REJECTED for ELECTCAST: price 75.55 outside band 2.4-3.6 (wrong scrip?)
+[10:52:06] circuit band REJECTED for MOTHERSON: price 159.53 outside band 80000.0-120000.0 (wrong scrip?)
+[10:52:06] circuit bands: 381 of 385 names (2 rejected as implausible)
+[10:52:20]   SHAREINDIA   10:36:00->10:46:00 206.45->208.17 +0.83% eye exit    Rs 1,945
+[10:52:20]   INDUSTOWER   10:43:00->10:50:00 383.25->383.40 +0.04% eye exit    Rs -38
+[10:52:20] no-dip watchlist 389 names | 202 in funnel (of 499 with bars, 202 warm) | 44 closed | flat | NET Rs 17,729
+[10:52:47] feed: 20 symbols fetched, 0 failed, 6s
+[10:52:55] circuit band REJECTED for ELECTCAST: price 75.51 outside band 2.4-3.6 (wrong scrip?)
+[10:52:55] circuit band REJECTED for MOTHERSON: price 159.64 outside band 80000.0-120000.0 (wrong scrip?)
+[10:52:55] circuit bands: 385 of 389 names (2 rejected as implausible)
+[10:53:00] surge: 1 new (SHANTIGOLD)
+[10:53:10] no-dip watchlist 390 names | 201 in funnel (of 498 with bars, 201 warm) | 44 closed | holding INOXINDIA | NET Rs 17,877
+[10:53:25] surge: 4 new (ANTELOPUS, ICIL, KINGFA, ZENTEC)
+[10:53:39] no-dip watchlist 394 names | 202 in funnel (of 498 with bars, 202 warm) | 44 closed | holding SHILPAMED | NET Rs 17,776
+[10:53:49] surge: 3 new (GVT&D, NEULANDLAB, VEDL)
+[10:54:13]   SHILPAMED    10:51:30->10:53:30 1094.00->1093.60 -0.04% eye exit    Rs -227
+[10:54:13] no-dip watchlist 396 names | 203 in funnel (of 498 with bars, 203 warm) | 45 closed | flat | NET Rs 17,503
+[10:54:13] surge: 4 new (INNOVACAP, J&KBANK, PVRINOX, RUBICON)
+[10:54:40] feed: 20 symbols fetched, 0 failed, 6s
+[10:54:44] surge: 1 new (PARAS)
+[10:54:48] quote batch 1: 429 -- backing off 2.5s, one retry
+[10:55:00] quote batch 1 HTTP 429: {"data":{"805":"Too many requests. Further requests may result in the user being blocked."},"status":"failed"}
+[10:55:00] circuit bands: 385 of 400 names
+[10:55:10]   INOXINDIA    10:51:30->10:54:30 2110.60->2109.20 -0.07% eye exit    Rs -301
+[10:55:10] no-dip watchlist 401 names | 204 in funnel (of 499 with bars, 204 warm) | 46 closed | flat | NET Rs 17,202
+[10:55:33] no-dip watchlist 401 names | 204 in funnel (of 499 with bars, 204 warm) | 46 closed | flat | NET Rs 17,202
+[10:56:06] surge: 1 new (ADANIPOWER)
+[10:56:06] no-dip watchlist 401 names | 205 in funnel (of 502 with bars, 205 warm) | 46 closed | flat | NET Rs 17,202
+[10:56:31] surge: 3 new (KALYANKJIL, KIRLOSENG, MOTISONS)
+[10:56:33] feed: 20 symbols fetched, 0 failed, 6s
+[10:56:43] circuit band REJECTED for ELECTCAST: price 75.82 outside band 2.4-3.6 (wrong scrip?)
+[10:56:43] circuit band REJECTED for MOTHERSON: price 159.21 outside band 80000.0-120000.0 (wrong scrip?)
+[10:56:43] circuit bands: 398 of 402 names (2 rejected as implausible)
+[10:56:57] no-dip watchlist 405 names | 207 in funnel (of 501 with bars, 207 warm) | 46 closed | holding J&KBANK | NET Rs 16,837
+[10:57:20] no-dip watchlist 405 names | 207 in funnel (of 501 with bars, 207 warm) | 46 closed | holding J&KBANK | NET Rs 16,837
+[10:57:54] no-dip watchlist 405 names | 209 in funnel (of 504 with bars, 209 warm) | 46 closed | holding J&KBANK | NET Rs 16,660
+[10:58:13] surge: 3 new (MEDANTA, PRESTIGE, SUNFLAG)
+[10:58:22] feed: 20 symbols fetched, 0 failed, 6s
+[10:59:44] surge: 3 new (ANANTRAJ, GRAVITA, TEXRAIL)
+[11:00:13] feed: 385 symbols fetched, 1 failed, 110s
+[11:00:16] surge: 2 new (AGARWALEYE, ARTEMISMED)
+[11:00:21] quote batch 1: 429 -- backing off 2.5s, one retry
+[11:00:33] quote batch 1 HTTP 429: {"data":{"805":"Too many requests. Further requests may result in the user being blocked."},"status":"failed"}
+[11:00:33] circuit bands: 398 of 408 names
+[11:00:44]   MOTISONS     10:08:00->10:10:30 18.10->18.12 +0.11% eye exit    Rs 140
+[11:00:44]   MOREPENLAB   10:11:30->10:24:00 132.11->134.49 +1.80% eye exit    Rs 4,366
+[11:00:44]   MOREPENLAB   10:24:30->10:28:30 134.50->133.47 -0.77% eye exit    Rs -2,049
+[11:00:44]   SHUKRAPHAR   10:27:30->10:34:00 64.79->64.49 -0.46% eye exit    Rs -1,293
+[11:00:44]   MOREPENLAB   10:29:00->10:32:30 133.30->134.38 +0.81% eye exit    Rs -2,161
+[11:00:44]   OMNI         10:33:00->10:35:00 584.65->585.20 +0.09% eye exit    Rs 99
+[11:00:44]   TARIL        10:34:30->10:45:00 296.25->295.85 -0.14% eye exit    Rs -473
+[11:00:44]   WELSPUNLIV   10:35:30->10:58:00 240.00->236.20 -1.58% eye exit    Rs 3,820
+[11:00:44]   SKIPPER      10:45:30->10:53:00 546.80->550.10 +0.60% eye exit    Rs 1,372
+[11:00:44]   SCHNEIDER    10:53:30->10:58:00 1251.30->1258.70 +0.59% eye exit    Rs 1,337
+[11:00:44] no-dip watchlist 413 names | 214 in funnel (of 513 with bars, 214 warm) | 56 closed | flat | NET Rs 22,361
+[11:01:06] surge: 1 new (PCJEWELLER)
+[11:01:11] feed: 20 symbols fetched, 0 failed, 6s
+[11:01:18] quote batch 1: 429 -- backing off 2.5s, one retry
+[11:01:30] circuit band REJECTED for ELECTCAST: price 75.54 outside band 2.4-3.6 (wrong scrip?)
+[11:01:30] circuit band REJECTED for MOTHERSON: price 159.16 outside band 80000.0-120000.0 (wrong scrip?)
+[11:01:30] circuit bands: 409 of 413 names (2 rejected as implausible)
+[11:01:46] no-dip watchlist 414 names | 214 in funnel (of 513 with bars, 214 warm) | 56 closed | flat | NET Rs 22,361
+[11:01:47] surge: 1 new (NESTLEIND)
+[11:02:12] surge: 2 new (AARTIPHARM, SBIN)
+[11:02:16] no-dip watchlist 415 names | 215 in funnel (of 513 with bars, 215 warm) | 56 closed | flat | NET Rs 22,361
+[11:02:37] surge: 4 new (ABREL, APOLLO, COCHINSHIP, SHRIRAMFIN)
+[11:02:43] feed: 20 symbols fetched, 0 failed, 6s
+[11:02:52] quote batch 1: 429 -- backing off 2.5s, one retry
+[11:03:04] circuit band REJECTED for ELECTCAST: price 75.56 outside band 2.4-3.6 (wrong scrip?)
+[11:03:04] circuit band REJECTED for MOTHERSON: price 159.12 outside band 80000.0-120000.0 (wrong scrip?)
+[11:03:04] circuit bands: 413 of 417 names (2 rejected as implausible)
+[11:03:20] no-dip watchlist 421 names | 216 in funnel (of 513 with bars, 216 warm) | 56 closed | holding LTF | NET Rs 22,318
+[11:03:41] surge: 7 new (CYIENT, KSHINTL, MSUMI, NHPC, SCHAEFFLER, SURYAROSNI)
+[11:03:55] no-dip watchlist 428 names | 219 in funnel (of 518 with bars, 219 warm) | 56 closed | holding LTF | NET Rs 22,225
+[11:04:22] feed: 21 symbols fetched, 0 failed, 6s
+[11:04:22] surge: 2 new (GODREJPROP, JUBLFOOD)
+[11:04:31] circuit band REJECTED for ELECTCAST: price 75.25 outside band 2.4-3.6 (wrong scrip?)
+[11:04:31] circuit band REJECTED for MOTHERSON: price 159.07 outside band 80000.0-120000.0 (wrong scrip?)
+[11:04:31] circuit bands: 424 of 428 names (2 rejected as implausible)
+[11:04:46]   LTF          11:02:30->11:04:00 268.35->268.50 +0.06% eye exit    Rs 4
+[11:04:46] no-dip watchlist 430 names | 220 in funnel (of 518 with bars, 220 warm) | 57 closed | flat | NET Rs 22,364
+[11:05:22] no-dip watchlist 430 names | 222 in funnel (of 520 with bars, 222 warm) | 57 closed | flat | NET Rs 22,364
+[11:05:58] no-dip watchlist 430 names | 224 in funnel (of 524 with bars, 224 warm) | 57 closed | flat | NET Rs 22,364
+[11:06:25] feed: 20 symbols fetched, 0 failed, 6s
+[11:07:19] surge: 2 new (SKYGOLD, VBL)
+[11:08:08] surge: 1 new (ANTHEM)
+[11:08:22] feed: 407 symbols fetched, 1 failed, 117s
+[11:08:32] circuit band REJECTED for ELECTCAST: price 75.36 outside band 2.4-3.6 (wrong scrip?)
+[11:08:32] circuit band REJECTED for MOTHERSON: price 159.43 outside band 80000.0-120000.0 (wrong scrip?)
+[11:08:32] circuit bands: 426 of 430 names (2 rejected as implausible)
+[11:08:49]   KAJARIACER   11:02:00->11:05:30 1246.60->1242.90 -0.30% eye exit    Rs -875
+[11:08:49] no-dip watchlist 433 names | 227 in funnel (of 531 with bars, 227 warm) | 58 closed | holding SKIPPER | NET Rs 21,965
+[11:09:16] feed: 20 symbols fetched, 0 failed, 6s
+[11:09:26] quote batch 1: 429 -- backing off 2.5s, one retry
+[11:09:38] quote batch 1 HTTP 429: {"data":{"805":"Too many requests. Further requests may result in the user being blocked."},"status":"failed"}
+[11:09:38] circuit bands: 426 of 433 names
+[11:10:01]   SKIPPER      11:06:00->11:09:00 551.00->551.35 +0.06% eye exit    Rs 23
+[11:10:01] no-dip watchlist 433 names | 227 in funnel (of 532 with bars, 227 warm) | 59 closed | flat | NET Rs 21,512
+[11:10:23] surge: 1 new (ADANIPORTS)
+[11:10:41] no-dip watchlist 434 names | 229 in funnel (of 532 with bars, 229 warm) | 59 closed | flat | NET Rs 21,512
+[11:11:08] feed: 20 symbols fetched, 0 failed, 6s
+[11:11:16] quote batch 1: 429 -- backing off 2.5s, one retry
+[11:11:29] circuit band REJECTED for ELECTCAST: price 75.6 outside band 2.4-3.6 (wrong scrip?)
+[11:11:29] circuit band REJECTED for MOTHERSON: price 159.38 outside band 80000.0-120000.0 (wrong scrip?)
+[11:11:29] circuit bands: 430 of 434 names (2 rejected as implausible)
+[11:11:43] no-dip watchlist 434 names | 229 in funnel (of 532 with bars, 229 warm) | 59 closed | flat | NET Rs 21,512
+[11:11:45] surge: 1 new (GPIL)
+[11:12:10] surge: 2 new (CUMMINSIND, RITES)
+[11:12:21] no-dip watchlist 436 names | 231 in funnel (of 533 with bars, 231 warm) | 59 closed | holding POWERINDIA | NET Rs 21,282
+[11:12:48] feed: 21 symbols fetched, 0 failed, 6s
+[11:13:00] circuit band REJECTED for ELECTCAST: price 75.61 outside band 2.4-3.6 (wrong scrip?)
+[11:13:00] circuit band REJECTED for MOTHERSON: price 159.44 outside band 80000.0-120000.0 (wrong scrip?)
+[11:13:00] circuit bands: 432 of 436 names (2 rejected as implausible)
+[11:13:12] surge: 2 new (IXIGO, SJVN)
+[11:13:15]   ASTERDM      11:06:00->11:12:00 703.50->705.25 +0.25% eye exit    Rs 485
+[11:13:15] no-dip watchlist 436 names | 231 in funnel (of 535 with bars, 231 warm) | 60 closed | holding AXISCADES | NET Rs 21,851
+[11:13:37] surge: 1 new (MARINE)
+[11:13:52] no-dip watchlist 439 names | 231 in funnel (of 535 with bars, 231 warm) | 60 closed | holding AXISCADES,FINCABLES | NET Rs 25,421
+[11:14:01] surge: 1 new (DMART)
+[11:14:19] feed: 22 symbols fetched, 0 failed, 6s
+[11:15:54] surge: 1 new (RENUKA)
+[11:16:19] feed: 415 symbols fetched, 1 failed, 119s
+[11:16:31] circuit band REJECTED for ELECTCAST: price 75.49 outside band 2.4-3.6 (wrong scrip?)
+[11:16:31] circuit band REJECTED for MOTHERSON: price 159.43 outside band 80000.0-120000.0 (wrong scrip?)
+[11:16:31] circuit bands: 436 of 440 names (2 rejected as implausible)
+[11:16:56]   MOLBIO       11:11:00->11:14:00 1427.10->1434.90 +0.55% eye exit    Rs 220
+[11:16:56]   NESTLEIND    11:11:00->11:14:00 1317.40->1318.00 +0.05% eye exit    Rs -22
+[11:16:56] no-dip watchlist 441 names | 235 in funnel (of 539 with bars, 235 warm) | 62 closed | flat | NET Rs 22,195
+[11:17:23] feed: 20 symbols fetched, 0 failed, 6s
+[11:17:33] quote batch 1: 429 -- backing off 2.5s, one retry
+[11:17:45] quote batch 1 HTTP 429: {"data":{"805":"Too many requests. Further requests may result in the user being blocked."},"status":"failed"}
+[11:17:45] circuit bands: 436 of 441 names
+[11:18:05]   INOXINDIA    11:14:30->11:17:00 2130.80->2136.40 +0.26% eye exit    Rs 519
+[11:18:05] no-dip watchlist 441 names | 235 in funnel (of 539 with bars, 235 warm) | 63 closed | flat | NET Rs 22,714
+[11:18:29] no-dip watchlist 441 names | 235 in funnel (of 539 with bars, 235 warm) | 63 closed | flat | NET Rs 22,714
+[11:18:56] feed: 20 symbols fetched, 0 failed, 6s
+[11:19:03] quote batch 1: 429 -- backing off 2.5s, one retry
+[11:19:15] quote batch 1 HTTP 429: {"data":{"805":"Too many requests. Further requests may result in the user being blocked."},"status":"failed"}
+[11:19:15] circuit bands: 436 of 441 names
+[11:19:33] no-dip watchlist 441 names | 235 in funnel (of 539 with bars, 235 warm) | 63 closed | flat | NET Rs 22,714
+[11:20:14]   TARIL        11:14:30->11:19:00 292.05->291.10 -0.33% eye exit    Rs 677
+[11:20:14] no-dip watchlist 441 names | 235 in funnel (of 539 with bars, 235 warm) | 64 closed | flat | NET Rs 23,392
+[11:20:41] feed: 20 symbols fetched, 0 failed, 6s
+[11:20:49] quote batch 1: 429 -- backing off 2.5s, one retry
+[11:21:01] circuit band REJECTED for ELECTCAST: price 75.51 outside band 2.4-3.6 (wrong scrip?)
+[11:21:01] circuit band REJECTED for MOTHERSON: price 159.72 outside band 80000.0-120000.0 (wrong scrip?)
+[11:21:01] circuit bands: 437 of 441 names (2 rejected as implausible)
+[11:21:21] no-dip watchlist 441 names | 236 in funnel (of 540 with bars, 236 warm) | 64 closed | flat | NET Rs 23,392
+[11:21:35] surge: 2 new (GIPCL, MAXHEALTH)
+[11:21:59] surge: 3 new (BALAMINES, GROWWPOWER, KAYNES)
+[11:22:02] no-dip watchlist 443 names | 236 in funnel (of 540 with bars, 236 warm) | 64 closed | flat | NET Rs 23,392
+[11:22:29] feed: 20 symbols fetched, 0 failed, 6s
+[11:22:41] surge: 1 new (ALICON)
+[11:23:05] surge: 1 new (BBOX)
+[11:23:30] surge: 1 new (HUDCO)
+[11:23:55] surge: 6 new (DCBBANK, DRREDDY, FEDFINA, NCC, PROTEAN, SUDARSCHEM)
+[11:24:35] surge: 1 new (AJANTPHARM)
+[11:24:45] feed: 423 symbols fetched, 1 failed, 135s
+[11:24:56] circuit band REJECTED for ELECTCAST: price 75.57 outside band 2.4-3.6 (wrong scrip?)
+[11:24:56] circuit band REJECTED for MOTHERSON: price 159.66 outside band 80000.0-120000.0 (wrong scrip?)
+[11:24:56] circuit bands: 442 of 446 names (2 rejected as implausible)
+[11:25:04] surge: 1 new (DECNGOLD)
+[11:25:14] no-dip watchlist 455 names | 237 in funnel (of 545 with bars, 237 warm) | 64 closed | holding LENSKART | NET Rs 23,093
+[11:25:37] surge: 1 new (SETL)
+[11:25:42] feed: 21 symbols fetched, 0 failed, 6s
+[11:25:49] quote batch 1: 429 -- backing off 2.5s, one retry
+[11:26:02] circuit band REJECTED for ELECTCAST: price 75.23 outside band 2.4-3.6 (wrong scrip?)
+[11:26:02] circuit band REJECTED for MOTHERSON: price 159.57 outside band 80000.0-120000.0 (wrong scrip?)
+[11:26:02] circuit bands: 452 of 456 names (2 rejected as implausible)
+[11:26:22]   LENSKART     11:22:00->11:25:30 688.75->689.70 +0.14% eye exit    Rs 208
+[11:26:22] no-dip watchlist 457 names | 238 in funnel (of 546 with bars, 238 warm) | 65 closed | flat | NET Rs 23,600
+[11:27:02] no-dip watchlist 457 names | 239 in funnel (of 547 with bars, 239 warm) | 65 closed | flat | NET Rs 23,600
+[11:27:29] feed: 20 symbols fetched, 0 failed, 6s
+[11:27:40] quote batch 1: 429 -- backing off 2.5s, one retry
+[11:27:52] circuit band REJECTED for ELECTCAST: price 75.15 outside band 2.4-3.6 (wrong scrip?)
+[11:27:52] circuit band REJECTED for MOTHERSON: price 159.46 outside band 80000.0-120000.0 (wrong scrip?)
+[11:27:52] circuit bands: 453 of 457 names (2 rejected as implausible)
+[11:27:58] no-dip watchlist 457 names | 240 in funnel (of 547 with bars, 240 warm) | 65 closed | holding ENGINERSIN,J&KBANK | NET Rs 23,088
+[11:28:39] no-dip watchlist 457 names | 240 in funnel (of 547 with bars, 240 warm) | 65 closed | holding ENGINERSIN,J&KBANK | NET Rs 23,088
+[11:29:06] feed: 20 symbols fetched, 0 failed, 6s
+[11:29:14] quote batch 1: 429 -- backing off 2.5s, one retry
+[11:29:27] quote batch 1 HTTP 429: {"data":{"805":"Too many requests. Further requests may result in the user being blocked."},"status":"failed"}
+[11:29:27] circuit bands: 453 of 457 names
+[11:29:35] surge: 1 new (RAMRAT)
+[11:29:45] no-dip watchlist 457 names | 241 in funnel (of 552 with bars, 241 warm) | 65 closed | flat | NET Rs 23,600
+[11:30:24] surge: 1 new (SENORES)
+[11:30:25] no-dip watchlist 458 names | 241 in funnel (of 553 with bars, 241 warm) | 65 closed | flat | NET Rs 23,600
+[11:30:52] feed: 20 symbols fetched, 0 failed, 6s
+[11:31:38] surge: 1 new (ADANIENT)
+[11:32:03] surge: 1 new (SHREECEM)
+[11:32:36] surge: 1 new (EPL)
+[11:32:58] feed: 436 symbols fetched, 1 failed, 125s
+[11:33:01] surge: 1 new (PPLPHARMA)
+[11:33:09] circuit band REJECTED for ELECTCAST: price 75.11 outside band 2.4-3.6 (wrong scrip?)
+[11:33:09] circuit band REJECTED for MOTHERSON: price 160.03 outside band 80000.0-120000.0 (wrong scrip?)
+[11:33:09] circuit bands: 455 of 459 names (2 rejected as implausible)
+[11:33:30]   RENTOMOJO    11:29:00->11:30:30 524.30->525.10 +0.15% eye exit    Rs 245
+[11:33:30] no-dip watchlist 463 names | 243 in funnel (of 555 with bars, 243 warm) | 66 closed | flat | NET Rs 23,845
+[11:33:55] surge: 1 new (JSWENERGY)
+[11:33:56] feed: 20 symbols fetched, 0 failed, 6s
+[11:34:06] circuit band REJECTED for ELECTCAST: price 75.35 outside band 2.4-3.6 (wrong scrip?)
+[11:34:06] circuit band REJECTED for MOTHERSON: price 160.2 outside band 80000.0-120000.0 (wrong scrip?)
+[11:34:06] circuit bands: 459 of 463 names (2 rejected as implausible)
+[11:34:23] no-dip watchlist 464 names | 243 in funnel (of 555 with bars, 243 warm) | 66 closed | holding ROSSTECH | NET Rs 22,764
+[11:34:30] surge: 1 new (IDBI)
+[11:35:03] no-dip watchlist 465 names | 244 in funnel (of 556 with bars, 244 warm) | 66 closed | holding ROSSTECH | NET Rs 22,813
+[11:35:20] surge: 1 new (HNGSNGBEES)
+[11:35:30] feed: 21 symbols fetched, 0 failed, 6s
+[11:35:40] quote batch 1: 429 -- backing off 2.5s, one retry
+[11:35:52] quote batch 1 HTTP 429: {"data":{"805":"Too many requests. Further requests may result in the user being blocked."},"status":"failed"}
+[11:35:52] circuit bands: 459 of 466 names
+[11:36:00]   ROSSTECH     11:33:00->11:34:30 1500.10->1491.70 -0.56% eye exit    Rs -1,529
+[11:36:00] no-dip watchlist 466 names | 244 in funnel (of 556 with bars, 244 warm) | 67 closed | flat | NET Rs 22,316
+[11:36:40] no-dip watchlist 466 names | 245 in funnel (of 557 with bars, 245 warm) | 67 closed | holding LENSKART | NET Rs 22,180
+[11:36:58] surge: 1 new (NATIONALUM)
+[11:37:07] feed: 21 symbols fetched, 0 failed, 6s
+[11:37:19] quote batch 1: 429 -- backing off 2.5s, one retry
+[11:37:31] quote batch 1 HTTP 429: {"data":{"805":"Too many requests. Further requests may result in the user being blocked."},"status":"failed"}
+[11:37:31] circuit bands: 459 of 467 names
+[11:37:39] surge: 1 new (ONESOURCE)
+[11:37:54]   LENSKART     11:35:00->11:37:00 690.30->690.60 +0.04% eye exit    Rs -27
+[11:37:54] no-dip watchlist 468 names | 245 in funnel (of 557 with bars, 245 warm) | 68 closed | flat | NET Rs 22,288
+[11:38:18] no-dip watchlist 468 names | 246 in funnel (of 557 with bars, 246 warm) | 68 closed | flat | NET Rs 22,288
+[11:38:20] surge: 1 new (CCAVENUE)
+[11:38:45] feed: 20 symbols fetched, 0 failed, 6s
+[11:39:01] surge: 1 new (HINDALCO)
+[11:39:42] surge: 1 new (ZFCVINDIA)
+[11:40:54] feed: 446 symbols fetched, 1 failed, 128s
+[11:41:04] circuit band REJECTED for ELECTCAST: price 75.56 outside band 2.4-3.6 (wrong scrip?)
+[11:41:04] circuit band REJECTED for MOTHERSON: price 160.62 outside band 80000.0-120000.0 (wrong scrip?)
+[11:41:04] circuit bands: 465 of 469 names (2 rejected as implausible)
+[11:41:33] no-dip watchlist 471 names | 249 in funnel (of 564 with bars, 249 warm) | 68 closed | flat | NET Rs 22,288
+[11:41:42] surge: 1 new (NEPHROPLUS)
+[11:41:44] retired the previous engine (pid 13696)
+[11:41:50] surge: scanning the whole NSE equity universe every 2s
+oard
+[11:41:50] paper_live 20261001: warm-up 268 symbols. Waiting for START.
+[11:41:50] quote_feed: started -- one bulk quote per second, 30s bars
+[11:41:52] leverage: MIS sheet 4899 scrips (3077 at 1x)
+[11:42:03] feed: 20 symbols fetched, 0 failed, 6s
+[11:42:10] circuit bands failed: UnboundLocalError cannot access local variable 'tape' where it is not associated with a value
+[11:42:27] surge: 307 new (3MINDIA, 5PAISA, AAREYDRUGS, AASTHA, AAVAS, ABDL)
+[11:42:42] live_exec: PAPER routing in force (mode=PAPER, armed=False)
+[11:42:42]   KARAMTARA    09:20:30->09:22:00 417.10->420.40 +0.79% eye exit    Rs 340
+[11:42:42]   ENRIN        09:21:00->09:23:00 3294.10->3311.50 +0.53% eye exit    Rs 1,170
+[11:42:42]   PACEDIGITK   09:24:30->09:34:30 176.63->172.80 -2.17% eye exit    Rs 5,284
+[11:42:42]   INDUSTOWER   09:25:00->09:27:30 376.55->376.00 -0.15% eye exit    Rs -500
+[11:42:42]   TARIL        09:26:00->09:31:00 293.40->292.90 -0.17% eye exit    Rs -562
+[11:42:42]   MOLBIO       09:29:00->09:31:00 1354.30->1372.60 +1.35% eye exit    Rs 607
+[11:42:42]   DPABHUSHAN   09:29:00->09:46:30 1805.60->1819.30 +0.76% eye exit    Rs 1,755
+[11:42:42]   TARIL        09:32:30->09:34:30 294.40->292.40 -0.68% eye exit    Rs -1,833
+[11:42:42]   AUGMONT      09:33:00->09:33:00 1189.90->1189.00 -0.08% circuit guard Rs -325
+[11:42:42]   DPABHUSHAN   09:37:00->09:38:30 1827.60->1832.00 +0.24% eye exit    Rs 463
+[11:42:42]   GVT&D        09:38:00->09:39:30 4331.80->4325.40 -0.15% eye exit    Rs -499
+[11:42:42]   RATNAVEER    09:38:00->09:40:30 342.70->342.90 +0.06% eye exit    Rs 10
+[11:42:42]   NAZARA       09:43:30->09:45:00 395.20->395.50 +0.08% eye exit    Rs 54
+[11:42:42]   KISSHT       09:44:00->09:45:30 380.10->377.35 -0.72% eye exit    Rs -1,942
+[11:42:42]   GKSL         09:46:00->09:54:00 194.05->194.28 +0.12% eye exit    Rs 160
+[11:42:42]   GALAXYSURF   09:46:30->09:48:00 2415.60->2417.00 +0.06% eye exit    Rs 9
+[11:42:42]   SHILPAMED    09:48:30->09:51:30 1073.10->1073.00 -0.01% eye exit    Rs -159
+[11:42:42]   THOMASCOTT   09:49:00->09:55:30 288.80->306.00 +5.96% eye exit    Rs 14,738
+[11:42:42]   PIXTRANS     09:54:30->09:57:30 1849.40->1876.30 +1.45% eye exit    Rs 3,495
+[11:42:42]   WELSPUNLIV   09:59:30->10:01:00 237.00->237.24 +0.10% eye exit    Rs 117
+[11:42:42]   DPABHUSHAN   10:01:30->10:04:30 1882.00->1878.00 -0.21% eye exit    Rs -663
+[11:42:42]   SACHEEROME   10:01:30->10:06:30 501.50->503.50 +0.40% eye exit    Rs 145
+[11:42:42]   GVT&D        10:01:30->10:07:30 4296.60->4312.50 +0.37% eye exit    Rs 786
+[11:42:42]   PAISALO      10:04:00->10:08:30 80.20->79.93 -0.34% eye exit    Rs -977
+[11:42:42]   MOTISONS     10:08:00->10:10:30 18.10->18.12 +0.11% eye exit    Rs 140
+[11:42:42]   LEMONTREE    10:08:30->10:10:00 110.15->110.54 +0.35% eye exit    Rs 749
+[11:42:42]   PIXTRANS     10:09:00->10:28:30 1871.80->1835.00 -1.97% eye exit    Rs 4,759
+[11:42:42]   MOREPENLAB   10:11:30->10:24:00 132.11->134.49 +1.80% eye exit    Rs 4,366
+[11:42:42]   SACHEEROME   10:15:30->10:17:00 504.00->504.00 +0.00% eye exit    Rs -53
+[11:42:42]   PIXTRANS     10:16:30->10:22:30 1845.60->1845.80 +0.01% eye exit    Rs -163
+[11:42:42]   INDUSTOWER   10:17:30->10:19:30 381.00->382.05 +0.28% eye exit    Rs 553
+[11:42:42]   SHILPAMED    10:22:00->10:23:30 1078.90->1086.00 +0.66% eye exit    Rs 1,504
+[11:42:42]   SHUKRAPHAR   10:23:00->10:25:30 64.43->64.37 -0.09% eye exit    Rs -369
+[11:42:42]   MOREPENLAB   10:24:30->10:28:30 134.50->133.47 -0.77% eye exit    Rs -2,049
+[11:42:42]   SHUKRAPHAR   10:27:30->10:34:00 64.79->64.49 -0.46% eye exit    Rs -1,293
+[11:42:42]   ROLEXRINGS   10:28:00->10:29:30 195.54->195.22 -0.16% eye exit    Rs -545
+[11:42:42]   MOREPENLAB   10:29:00->10:32:30 133.30->134.38 +0.81% eye exit    Rs -2,161
+[11:42:42]   INDSWFTLAB   10:29:00->10:30:30 409.75->407.70 -0.50% eye exit    Rs -1,386
+[11:42:42]   STLNETWORK   10:31:00->10:32:30 48.50->48.76 +0.54% eye exit    Rs 1,204
+[11:42:42]   AMAGI        10:31:00->10:36:00 560.40->562.05 +0.29% eye exit    Rs 600
+[11:42:42]   OMNI         10:33:00->10:35:00 584.65->585.20 +0.09% eye exit    Rs 99
+[11:42:42]   TARIL        10:34:30->10:45:00 296.25->295.85 -0.14% eye exit    Rs -473
+[11:42:42]   WELSPUNLIV   10:35:30->10:58:00 240.00->236.20 -1.58% eye exit    Rs 3,820
+[11:42:42]   BEML         10:36:00->10:39:30 1981.60->1977.40 -0.21% eye exit    Rs -665
+[11:42:42]   SHAREINDIA   10:36:00->10:46:00 206.45->208.17 +0.83% eye exit    Rs 1,945
+[11:42:42]   OMNI         10:36:30->10:38:00 587.50->593.90 +1.09% eye exit    Rs 2,584
+[11:42:42]   INOXINDIA    10:39:00->10:40:30 2111.70->2107.80 -0.18% eye exit    Rs -596
+[11:42:42]   RATNAVEER    10:39:00->10:41:30 340.70->340.80 +0.03% eye exit    Rs -62
+[11:42:42]   LTF          10:40:00->10:41:30 267.95->267.55 -0.15% eye exit    Rs -509
+[11:42:42]   BHEL         10:43:00->10:46:00 426.55->425.90 -0.15% eye exit    Rs -517
+[11:42:42]   INDUSTOWER   10:43:00->10:50:00 383.25->383.40 +0.04% eye exit    Rs -38
+[11:42:42]   SMCGLOBAL    10:44:30->10:46:00 102.24->97.50 -4.64% eye exit    Rs -11,722
+[11:42:42]   SKIPPER      10:45:30->10:53:00 546.80->550.10 +0.60% eye exit    Rs 1,372
+[11:42:42]   AMAGI        10:46:30->10:48:00 564.80->564.35 -0.08% eye exit    Rs -335
+[11:42:42]   RBLBANK      10:46:30->10:49:00 414.95->415.80 +0.20% eye exit    Rs 376
+[11:42:42]   SKIPPER      10:47:30->10:49:00 549.00->551.80 +0.51% eye exit    Rs 1,138
+[11:42:42]   SHILPAMED    10:51:30->10:53:30 1094.00->1093.60 -0.04% eye exit    Rs -227
+[11:42:42]   INOXINDIA    10:51:30->10:54:30 2110.60->2109.20 -0.07% eye exit    Rs -301
+[11:42:42]   SCHNEIDER    10:53:30->10:58:00 1251.30->1258.70 +0.59% eye exit    Rs 1,337
+[11:42:42]   SCHNEIDER    10:56:00->11:01:30 1255.10->1250.20 -0.39% eye exit    Rs -1,111
+[11:42:42]   KAJARIACER   11:02:00->11:05:30 1246.60->1242.90 -0.30% eye exit    Rs -875
+[11:42:42]   LTF          11:02:30->11:04:00 268.35->268.50 +0.06% eye exit    Rs 4
+[11:42:42]   SKIPPER      11:06:00->11:09:00 551.00->551.35 +0.06% eye exit    Rs 23
+[11:42:42]   ASTERDM      11:06:00->11:12:00 703.50->705.25 +0.25% eye exit    Rs 485
+[11:42:42]   MOLBIO       11:11:00->11:14:00 1427.10->1434.90 +0.55% eye exit    Rs 220
+[11:42:42]   NESTLEIND    11:11:00->11:14:00 1317.40->1318.00 +0.05% eye exit    Rs -22
+[11:42:42]   INOXINDIA    11:14:30->11:17:00 2130.80->2136.40 +0.26% eye exit    Rs 519
+[11:42:42]   TARIL        11:14:30->11:19:00 292.05->291.10 -0.33% eye exit    Rs 677
+[11:42:42]   LENSKART     11:22:00->11:25:30 688.75->689.70 +0.14% eye exit    Rs 208
+[11:42:42]   RENTOMOJO    11:29:00->11:30:30 524.30->525.10 +0.15% eye exit    Rs 245
+[11:42:42]   ROSSTECH     11:33:00->11:34:30 1500.10->1491.70 -0.56% eye exit    Rs -1,529
+[11:42:42]   LENSKART     11:35:00->11:37:00 690.30->690.60 +0.04% eye exit    Rs -27
+[11:42:42]   NUVAMA       11:39:00->11:41:30 1715.00->1718.20 +0.19% eye exit    Rs 329
+[11:42:42]   STLNETWORK   11:39:30->11:41:30 50.13->49.85 -0.56% eye exit    Rs -1,532
+[11:42:42] no-dip watchlist 478 names | 254 in funnel (of 563 with bars, 254 warm) | 74 closed | flat | NET Rs 22,371
+[11:42:52] surge: 8 new (ARCIL, CCAVENUE, GENESYS, HAVELLS, JTLIND, LALPATHLAB)
+[11:43:16]   WELSPUNLIV   10:16:00->10:17:30 244.20->241.67 -1.04% eye exit    Rs -2,723
+[11:43:16]   WELSPUNLIV   10:18:00->10:25:00 241.60->243.33 +0.72% eye exit    Rs -1,925
+[11:43:16]   COFORGE      10:25:30->10:37:30 1807.00->1808.50 +0.08% eye exit    Rs 71
+[11:43:16]   CGPOWER      10:38:00->10:42:30 882.80->883.10 +0.03% eye exit    Rs -51
+[11:43:16]   SBC          11:13:30->11:24:00 59.35->59.30 -0.08% eye exit    Rs -346
+[11:43:16]   MOLBIO       11:23:30->11:27:30 1440.80->1453.00 +0.85% eye exit    Rs -467
+[11:43:16]   RENTOMOJO    11:25:00->11:39:00 521.70->527.05 +1.03% eye exit    Rs 2,426
+[11:43:16]   MOLBIO       11:28:00->11:38:00 1450.40->1543.60 +6.43% trail       Rs 3,114
+[11:43:16]   LOKESHMACH   11:38:30->11:41:30 397.25->391.45 -1.46% eye exit    Rs -3,783
+[11:43:16] no-dip watchlist 359 names | 160 in funnel (of 563 with bars, 160 warm) | 83 closed | flat | NET Rs 18,688
+[11:43:17] surge: 4 new (ABB, ARIS, LANDMARK, SHREECEM)
+[11:43:44] feed: 20 symbols fetched, 0 failed, 6s
+[11:43:49] surge: 4 new (KSHINTL, LENSKART, ROLEXRINGS, TARSONS)
+[11:43:53] circuit band REJECTED for ELECTCAST: price 75.35 outside band 2.4-3.6 (wrong scrip?)
+[11:43:53] circuit bands: 358 of 362 names (1 rejected as implausible)
+[11:44:07]   J&KBANK      10:55:30->10:57:00 141.56->141.41 -0.11% eye exit    Rs -401
+[11:44:07]   HDFCLIFE     10:57:30->11:04:30 532.30->534.50 +0.41% eye exit    Rs 896
+[11:44:07]   DPABHUSHAN   11:05:00->11:17:00 1892.10->1877.70 -0.76% eye exit    Rs 1,765
+[11:44:07]   SAILIFE      11:17:30->11:23:30 1541.20->1541.90 +0.05% eye exit    Rs -22
+[11:44:07]   LENSKART     11:24:00->11:32:30 689.45->690.00 +0.08% eye exit    Rs 63
+[11:44:07]   MOLBIO       11:34:00->11:38:00 1466.30->1543.60 +5.27% circuit guard Rs 2,574
+[11:44:07] no-dip watchlist 365 names | 163 in funnel (of 563 with bars, 163 warm) | 89 closed | holding APARINDS | NET Rs 23,303
+[11:44:26] surge: 2 new (HDFCMID150, JAICORPLTD)
+[11:44:43] no-dip watchlist 367 names | 163 in funnel (of 563 with bars, 163 warm) | 89 closed | holding LALPATHLAB | NET Rs 23,759
+[11:45:18]   LALPATHLAB   11:42:30->11:44:00 2016.90->2019.30 +0.12% eye exit    Rs 160
+[11:45:18] no-dip watchlist 367 names | 164 in funnel (of 566 with bars, 164 warm) | 90 closed | flat | NET Rs 23,723
+[11:45:45] feed: 20 symbols fetched, 0 failed, 6s
+[11:45:49] surge: 4 new (EICHERMOT, MAXHEALTH, SGFIN, SMARTWORKS)
+[11:45:57] quote batch 1: 429 -- backing off 2.5s, one retry
+[11:46:09] circuit band REJECTED for ELECTCAST: price 75.45 outside band 2.4-3.6 (wrong scrip?)
+[11:46:09] circuit bands: 363 of 367 names (1 rejected as implausible)
+[11:46:26]   APARINDS     11:42:30->11:45:30 17865.00->17865.00 +0.00% eye exit    Rs -130
+[11:46:26] no-dip watchlist 371 names | 165 in funnel (of 566 with bars, 165 warm) | 91 closed | holding NUVAMA | NET Rs 23,458
+[11:46:38] surge: 1 new (PRESTIGE)
+[11:47:04] no-dip watchlist 372 names | 185 in funnel (of 655 with bars, 185 warm) | 91 closed | holding RENTOMOJO | NET Rs 23,457
+[11:47:33] feed: 20 symbols fetched, 0 failed, 6s
+[11:48:57] surge: 3 new (FORTIS, PFC, TVSMOTOR)
+[11:49:14] feed: 349 symbols fetched, 0 failed, 100s
+[11:49:26] circuit band REJECTED for ELECTCAST: price 75.4 outside band 2.4-3.6 (wrong scrip?)
+[11:49:26] circuit bands: 368 of 372 names (1 rejected as implausible)
+[11:49:42] surge: 1 new (MARSONS)
+[11:49:46]   DPABHUSHAN   11:40:30->11:47:00 1908.20->1919.30 +0.58% eye exit    Rs 1,318
+[11:49:46]   OMNI         11:43:00->11:45:00 600.00->601.60 +0.27% eye exit    Rs 530
+[11:49:46]   NUVAMA       11:45:30->11:47:00 1718.00->1716.60 -0.08% eye exit    Rs -338
+[11:49:46] no-dip watchlist 375 names | 187 in funnel (of 661 with bars, 187 warm) | 94 closed | flat | NET Rs 25,102
+[11:50:14] feed: 20 symbols fetched, 0 failed, 6s
+[11:50:23] quote batch 1: 429 -- backing off 2.5s, one retry
+[11:50:28] surge: 1 new (TATASTEEL)
+[11:50:36] quote batch 1 HTTP 429: {"data":{"805":"Too many requests. Further requests may result in the user being blocked."},"status":"failed"}
+[11:50:36] circuit bands: 368 of 376 names
+[11:50:53] no-dip watchlist 377 names | 189 in funnel (of 661 with bars, 189 warm) | 94 closed | holding DPABHUSHAN | NET Rs 24,875
+[11:51:13] surge: 6 new (ADANIGREEN, ADANIPOWER, HINDUNILVR, MARUTI, PCJEWELLER, PERSISTENT)
+[11:51:31] no-dip watchlist 383 names | 192 in funnel (of 661 with bars, 192 warm) | 94 closed | holding DPABHUSHAN | NET Rs 25,255
+[11:51:38] surge: 5 new (ANGELONE, GVT&D, ITC, OIL, ZENSARTECH)
+[11:51:59] feed: 21 symbols fetched, 0 failed, 6s
+[11:52:03] surge: 2 new (HINDALCO, RAINBOW)
+[11:52:11] circuit band REJECTED for ELECTCAST: price 75.2 outside band 2.4-3.6 (wrong scrip?)
+[11:52:11] circuit bands: 382 of 386 names (1 rejected as implausible)
+[11:52:30]   DPABHUSHAN   11:49:00->11:51:30 1905.40->1896.20 -0.48% eye exit    Rs 1,070
+[11:52:30] no-dip watchlist 388 names | 194 in funnel (of 661 with bars, 194 warm) | 95 closed | holding KSHINTL | NET Rs 26,522
+[11:52:40] surge: 1 new (SAIL)
+[11:53:05] surge: 3 new (FLUOROCHEM, LTM, RECLTD)
+[11:53:11]   KSHINTL      11:50:30->11:52:00 1024.80->1025.30 +0.05% eye exit    Rs -14
+[11:53:11] no-dip watchlist 389 names | 195 in funnel (of 661 with bars, 195 warm) | 96 closed | flat | NET Rs 26,158
+[11:53:38] surge: 2 new (AMBUJACEM, IRCTC)
+[11:53:38] feed: 20 symbols fetched, 0 failed, 6s
+[11:53:50] circuit band REJECTED for ELECTCAST: price 75.2 outside band 2.4-3.6 (wrong scrip?)
+[11:53:50] circuit bands: 388 of 392 names (1 rejected as implausible)
+[11:54:07] surge: 4 new (GRASIM, HDFCBANK, HINDCOPPER, KIRLOSBROS)
+[11:54:08]   FEDDERSHOL   11:50:30->11:53:30 64.40->64.67 +0.42% eye exit    Rs 912
+[11:54:08] no-dip watchlist 394 names | 196 in funnel (of 663 with bars, 196 warm) | 97 closed | flat | NET Rs 27,070
+[11:54:40] surge: 1 new (ARSSBL)
+[11:54:45] no-dip watchlist 397 names | 198 in funnel (of 663 with bars, 198 warm) | 97 closed | flat | NET Rs 27,070
+[11:55:12] feed: 20 symbols fetched, 0 failed, 6s
+[11:55:29] surge: 4 new (AEGISVOPAK, RAMRAT, SBILIFE, SYNGENE)
+[11:56:10] surge: 1 new (RVNL)
+[11:56:51] surge: 1 new (RAIN)
+[11:57:00] feed: 375 symbols fetched, 0 failed, 107s
+[11:57:07] quote batch 1: 429 -- backing off 2.5s, one retry
+[11:57:20] circuit band REJECTED for ELECTCAST: price 75.09 outside band 2.4-3.6 (wrong scrip?)
+[11:57:20] circuit bands: 394 of 398 names (1 rejected as implausible)
+[11:57:35]   RBLBANK      11:50:00->11:54:00 417.00->417.10 +0.02% eye exit    Rs -76
+[11:57:35] no-dip watchlist 402 names | 203 in funnel (of 668 with bars, 203 warm) | 98 closed | holding SBC | NET Rs 27,026
+[11:58:02] feed: 21 symbols fetched, 0 failed, 6s
+[11:58:05] surge: 9 new (ACUTAAS, ADANIPORTS, APOLLOPIPE, ASHOKLEY, BANKBARODA, KAYNES)
+[11:58:09] circuit band REJECTED for ELECTCAST: price 75.05 outside band 2.4-3.6 (wrong scrip?)
+[11:58:09] circuit bands: 398 of 402 names (1 rejected as implausible)
+[11:58:29]   SBC          11:54:30->11:57:30 59.31->59.25 -0.10% eye exit    Rs -389
+[11:58:29] no-dip watchlist 410 names | 207 in funnel (of 668 with bars, 207 warm) | 99 closed | flat | NET Rs 26,605
+[11:58:50] surge: 1 new (FEDERALBNK)
+[11:59:04] no-dip watchlist 411 names | 208 in funnel (of 668 with bars, 208 warm) | 99 closed | flat | NET Rs 26,605
+[11:59:23] surge: 3 new (DMART, GSFC, ZYDUSLIFE)
+[11:59:43] no-dip watchlist 414 names | 210 in funnel (of 669 with bars, 210 warm) | 99 closed | flat | NET Rs 26,605
+[11:59:56] surge: 2 new (CORDELIA, CUMMINSIND)
+[12:00:10] feed: 20 symbols fetched, 0 failed, 6s
+[12:00:21] quote batch 1: 429 -- backing off 2.5s, one retry
+[12:00:33] quote batch 1 HTTP 429: {"data":{"805":"Too many requests. Further requests may result in the user being blocked."},"status":"failed"}
+[12:00:33] circuit bands: 398 of 416 names
+[12:00:37] surge: 3 new (ATULAUTO, SBIN, TATACONSUM)
+[12:00:52] no-dip watchlist 419 names | 213 in funnel (of 669 with bars, 213 warm) | 99 closed | holding NUVAMA,MFSL | NET Rs 27,268
+[12:01:33] no-dip watchlist 419 names | 214 in funnel (of 670 with bars, 214 warm) | 99 closed | holding NUVAMA | NET Rs 26,268
+[12:01:43] surge: 2 new (M&M, SHRIRAMFIN)
+[12:02:00] feed: 20 symbols fetched, 0 failed, 6s
+[12:02:08] circuit band REJECTED for ELECTCAST: price 75.18 outside band 2.4-3.6 (wrong scrip?)
+[12:02:08] circuit bands: 417 of 421 names (1 rejected as implausible)
+[12:02:12] surge: 2 new (AVALON, MEESHO)
+[12:02:25]   NUVAMA       11:59:30->12:01:30 1730.90->1726.90 -0.23% eye exit    Rs -711
+[12:02:25] no-dip watchlist 423 names | 216 in funnel (of 672 with bars, 216 warm) | 100 closed | flat | NET Rs 25,894
+[12:02:37] surge: 5 new (DHOOTTRANS, ICICIAMC, TATACAP, TEJASNET, UPL)
+[12:03:06] no-dip watchlist 428 names | 217 in funnel (of 672 with bars, 217 warm) | 100 closed | flat | NET Rs 25,894
+[12:03:10] surge: 2 new (FIVESTAR, ITCHOTELS)
+[12:03:33] feed: 20 symbols fetched, 0 failed, 6s
+[12:05:05] surge: 3 new (PRIVISCL, SOLARINDS, SYRMA)
+[12:05:30] surge: 7 new (GENUSPOWER, JINDALSTEL, MAZDOCK, RAYMOND, TIMEX, ZEEL)
+[12:05:34] feed: 407 symbols fetched, 0 failed, 120s
+[12:05:42] quote batch 1: 429 -- backing off 2.5s, one retry
+[12:05:55] circuit band REJECTED for ELECTCAST: price 75.11 outside band 2.4-3.6 (wrong scrip?)
+[12:05:55] circuit bands: 426 of 430 names (1 rejected as implausible)
+[12:06:11] surge: 2 new (SUDEEPPHRM, TEMPSENS)
+[12:06:13]   HDFCBANK     11:59:30->12:03:00 719.35->719.30 -0.01% eye exit    Rs -153
+[12:06:13]   DPABHUSHAN   12:01:30->12:03:00 1865.00->1859.30 -0.31% eye exit    Rs 628
+[12:06:13] no-dip watchlist 440 names | 223 in funnel (of 680 with bars, 223 warm) | 102 closed | flat | NET Rs 26,369
+[12:06:30] retired the previous engine (pid 39824)
+[12:06:34] surge: scanning the whole NSE equity universe every 2s
+oard
+[12:06:34] paper_live 20261001: warm-up 268 symbols. Waiting for START.
+[12:06:34] quote_feed: started -- one bulk quote per second, 30s bars
+[12:06:36] leverage: MIS sheet 4899 scrips (3077 at 1x)
+[12:06:46] feed: 20 symbols fetched, 0 failed, 6s
+[12:06:53] quote batch 1: 429 -- backing off 2.5s, one retry
+[12:07:05] quote batch 1 HTTP 429: {"data":{"805":"Too many requests. Further requests may result in the user being blocked."},"status":"failed"}
+[12:07:05] circuit bands: 0 of 443 names
+[12:07:13] surge: 270 new (3MINDIA, 5PAISA, AAREYDRUGS, AAVAS, ABDL, ABREL)
+[12:07:22] live_exec: PAPER routing in force (mode=PAPER, armed=False)
+[12:07:22]   KARAMTARA    09:20:30->09:22:00 417.10->420.40 +0.79% eye exit    Rs 340
+[12:07:22]   ENRIN        09:21:00->09:23:00 3294.10->3311.50 +0.53% eye exit    Rs 1,170
+[12:07:22]   PACEDIGITK   09:24:30->09:34:30 176.63->172.80 -2.17% eye exit    Rs 5,284
+[12:07:22]   INDUSTOWER   09:25:00->09:27:30 376.55->376.00 -0.15% eye exit    Rs -500
+[12:07:22]   TARIL        09:26:00->09:31:00 293.40->292.90 -0.17% eye exit    Rs -562
+[12:07:22]   MOLBIO       09:29:00->09:31:00 1354.30->1372.60 +1.35% eye exit    Rs 607
+[12:07:22]   DPABHUSHAN   09:29:00->09:46:30 1805.60->1819.30 +0.76% eye exit    Rs 1,755
+[12:07:22]   TARIL        09:32:30->09:34:30 294.40->292.40 -0.68% eye exit    Rs -1,833
+[12:07:22]   AUGMONT      09:33:00->09:33:00 1189.90->1189.00 -0.08% circuit guard Rs -325
+[12:07:22]   DPABHUSHAN   09:37:00->09:38:30 1827.60->1832.00 +0.24% eye exit    Rs 463
+[12:07:22]   GVT&D        09:38:00->09:39:30 4331.80->4325.40 -0.15% eye exit    Rs -499
+[12:07:22]   RATNAVEER    09:38:00->09:40:30 342.70->342.90 +0.06% eye exit    Rs 10
+[12:07:22]   NAZARA       09:43:30->09:45:00 395.20->395.50 +0.08% eye exit    Rs 54
+[12:07:22]   KISSHT       09:44:00->09:45:30 380.10->377.35 -0.72% eye exit    Rs -1,942
+[12:07:22]   GKSL         09:46:00->09:54:00 194.05->194.28 +0.12% eye exit    Rs 160
+[12:07:22]   GALAXYSURF   09:46:30->09:48:00 2415.60->2417.00 +0.06% eye exit    Rs 9
+[12:07:22]   SHILPAMED    09:48:30->09:51:30 1073.10->1073.00 -0.01% eye exit    Rs -159
+[12:07:22]   THOMASCOTT   09:49:00->09:55:30 288.80->306.00 +5.96% eye exit    Rs 14,738
+[12:07:22]   PIXTRANS     09:54:30->09:57:30 1849.40->1876.30 +1.45% eye exit    Rs 3,495
+[12:07:22]   WELSPUNLIV   09:59:30->10:01:00 237.00->237.24 +0.10% eye exit    Rs 117
+[12:07:22]   DPABHUSHAN   10:01:30->10:04:30 1882.00->1878.00 -0.21% eye exit    Rs -663
+[12:07:22]   SACHEEROME   10:01:30->10:06:30 501.50->503.50 +0.40% eye exit    Rs 145
+[12:07:22]   GVT&D        10:01:30->10:07:30 4296.60->4312.50 +0.37% eye exit    Rs 786
+[12:07:22]   PAISALO      10:04:00->10:08:30 80.20->79.93 -0.34% eye exit    Rs -977
+[12:07:22]   MOTISONS     10:08:00->10:10:30 18.10->18.12 +0.11% eye exit    Rs 140
+[12:07:22]   LEMONTREE    10:08:30->10:10:00 110.15->110.54 +0.35% eye exit    Rs 749
+[12:07:22]   PIXTRANS     10:09:00->10:28:30 1871.80->1835.00 -1.97% eye exit    Rs 4,759
+[12:07:22]   MOREPENLAB   10:11:30->10:24:00 132.11->134.49 +1.80% eye exit    Rs 4,366
+[12:07:22]   SACHEEROME   10:15:30->10:17:00 504.00->504.00 +0.00% eye exit    Rs -53
+[12:07:22]   WELSPUNLIV   10:16:00->10:17:30 244.20->241.67 -1.04% eye exit    Rs -2,723
+[12:07:22]   PIXTRANS     10:16:30->10:22:30 1845.60->1845.80 +0.01% eye exit    Rs -163
+[12:07:22]   INDUSTOWER   10:17:30->10:19:30 381.00->382.05 +0.28% eye exit    Rs 553
+[12:07:22]   WELSPUNLIV   10:18:00->10:25:00 241.60->243.33 +0.72% eye exit    Rs -1,925
+[12:07:22]   SHILPAMED    10:22:00->10:23:30 1078.90->1086.00 +0.66% eye exit    Rs 1,504
+[12:07:22]   SHUKRAPHAR   10:23:00->10:25:30 64.43->64.37 -0.09% eye exit    Rs -369
+[12:07:22]   MOREPENLAB   10:24:30->10:28:30 134.50->133.47 -0.77% eye exit    Rs -2,049
+[12:07:22]   COFORGE      10:25:30->10:37:30 1807.00->1808.50 +0.08% eye exit    Rs 71
+[12:07:22]   SHUKRAPHAR   10:27:30->10:34:00 64.79->64.49 -0.46% eye exit    Rs -1,293
+[12:07:22]   ROLEXRINGS   10:28:00->10:29:30 195.54->195.22 -0.16% eye exit    Rs -545
+[12:07:22]   MOREPENLAB   10:29:00->10:32:30 133.30->134.38 +0.81% eye exit    Rs -2,161
+[12:07:22]   INDSWFTLAB   10:29:00->10:30:30 409.75->407.70 -0.50% eye exit    Rs -1,386
+[12:07:22]   STLNETWORK   10:31:00->10:32:30 48.50->48.76 +0.54% eye exit    Rs 1,204
+[12:07:22]   AMAGI        10:31:00->10:36:00 560.40->562.05 +0.29% eye exit    Rs 600
+[12:07:22]   OMNI         10:33:00->10:35:00 584.65->585.20 +0.09% eye exit    Rs 99
+[12:07:22]   TARIL        10:34:30->10:45:00 296.25->295.85 -0.14% eye exit    Rs -473
+[12:07:22]   WELSPUNLIV   10:35:30->10:58:00 240.00->236.20 -1.58% eye exit    Rs 3,820
+[12:07:22]   BEML         10:36:00->10:39:30 1981.60->1977.40 -0.21% eye exit    Rs -665
+[12:07:22]   SHAREINDIA   10:36:00->10:46:00 206.45->208.17 +0.83% eye exit    Rs 1,945
+[12:07:22]   OMNI         10:36:30->10:38:00 587.50->593.90 +1.09% eye exit    Rs 2,584
+[12:07:22]   CGPOWER      10:38:00->10:42:30 882.80->883.10 +0.03% eye exit    Rs -51
+[12:07:22]   INOXINDIA    10:39:00->10:40:30 2111.70->2107.80 -0.18% eye exit    Rs -596
+[12:07:22]   RATNAVEER    10:39:00->10:41:30 340.70->340.80 +0.03% eye exit    Rs -62
+[12:07:22]   LTF          10:40:00->10:41:30 267.95->267.55 -0.15% eye exit    Rs -509
+[12:07:22]   BHEL         10:43:00->10:46:00 426.55->425.90 -0.15% eye exit    Rs -517
+[12:07:22]   INDUSTOWER   10:43:00->10:50:00 383.25->383.40 +0.04% eye exit    Rs -38
+[12:07:22]   SMCGLOBAL    10:44:30->10:46:00 102.24->97.50 -4.64% eye exit    Rs -11,722
+[12:07:22]   SKIPPER      10:45:30->10:53:00 546.80->550.10 +0.60% eye exit    Rs 1,372
+[12:07:22]   AMAGI        10:46:30->10:48:00 564.80->564.35 -0.08% eye exit    Rs -335
+[12:07:22]   RBLBANK      10:46:30->10:49:00 414.95->415.80 +0.20% eye exit    Rs 376
+[12:07:22]   SKIPPER      10:47:30->10:49:00 549.00->551.80 +0.51% eye exit    Rs 1,138
+[12:07:22]   SHILPAMED    10:51:30->10:53:30 1094.00->1093.60 -0.04% eye exit    Rs -227
+[12:07:22]   INOXINDIA    10:51:30->10:54:30 2110.60->2109.20 -0.07% eye exit    Rs -301
+[12:07:22]   SCHNEIDER    10:53:30->10:58:00 1251.30->1258.70 +0.59% eye exit    Rs 1,337
+[12:07:22]   J&KBANK      10:55:30->10:57:00 141.56->141.41 -0.11% eye exit    Rs -401
+[12:07:22]   SCHNEIDER    10:56:00->11:01:30 1255.10->1250.20 -0.39% eye exit    Rs -1,111
+[12:07:22]   HDFCLIFE     10:57:30->11:04:30 532.30->534.50 +0.41% eye exit    Rs 896
+[12:07:22]   KAJARIACER   11:02:00->11:05:30 1246.60->1242.90 -0.30% eye exit    Rs -875
+[12:07:22]   LTF          11:02:30->11:04:00 268.35->268.50 +0.06% eye exit    Rs 4
+[12:07:22]   DPABHUSHAN   11:05:00->11:17:00 1892.10->1877.70 -0.76% eye exit    Rs 1,765
+[12:07:22]   SKIPPER      11:06:00->11:09:00 551.00->551.35 +0.06% eye exit    Rs 23
+[12:07:22]   ASTERDM      11:06:00->11:12:00 703.50->705.25 +0.25% eye exit    Rs 485
+[12:07:22]   MOLBIO       11:11:00->11:14:00 1427.10->1434.90 +0.55% eye exit    Rs 220
+[12:07:22]   NESTLEIND    11:11:00->11:14:00 1317.40->1318.00 +0.05% eye exit    Rs -22
+[12:07:22]   SBC          11:13:30->11:24:00 59.35->59.30 -0.08% eye exit    Rs -346
+[12:07:22]   INOXINDIA    11:14:30->11:17:00 2130.80->2136.40 +0.26% eye exit    Rs 519
+[12:07:22]   TARIL        11:14:30->11:19:00 292.05->291.10 -0.33% eye exit    Rs 677
+[12:07:22]   SAILIFE      11:17:30->11:23:30 1541.20->1541.90 +0.05% eye exit    Rs -22
+[12:07:22]   LENSKART     11:22:00->11:25:30 688.75->689.70 +0.14% eye exit    Rs 208
+[12:07:22]   MOLBIO       11:23:30->11:27:30 1440.80->1453.00 +0.85% eye exit    Rs -467
+[12:07:22]   LENSKART     11:24:00->11:32:30 689.45->690.00 +0.08% eye exit    Rs 63
+[12:07:22]   RENTOMOJO    11:25:00->11:39:00 521.70->527.05 +1.03% eye exit    Rs 2,426
+[12:07:22]   MOLBIO       11:28:00->11:38:00 1450.40->1543.60 +6.43% trail       Rs 3,114
+[12:07:22]   RENTOMOJO    11:29:00->11:30:30 524.30->525.10 +0.15% eye exit    Rs 245
+[12:07:22]   ROSSTECH     11:33:00->11:34:30 1500.10->1491.70 -0.56% eye exit    Rs -1,529
+[12:07:22]   MOLBIO       11:34:00->11:38:00 1466.30->1543.60 +5.27% circuit guard Rs 2,574
+[12:07:22]   LENSKART     11:35:00->11:37:00 690.30->690.60 +0.04% eye exit    Rs -27
+[12:07:22]   LOKESHMACH   11:38:30->11:41:30 397.25->391.45 -1.46% eye exit    Rs -3,783
+[12:07:22]   NUVAMA       11:39:00->11:41:30 1715.00->1718.20 +0.19% eye exit    Rs 329
+[12:07:22]   STLNETWORK   11:39:30->11:41:30 50.13->49.85 -0.56% eye exit    Rs -1,532
+[12:07:22]   DPABHUSHAN   11:40:30->11:47:00 1908.20->1919.30 +0.58% eye exit    Rs 1,318
+[12:07:22]   LALPATHLAB   11:42:30->11:44:00 2016.90->2019.30 +0.12% eye exit    Rs 160
+[12:07:22]   APARINDS     11:42:30->11:45:30 17865.00->17865.00 +0.00% eye exit    Rs -130
+[12:07:22]   OMNI         11:43:00->11:45:00 600.00->601.60 +0.27% eye exit    Rs 530
+[12:07:22]   NUVAMA       11:45:30->11:47:00 1718.00->1716.60 -0.08% eye exit    Rs -338
+[12:07:22]   DPABHUSHAN   11:49:00->11:51:30 1905.40->1896.20 -0.48% eye exit    Rs 1,070
+[12:07:22]   RBLBANK      11:50:00->11:54:00 417.00->417.10 +0.02% eye exit    Rs -76
+[12:07:22]   KSHINTL      11:50:30->11:52:00 1024.80->1025.30 +0.05% eye exit    Rs -14
+[12:07:22]   FEDDERSHOL   11:50:30->11:53:30 64.40->64.67 +0.42% eye exit    Rs 912
+[12:07:22]   SBC          11:54:30->11:57:30 59.31->59.25 -0.10% eye exit    Rs -389
+[12:07:22]   NUVAMA       11:59:30->12:01:30 1730.90->1726.90 -0.23% eye exit    Rs -711
+[12:07:22]   HDFCBANK     11:59:30->12:03:00 719.35->719.30 -0.01% eye exit    Rs -153
+[12:07:22]   DPABHUSHAN   12:01:30->12:03:00 1865.00->1859.30 -0.31% eye exit    Rs 628
+[12:07:22]   FEDDERSHOL   12:04:30->12:06:30 65.77->65.50 -0.41% eye exit    Rs -1,162
+[12:07:22] no-dip watchlist 443 names | 224 in funnel (of 681 with bars, 224 warm) | 103 closed | flat | NET Rs 25,207
+[12:07:47] no-dip watchlist 347 names | 177 in funnel (of 681 with bars, 177 warm) | 103 closed | flat | NET Rs 25,207
+[12:08:15] feed: 20 symbols fetched, 0 failed, 6s
+[12:08:23] circuit band REJECTED for ELECTCAST: price 74.74 outside band 2.4-3.6 (wrong scrip?)
+[12:08:23] circuit bands: 343 of 347 names (1 rejected as implausible)
+[12:08:36]   MARINE       11:24:00->11:27:00 433.75->433.60 -0.03% eye exit    Rs -222
+[12:08:36]   ROLEXRINGS   11:27:30->11:30:30 193.98->194.00 +0.01% eye exit    Rs -110
+[12:08:36]   SURYAROSNI   11:31:00->11:34:30 221.62->221.28 -0.15% eye exit    Rs -519
+[12:08:36]   MANORAMA     11:35:30->11:42:00 1857.80->1878.20 +1.10% eye exit    Rs 2,597
+[12:08:36]   SCHNEIDER    11:42:30->11:47:30 1264.60->1269.00 +0.35% eye exit    Rs 731
+[12:08:36]   HDFCLIFE     11:48:00->11:50:30 532.30->532.35 +0.01% eye exit    Rs -112
+[12:08:36]   DPABHUSHAN   11:51:00->12:01:00 1895.70->1862.20 -1.77% eye exit    Rs 4,254
+[12:08:36] no-dip watchlist 347 names | 177 in funnel (of 681 with bars, 177 warm) | 110 closed | flat | NET Rs 31,825
+[12:08:40] surge: 109 new (AASTHA, ADVAIT, AFCONS, AGL, ALEMBICLTD, AMAGI)
+[12:09:04] surge: 6 new (GROWWPOWER, KAPSTON, NOCIL, RICOAUTO, TATACAP, VIPIND)
+[12:09:15] no-dip watchlist 436 names | 196 in funnel (of 681 with bars, 196 warm) | 110 closed | flat | NET Rs 31,825
+[12:09:48] no-dip watchlist 442 names | 198 in funnel (of 681 with bars, 198 warm) | 110 closed | flat | NET Rs 31,825
+[12:09:54] surge: 7 new (DHAMPURSUG, IRCTC, JASH, JKTYRE, LENSKART, VEDPOWER)
+[12:10:15] feed: 20 symbols fetched, 0 failed, 6s
+[12:10:27] quote batch 1: 429 -- backing off 2.5s, one retry
+[12:10:31] surge: 15 new (ALIVUS, ASTRAL, CARRARO, CORONA, CRAMC, DAMCAPITAL)
+[12:10:39] quote batch 1 HTTP 429: {"data":{"805":"Too many requests. Further requests may result in the user being blocked."},"status":"failed"}
+[12:10:39] circuit bands: 343 of 449 names
+[12:11:01] no-dip watchlist 464 names | 205 in funnel (of 681 with bars, 205 warm) | 110 closed | flat | NET Rs 31,825
+[12:11:34] no-dip watchlist 464 names | 205 in funnel (of 681 with bars, 205 warm) | 110 closed | flat | NET Rs 31,825
+[12:11:49] surge: 21 new (ABB, APOLLO, BLUECLOUDS, CRIZAC, FREDUN, GAEL)
+[12:12:01] feed: 20 symbols fetched, 0 failed, 6s
+[12:12:14] surge: 4 new (DATAPATTNS, HONAUT, LLOYDSENGG, PSPPROJECT)
+[12:12:47] surge: 6 new (FEDERALBNK, HINDZINC, JYOTHYLAB, MAZDOCK, SYRMA, ZENTEC)
+[12:13:12] surge: 9 new (AEGISLOG, AUBANK, BANKBARODA, CROMPTON, DRREDDY, IRFC)
+[12:13:37] surge: 3 new (GNFC, NESTLEIND, PIDILITIND)
+[12:14:02] surge: 4 new (GANDHAR, HAVELLS, JSFB, PATANJALI)
+[12:14:14] feed: 460 symbols fetched, 0 failed, 132s
+[12:14:22] quote batch 1: 429 -- backing off 2.5s, one retry
+[12:14:34] quote batch 1 HTTP 429: {"data":{"805":"Too many requests. Further requests may result in the user being blocked."},"status":"failed"}
+[12:14:34] circuit bands: 343 of 483 names
+[12:14:52]   ALICON       12:08:00->12:11:30 859.95->867.50 +0.88% eye exit    Rs 2,053
+[12:14:52] no-dip watchlist 508 names | 227 in funnel (of 751 with bars, 227 warm) | 111 closed | flat | NET Rs 33,879
+[12:15:16] surge: 5 new (APARINDS, FIRSTCRY, KPITTECH, STARHEALTH, TVSMOTOR)
+[12:15:19] feed: 20 symbols fetched, 0 failed, 6s
+[12:15:28] circuit band REJECTED for ELECTCAST: price 74.22 outside band 2.4-3.6 (wrong scrip?)
+[12:15:28] circuit bands: 504 of 508 names (1 rejected as implausible)
+[12:15:50] no-dip watchlist 512 names | 230 in funnel (of 755 with bars, 230 warm) | 111 closed | flat | NET Rs 33,879
+[12:15:53] surge: 1 new (AETHER)
+[12:16:15] no-dip watchlist 513 names | 230 in funnel (of 755 with bars, 230 warm) | 111 closed | flat | NET Rs 33,879
+[12:16:40] no-dip watchlist 513 names | 230 in funnel (of 755 with bars, 230 warm) | 111 closed | flat | NET Rs 33,879
+[12:16:42] surge: 4 new (APLAPOLLO, DIXON, MOTHERSON, VISL)
+[12:17:07] feed: 20 symbols fetched, 0 failed, 6s
+[12:17:19] quote batch 1: 429 -- backing off 2.5s, one retry
+[12:17:27] surge: 1 new (SUNDRMFAST)
+[12:17:31] quote batch 1 HTTP 429: {"data":{"805":"Too many requests. Further requests may result in the user being blocked."},"status":"failed"}
+[12:17:31] circuit bands: 504 of 517 names
+[12:17:53] no-dip watchlist 518 names | 236 in funnel (of 763 with bars, 236 warm) | 111 closed | holding APARINDS | NET Rs 33,660
+[12:18:35] no-dip watchlist 518 names | 236 in funnel (of 764 with bars, 236 warm) | 111 closed | holding APARINDS | NET Rs 33,688
+[12:19:01] feed: 20 symbols fetched, 0 failed, 6s
+[12:19:13] circuit band REJECTED for ELECTCAST: price 74.47 outside band 2.4-3.6 (wrong scrip?)
+[12:19:13] circuit band REJECTED for MOTHERSON: price 159.02 outside band 80000.0-120000.0 (wrong scrip?)
+[12:19:13] circuit bands: 513 of 518 names (2 rejected as implausible)
+[12:19:36]   APARINDS     12:16:30->12:18:30 17636.00->17641.00 +0.03% eye exit    Rs -65
+[12:19:36] no-dip watchlist 518 names | 238 in funnel (of 766 with bars, 238 warm) | 112 closed | holding MONQ50 | NET Rs 33,660
+[12:19:55] surge: 1 new (WAAREEENER)
+[12:20:19] no-dip watchlist 519 names | 240 in funnel (of 768 with bars, 240 warm) | 112 closed | holding FEDDERSHOL | NET Rs 33,678
+[12:20:36] surge: 6 new (BLUESTONE, FORTIS, HSCL, JSWSTEEL, KARURVYSYA, TMCV)
+[12:20:46] feed: 20 symbols fetched, 0 failed, 6s
+[12:21:17] surge: 1 new (TEGA)
+[12:21:42] surge: 3 new (CUB, GESHIP, NIFTYAXIS)
+[12:22:07] surge: 4 new (ATULAUTO, ORKLAINDIA, SOLARINDS, ZYDUSLIFE)
+[12:22:31] surge: 3 new (GRSE, INDIGOPNTS, SWSOLAR)
+[12:22:55] surge: 5 new (AEQUS, BHARATFORG, KWIL, MAHABANK, PAISALO)
+[12:23:10] feed: 501 symbols fetched, 1 failed, 144s
+[12:23:19] circuit band REJECTED for ELECTCAST: price 74.4 outside band 2.4-3.6 (wrong scrip?)
+[12:23:19] circuit band REJECTED for MOTHERSON: price 158.83 outside band 80000.0-120000.0 (wrong scrip?)
+[12:23:19] circuit bands: 520 of 525 names (2 rejected as implausible)
+[12:23:31] surge: 4 new (DEEPAKNTR, PWL, RADICO, RITES)
+[12:23:43]   ELEVATE      12:18:00->12:20:00 341.80->339.80 -0.59% eye exit    Rs -345
+[12:23:43] no-dip watchlist 540 names | 248 in funnel (of 772 with bars, 248 warm) | 113 closed | holding ALICON | NET Rs 32,390
+[12:23:47] retired the previous engine (pid 4920)
+[12:23:51] surge: scanning the whole NSE equity universe every 2s
+[12:23:51] surge scanner ON -- the engine no longer waits for the board
+[12:23:51] paper_live 20261001: warm-up 268 symbols. Waiting for START.
+[12:23:51] quote_feed: started -- one bulk quote per second, 30s bars
+[12:23:53] leverage: MIS sheet 4899 scrips (3077 at 1x)
+[12:23:56] surge: 474 new (3MINDIA, 5PAISA, AAREYDRUGS, AASTHA, AAVAS, ABDL)
+[12:24:02] feed: 20 symbols fetched, 0 failed, 6s
+[12:24:08] circuit bands failed: UnboundLocalError cannot access local variable 'tape' where it is not associated with a value
+[12:24:17] surge: 5 new (CAPILLARY, DMCC, RAMCOIND, RAMCOSYS, TGVSL)
+[12:24:29] live_exec: PAPER routing in force (mode=PAPER, armed=False)
+[12:24:30]   KARAMTARA    09:20:30->09:22:00 417.10->420.40 +0.79% eye exit    Rs 340
+[12:24:30]   ENRIN        09:21:00->09:23:00 3294.10->3311.50 +0.53% eye exit    Rs 1,170
+[12:24:30]   PACEDIGITK   09:24:30->09:34:30 176.63->172.80 -2.17% eye exit    Rs 5,284
+[12:24:30]   INDUSTOWER   09:25:00->09:27:30 376.55->376.00 -0.15% eye exit    Rs -500
+[12:24:30]   TARIL        09:26:00->09:31:00 293.40->292.90 -0.17% eye exit    Rs -562
+[12:24:30]   MOLBIO       09:29:00->09:31:00 1354.30->1372.60 +1.35% eye exit    Rs 607
+[12:24:30]   DPABHUSHAN   09:29:00->09:46:30 1805.60->1819.30 +0.76% eye exit    Rs 1,755
+[12:24:30]   TARIL        09:32:30->09:34:30 294.40->292.40 -0.68% eye exit    Rs -1,833
+[12:24:30]   AUGMONT      09:33:00->09:33:00 1189.90->1189.00 -0.08% circuit guard Rs -325
+[12:24:30]   DPABHUSHAN   09:37:00->09:38:30 1827.60->1832.00 +0.24% eye exit    Rs 463
+[12:24:30]   GVT&D        09:38:00->09:39:30 4331.80->4325.40 -0.15% eye exit    Rs -499
+[12:24:30]   RATNAVEER    09:38:00->09:40:30 342.70->342.90 +0.06% eye exit    Rs 10
+[12:24:30]   NAZARA       09:43:30->09:45:00 395.20->395.50 +0.08% eye exit    Rs 54
+[12:24:30]   KISSHT       09:44:00->09:45:30 380.10->377.35 -0.72% eye exit    Rs -1,942
+[12:24:30]   GKSL         09:46:00->09:54:00 194.05->194.28 +0.12% eye exit    Rs 160
+[12:24:30]   GALAXYSURF   09:46:30->09:48:00 2415.60->2417.00 +0.06% eye exit    Rs 9
+[12:24:30]   SHILPAMED    09:48:30->09:51:30 1073.10->1073.00 -0.01% eye exit    Rs -159
+[12:24:30]   THOMASCOTT   09:49:00->09:55:30 288.80->306.00 +5.96% eye exit    Rs 14,738
+[12:24:30]   PIXTRANS     09:54:30->09:57:30 1849.40->1876.30 +1.45% eye exit    Rs 3,495
+[12:24:30]   WELSPUNLIV   09:59:30->10:01:00 237.00->237.24 +0.10% eye exit    Rs 117
+[12:24:30]   DPABHUSHAN   10:01:30->10:04:30 1882.00->1878.00 -0.21% eye exit    Rs -663
+[12:24:30]   SACHEEROME   10:01:30->10:06:30 501.50->503.50 +0.40% eye exit    Rs 145
+[12:24:30]   GVT&D        10:01:30->10:07:30 4296.60->4312.50 +0.37% eye exit    Rs 786
+[12:24:30]   PAISALO      10:04:00->10:08:30 80.20->79.93 -0.34% eye exit    Rs -977
+[12:24:30]   MOTISONS     10:08:00->10:10:30 18.10->18.12 +0.11% eye exit    Rs 140
+[12:24:30]   LEMONTREE    10:08:30->10:10:00 110.15->110.54 +0.35% eye exit    Rs 749
+[12:24:30]   PIXTRANS     10:09:00->10:28:30 1871.80->1835.00 -1.97% eye exit    Rs 4,759
+[12:24:30]   MOREPENLAB   10:11:30->10:24:00 132.11->134.49 +1.80% eye exit    Rs 4,366
+[12:24:30]   SACHEEROME   10:15:30->10:17:00 504.00->504.00 +0.00% eye exit    Rs -53
+[12:24:30]   WELSPUNLIV   10:16:00->10:17:30 244.20->241.67 -1.04% eye exit    Rs -2,723
+[12:24:30]   PIXTRANS     10:16:30->10:22:30 1845.60->1845.80 +0.01% eye exit    Rs -163
+[12:24:30]   INDUSTOWER   10:17:30->10:19:30 381.00->382.05 +0.28% eye exit    Rs 553
+[12:24:30]   WELSPUNLIV   10:18:00->10:25:00 241.60->243.33 +0.72% eye exit    Rs -1,925
+[12:24:30]   SHILPAMED    10:22:00->10:23:30 1078.90->1086.00 +0.66% eye exit    Rs 1,504
+[12:24:30]   SHUKRAPHAR   10:23:00->10:25:30 64.43->64.37 -0.09% eye exit    Rs -369
+[12:24:30]   MOREPENLAB   10:24:30->10:28:30 134.50->133.47 -0.77% eye exit    Rs -2,049
+[12:24:30]   COFORGE      10:25:30->10:37:30 1807.00->1808.50 +0.08% eye exit    Rs 71
+[12:24:30]   SHUKRAPHAR   10:27:30->10:34:00 64.79->64.49 -0.46% eye exit    Rs -1,293
+[12:24:30]   ROLEXRINGS   10:28:00->10:29:30 195.54->195.22 -0.16% eye exit    Rs -545
+[12:24:30]   MOREPENLAB   10:29:00->10:32:30 133.30->134.38 +0.81% eye exit    Rs -2,161
+[12:24:30]   INDSWFTLAB   10:29:00->10:30:30 409.75->407.70 -0.50% eye exit    Rs -1,386
+[12:24:30]   STLNETWORK   10:31:00->10:32:30 48.50->48.76 +0.54% eye exit    Rs 1,204
+[12:24:30]   AMAGI        10:31:00->10:36:00 560.40->562.05 +0.29% eye exit    Rs 600
+[12:24:30]   OMNI         10:33:00->10:35:00 584.65->585.20 +0.09% eye exit    Rs 99
+[12:24:30]   TARIL        10:34:30->10:45:00 296.25->295.85 -0.14% eye exit    Rs -473
+[12:24:30]   WELSPUNLIV   10:35:30->10:58:00 240.00->236.20 -1.58% eye exit    Rs 3,820
+[12:24:30]   BEML         10:36:00->10:39:30 1981.60->1977.40 -0.21% eye exit    Rs -665
+[12:24:30]   SHAREINDIA   10:36:00->10:46:00 206.45->208.17 +0.83% eye exit    Rs 1,945
+[12:24:30]   OMNI         10:36:30->10:38:00 587.50->593.90 +1.09% eye exit    Rs 2,584
+[12:24:30]   CGPOWER      10:38:00->10:42:30 882.80->883.10 +0.03% eye exit    Rs -51
+[12:24:30]   INOXINDIA    10:39:00->10:40:30 2111.70->2107.80 -0.18% eye exit    Rs -596
+[12:24:30]   RATNAVEER    10:39:00->10:41:30 340.70->340.80 +0.03% eye exit    Rs -62
+[12:24:30]   LTF          10:40:00->10:41:30 267.95->267.55 -0.15% eye exit    Rs -509
+[12:24:30]   BHEL         10:43:00->10:46:00 426.55->425.90 -0.15% eye exit    Rs -517
+[12:24:30]   INDUSTOWER   10:43:00->10:50:00 383.25->383.40 +0.04% eye exit    Rs -38
+[12:24:30]   SMCGLOBAL    10:44:30->10:46:00 102.24->97.50 -4.64% eye exit    Rs -11,722
+[12:24:30]   SKIPPER      10:45:30->10:53:00 546.80->550.10 +0.60% eye exit    Rs 1,372
+[12:24:30]   AMAGI        10:46:30->10:48:00 564.80->564.35 -0.08% eye exit    Rs -335
+[12:24:30]   RBLBANK      10:46:30->10:49:00 414.95->415.80 +0.20% eye exit    Rs 376
+[12:24:30]   SKIPPER      10:47:30->10:49:00 549.00->551.80 +0.51% eye exit    Rs 1,138
+[12:24:30]   SHILPAMED    10:51:30->10:53:30 1094.00->1093.60 -0.04% eye exit    Rs -227
+[12:24:30]   INOXINDIA    10:51:30->10:54:30 2110.60->2109.20 -0.07% eye exit    Rs -301
+[12:24:30]   SCHNEIDER    10:53:30->10:58:00 1251.30->1258.70 +0.59% eye exit    Rs 1,337
+[12:24:30]   J&KBANK      10:55:30->10:57:00 141.56->141.41 -0.11% eye exit    Rs -401
+[12:24:30]   SCHNEIDER    10:56:00->11:01:30 1255.10->1250.20 -0.39% eye exit    Rs -1,111
+[12:24:30]   HDFCLIFE     10:57:30->11:04:30 532.30->534.50 +0.41% eye exit    Rs 896
+[12:24:30]   KAJARIACER   11:02:00->11:05:30 1246.60->1242.90 -0.30% eye exit    Rs -875
+[12:24:30]   LTF          11:02:30->11:04:00 268.35->268.50 +0.06% eye exit    Rs 4
+[12:24:30]   DPABHUSHAN   11:05:00->11:17:00 1892.10->1877.70 -0.76% eye exit    Rs 1,765
+[12:24:30]   SKIPPER      11:06:00->11:09:00 551.00->551.35 +0.06% eye exit    Rs 23
+[12:24:30]   ASTERDM      11:06:00->11:12:00 703.50->705.25 +0.25% eye exit    Rs 485
+[12:24:30]   MOLBIO       11:11:00->11:14:00 1427.10->1434.90 +0.55% eye exit    Rs 220
+[12:24:30]   NESTLEIND    11:11:00->11:14:00 1317.40->1318.00 +0.05% eye exit    Rs -22
+[12:24:30]   SBC          11:13:30->11:24:00 59.35->59.30 -0.08% eye exit    Rs -346
+[12:24:30]   INOXINDIA    11:14:30->11:17:00 2130.80->2136.40 +0.26% eye exit    Rs 519
+[12:24:30]   TARIL        11:14:30->11:19:00 292.05->291.10 -0.33% eye exit    Rs 677
+[12:24:30]   SAILIFE      11:17:30->11:23:30 1541.20->1541.90 +0.05% eye exit    Rs -22
+[12:24:30]   LENSKART     11:22:00->11:25:30 688.75->689.70 +0.14% eye exit    Rs 208
+[12:24:30]   MOLBIO       11:23:30->11:27:30 1440.80->1453.00 +0.85% eye exit    Rs -467
+[12:24:30]   LENSKART     11:24:00->11:32:30 689.45->690.00 +0.08% eye exit    Rs 63
+[12:24:30]   MARINE       11:24:00->11:27:00 433.75->433.60 -0.03% eye exit    Rs -222
+[12:24:30]   RENTOMOJO    11:25:00->11:39:00 521.70->527.05 +1.03% eye exit    Rs 2,426
+[12:24:30]   ROLEXRINGS   11:27:30->11:30:30 193.98->194.00 +0.01% eye exit    Rs -110
+[12:24:30]   MOLBIO       11:28:00->11:38:00 1450.40->1543.60 +6.43% trail       Rs 3,114
+[12:24:30]   RENTOMOJO    11:29:00->11:30:30 524.30->525.10 +0.15% eye exit    Rs 245
+[12:24:30]   SURYAROSNI   11:31:00->11:34:30 221.62->221.28 -0.15% eye exit    Rs -519
+[12:24:30]   ROSSTECH     11:33:00->11:34:30 1500.10->1491.70 -0.56% eye exit    Rs -1,529
+[12:24:30]   MOLBIO       11:34:00->11:38:00 1466.30->1543.60 +5.27% circuit guard Rs 2,574
+[12:24:30]   LENSKART     11:35:00->11:37:00 690.30->690.60 +0.04% eye exit    Rs -27
+[12:24:30]   MANORAMA     11:35:30->11:42:00 1857.80->1878.20 +1.10% eye exit    Rs 2,597
+[12:24:30]   LOKESHMACH   11:38:30->11:41:30 397.25->391.45 -1.46% eye exit    Rs -3,783
+[12:24:30]   NUVAMA       11:39:00->11:41:30 1715.00->1718.20 +0.19% eye exit    Rs 329
+[12:24:30]   STLNETWORK   11:39:30->11:41:30 50.13->49.85 -0.56% eye exit    Rs -1,532
+[12:24:30]   DPABHUSHAN   11:40:30->11:47:00 1908.20->1919.30 +0.58% eye exit    Rs 1,318
+[12:24:30]   LALPATHLAB   11:42:30->11:44:00 2016.90->2019.30 +0.12% eye exit    Rs 160
+[12:24:30]   APARINDS     11:42:30->11:45:30 17865.00->17865.00 +0.00% eye exit    Rs -130
+[12:24:30]   SCHNEIDER    11:42:30->11:47:30 1264.60->1269.00 +0.35% eye exit    Rs 731
+[12:24:30]   OMNI         11:43:00->11:45:00 600.00->601.60 +0.27% eye exit    Rs 530
+[12:24:30]   NUVAMA       11:45:30->11:47:00 1718.00->1716.60 -0.08% eye exit    Rs -338
+[12:24:30]   HDFCLIFE     11:48:00->11:50:30 532.30->532.35 +0.01% eye exit    Rs -112
+[12:24:30]   DPABHUSHAN   11:49:00->11:51:30 1905.40->1896.20 -0.48% eye exit    Rs 1,070
+[12:24:30]   RBLBANK      11:50:00->11:54:00 417.00->417.10 +0.02% eye exit    Rs -76
+[12:24:30]   KSHINTL      11:50:30->11:52:00 1024.80->1025.30 +0.05% eye exit    Rs -14
+[12:24:30]   FEDDERSHOL   11:50:30->11:53:30 64.40->64.67 +0.42% eye exit    Rs 912
+[12:24:30]   DPABHUSHAN   11:51:00->12:01:00 1895.70->1862.20 -1.77% eye exit    Rs 4,254
+[12:24:30]   SBC          11:54:30->11:57:30 59.31->59.25 -0.10% eye exit    Rs -389
+[12:24:30]   NUVAMA       11:59:30->12:01:30 1730.90->1726.90 -0.23% eye exit    Rs -711
+[12:24:30]   HDFCBANK     11:59:30->12:03:00 719.35->719.30 -0.01% eye exit    Rs -153
+[12:24:30]   DPABHUSHAN   12:01:30->12:03:00 1865.00->1859.30 -0.31% eye exit    Rs 628
+[12:24:30]   FEDDERSHOL   12:04:30->12:06:30 65.77->65.50 -0.41% eye exit    Rs -1,162
+[12:24:30]   ALICON       12:08:00->12:11:30 859.95->867.50 +0.88% eye exit    Rs 2,053
+[12:24:30]   GKSL         12:08:00->12:11:00 198.87->198.30 -0.29% eye exit    Rs 581
+[12:24:30]   KEI          12:11:30->12:15:30 4523.20->4520.00 -0.07% eye exit    Rs -311
+[12:24:30]   DPABHUSHAN   12:13:30->12:18:00 1868.00->1868.30 +0.02% eye exit    Rs -95
+[12:24:30]   APARINDS     12:16:30->12:18:30 17636.00->17641.00 +0.03% eye exit    Rs -65
+[12:24:30]   ELEVATE      12:18:00->12:20:00 341.80->339.80 -0.59% eye exit    Rs -345
+[12:24:30]   CGCL         12:18:30->12:20:00 250.78->250.42 -0.14% eye exit    Rs -494
+[12:24:30]   BECTORFOOD   12:20:30->12:22:30 213.86->213.28 -0.27% eye exit    Rs -813
+[12:24:30] no-dip watchlist 549 names | 227 in funnel (of 772 with bars, 227 warm) | 118 closed | flat | NET Rs 32,336
+[12:24:47] surge: 10 new (AARTIPHARM, APCOTEXIND, ASTEC, INDIGOPNTS, ITC, MFSL)
+[12:25:06]   IOLCP        12:20:30->12:24:00 208.60->208.31 -0.14% eye exit    Rs -483
+[12:25:06] no-dip watchlist 557 names | 229 in funnel (of 772 with bars, 229 warm) | 119 closed | flat | NET Rs 31,853
+[12:25:28] surge: 7 new (BLKASHYAP, KAPSTON, MAHLOG, PAISALO, PARACABLES, SUNFLAG)
+[12:25:34] feed: 20 symbols fetched, 0 failed, 6s
+[12:25:44] quote batch 1: 429 -- backing off 2.5s, one retry
+[12:25:56] quote batch 1 HTTP 429: {"data":{"805":"Too many requests. Further requests may result in the user being blocked."},"status":"failed"}
+[12:25:56] circuit bands: 0 of 557 names
+[12:26:19] no-dip watchlist 563 names | 231 in funnel (of 772 with bars, 231 warm) | 119 closed | holding FEDDERSHOL | NET Rs 30,156
+[12:26:25] surge: 17 new (APLAPOLLO, CAMPUS, CELLO, CONCORDBIO, DELHIVERY, GANDHAR)
+[12:26:58]   FEDDERSHOL   12:24:00->12:25:30 67.25->67.08 -0.25% eye exit    Rs -768
+[12:26:58] no-dip watchlist 579 names | 234 in funnel (of 772 with bars, 234 warm) | 120 closed | flat | NET Rs 31,085
+[12:27:26] feed: 20 symbols fetched, 0 failed, 6s
+[12:27:35] quote batch 1: 429 -- backing off 2.5s, one retry
+[12:27:47] quote batch 1 HTTP 429: {"data":{"805":"Too many requests. Further requests may result in the user being blocked."},"status":"failed"}
+[12:27:47] circuit bands: 0 of 579 names
+[12:28:04] surge: 8 new (ADANIENSOL, DIVISLAB, FORTIS, HBLENGINE, PFC, SAIL)
+[12:28:11] no-dip watchlist 579 names | 246 in funnel (of 817 with bars, 246 warm) | 120 closed | holding FEDDERSHOL | NET Rs 31,062
+[12:28:37] no-dip watchlist 586 names | 247 in funnel (of 817 with bars, 247 warm) | 120 closed | holding FEDDERSHOL | NET Rs 31,062
+[12:28:45] surge: 6 new (ADANIENT, GABRIEL, HDFCBANK, PATANJALI, PRESTIGE, UJJIVANSFB)
+[12:29:04] feed: 20 symbols fetched, 0 failed, 6s
+[12:29:26] surge: 11 new (GAEL, JSWSTEEL, KANOHAR, KWIL, LEAPIND, MEESHO)
+[12:30:15] surge: 2 new (GRASIM, NMDC)
+[12:31:36] feed: 528 symbols fetched, 0 failed, 151s
+[12:31:37] surge: 5 new (CORDELIA, GSPCROP, KTKBANK, OIL, SOLARWORLD)
+[12:31:45] circuit band REJECTED for ELECTCAST: price 74.02 outside band 2.4-3.6 (wrong scrip?)
+[12:31:45] circuit bands: 587 of 591 names (1 rejected as implausible)
+[12:32:02] retired the previous engine (pid 9480)
+[12:32:07] surge: scanning the whole NSE equity universe every 2s
+[12:32:07] surge scanner ON -- the engine no longer waits for the board
+[12:32:07] paper_live 20261001: warm-up 268 symbols. Waiting for START.
+[12:32:07] quote_feed: started -- one bulk quote per second, 30s bars
+[12:32:09] leverage: MIS sheet 4899 scrips (3077 at 1x)
+[12:32:12] surge: 540 new (3MINDIA, 5PAISA, AARTIPHARM, AASTHA, AAVAS, ABDL)
+[12:32:20] feed: 20 symbols fetched, 0 failed, 6s
+[12:32:21] surge: 2 new (CONCORDBIO, PROTEAN)
+[12:32:24] quote batch 1: 429 -- backing off 2.5s, one retry
+[12:32:34] circuit bands failed: UnboundLocalError cannot access local variable 'tape' where it is not associated with a value
+[12:32:41] surge: 3 new (BHAGYANGR, LTF, PFC)
+[12:33:02] surge: 6 new (CGPOWER, GALLANTT, IFBIND, MEESHO, TNPL, TVSSCS)
+[12:33:08] live_exec: PAPER routing in force (mode=PAPER, armed=False)
+[12:33:08]   KARAMTARA    09:20:30->09:22:00 417.10->420.40 +0.79% eye exit    Rs 340
+[12:33:08]   ENRIN        09:21:00->09:23:00 3294.10->3311.50 +0.53% eye exit    Rs 1,170
+[12:33:08]   PACEDIGITK   09:24:30->09:34:30 176.63->172.80 -2.17% eye exit    Rs 5,284
+[12:33:08]   INDUSTOWER   09:25:00->09:27:30 376.55->376.00 -0.15% eye exit    Rs -500
+[12:33:08]   TARIL        09:26:00->09:31:00 293.40->292.90 -0.17% eye exit    Rs -562
+[12:33:08]   MOLBIO       09:29:00->09:31:00 1354.30->1372.60 +1.35% eye exit    Rs 607
+[12:33:08]   DPABHUSHAN   09:29:00->09:46:30 1805.60->1819.30 +0.76% eye exit    Rs 1,755
+[12:33:08]   TARIL        09:32:30->09:34:30 294.40->292.40 -0.68% eye exit    Rs -1,833
+[12:33:08]   AUGMONT      09:33:00->09:33:00 1189.90->1189.00 -0.08% circuit guard Rs -325
+[12:33:08]   DPABHUSHAN   09:37:00->09:38:30 1827.60->1832.00 +0.24% eye exit    Rs 463
+[12:33:08]   GVT&D        09:38:00->09:39:30 4331.80->4325.40 -0.15% eye exit    Rs -499
+[12:33:08]   RATNAVEER    09:38:00->09:40:30 342.70->342.90 +0.06% eye exit    Rs 10
+[12:33:08]   NAZARA       09:43:30->09:45:00 395.20->395.50 +0.08% eye exit    Rs 54
+[12:33:08]   KISSHT       09:44:00->09:45:30 380.10->377.35 -0.72% eye exit    Rs -1,942
+[12:33:08]   GKSL         09:46:00->09:54:00 194.05->194.28 +0.12% eye exit    Rs 160
+[12:33:08]   GALAXYSURF   09:46:30->09:48:00 2415.60->2417.00 +0.06% eye exit    Rs 9
+[12:33:08]   SHILPAMED    09:48:30->09:51:30 1073.10->1073.00 -0.01% eye exit    Rs -159
+[12:33:08]   THOMASCOTT   09:49:00->09:55:30 288.80->306.00 +5.96% eye exit    Rs 14,738
+[12:33:08]   PIXTRANS     09:54:30->09:57:30 1849.40->1876.30 +1.45% eye exit    Rs 3,495
+[12:33:08]   WELSPUNLIV   09:59:30->10:01:00 237.00->237.24 +0.10% eye exit    Rs 117
+[12:33:08]   DPABHUSHAN   10:01:30->10:04:30 1882.00->1878.00 -0.21% eye exit    Rs -663
+[12:33:08]   SACHEEROME   10:01:30->10:06:30 501.50->503.50 +0.40% eye exit    Rs 145
+[12:33:08]   GVT&D        10:01:30->10:07:30 4296.60->4312.50 +0.37% eye exit    Rs 786
+[12:33:08]   PAISALO      10:04:00->10:08:30 80.20->79.93 -0.34% eye exit    Rs -977
+[12:33:08]   MOTISONS     10:08:00->10:10:30 18.10->18.12 +0.11% eye exit    Rs 140
+[12:33:08]   LEMONTREE    10:08:30->10:10:00 110.15->110.54 +0.35% eye exit    Rs 749
+[12:33:08]   PIXTRANS     10:09:00->10:28:30 1871.80->1835.00 -1.97% eye exit    Rs 4,759
+[12:33:08]   MOREPENLAB   10:11:30->10:24:00 132.11->134.49 +1.80% eye exit    Rs 4,366
+[12:33:08]   SACHEEROME   10:15:30->10:17:00 504.00->504.00 +0.00% eye exit    Rs -53
+[12:33:08]   WELSPUNLIV   10:16:00->10:17:30 244.20->241.67 -1.04% eye exit    Rs -2,723
+[12:33:08]   PIXTRANS     10:16:30->10:22:30 1845.60->1845.80 +0.01% eye exit    Rs -163
+[12:33:08]   INDUSTOWER   10:17:30->10:19:30 381.00->382.05 +0.28% eye exit    Rs 553
+[12:33:08]   WELSPUNLIV   10:18:00->10:25:00 241.60->243.33 +0.72% eye exit    Rs -1,925
+[12:33:08]   SHILPAMED    10:22:00->10:23:30 1078.90->1086.00 +0.66% eye exit    Rs 1,504
+[12:33:08]   SHUKRAPHAR   10:23:00->10:25:30 64.43->64.37 -0.09% eye exit    Rs -369
+[12:33:08]   MOREPENLAB   10:24:30->10:28:30 134.50->133.47 -0.77% eye exit    Rs -2,049
+[12:33:08]   COFORGE      10:25:30->10:37:30 1807.00->1808.50 +0.08% eye exit    Rs 71
+[12:33:08]   SHUKRAPHAR   10:27:30->10:34:00 64.79->64.49 -0.46% eye exit    Rs -1,293
+[12:33:08]   ROLEXRINGS   10:28:00->10:29:30 195.54->195.22 -0.16% eye exit    Rs -545
+[12:33:08]   MOREPENLAB   10:29:00->10:32:30 133.30->134.38 +0.81% eye exit    Rs -2,161
+[12:33:08]   INDSWFTLAB   10:29:00->10:30:30 409.75->407.70 -0.50% eye exit    Rs -1,386
+[12:33:08]   STLNETWORK   10:31:00->10:32:30 48.50->48.76 +0.54% eye exit    Rs 1,204
+[12:33:08]   AMAGI        10:31:00->10:36:00 560.40->562.05 +0.29% eye exit    Rs 600
+[12:33:08]   OMNI         10:33:00->10:35:00 584.65->585.20 +0.09% eye exit    Rs 99
+[12:33:08]   TARIL        10:34:30->10:45:00 296.25->295.85 -0.14% eye exit    Rs -473
+[12:33:08]   WELSPUNLIV   10:35:30->10:58:00 240.00->236.20 -1.58% eye exit    Rs 3,820
+[12:33:08]   BEML         10:36:00->10:39:30 1981.60->1977.40 -0.21% eye exit    Rs -665
+[12:33:08]   SHAREINDIA   10:36:00->10:46:00 206.45->208.17 +0.83% eye exit    Rs 1,945
+[12:33:08]   OMNI         10:36:30->10:38:00 587.50->593.90 +1.09% eye exit    Rs 2,584
+[12:33:08]   CGPOWER      10:38:00->10:42:30 882.80->883.10 +0.03% eye exit    Rs -51
+[12:33:08]   INOXINDIA    10:39:00->10:40:30 2111.70->2107.80 -0.18% eye exit    Rs -596
+[12:33:08]   RATNAVEER    10:39:00->10:41:30 340.70->340.80 +0.03% eye exit    Rs -62
+[12:33:08]   LTF          10:40:00->10:41:30 267.95->267.55 -0.15% eye exit    Rs -509
+[12:33:08]   BHEL         10:43:00->10:46:00 426.55->425.90 -0.15% eye exit    Rs -517
+[12:33:08]   INDUSTOWER   10:43:00->10:50:00 383.25->383.40 +0.04% eye exit    Rs -38
+[12:33:08]   SMCGLOBAL    10:44:30->10:46:00 102.24->97.50 -4.64% eye exit    Rs -11,722
+[12:33:08]   SKIPPER      10:45:30->10:53:00 546.80->550.10 +0.60% eye exit    Rs 1,372
+[12:33:08]   AMAGI        10:46:30->10:48:00 564.80->564.35 -0.08% eye exit    Rs -335
+[12:33:08]   RBLBANK      10:46:30->10:49:00 414.95->415.80 +0.20% eye exit    Rs 376
+[12:33:08]   SKIPPER      10:47:30->10:49:00 549.00->551.80 +0.51% eye exit    Rs 1,138
+[12:33:08]   SHILPAMED    10:51:30->10:53:30 1094.00->1093.60 -0.04% eye exit    Rs -227
+[12:33:08]   INOXINDIA    10:51:30->10:54:30 2110.60->2109.20 -0.07% eye exit    Rs -301
+[12:33:08]   SCHNEIDER    10:53:30->10:58:00 1251.30->1258.70 +0.59% eye exit    Rs 1,337
+[12:33:08]   J&KBANK      10:55:30->10:57:00 141.56->141.41 -0.11% eye exit    Rs -401
+[12:33:08]   SCHNEIDER    10:56:00->11:01:30 1255.10->1250.20 -0.39% eye exit    Rs -1,111
+[12:33:08]   HDFCLIFE     10:57:30->11:04:30 532.30->534.50 +0.41% eye exit    Rs 896
+[12:33:08]   KAJARIACER   11:02:00->11:05:30 1246.60->1242.90 -0.30% eye exit    Rs -875
+[12:33:08]   LTF          11:02:30->11:04:00 268.35->268.50 +0.06% eye exit    Rs 4
+[12:33:08]   DPABHUSHAN   11:05:00->11:17:00 1892.10->1877.70 -0.76% eye exit    Rs 1,765
+[12:33:08]   SKIPPER      11:06:00->11:09:00 551.00->551.35 +0.06% eye exit    Rs 23
+[12:33:08]   ASTERDM      11:06:00->11:12:00 703.50->705.25 +0.25% eye exit    Rs 485
+[12:33:08]   MOLBIO       11:11:00->11:14:00 1427.10->1434.90 +0.55% eye exit    Rs 220
+[12:33:08]   NESTLEIND    11:11:00->11:14:00 1317.40->1318.00 +0.05% eye exit    Rs -22
+[12:33:08]   SBC          11:13:30->11:24:00 59.35->59.30 -0.08% eye exit    Rs -346
+[12:33:08]   INOXINDIA    11:14:30->11:17:00 2130.80->2136.40 +0.26% eye exit    Rs 519
+[12:33:08]   TARIL        11:14:30->11:19:00 292.05->291.10 -0.33% eye exit    Rs 677
+[12:33:08]   SAILIFE      11:17:30->11:23:30 1541.20->1541.90 +0.05% eye exit    Rs -22
+[12:33:08]   LENSKART     11:22:00->11:25:30 688.75->689.70 +0.14% eye exit    Rs 208
+[12:33:08]   MOLBIO       11:23:30->11:27:30 1440.80->1453.00 +0.85% eye exit    Rs -467
+[12:33:08]   LENSKART     11:24:00->11:32:30 689.45->690.00 +0.08% eye exit    Rs 63
+[12:33:08]   MARINE       11:24:00->11:27:00 433.75->433.60 -0.03% eye exit    Rs -222
+[12:33:08]   RENTOMOJO    11:25:00->11:39:00 521.70->527.05 +1.03% eye exit    Rs 2,426
+[12:33:08]   ROLEXRINGS   11:27:30->11:30:30 193.98->194.00 +0.01% eye exit    Rs -110
+[12:33:08]   MOLBIO       11:28:00->11:38:00 1450.40->1543.60 +6.43% trail       Rs 3,114
+[12:33:08]   RENTOMOJO    11:29:00->11:30:30 524.30->525.10 +0.15% eye exit    Rs 245
+[12:33:08]   SURYAROSNI   11:31:00->11:34:30 221.62->221.28 -0.15% eye exit    Rs -519
+[12:33:08]   ROSSTECH     11:33:00->11:34:30 1500.10->1491.70 -0.56% eye exit    Rs -1,529
+[12:33:08]   MOLBIO       11:34:00->11:38:00 1466.30->1543.60 +5.27% circuit guard Rs 2,574
+[12:33:08]   LENSKART     11:35:00->11:37:00 690.30->690.60 +0.04% eye exit    Rs -27
+[12:33:08]   MANORAMA     11:35:30->11:42:00 1857.80->1878.20 +1.10% eye exit    Rs 2,597
+[12:33:08]   LOKESHMACH   11:38:30->11:41:30 397.25->391.45 -1.46% eye exit    Rs -3,783
+[12:33:08]   NUVAMA       11:39:00->11:41:30 1715.00->1718.20 +0.19% eye exit    Rs 329
+[12:33:08]   STLNETWORK   11:39:30->11:41:30 50.13->49.85 -0.56% eye exit    Rs -1,532
+[12:33:08]   DPABHUSHAN   11:40:30->11:47:00 1908.20->1919.30 +0.58% eye exit    Rs 1,318
+[12:33:08]   LALPATHLAB   11:42:30->11:44:00 2016.90->2019.30 +0.12% eye exit    Rs 160
+[12:33:08]   APARINDS     11:42:30->11:45:30 17865.00->17865.00 +0.00% eye exit    Rs -130
+[12:33:08]   SCHNEIDER    11:42:30->11:47:30 1264.60->1269.00 +0.35% eye exit    Rs 731
+[12:33:08]   OMNI         11:43:00->11:45:00 600.00->601.60 +0.27% eye exit    Rs 530
+[12:33:08]   NUVAMA       11:45:30->11:47:00 1718.00->1716.60 -0.08% eye exit    Rs -338
+[12:33:08]   HDFCLIFE     11:48:00->11:50:30 532.30->532.35 +0.01% eye exit    Rs -112
+[12:33:08]   DPABHUSHAN   11:49:00->11:51:30 1905.40->1896.20 -0.48% eye exit    Rs 1,070
+[12:33:08]   RBLBANK      11:50:00->11:54:00 417.00->417.10 +0.02% eye exit    Rs -76
+[12:33:08]   KSHINTL      11:50:30->11:52:00 1024.80->1025.30 +0.05% eye exit    Rs -14
+[12:33:08]   FEDDERSHOL   11:50:30->11:53:30 64.40->64.67 +0.42% eye exit    Rs 912
+[12:33:08]   DPABHUSHAN   11:51:00->12:01:00 1895.70->1862.20 -1.77% eye exit    Rs 4,254
+[12:33:08]   SBC          11:54:30->11:57:30 59.31->59.25 -0.10% eye exit    Rs -389
+[12:33:08]   NUVAMA       11:59:30->12:01:30 1730.90->1726.90 -0.23% eye exit    Rs -711
+[12:33:08]   HDFCBANK     11:59:30->12:03:00 719.35->719.30 -0.01% eye exit    Rs -153
+[12:33:08]   DPABHUSHAN   12:01:30->12:03:00 1865.00->1859.30 -0.31% eye exit    Rs 628
+[12:33:08]   FEDDERSHOL   12:04:30->12:06:30 65.77->65.50 -0.41% eye exit    Rs -1,162
+[12:33:08]   ALICON       12:08:00->12:11:30 859.95->867.50 +0.88% eye exit    Rs 2,053
+[12:33:08]   GKSL         12:08:00->12:11:00 198.87->198.30 -0.29% eye exit    Rs 581
+[12:33:08]   KEI          12:11:30->12:15:30 4523.20->4520.00 -0.07% eye exit    Rs -311
+[12:33:08]   DPABHUSHAN   12:13:30->12:18:00 1868.00->1868.30 +0.02% eye exit    Rs -95
+[12:33:08]   APARINDS     12:16:30->12:18:30 17636.00->17641.00 +0.03% eye exit    Rs -65
+[12:33:08]   ELEVATE      12:18:00->12:20:00 341.80->339.80 -0.59% eye exit    Rs -345
+[12:33:08]   CGCL         12:18:30->12:20:00 250.78->250.42 -0.14% eye exit    Rs -494
+[12:33:08]   BECTORFOOD   12:20:30->12:22:30 213.86->213.28 -0.27% eye exit    Rs -813
+[12:33:08]   IOLCP        12:20:30->12:24:00 208.60->208.31 -0.14% eye exit    Rs -483
+[12:33:08]   FEDDERSHOL   12:24:00->12:25:30 67.25->67.08 -0.25% eye exit    Rs -768
+[12:33:08]   THOMASCOTT   12:24:00->12:26:00 303.55->303.50 -0.02% eye exit    Rs -95
+[12:33:08]   TI           12:26:00->12:29:00 545.40->545.60 +0.04% eye exit    Rs -44
+[12:33:08]   FEDDERSHOL   12:26:30->12:28:00 66.77->67.36 +0.88% eye exit    Rs -2,345
+[12:33:08]   NUVAMA       12:28:30->12:32:00 1728.00->1725.90 -0.12% eye exit    Rs -438
+[12:33:08]   GPTINFRA     12:29:30->12:31:30 118.34->118.29 -0.04% eye exit    Rs -241
+[12:33:08] no-dip watchlist 617 names | 244 in funnel (of 840 with bars, 244 warm) | 125 closed | flat | NET Rs 27,923
+[12:33:28] surge: 4 new (ALOKINDS, HPL, KWIL, REFEX)
+[12:34:01] surge: 7 new (ADANIPORTS, BALRAMCHIN, DIXON, GRAPHITE, JSWSTEEL, PFOCUS)
+[12:34:03] no-dip watchlist 626 names | 246 in funnel (of 840 with bars, 246 warm) | 125 closed | holding J&KBANK | NET Rs 27,557
+[12:34:31] feed: 20 symbols fetched, 0 failed, 6s
+[12:34:38] quote batch 1: 429 -- backing off 2.5s, one retry
+[12:34:46] surge: 1 new (PINELABS)
+[12:34:50] circuit band REJECTED for ELECTCAST: price 74.14 outside band 2.4-3.6 (wrong scrip?)
+[12:34:50] circuit bands: 629 of 633 names (1 rejected as implausible)
+[12:35:22]   STLNETWORK   11:25:30->11:27:00 48.85->48.34 -1.04% eye exit    Rs -2,745
+[12:35:22]   MONQ50       12:16:30->12:21:00 200.00->198.69 -0.66% eye exit    Rs -380
+[12:35:22]   GENESYS      12:21:30->12:26:00 281.15->280.30 -0.30% eye exit    Rs -891
+[12:35:22] no-dip watchlist 633 names | 248 in funnel (of 840 with bars, 248 warm) | 128 closed | holding J&KBANK,PANORAMA | NET Rs 23,776
+[12:35:32] surge: 2 new (SAIL, TMPV)
+[12:36:14]   J&KBANK      12:33:00->12:34:30 141.47->141.55 +0.06% eye exit    Rs 6
+[12:36:14]   PANORAMA     12:33:30->12:35:00 59.00->59.00 +0.00% eye exit    Rs -136
+[12:36:14] no-dip watchlist 635 names | 261 in funnel (of 885 with bars, 261 warm) | 130 closed | flat | NET Rs 23,776
+[12:36:42] feed: 20 symbols fetched, 0 failed, 6s
+[12:36:54] quote batch 1: 429 -- backing off 2.5s, one retry
+[12:37:06] circuit band REJECTED for ELECTCAST: price 74.15 outside band 2.4-3.6 (wrong scrip?)
+[12:37:06] circuit bands: 631 of 635 names (1 rejected as implausible)
+[12:37:10] surge: 1 new (ZYDUSLIFE)
+[12:38:00] surge: 1 new (NMDC)
+[12:38:05] no-dip watchlist 636 names | 264 in funnel (of 891 with bars, 264 warm) | 130 closed | flat | NET Rs 23,776
+[12:38:33] feed: 20 symbols fetched, 0 failed, 6s
+[12:38:45] surge: 1 new (GVT&D)

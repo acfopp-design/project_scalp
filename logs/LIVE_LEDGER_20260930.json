@@ -1,0 +1,129 @@
+{
+ "GLASSWALL|09:26:30": {
+  "sym": "GLASSWALL",
+  "side": 1,
+  "qty": 1,
+  "in": 291.6,
+  "entry_id": "34126093015506",
+  "sl_id": null,
+  "state": "ENTRY_FAILED",
+  "sent": "09:27:47",
+  "detail": "entry REJECTED at Dhan"
+ },
+ "DELTACORP|09:27:00": {
+  "sym": "DELTACORP",
+  "side": 1,
+  "qty": 1,
+  "in": 80.65,
+  "entry_id": "34126093015606",
+  "sl_id": null,
+  "state": "CLOSED",
+  "sent": "09:27:47",
+  "filled_qty": 1,
+  "fill_px": 80.89,
+  "sl_error": "{'errorType': 'Order_Error', 'errorCode': 'DH-906', 'errorMessage': 'Trigger Price should be greater than Price'}",
+  "exit_id": "23126093015006",
+  "closed": "09:29:29"
+ },
+ "KSB|09:29:00": {
+  "sym": "KSB",
+  "state": "ENTRY_FAILED",
+  "detail": "1 share costs 886.40, over LIVE_MAX_ENTRY_VALUE 400"
+ },
+ "UJJIVANSFB|09:31:00": {
+  "sym": "UJJIVANSFB",
+  "side": 1,
+  "qty": 1,
+  "in": 67.36,
+  "entry_id": "34126093016206",
+  "sl_id": null,
+  "state": "CLOSED",
+  "sent": "09:31:49",
+  "filled_qty": 1,
+  "fill_px": 67.4,
+  "sl_trigger": 65.68,
+  "exit_id": "321260930110306",
+  "closed": "09:33:18"
+ },
+ "UJJIVANSFB|09:36:30": {
+  "sym": "UJJIVANSFB",
+  "side": 1,
+  "qty": 1,
+  "in": 67.73,
+  "entry_id": "34126093018206",
+  "sl_id": null,
+  "state": "CLOSED",
+  "sent": "09:37:15",
+  "filled_qty": 1,
+  "fill_px": 67.61,
+  "sl_trigger": 66.04,
+  "exit_id": "321260930121406",
+  "closed": "09:38:43"
+ },
+ "UNIONBANK|09:38:30": {
+  "sym": "UNIONBANK",
+  "side": 1,
+  "qty": 1,
+  "in": 172.16,
+  "entry_id": "34126093019506",
+  "sl_id": null,
+  "state": "CLOSED",
+  "sent": "09:39:07",
+  "filled_qty": 1,
+  "fill_px": 172.02,
+  "sl_trigger": 167.86,
+  "exit_id": "23126093017406",
+  "closed": "09:40:59"
+ },
+ "RATEGAIN|09:40:00": {
+  "sym": "RATEGAIN",
+  "state": "ENTRY_FAILED",
+  "detail": "1 share costs 859.05, over LIVE_MAX_ENTRY_VALUE 400"
+ },
+ "PERSISTENT|09:41:30": {
+  "sym": "PERSISTENT",
+  "state": "ENTRY_FAILED",
+  "detail": "1 share costs 5337.50, over LIVE_MAX_ENTRY_VALUE 400"
+ },
+ "CUPID|09:42:00": {
+  "sym": "CUPID",
+  "side": -1,
+  "qty": 1,
+  "in": 306.4,
+  "entry_id": "34126093019706",
+  "sl_id": null,
+  "state": "ENTRY_FAILED",
+  "sent": "09:43:47",
+  "detail": "entry REJECTED at Dhan"
+ },
+ "QPOWER|09:43:00": {
+  "sym": "QPOWER",
+  "state": "ENTRY_FAILED",
+  "detail": "1 share costs 1664.90, over LIVE_MAX_ENTRY_VALUE 400"
+ },
+ "VESUVIUS|09:44:00": {
+  "sym": "VESUVIUS",
+  "state": "ENTRY_FAILED",
+  "detail": "1 share costs 450.50, over LIVE_MAX_ENTRY_VALUE 400"
+ },
+ "OMNI|09:46:30": {
+  "sym": "OMNI",
+  "state": "ENTRY_FAILED",
+  "detail": "1 share costs 576.80, over LIVE_MAX_ENTRY_VALUE 400"
+ },
+ "TEXRAIL|09:47:30": {
+  "sym": "TEXRAIL",
+  "side": 1,
+  "qty": 1,
+  "in": 132.41,
+  "entry_id": "34126093021206",
+  "sl_id": null,
+  "state": "CLOSED",
+  "sent": "09:48:40",
+  "filled_qty": 1,
+  "fill_px": 132.5,
+  "sl_trigger": 129.1,
+  "exit_id": "321260930142406",
+  "closed": "09:50:27"
+ }
+}

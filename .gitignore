@@ -3,7 +3,27 @@ env.txt
 DHAN_SUPPORT_TICKET.txt
 
 # ---- big data folders (GBs, not code) ----
-logs/
+# logs/: only Sept-30 and Oct-1 data is kept, for the cloud analysis agent.
+logs/*
+!logs/context/
+!logs/movers_board/
+!logs/tape_live/
+!logs/tape_fast/
+!logs/*20260930*
+!logs/*20261001*
+logs/context/*
+!logs/context/*20260930*
+!logs/context/*20261001*
+logs/movers_board/*
+!logs/movers_board/*20260930*
+!logs/movers_board/*20261001*
+# too big for GitHub's 100MB file limit
+logs/movers_board/board_20260930.jsonl
+logs/tape_live/*
+!logs/tape_live/20260930/
+!logs/tape_live/20261001/
+logs/tape_fast/*
+!logs/tape_fast/20261001/
 Backup/
 Archive/
 checkpoints/

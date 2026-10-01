@@ -1,0 +1,37 @@
+==========================================================================
+  SUPER STOCKS -- health, 20261001
+==========================================================================
+
+  RIGHT NOW (12:39:21): Super Stocks is behaving as expected
+  worst so far today: OK
+
+  picks made today      : 15   (the backtest expects about 8)
+  judged after 10 min   : 15, of which 12 reached +0.5%  (80%, backtest said 58-74%)
+
+  Anything that was not routine:
+    nothing. Every pass was clean.
+
+  The funnel, every 10 minutes:
+    time        scanned   up 2%  climbing  bursting  on screen  alarm sees
+    09:16          1642       6         6         0          0           0
+    09:26          2469      67        36         0          0           4
+    09:36          2536      97        37         0          0          13
+    09:46          2570     103        21         0          0          14
+    09:56          1934      63         8         0          0          12
+    10:06          2597     119        40         0          0          15
+    10:16          2602     137        33         0          0          15
+    10:26          2609     138        20         0          0          15
+    10:36          2616     143        24         0          0          15
+    10:46          2619     161        22         0          0          15
+    10:56          2622     147        17         0          0          15
+    11:06          2626     139        12         0          0          15
+    11:16          2628     145        11         0          0          15
+    11:26          1640     101         8         0          0          11
+    11:36          2632     153        11         0          0          15
+    11:46          2632     156        17         0          0          15
+    11:56          1666     106         6         0          0          15
+    12:06          1667     103         4         0          0           6
+    12:16          2638     124         2         0          0           8
+    12:26          1667      83         2         0          0           2
+    12:36          2639     111         3         0          0           7
+

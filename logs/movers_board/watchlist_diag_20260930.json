@@ -1,0 +1,17 @@
+{
+ "ts": "2026-09-30 17:47:36",
+ "relax_used": 0,
+ "rows": 1,
+ "rejects": {
+  "2_no_hard_event": 39,
+  "1_noise": 86,
+  "4_magnitude": 11,
+  "3_aspiration": 2,
+  "6_not_nse_eq": 1
+ },
+ "market_live": false,
+ "thresholds": {
+  "MIN_TOVER_CR": 2.0,
+  "MIN_PRICE": 40.0
+ }
+}

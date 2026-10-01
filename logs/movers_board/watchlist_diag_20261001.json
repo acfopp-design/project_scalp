@@ -1,0 +1,19 @@
+{
+ "ts": "2026-10-01 12:39:14",
+ "relax_used": 0,
+ "rows": 4,
+ "rejects": {
+  "2_no_hard_event": 211,
+  "1_noise": 327,
+  "4_magnitude": 47,
+  "6_not_nse_eq": 9,
+  "7_price_below_min": 3,
+  "3_aspiration": 5,
+  "9_turnover_below_min": 2
+ },
+ "market_live": true,
+ "thresholds": {
+  "MIN_TOVER_CR": 2.0,
+  "MIN_PRICE": 40.0
+ }
+}

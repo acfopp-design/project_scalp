@@ -1,0 +1,2091 @@
+[09:05:15] paper_live 20260930: warm-up 227 symbols. Waiting for START.
+[09:05:16] leverage: MIS sheet 4899 scrips (3077 at 1x)
+[09:06:31] leverage: 227 fetched, 0 failed, 32 of 227 are 1x (Rule A)
+[09:06:35] feed: 0 symbols fetched, 10 failed, 3s
+[09:06:36] quote batch 1: 429 -- backing off 2.5s, one retry
+[09:06:38] quote batch 1 HTTP 429: {"data":{"805":"Too many requests. Further requests may result in the user being blocked."},"status":"failed"}
+[09:06:38] circuit bands: 0 of 10 names
+[09:06:39] ==============================================================
+[09:06:39] LIVE EXEC ACTIVE -- REAL ORDERS WILL BE SENT TO DHAN
+[09:06:39]   max 1 share(s) per position | skip shares over Rs 400
+[09:06:39]   broker stop -2.50% | new entries allowed
+[09:06:39] ==============================================================
+[09:06:39] no-dip watchlist 10 names | 0 in funnel (of 0 with bars, 0 warm) | 0 closed | flat | NET Rs 0
+[09:06:59] no-dip watchlist 10 names | 0 in funnel (of 0 with bars, 0 warm) | 0 closed | flat | NET Rs 0
+[09:07:20] no-dip watchlist 10 names | 0 in funnel (of 0 with bars, 0 warm) | 0 closed | flat | NET Rs 0
+[09:07:41] no-dip watchlist 10 names | 0 in funnel (of 0 with bars, 0 warm) | 0 closed | flat | NET Rs 0
+[09:08:02] no-dip watchlist 10 names | 0 in funnel (of 0 with bars, 0 warm) | 0 closed | flat | NET Rs 0
+[09:08:25] feed: 0 symbols fetched, 10 failed, 4s
+[09:08:25] quote batch 1: 429 -- backing off 2.5s, one retry
+[09:08:29] quote batch 1 HTTP 429: {"data":{"805":"Too many requests. Further requests may result in the user being blocked."},"status":"failed"}
+[09:08:29] circuit bands: 0 of 10 names
+[09:08:30] no-dip watchlist 10 names | 0 in funnel (of 0 with bars, 0 warm) | 0 closed | flat | NET Rs 0
+[09:08:51] no-dip watchlist 10 names | 0 in funnel (of 0 with bars, 0 warm) | 0 closed | flat | NET Rs 0
+[09:09:12] no-dip watchlist 10 names | 0 in funnel (of 0 with bars, 0 warm) | 0 closed | flat | NET Rs 0
+[09:09:33] no-dip watchlist 11 names | 0 in funnel (of 0 with bars, 0 warm) | 0 closed | flat | NET Rs 0
+[09:09:57] feed: 0 symbols fetched, 12 failed, 4s
+[09:09:57] quote batch 1: 429 -- backing off 2.5s, one retry
+[09:10:01] quote batch 1 HTTP 429: {"data":{"805":"Too many requests. Further requests may result in the user being blocked."},"status":"failed"}
+[09:10:01] circuit bands: 0 of 12 names
+[09:10:02] no-dip watchlist 12 names | 0 in funnel (of 0 with bars, 0 warm) | 0 closed | flat | NET Rs 0
+[09:10:22] no-dip watchlist 12 names | 0 in funnel (of 0 with bars, 0 warm) | 0 closed | flat | NET Rs 0
+[09:10:43] no-dip watchlist 12 names | 0 in funnel (of 0 with bars, 0 warm) | 0 closed | flat | NET Rs 0
+[09:11:04] no-dip watchlist 12 names | 0 in funnel (of 0 with bars, 0 warm) | 0 closed | flat | NET Rs 0
+[09:11:28] feed: 0 symbols fetched, 12 failed, 4s
+[09:11:28] circuit bands: 12 of 12 names
+[09:11:29] no-dip watchlist 12 names | 0 in funnel (of 0 with bars, 0 warm) | 0 closed | flat | NET Rs 0
+[09:11:50] no-dip watchlist 12 names | 0 in funnel (of 0 with bars, 0 warm) | 0 closed | flat | NET Rs 0
+[09:12:11] no-dip watchlist 12 names | 0 in funnel (of 0 with bars, 0 warm) | 0 closed | flat | NET Rs 0
+[09:12:31] no-dip watchlist 12 names | 0 in funnel (of 0 with bars, 0 warm) | 0 closed | flat | NET Rs 0
+[09:12:52] no-dip watchlist 12 names | 0 in funnel (of 0 with bars, 0 warm) | 0 closed | flat | NET Rs 0
+[09:13:16] feed: 0 symbols fetched, 12 failed, 4s
+[09:13:17] no-dip watchlist 12 names | 0 in funnel (of 0 with bars, 0 warm) | 0 closed | flat | NET Rs 0
+[09:13:38] no-dip watchlist 12 names | 0 in funnel (of 0 with bars, 0 warm) | 0 closed | flat | NET Rs 0
+[09:13:58] no-dip watchlist 12 names | 0 in funnel (of 0 with bars, 0 warm) | 0 closed | flat | NET Rs 0
+[09:14:19] no-dip watchlist 12 names | 0 in funnel (of 0 with bars, 0 warm) | 0 closed | flat | NET Rs 0
+[09:14:40] no-dip watchlist 12 names | 0 in funnel (of 0 with bars, 0 warm) | 0 closed | flat | NET Rs 0
+[09:15:04] feed: 0 symbols fetched, 12 failed, 4s
+[09:15:05] no-dip watchlist 12 names | 0 in funnel (of 0 with bars, 0 warm) | 0 closed | flat | NET Rs 0
+[09:15:26] no-dip watchlist 12 names | 0 in funnel (of 0 with bars, 0 warm) | 0 closed | flat | NET Rs 0
+[09:15:47] no-dip watchlist 14 names | 0 in funnel (of 0 with bars, 0 warm) | 0 closed | flat | NET Rs 0
+[09:16:07] no-dip watchlist 22 names | 0 in funnel (of 0 with bars, 0 warm) | 0 closed | flat | NET Rs 0
+[09:16:28] no-dip watchlist 22 names | 0 in funnel (of 0 with bars, 0 warm) | 0 closed | flat | NET Rs 0
+[09:16:59] feed: 21 symbols fetched, 5 failed, 10s
+[09:16:59] quote batch 1: 429 -- backing off 2.5s, one retry
+[09:17:03] circuit bands: 26 of 26 names
+[09:17:04] no-dip watchlist 27 names | 0 in funnel (of 0 with bars, 0 warm) | 0 closed | flat | NET Rs 0
+[09:17:24] no-dip watchlist 28 names | 0 in funnel (of 0 with bars, 0 warm) | 0 closed | flat | NET Rs 0
+[09:17:45] no-dip watchlist 30 names | 0 in funnel (of 5 with bars, 0 warm) | 0 closed | flat | NET Rs 0
+[09:18:06]   HEROMOTORS   09:15:30->09:17:00 142.53->143.80 +0.89% eye exit    Rs 391
+[09:18:06]   CUPID        09:15:30->09:17:30 291.90->295.75 +1.32% eye exit    Rs 605
+[09:18:06] no-dip watchlist 30 names | 9 in funnel (of 75 with bars, 9 warm) | 2 closed | flat | NET Rs 996
+[09:18:44] feed: 28 symbols fetched, 4 failed, 18s
+[09:18:44] quote batch 1: 429 -- backing off 2.5s, one retry
+[09:18:48] circuit bands: 32 of 32 names
+[09:18:50]   PRASOLCHEM   09:15:30->09:18:00 884.10->882.50 -0.18% eye exit    Rs -142
+[09:18:50]   CUPID        09:15:30->09:18:00 291.90->294.85 +1.01% eye exit    Rs 451
+[09:18:50] no-dip watchlist 33 names | 25 in funnel (of 113 with bars, 25 warm) | 2 closed | flat | NET Rs 309
+[09:19:11]   CUPID        09:15:30->09:18:30 291.90->295.00 +1.06% eye exit    Rs 477
+[09:19:11]   KSB          09:15:30->09:18:30 863.30->863.30 +0.00% eye exit    Rs -136
+[09:19:11] no-dip watchlist 39 names | 29 in funnel (of 123 with bars, 29 warm) | 2 closed | flat | NET Rs 341
+[09:19:33] no-dip watchlist 41 names | 30 in funnel (of 126 with bars, 30 warm) | 2 closed | flat | NET Rs 341
+[09:19:54] no-dip watchlist 42 names | 31 in funnel (of 127 with bars, 31 warm) | 2 closed | flat | NET Rs 341
+[09:20:29] feed: 40 symbols fetched, 4 failed, 15s
+[09:20:29] quote batch 1: 429 -- backing off 2.5s, one retry
+[09:20:33] quote batch 1 HTTP 429: {"data":{"805":"Too many requests. Further requests may result in the user being blocked."},"status":"failed"}
+[09:20:33] circuit bands: 32 of 44 names
+[09:20:35]   CUPID        09:15:30->09:20:00 291.90->292.80 +0.31% eye exit    Rs 101
+[09:20:35]   NAZARA       09:15:30->09:20:00 391.00->398.00 +1.79% eye exit    Rs 4,336
+[09:20:35] no-dip watchlist 46 names | 37 in funnel (of 135 with bars, 37 warm) | 2 closed | flat | NET Rs 4,437
+[09:20:56] no-dip watchlist 50 names | 38 in funnel (of 136 with bars, 38 warm) | 2 closed | flat | NET Rs 4,437
+[09:21:17] no-dip watchlist 51 names | 39 in funnel (of 137 with bars, 39 warm) | 2 closed | flat | NET Rs 4,437
+[09:21:38] no-dip watchlist 56 names | 40 in funnel (of 138 with bars, 40 warm) | 2 closed | flat | NET Rs 4,437
+[09:22:21] feed: 57 symbols fetched, 3 failed, 22s
+[09:22:21] circuit bands: 60 of 60 names
+[09:22:23] LIVE PRASOLCHEM: skipped -- 1 share is Rs 913.95, cap is Rs 400
+[09:22:23]   NAZARA       09:15:30->09:20:30 391.00->398.80 +1.99% eye exit    Rs 4,847
+[09:22:23]   CUPID        09:15:30->09:21:30 291.90->293.55 +0.57% eye exit    Rs 229
+[09:22:23] no-dip watchlist 64 names | 53 in funnel (of 150 with bars, 53 warm) | 2 closed | holding PRASOLCHEM | NET Rs 4,473
+[09:22:45]   CUPID        09:15:30->09:22:00 291.90->293.60 +0.58% eye exit    Rs 237
+[09:22:45]   NAZARA       09:15:30->09:22:00 391.00->397.30 +1.61% eye exit    Rs 3,889
+[09:22:45] no-dip watchlist 65 names | 53 in funnel (of 151 with bars, 53 warm) | 2 closed | flat | NET Rs 4,126
+[09:23:06] no-dip watchlist 67 names | 54 in funnel (of 151 with bars, 54 warm) | 2 closed | flat | NET Rs 4,126
+[09:23:28] no-dip watchlist 69 names | 54 in funnel (of 151 with bars, 54 warm) | 2 closed | flat | NET Rs 4,126
+[09:24:13] feed: 66 symbols fetched, 3 failed, 24s
+[09:24:13] circuit bands: 69 of 69 names
+[09:24:15]   NAZARA       09:15:30->09:23:30 391.00->398.50 +1.92% eye exit    Rs 4,655
+[09:24:15]   EMIL         09:15:30->09:23:30 193.42->201.00 +3.92% eye exit    Rs 9,655
+[09:24:15] no-dip watchlist 71 names | 63 in funnel (of 161 with bars, 63 warm) | 2 closed | flat | NET Rs 14,310
+[09:24:36] LIVE UJJIVANSFB: ENTRY REJECTED -- {'errorType': 'Input_Exception', 'errorCode': 'DH-905', 'errorMessage': 'Invalid correlationId'}
+[09:24:36]   NAZARA       09:15:30->09:24:00 391.00->398.50 +1.92% eye exit    Rs 4,655
+[09:24:36] no-dip watchlist 71 names | 63 in funnel (of 161 with bars, 63 warm) | 2 closed | holding UJJIVANSFB | NET Rs 13,842
+[09:24:58] no-dip watchlist 74 names | 64 in funnel (of 161 with bars, 64 warm) | 2 closed | holding UJJIVANSFB | NET Rs 13,842
+[09:25:47] feed: 73 symbols fetched, 3 failed, 28s
+[09:25:47] quote batch 1: 429 -- backing off 2.5s, one retry
+[09:25:51] quote batch 1 HTTP 429: {"data":{"805":"Too many requests. Further requests may result in the user being blocked."},"status":"failed"}
+[09:25:51] circuit bands: 69 of 76 names
+[09:25:54]   NAZARA       09:15:30->09:24:30 391.00->398.15 +1.83% eye exit    Rs 4,432
+[09:25:54]   GANDHAR      09:15:30->09:25:00 278.25->281.70 +1.24% eye exit    Rs 2,961
+[09:25:54] no-dip watchlist 78 names | 70 in funnel (of 166 with bars, 70 warm) | 2 closed | flat | NET Rs 7,393
+[09:26:16] LIVE MRPL: ENTRY REJECTED -- {'errorType': 'Input_Exception', 'errorCode': 'DH-905', 'errorMessage': 'Invalid correlationId'}
+[09:26:16]   NAZARA       09:15:30->09:25:30 391.00->397.50 +1.66% eye exit    Rs 4,017
+[09:26:16] no-dip watchlist 80 names | 70 in funnel (of 166 with bars, 70 warm) | 2 closed | holding MRPL | NET Rs 6,772
+[09:26:37] no-dip watchlist 80 names | 70 in funnel (of 166 with bars, 70 warm) | 2 closed | holding MRPL | NET Rs 6,772
+[09:26:57] paper_live.py changed on disk -- exiting so the new code can take over
+[09:27:01] paper_live 20260930: warm-up 227 symbols. Waiting for START.
+[09:27:02] leverage: MIS sheet 4899 scrips (3077 at 1x)
+[09:27:44] feed: 79 symbols fetched, 3 failed, 40s
+[09:27:44] circuit bands failed: UnboundLocalError cannot access local variable 'tape' where it is not associated with a value
+[09:27:47] ==============================================================
+[09:27:47] LIVE EXEC ACTIVE -- REAL ORDERS WILL BE SENT TO DHAN
+[09:27:47]   max 1 share(s) per position | skip shares over Rs 400
+[09:27:47]   broker stop -2.50% | new entries allowed
+[09:27:47] ==============================================================
+[09:27:47] LIVE GLASSWALL: entry BUY 1 @ ~292.47 (order 34126093015506)
+[09:27:47] LIVE DELTACORP: entry BUY 1 @ ~80.89 (order 34126093015606)
+[09:27:47]   NAZARA       09:15:30->09:25:30 391.00->397.15 +1.57% eye exit    Rs 3,793
+[09:27:47]   GANDHAR      09:15:30->09:25:30 278.25->282.55 +1.55% eye exit    Rs 3,725
+[09:27:47] no-dip watchlist 83 names | 75 in funnel (of 171 with bars, 75 warm) | 2 closed | holding GLASSWALL,DELTACORP | NET Rs 8,957
+[09:28:09] LIVE GLASSWALL: entry REJECTED at Dhan
+[09:28:09] LIVE DELTACORP: entry FILLED 1 @ 80.89
+[09:28:09] LIVE DELTACORP: *** PROTECTIVE SL FAILED *** {'errorType': 'Order_Error', 'errorCode': 'DH-906', 'errorMessage': 'Trigger Price should be greater than Price'} -- this position is NOT protected against a crash; exit it by hand if you leave the desk
+[09:28:09] no-dip watchlist 84 names | 75 in funnel (of 171 with bars, 75 warm) | 2 closed | holding GLASSWALL,DELTACORP | NET Rs 8,957
+[09:28:31] no-dip watchlist 86 names | 75 in funnel (of 172 with bars, 75 warm) | 2 closed | holding GLASSWALL,DELTACORP | NET Rs 8,957
+[09:29:26] feed: 84 symbols fetched, 3 failed, 35s
+[09:29:26] circuit bands: 87 of 87 names
+[09:29:29] LIVE DELTACORP: exit 1 @ ~80.41 (order 23126093015006)
+[09:29:29]   GANDHAR      09:15:30->09:19:00 278.25->282.10 +1.38% displaced by MRPL Rs 3,321
+[09:29:29]   NAZARA       09:15:30->09:25:00 391.00->397.65 +1.70% eye exit    Rs 4,112
+[09:29:29]   GLASSWALL    09:26:30->09:28:00 291.60->289.12 -0.85% eye exit    Rs -477
+[09:29:29]   MRPL         09:19:30->09:28:30 174.35->179.29 +2.83% eye exit    Rs 6,941
+[09:29:29] no-dip watchlist 88 names | 80 in funnel (of 177 with bars, 80 warm) | 4 closed | flat | NET Rs 13,897
+[09:29:51] LIVE KSB: skipped -- 1 share is Rs 886.40, cap is Rs 400
+[09:29:51]   NAZARA       09:15:30->09:19:00 391.00->398.40 +1.89% displaced by MRPL Rs 4,591
+[09:29:51]   MRPL         09:19:30->09:29:00 174.35->179.19 +2.78% eye exit    Rs 6,798
+[09:29:51] no-dip watchlist 88 names | 80 in funnel (of 177 with bars, 80 warm) | 4 closed | holding KSB | NET Rs 14,149
+[09:30:13] no-dip watchlist 88 names | 80 in funnel (of 177 with bars, 80 warm) | 4 closed | holding KSB | NET Rs 14,149
+[09:30:33] paper_live.py changed on disk -- exiting so the new code can take over
+[09:30:46] paper_live 20260930: warm-up 227 symbols. Waiting for START.
+[09:30:47] leverage: MIS sheet 4899 scrips (3077 at 1x)
+[09:31:24] feed: 87 symbols fetched, 3 failed, 35s
+[09:31:24] circuit bands failed: UnboundLocalError cannot access local variable 'tape' where it is not associated with a value
+[09:31:27] ==============================================================
+[09:31:27] LIVE EXEC ACTIVE -- REAL ORDERS WILL BE SENT TO DHAN
+[09:31:27]   max 1 share(s) per position | skip shares over Rs 400
+[09:31:27]   broker stop -2.50% | new entries allowed
+[09:31:27] ==============================================================
+[09:31:27]   NAZARA       09:15:30->09:19:00 391.00->398.40 +1.89% displaced by MRPL Rs 4,591
+[09:31:27]   GANDHAR      09:15:30->09:23:00 278.25->282.40 +1.49% displaced by CHENNPETRO Rs 3,590
+[09:31:27]   MRPL         09:19:30->09:30:30 174.35->178.74 +2.52% eye exit    Rs 6,153
+[09:31:27]   CHENNPETRO   09:23:30->09:30:30 1469.60->1492.90 +1.59% eye exit    Rs 3,824
+[09:31:27] no-dip watchlist 90 names | 83 in funnel (of 181 with bars, 83 warm) | 4 closed | flat | NET Rs 18,159
+[09:31:49] LIVE UJJIVANSFB: entry BUY 1 @ ~67.56 (order 34126093016206)
+[09:31:49]   MRPL         09:19:30->09:31:00 174.35->178.66 +2.47% eye exit    Rs 6,039
+[09:31:49] no-dip watchlist 91 names | 83 in funnel (of 181 with bars, 83 warm) | 4 closed | holding UJJIVANSFB | NET Rs 17,908
+[09:32:10] LIVE UJJIVANSFB: entry FILLED 1 @ 67.4
+[09:32:11] LIVE UJJIVANSFB: protective SL-M 1 trigger 65.68 (order 321260930108406)
+[09:32:11] no-dip watchlist 93 names | 83 in funnel (of 181 with bars, 83 warm) | 4 closed | holding UJJIVANSFB | NET Rs 17,908
+[09:33:15] feed: 91 symbols fetched, 2 failed, 44s
+[09:33:15] circuit bands: 93 of 93 names
+[09:33:18] LIVE UJJIVANSFB: exit 1 @ ~67.16 (order 321260930110306)
+[09:33:18]   MRPL         09:19:30->09:32:30 174.35->179.70 +3.07% eye exit    Rs 7,529
+[09:33:18]   CHENNPETRO   09:23:30->09:32:30 1469.60->1492.90 +1.59% eye exit    Rs 3,824
+[09:33:18] no-dip watchlist 95 names | 86 in funnel (of 185 with bars, 86 warm) | 4 closed | flat | NET Rs 19,534
+[09:33:40]   MRPL         09:19:30->09:33:00 174.35->179.80 +3.13% eye exit    Rs 7,672
+[09:33:40] no-dip watchlist 96 names | 87 in funnel (of 185 with bars, 87 warm) | 4 closed | flat | NET Rs 19,677
+[09:34:01] no-dip watchlist 96 names | 87 in funnel (of 185 with bars, 87 warm) | 4 closed | flat | NET Rs 19,677
+[09:35:01] feed: 95 symbols fetched, 2 failed, 38s
+[09:35:01] circuit bands: 97 of 97 names
+[09:35:05]   MRPL         09:19:30->09:34:00 174.35->179.29 +2.83% eye exit    Rs 6,941
+[09:35:05]   CHENNPETRO   09:23:30->09:34:00 1469.60->1482.90 +0.91% eye exit    Rs 2,125
+[09:35:05] no-dip watchlist 97 names | 90 in funnel (of 188 with bars, 90 warm) | 4 closed | flat | NET Rs 17,247
+[09:35:28]   NAZARA       09:15:30->09:16:00 391.00->393.65 +0.68% displaced by TFCILTD Rs 1,557
+[09:35:28]   GANDHAR      09:15:30->09:16:30 278.25->280.30 +0.74% displaced by WELSPUNLIV Rs 1,705
+[09:35:28]   TFCILTD      09:16:30->09:20:00 141.79->143.63 +1.30% displaced by ENRIN Rs 3,107
+[09:35:28]   WELSPUNLIV   09:17:00->09:32:30 228.05->229.75 +0.75% eye exit    Rs 1,727
+[09:35:28]   ENRIN        09:20:30->09:34:30 3271.40->3287.60 +0.50% eye exit    Rs 1,096
+[09:35:28]   TFCILTD      09:33:00->09:34:30 146.18->146.34 +0.11% eye exit    Rs 138
+[09:35:28] no-dip watchlist 97 names | 90 in funnel (of 190 with bars, 90 warm) | 6 closed | flat | NET Rs 9,329
+[09:35:50] no-dip watchlist 97 names | 90 in funnel (of 190 with bars, 90 warm) | 6 closed | flat | NET Rs 9,329
+[09:36:48] feed: 95 symbols fetched, 2 failed, 38s
+[09:36:52]   NAZARA       09:15:30->09:15:30 391.00->392.05 +0.27% displaced by ASTEC Rs 535
+[09:36:52]   WELSPUNLIV   09:17:00->09:26:30 228.05->230.61 +1.12% displaced by TFCILTD Rs 2,669
+[09:36:52]   ASTEC        09:16:00->09:36:00 708.45->779.60 +10.04% eye exit    Rs 24,902
+[09:36:52]   TFCILTD      09:27:00->09:36:00 145.20->146.30 +0.76% eye exit    Rs 1,757
+[09:36:52] no-dip watchlist 97 names | 90 in funnel (of 191 with bars, 90 warm) | 5 closed | flat | NET Rs 31,568
+[09:37:15] LIVE UJJIVANSFB: entry BUY 1 @ ~67.93 (order 34126093018206)
+[09:37:15]   TFCILTD      09:27:00->09:36:30 145.20->146.14 +0.65% eye exit    Rs 1,481
+[09:37:15] no-dip watchlist 97 names | 90 in funnel (of 191 with bars, 90 warm) | 5 closed | holding UJJIVANSFB | NET Rs 31,046
+[09:37:37] LIVE UJJIVANSFB: entry FILLED 1 @ 67.61
+[09:37:38] LIVE UJJIVANSFB: protective SL-M 1 trigger 66.04 (order 221260930151706)
+[09:37:38] no-dip watchlist 98 names | 90 in funnel (of 191 with bars, 90 warm) | 5 closed | holding UJJIVANSFB | NET Rs 31,046
+[09:38:38] feed: 96 symbols fetched, 2 failed, 39s
+[09:38:38] circuit bands: 98 of 98 names
+[09:38:43] LIVE UJJIVANSFB: exit 1 @ ~67.53 (order 321260930121406)
+[09:38:43]   WELSPUNLIV   09:17:00->09:24:00 228.05->230.00 +0.86% displaced by KAJARIACER Rs 2,001
+[09:38:43]   ASTEC        09:16:00->09:37:30 708.45->782.85 +10.50% eye exit    Rs 26,046
+[09:38:43]   KAJARIACER   09:24:30->09:37:30 1234.90->1253.70 +1.52% eye exit    Rs 3,661
+[09:38:43] no-dip watchlist 100 names | 91 in funnel (of 192 with bars, 91 warm) | 5 closed | flat | NET Rs 33,947
+[09:39:07] LIVE UNIONBANK: entry BUY 1 @ ~172.68 (order 34126093019506)
+[09:39:07]   ASTEC        09:16:00->09:38:00 708.45->783.40 +10.58% eye exit    Rs 26,239
+[09:39:07] no-dip watchlist 101 names | 91 in funnel (of 192 with bars, 91 warm) | 5 closed | holding UNIONBANK | NET Rs 34,005
+[09:39:28] LIVE UNIONBANK: entry FILLED 1 @ 172.02
+[09:39:28] LIVE UNIONBANK: protective SL-M 1 trigger 167.86 (order 321260930123406)
+[09:39:28] no-dip watchlist 104 names | 92 in funnel (of 192 with bars, 92 warm) | 5 closed | holding UNIONBANK | NET Rs 34,005
+[09:40:32] feed: 103 symbols fetched, 2 failed, 43s
+[09:40:32] circuit bands: 105 of 105 names
+[09:40:36]   ASTEC        09:16:00->09:39:30 708.45->779.65 +10.05% eye exit    Rs 24,920
+[09:40:36] no-dip watchlist 105 names | 98 in funnel (of 199 with bars, 98 warm) | 5 closed | holding UNIONBANK | NET Rs 32,453
+[09:40:59] LIVE UNIONBANK: exit 1 @ ~171.64 (order 23126093017406)
+[09:40:59] LIVE RATEGAIN: skipped -- 1 share is Rs 859.05, cap is Rs 400
+[09:40:59]   KAJARIACER   09:24:30->09:34:00 1234.90->1253.50 +1.51% displaced by NAZARA Rs 3,620
+[09:40:59]   NAZARA       09:34:30->09:40:00 398.35->399.60 +0.31% eye exit    Rs 648
+[09:40:59] no-dip watchlist 105 names | 98 in funnel (of 199 with bars, 98 warm) | 6 closed | holding RATEGAIN | NET Rs 35,140
+[09:42:07] feed: 104 symbols fetched, 3 failed, 47s
+[09:42:07] circuit band REJECTED for MOTHERSON: price 163.04 outside band 80000.0-120000.0 (wrong scrip?)
+[09:42:07] circuit bands: 106 of 107 names (1 rejected as implausible)
+[09:42:12]   KAJARIACER   09:24:30->09:31:00 1234.90->1244.00 +0.74% displaced by CUPID Rs 1,702
+[09:42:12]   ASTEC        09:16:00->09:41:00 708.45->780.00 +10.10% eye exit    Rs 25,043
+[09:42:12]   CUPID        09:31:30->09:41:00 306.60->308.65 +0.67% eye exit    Rs 281
+[09:42:12] no-dip watchlist 108 names | 100 in funnel (of 202 with bars, 100 warm) | 6 closed | flat | NET Rs 31,266
+[09:42:36] LIVE PERSISTENT: skipped -- 1 share is Rs 5337.50, cap is Rs 400
+[09:42:36] no-dip watchlist 108 names | 100 in funnel (of 202 with bars, 100 warm) | 6 closed | holding PERSISTENT | NET Rs 31,247
+[09:43:41] feed: 106 symbols fetched, 3 failed, 44s
+[09:43:41] circuit band REJECTED for MOTHERSON: price 162.94 outside band 80000.0-120000.0 (wrong scrip?)
+[09:43:41] circuit bands: 108 of 109 names (1 rejected as implausible)
+[09:43:47] LIVE CUPID: entry SELL 1 @ ~305.48 (order 34126093019706)
+[09:43:47]   CUPID        09:31:30->09:41:30 306.60->306.40 -0.07% eye exit    Rs -86
+[09:43:47]   ASTEC        09:16:00->09:42:30 708.45->778.95 +9.95% eye exit    Rs 24,673
+[09:43:47] no-dip watchlist 110 names | 102 in funnel (of 204 with bars, 102 warm) | 6 closed | holding CUPID | NET Rs 31,137
+[09:44:13] LIVE CUPID: entry REJECTED at Dhan
+[09:44:13] LIVE QPOWER: skipped -- 1 share is Rs 1664.90, cap is Rs 400
+[09:44:13]   RENTOMOJO    09:42:00->09:43:30 526.85->528.10 +0.24% eye exit    Rs 457
+[09:44:13] no-dip watchlist 110 names | 102 in funnel (of 206 with bars, 102 warm) | 7 closed | holding QPOWER | NET Rs 30,371
+[09:45:19] feed: 107 symbols fetched, 3 failed, 45s
+[09:45:19] circuit band REJECTED for MOTHERSON: price 163.34 outside band 80000.0-120000.0 (wrong scrip?)
+[09:45:19] circuit bands: 109 of 110 names (1 rejected as implausible)
+[09:45:25] LIVE VESUVIUS: skipped -- 1 share is Rs 450.50, cap is Rs 400
+[09:45:25]   GANDHAR      09:15:30->09:15:30 278.25->280.20 +0.70% displaced by ASTEC Rs 1,615
+[09:45:25]   OMNI         09:15:30->09:23:00 556.00->559.35 +0.60% displaced by CHENNPETRO Rs 1,368
+[09:45:25]   CHENNPETRO   09:23:30->09:26:30 1469.60->1488.10 +1.26% displaced by TFCILTD Rs 3,008
+[09:45:25]   TFCILTD      09:27:00->09:34:00 145.20->145.90 +0.48% displaced by NAZARA Rs 1,069
+[09:45:25]   NAZARA       09:34:30->09:42:30 398.35->398.60 +0.06% eye exit    Rs 21
+[09:45:25]   ASTEC        09:16:00->09:43:30 708.45->780.90 +10.23% eye exit    Rs 25,359
+[09:45:25]   QPOWER       09:43:00->09:44:30 1664.90->1655.30 -0.58% eye exit    Rs -1,575
+[09:45:25] no-dip watchlist 114 names | 103 in funnel (of 207 with bars, 103 warm) | 7 closed | holding VESUVIUS | NET Rs 28,652
+[09:45:48]   NAZARA       09:34:30->09:38:00 398.35->400.50 +0.54% displaced by UNIONBANK Rs 1,212
+[09:45:48]   UNIONBANK    09:38:30->09:45:00 172.16->172.40 +0.14% eye exit    Rs 213
+[09:45:48] no-dip watchlist 114 names | 103 in funnel (of 207 with bars, 103 warm) | 7 closed | holding VESUVIUS | NET Rs 31,520
+[09:46:53] feed: 111 symbols fetched, 3 failed, 44s
+[09:46:53] circuit band REJECTED for MOTHERSON: price 163.21 outside band 80000.0-120000.0 (wrong scrip?)
+[09:46:53] circuit bands: 113 of 114 names (1 rejected as implausible)
+[09:46:59]   NAZARA       09:34:30->09:35:30 398.35->398.40 +0.01% displaced by EDELWEISS Rs -104
+[09:46:59]   ASTEC        09:16:00->09:39:00 708.45->780.00 +10.10% displaced by IOC Rs 25,043
+[09:46:59]   EDELWEISS    09:36:00->09:46:00 140.82->142.22 +0.99% eye exit    Rs 2,348
+[09:46:59]   IOC          09:39:30->09:46:00 134.80->134.94 +0.10% eye exit    Rs 124
+[09:46:59] no-dip watchlist 114 names | 107 in funnel (of 212 with bars, 107 warm) | 8 closed | flat | NET Rs 34,470
+[09:47:23] LIVE OMNI: skipped -- 1 share is Rs 576.80, cap is Rs 400
+[09:47:23]   UNIONBANK    09:38:30->09:46:30 172.16->172.12 -0.02% eye exit    Rs -194
+[09:47:23] no-dip watchlist 117 names | 108 in funnel (of 212 with bars, 108 warm) | 8 closed | holding OMNI | NET Rs 34,280
+[09:48:30] feed: 114 symbols fetched, 3 failed, 46s
+[09:48:30] quote batch 1: 429 -- backing off 2.5s, one retry
+[09:48:33] quote batch 1 HTTP 429: {"data":{"805":"Too many requests. Further requests may result in the user being blocked."},"status":"failed"}
+[09:48:33] circuit bands: 113 of 117 names
+[09:48:40] LIVE TEXRAIL: entry BUY 1 @ ~132.81 (order 34126093021206)
+[09:48:40]   EDELWEISS    09:36:00->09:47:00 140.82->142.05 +0.87% eye exit    Rs 2,047
+[09:48:40]   UNIONBANK    09:38:30->09:47:30 172.16->172.14 -0.01% eye exit    Rs -165
+[09:48:40] no-dip watchlist 121 names | 112 in funnel (of 215 with bars, 112 warm) | 8 closed | holding TEXRAIL | NET Rs 33,883
+[09:49:06] LIVE TEXRAIL: entry FILLED 1 @ 132.5
+[09:49:06] LIVE TEXRAIL: protective SL-M 1 trigger 129.10 (order 23126093018506)
+[09:49:06]   UNIONBANK    09:38:30->09:48:00 172.16->172.10 -0.03% eye exit    Rs -223
+[09:49:06] no-dip watchlist 123 names | 112 in funnel (of 215 with bars, 112 warm) | 8 closed | holding TEXRAIL | NET Rs 33,881
+[09:50:15] feed: 120 symbols fetched, 3 failed, 47s
+[09:50:15] quote batch 1: 429 -- backing off 2.5s, one retry
+[09:50:19] quote batch 1 HTTP 429: {"data":{"805":"Too many requests. Further requests may result in the user being blocked."},"status":"failed"}
+[09:50:19] circuit bands: 113 of 123 names
+[09:50:27] LIVE TEXRAIL: exit 1 @ ~132.01 (order 321260930142406)
+[09:50:27]   EDELWEISS    09:36:00->09:43:00 140.82->142.10 +0.91% displaced by RIR Rs 2,136
+[09:50:27]   UNIONBANK    09:38:30->09:49:00 172.16->172.24 +0.05% eye exit    Rs -20
+[09:50:27]   RIR          09:43:30->09:49:00 194.99->196.35 +0.70% eye exit    Rs 1,607
+[09:50:27] no-dip watchlist 124 names | 116 in funnel (of 219 with bars, 116 warm) | 9 closed | flat | NET Rs 35,897
+[09:50:53]   EDELWEISS    09:36:00->09:42:30 140.82->142.01 +0.85% displaced by OMNI Rs 1,976
+[09:50:53]   OMNI         09:43:00->09:49:30 571.25->578.15 +1.21% eye exit    Rs 2,879
+[09:50:53]   UNIONBANK    09:38:30->09:50:00 172.16->172.02 -0.08% eye exit    Rs -339
+[09:50:53] no-dip watchlist 124 names | 116 in funnel (of 219 with bars, 116 warm) | 9 closed | flat | NET Rs 36,690
+[09:52:02] feed: 121 symbols fetched, 3 failed, 48s
+[09:52:02] quote batch 1: 429 -- backing off 2.5s, one retry
+[09:52:06] quote batch 1 HTTP 429: {"data":{"805":"Too many requests. Further requests may result in the user being blocked."},"status":"failed"}
+[09:52:06] circuit bands: 113 of 124 names
+[09:52:15]   EDELWEISS    09:36:00->09:41:00 140.82->141.73 +0.65% displaced by AZAD Rs 1,479
+[09:52:15]   MAHSEAMLES   09:38:30->09:51:00 750.45->766.80 +2.18% eye exit    Rs 5,307
+[09:52:15]   AZAD         09:41:30->09:51:00 3036.80->3032.30 -0.15% eye exit    Rs -504
+[09:52:15] no-dip watchlist 126 names | 117 in funnel (of 222 with bars, 117 warm) | 9 closed | flat | NET Rs 38,456
+[09:52:39]   MAHSEAMLES   09:38:30->09:51:30 750.45->764.05 +1.81% eye exit    Rs 4,392
+[09:52:39] no-dip watchlist 127 names | 117 in funnel (of 223 with bars, 117 warm) | 9 closed | flat | NET Rs 37,540
+[09:53:49] feed: 124 symbols fetched, 3 failed, 49s
+[09:53:49] circuit band REJECTED for MOTHERSON: price 162.38 outside band 80000.0-120000.0 (wrong scrip?)
+[09:53:49] circuit bands: 126 of 127 names (1 rejected as implausible)
+[09:53:56] LIVE: LIVE_NO_NEW_ENTRIES is YES -- 1 new signal(s) not taken
+[09:53:56]   AZAD         09:41:30->09:51:30 3036.80->3034.90 -0.06% eye exit    Rs -291
+[09:53:56]   MAHSEAMLES   09:38:30->09:52:30 750.45->757.20 +0.90% eye exit    Rs 2,111
+[09:53:56] no-dip watchlist 127 names | 120 in funnel (of 227 with bars, 120 warm) | 9 closed | holding MUKANDLTD | NET Rs 35,708
+[09:54:23] LIVE: LIVE_NO_NEW_ENTRIES is YES -- 1 new signal(s) not taken
+[09:54:23]   CUPID        09:31:30->09:35:30 306.60->307.60 +0.33% displaced by EDELWEISS Rs 110
+[09:54:23]   MAHSEAMLES   09:38:30->09:53:00 750.45->758.70 +1.10% eye exit    Rs 2,611
+[09:54:23] no-dip watchlist 127 names | 120 in funnel (of 227 with bars, 120 warm) | 9 closed | holding MUKANDLTD | NET Rs 35,977
+[09:55:33] feed: 125 symbols fetched, 3 failed, 49s
+[09:55:33] circuit band REJECTED for MOTHERSON: price 162.39 outside band 80000.0-120000.0 (wrong scrip?)
+[09:55:33] circuit bands: 127 of 128 names (1 rejected as implausible)
+[09:55:42]   AZAD         09:41:30->09:47:00 3036.80->3052.20 +0.51% displaced by SBC Rs 1,127
+[09:55:42]   MAHSEAMLES   09:38:30->09:54:30 750.45->759.95 +1.27% eye exit    Rs 3,027
+[09:55:42]   SBC          09:47:30->09:54:30 57.42->58.00 +1.01% eye exit    Rs 2,388
+[09:55:42] no-dip watchlist 128 names | 121 in funnel (of 228 with bars, 121 warm) | 10 closed | flat | NET Rs 40,195
+[09:56:08]   MAHSEAMLES   09:38:30->09:55:00 750.45->759.45 +1.20% eye exit    Rs 2,860
+[09:56:08]   SBC          09:47:30->09:55:00 57.42->57.99 +0.99% eye exit    Rs 2,345
+[09:56:08] no-dip watchlist 128 names | 121 in funnel (of 228 with bars, 121 warm) | 10 closed | flat | NET Rs 39,985
+[09:57:17] feed: 125 symbols fetched, 3 failed, 49s
+[09:57:17] circuit band REJECTED for MOTHERSON: price 162.65 outside band 80000.0-120000.0 (wrong scrip?)
+[09:57:17] circuit bands: 127 of 128 names (1 rejected as implausible)
+[09:57:20] cycle error: ValueError: operands could not be broadcast together with shapes (83,) (81,) () 
+[09:57:45] LIVE: LIVE_NO_NEW_ENTRIES is YES -- 1 new signal(s) not taken
+[09:57:45]   MAHSEAMLES   09:38:30->09:55:30 750.45->760.50 +1.34% eye exit    Rs 3,210
+[09:57:45]   SUNTV        09:55:30->09:57:00 586.40->589.20 +0.48% eye exit    Rs 1,057
+[09:57:45] no-dip watchlist 128 names | 121 in funnel (of 228 with bars, 121 warm) | 11 closed | holding NAZARA | NET Rs 41,797
+[09:58:54] feed: 125 symbols fetched, 3 failed, 49s
+[09:58:54] circuit band REJECTED for MOTHERSON: price 162.52 outside band 80000.0-120000.0 (wrong scrip?)
+[09:58:54] circuit bands: 127 of 128 names (1 rejected as implausible)
+[09:59:01]   SBC          09:47:30->09:50:00 57.42->58.04 +1.08% displaced by ITDC Rs 2,562
+[09:59:01]   ITDC         09:50:30->09:58:00 712.80->702.90 -1.39% eye exit    Rs 3,330
+[09:59:01]   KOTAKBANK    09:51:30->09:58:00 411.00->412.10 +0.27% eye exit    Rs 533
+[09:59:01] no-dip watchlist 128 names | 121 in funnel (of 228 with bars, 121 warm) | 12 closed | flat | NET Rs 46,512
+[09:59:24] LIVE: LIVE_NO_NEW_ENTRIES is YES -- 1 new signal(s) not taken
+[09:59:24] no-dip watchlist 130 names | 123 in funnel (of 228 with bars, 123 warm) | 12 closed | holding OMNI | NET Rs 46,311
+[10:00:36] feed: 128 symbols fetched, 3 failed, 51s
+[10:00:37] quote batch 1: 429 -- backing off 2.5s, one retry
+[10:00:41] quote batch 1 HTTP 429: {"data":{"805":"Too many requests. Further requests may result in the user being blocked."},"status":"failed"}
+[10:00:41] circuit bands: 127 of 131 names
+[10:00:46]   SBC          09:47:30->09:48:30 57.42->57.90 +0.84% displaced by FAZE3Q Rs 1,953
+[10:00:46]   MAHSEAMLES   09:38:30->09:50:00 750.45->767.85 +2.32% displaced by ITDC Rs 5,657
+[10:00:46]   FAZE3Q       09:49:00->09:59:30 443.10->455.45 +2.79% eye exit    Rs 6,828
+[10:00:46]   ITDC         09:50:30->09:59:30 712.80->702.65 -1.42% eye exit    Rs 3,417
+[10:00:46] no-dip watchlist 131 names | 124 in funnel (of 229 with bars, 124 warm) | 12 closed | flat | NET Rs 52,635
+[10:01:11] LIVE: LIVE_NO_NEW_ENTRIES is YES -- 1 new signal(s) not taken
+[10:01:11]   ITDC         09:50:30->10:00:00 712.80->702.05 -1.51% eye exit    Rs 3,627
+[10:01:11] no-dip watchlist 131 names | 124 in funnel (of 229 with bars, 124 warm) | 12 closed | holding TFCILTD | NET Rs 51,623
+[10:02:20] feed: 128 symbols fetched, 3 failed, 49s
+[10:02:20] quote batch 1: 429 -- backing off 2.5s, one retry
+[10:02:24] quote batch 1 HTTP 429: {"data":{"805":"Too many requests. Further requests may result in the user being blocked."},"status":"failed"}
+[10:02:24] circuit bands: 127 of 131 names
+[10:02:31] LIVE: LIVE_NO_NEW_ENTRIES is YES -- 1 new signal(s) not taken
+[10:02:31]   ITDC         09:50:30->10:00:30 712.80->703.90 -1.25% eye exit    Rs 2,980
+[10:02:31]   FAZE3Q       09:49:00->10:01:30 443.10->451.10 +1.81% eye exit    Rs 4,375
+[10:02:31] no-dip watchlist 131 names | 124 in funnel (of 229 with bars, 124 warm) | 12 closed | holding CYIENT | NET Rs 49,541
+[10:02:55] LIVE: LIVE_NO_NEW_ENTRIES is YES -- 1 new signal(s) not taken
+[10:02:55] no-dip watchlist 131 names | 124 in funnel (of 229 with bars, 124 warm) | 12 closed | holding CYIENT | NET Rs 49,541
+[10:03:44] retired the previous engine (pid 40304)
+[10:03:48] paper_live 20260930: warm-up 227 symbols. Waiting for START.
+[10:03:49] leverage: MIS sheet 4899 scrips (3077 at 1x)
+[10:04:42] feed: 129 symbols fetched, 3 failed, 50s
+[10:04:42] quote batch 1: 429 -- backing off 2.5s, one retry
+[10:04:44] circuit bands failed: UnboundLocalError cannot access local variable 'tape' where it is not associated with a value
+[10:04:55] ==============================================================
+[10:04:55] LIVE EXEC ACTIVE -- REAL ORDERS WILL BE SENT TO DHAN
+[10:04:55]   max 1 share(s) per position | skip shares over Rs 400
+[10:04:55]   broker stop -2.50% | new entries BLOCKED
+[10:04:55] ==============================================================
+[10:04:55] no-dip watchlist 133 names | 126 in funnel (of 231 with bars, 126 warm) | 0 closed | flat | NET Rs 0
+[10:05:21] no-dip watchlist 133 names | 126 in funnel (of 234 with bars, 126 warm) | 0 closed | flat | NET Rs 0
+[10:06:35] feed: 130 symbols fetched, 3 failed, 53s
+[10:06:35] quote batch 1: 429 -- backing off 2.5s, one retry
+[10:06:38] quote batch 1 HTTP 429: {"data":{"805":"Too many requests. Further requests may result in the user being blocked."},"status":"failed"}
+[10:06:38] circuit bands: 0 of 134 names
+[10:06:46] LIVE: LIVE_NO_NEW_ENTRIES=YES -- 2 new signal(s) not taken
+[10:06:46] no-dip watchlist 136 names | 127 in funnel (of 236 with bars, 127 warm) | 0 closed | holding HEROMOTORS,PINELABS | NET Rs -1,184
+[10:07:11] LIVE: LIVE_NO_NEW_ENTRIES=YES -- 2 new signal(s) not taken
+[10:07:11] no-dip watchlist 137 names | 129 in funnel (of 237 with bars, 129 warm) | 0 closed | holding HEROMOTORS,PINELABS | NET Rs -1,025
+[10:08:24] feed: 133 symbols fetched, 3 failed, 51s
+[10:08:24] circuit band REJECTED for MOTHERSON: price 162.51 outside band 80000.0-120000.0 (wrong scrip?)
+[10:08:24] circuit bands: 135 of 138 names (1 rejected as implausible)
+[10:08:32] LIVE: LIVE_NO_NEW_ENTRIES=YES -- 1 new signal(s) not taken
+[10:08:32]   PINELABS     10:05:30->10:07:00 175.56->175.07 -0.28% eye exit    Rs -833
+[10:08:32]   HEROMOTORS   10:05:30->10:07:30 146.75->146.90 +0.10% eye exit    Rs -2
+[10:08:32] no-dip watchlist 138 names | 131 in funnel (of 238 with bars, 131 warm) | 2 closed | holding ADANIPOWER | NET Rs -971
+[10:08:56] LIVE: LIVE_NO_NEW_ENTRIES=YES -- 1 new signal(s) not taken
+[10:08:56] no-dip watchlist 139 names | 132 in funnel (of 238 with bars, 132 warm) | 2 closed | holding ADANIPOWER | NET Rs -971
+[10:10:09] feed: 133 symbols fetched, 3 failed, 52s
+[10:10:10] circuit band REJECTED for MOTHERSON: price 162.51 outside band 80000.0-120000.0 (wrong scrip?)
+[10:10:10] circuit bands: 135 of 139 names (1 rejected as implausible)
+[10:10:15] cycle error: ValueError: operands could not be broadcast together with shapes (109,) (111,) () 
+[10:10:41]   HEROMOTORS   10:05:30->10:09:30 146.75->146.91 +0.11% eye exit    Rs 1
+[10:10:41]   ESTER        10:07:30->10:09:30 99.38->98.87 -0.51% eye exit    Rs -1,418
+[10:10:41] no-dip watchlist 140 names | 132 in funnel (of 238 with bars, 132 warm) | 3 closed | flat | NET Rs -2,250
+[10:11:54] feed: 134 symbols fetched, 3 failed, 52s
+[10:11:54] circuit band REJECTED for MOTHERSON: price 162.62 outside band 80000.0-120000.0 (wrong scrip?)
+[10:11:54] circuit bands: 136 of 140 names (1 rejected as implausible)
+[10:12:01]   HEROMOTORS   10:05:30->10:11:00 146.75->146.84 +0.06% eye exit    Rs -22
+[10:12:01]   ADANIPOWER   10:07:30->10:11:00 202.13->203.30 +0.58% eye exit    Rs 1,310
+[10:12:01] no-dip watchlist 140 names | 133 in funnel (of 240 with bars, 133 warm) | 3 closed | flat | NET Rs 454
+[10:12:25] LIVE: LIVE_NO_NEW_ENTRIES=YES -- 1 new signal(s) not taken
+[10:12:25]   PINELABS     10:05:30->10:05:30 175.56->174.94 -0.35% displaced by LTM Rs -1,018
+[10:12:25]   LTM          10:06:00->10:11:30 4087.30->4103.50 +0.40% eye exit    Rs 852
+[10:12:25] no-dip watchlist 140 names | 133 in funnel (of 241 with bars, 133 warm) | 3 closed | holding HTEL | NET Rs -31
+[10:13:36] feed: 134 symbols fetched, 3 failed, 51s
+[10:13:36] circuit band REJECTED for MOTHERSON: price 162.47 outside band 80000.0-120000.0 (wrong scrip?)
+[10:13:36] circuit bands: 136 of 140 names (1 rejected as implausible)
+[10:13:44] LIVE: LIVE_NO_NEW_ENTRIES=YES -- 1 new signal(s) not taken
+[10:13:44]   HEROMOTORS   10:05:30->10:12:00 146.75->147.19 +0.30% eye exit    Rs 96
+[10:13:44]   LTM          10:06:00->10:12:30 4087.30->4110.00 +0.56% eye exit    Rs 1,249
+[10:13:44] no-dip watchlist 140 names | 133 in funnel (of 241 with bars, 133 warm) | 3 closed | holding IOC | NET Rs 265
+[10:14:08] LIVE: LIVE_NO_NEW_ENTRIES=YES -- 1 new signal(s) not taken
+[10:14:08]   LTM          10:06:00->10:13:00 4087.30->4108.30 +0.51% eye exit    Rs 1,145
+[10:14:08] no-dip watchlist 140 names | 133 in funnel (of 241 with bars, 133 warm) | 3 closed | holding IOC | NET Rs 162
+[10:15:27] feed: 135 symbols fetched, 2 failed, 59s
+[10:15:27] quote batch 1: 429 -- backing off 2.5s, one retry
+[10:15:31] circuit band REJECTED for MOTHERSON: price 162.48 outside band 80000.0-120000.0 (wrong scrip?)
+[10:15:31] circuit bands: 136 of 140 names (1 rejected as implausible)
+[10:15:41]   HEROMOTORS   10:05:30->10:08:00 146.75->146.88 +0.09% displaced by ENRIN Rs -9
+[10:15:41]   LTM          10:06:00->10:14:00 4087.30->4114.20 +0.66% eye exit    Rs 1,505
+[10:15:41]   ENRIN        10:08:30->10:14:00 3288.50->3301.40 +0.39% eye exit    Rs 844
+[10:15:41] no-dip watchlist 141 names | 134 in funnel (of 243 with bars, 134 warm) | 4 closed | flat | NET Rs 1,322
+[10:16:54] feed: 136 symbols fetched, 2 failed, 52s
+[10:16:54] quote batch 1: 429 -- backing off 2.5s, one retry
+[10:16:58] circuit band REJECTED for MOTHERSON: price 162.52 outside band 80000.0-120000.0 (wrong scrip?)
+[10:16:58] circuit bands: 137 of 141 names (1 rejected as implausible)
+[10:17:04]   HEROMOTORS   10:05:30->10:06:00 146.75->146.50 -0.17% displaced by AEGISLOG Rs -138
+[10:17:04]   LTM          10:06:00->10:16:00 4087.30->4110.20 +0.56% eye exit    Rs 1,261
+[10:17:04]   AEGISLOG     10:06:30->10:16:00 1352.00->1356.20 +0.31% eye exit    Rs 637
+[10:17:04] no-dip watchlist 141 names | 134 in funnel (of 243 with bars, 134 warm) | 4 closed | flat | NET Rs 742
+[10:17:27] LIVE: LIVE_NO_NEW_ENTRIES=YES -- 1 new signal(s) not taken
+[10:17:27]   LTM          10:06:00->10:16:30 4087.30->4110.10 +0.56% eye exit    Rs 1,255
+[10:17:27] no-dip watchlist 141 names | 134 in funnel (of 243 with bars, 134 warm) | 4 closed | holding RPEL | NET Rs 380
+[10:18:41] feed: 136 symbols fetched, 2 failed, 53s
+[10:18:41] circuit band REJECTED for MOTHERSON: price 162.21 outside band 80000.0-120000.0 (wrong scrip?)
+[10:18:41] circuit bands: 137 of 141 names (1 rejected as implausible)
+[10:18:49]   LTM          10:06:00->10:17:30 4087.30->4107.30 +0.49% eye exit    Rs 1,084
+[10:18:49]   AEGISLOG     10:06:30->10:17:30 1352.00->1356.10 +0.30% eye exit    Rs 619
+[10:18:49] no-dip watchlist 142 names | 134 in funnel (of 243 with bars, 134 warm) | 4 closed | flat | NET Rs 546
+[10:19:14]   LTM          10:06:00->10:18:00 4087.30->4105.00 +0.43% eye exit    Rs 944
+[10:19:14] no-dip watchlist 142 names | 134 in funnel (of 243 with bars, 134 warm) | 4 closed | flat | NET Rs 406
+[10:20:28] feed: 137 symbols fetched, 2 failed, 52s
+[10:20:28] circuit band REJECTED for MOTHERSON: price 162.53 outside band 80000.0-120000.0 (wrong scrip?)
+[10:20:28] circuit bands: 138 of 142 names (1 rejected as implausible)
+[10:20:39] LIVE: LIVE_NO_NEW_ENTRIES=YES -- 1 new signal(s) not taken
+[10:20:39]   LTM          10:06:00->10:18:30 4087.30->4109.50 +0.54% eye exit    Rs 1,218
+[10:20:39]   AEGISLOG     10:06:30->10:19:30 1352.00->1356.50 +0.33% eye exit    Rs 692
+[10:20:39] no-dip watchlist 142 names | 135 in funnel (of 244 with bars, 135 warm) | 4 closed | holding ZEEL | NET Rs 784
+[10:21:06] LIVE: LIVE_NO_NEW_ENTRIES=YES -- 1 new signal(s) not taken
+[10:21:06] no-dip watchlist 142 names | 135 in funnel (of 244 with bars, 135 warm) | 4 closed | holding ZEEL | NET Rs 818
+[10:22:19] feed: 137 symbols fetched, 2 failed, 53s
+[10:22:19] circuit band REJECTED for MOTHERSON: price 162.47 outside band 80000.0-120000.0 (wrong scrip?)
+[10:22:19] circuit bands: 138 of 142 names (1 rejected as implausible)
+[10:22:32]   LTM          10:06:00->10:13:30 4087.30->4114.30 +0.66% displaced by BLEL Rs 1,511
+[10:22:32]   AEGISLOG     10:06:30->10:21:00 1352.00->1352.70 +0.05% eye exit    Rs -7
+[10:22:32]   BLEL         10:14:00->10:21:00 484.40->501.90 +3.61% eye exit    Rs 8,892
+[10:22:32] no-dip watchlist 142 names | 135 in funnel (of 244 with bars, 135 warm) | 5 closed | flat | NET Rs 9,240
+[10:23:01]   PINELABS     10:13:30->10:22:00 175.23->176.19 +0.55% eye exit    Rs 1,233
+[10:23:01] no-dip watchlist 142 names | 135 in funnel (of 244 with bars, 135 warm) | 5 closed | flat | NET Rs 1,160
+[10:24:21] feed: 137 symbols fetched, 2 failed, 59s
+[10:24:21] circuit band REJECTED for MOTHERSON: price 162.47 outside band 80000.0-120000.0 (wrong scrip?)
+[10:24:21] circuit bands: 138 of 142 names (1 rejected as implausible)
+[10:24:33]   LTM          10:06:00->10:09:30 4087.30->4098.70 +0.28% displaced by BLEL Rs 560
+[10:24:33]   AEGISLOG     10:06:30->10:23:00 1352.00->1354.70 +0.20% eye exit    Rs 361
+[10:24:33]   BLEL         10:10:00->10:23:00 480.95->498.45 +3.64% eye exit    Rs 8,944
+[10:24:33] no-dip watchlist 142 names | 135 in funnel (of 244 with bars, 135 warm) | 5 closed | flat | NET Rs 8,709
+[10:25:51] feed: 137 symbols fetched, 2 failed, 59s
+[10:25:51] circuit band REJECTED for MOTHERSON: price 162.47 outside band 80000.0-120000.0 (wrong scrip?)
+[10:25:51] circuit bands: 138 of 142 names (1 rejected as implausible)
+[10:26:01] LIVE: LIVE_NO_NEW_ENTRIES=YES -- 2 new signal(s) not taken
+[10:26:01]   LTM          10:06:00->10:08:30 4087.30->4093.70 +0.16% displaced by CYIENT Rs 255
+[10:26:01]   CYIENT       10:09:00->10:24:00 1095.40->1102.50 +0.65% eye exit    Rs 1,483
+[10:26:01] no-dip watchlist 142 names | 135 in funnel (of 244 with bars, 135 warm) | 5 closed | holding NAZARA,TVSELECT | NET Rs 44
+[10:26:29] LIVE: LIVE_NO_NEW_ENTRIES=YES -- 1 new signal(s) not taken
+[10:26:29]   AEGISLOG     10:06:30->10:19:00 1352.00->1356.90 +0.36% displaced by COFORGE Rs 766
+[10:26:29]   COFORGE      10:19:30->10:25:00 1820.40->1823.50 +0.17% eye exit    Rs 289
+[10:26:29] no-dip watchlist 142 names | 135 in funnel (of 244 with bars, 135 warm) | 6 closed | holding TVSELECT | NET Rs 274
+[10:27:47] feed: 137 symbols fetched, 2 failed, 58s
+[10:27:47] circuit band REJECTED for MOTHERSON: price 162.36 outside band 80000.0-120000.0 (wrong scrip?)
+[10:27:47] circuit bands: 138 of 142 names (1 rejected as implausible)
+[10:27:59]   COFORGE      10:19:30->10:26:30 1820.40->1817.00 -0.19% eye exit    Rs -601
+[10:27:59]   TVSELECT     10:24:30->10:26:30 397.00->398.95 +0.49% eye exit    Rs -1,362
+[10:27:59] no-dip watchlist 145 names | 136 in funnel (of 244 with bars, 136 warm) | 7 closed | flat | NET Rs -617
+[10:29:35] feed: 140 symbols fetched, 2 failed, 74s
+[10:29:35] quote batch 1: 429 -- backing off 2.5s, one retry
+[10:29:39] quote batch 1 HTTP 429: {"data":{"805":"Too many requests. Further requests may result in the user being blocked."},"status":"failed"}
+[10:29:39] circuit bands: 138 of 145 names
+[10:29:52] LIVE: LIVE_NO_NEW_ENTRIES=YES -- 1 new signal(s) not taken
+[10:29:52]   CYIENT       10:09:00->10:21:30 1095.40->1102.40 +0.64% displaced by LTM Rs 1,460
+[10:29:52]   COFORGE      10:19:30->10:27:00 1820.40->1818.00 -0.13% eye exit    Rs -464
+[10:29:52]   LTM          10:22:00->10:28:00 4132.10->4120.00 -0.29% eye exit    Rs -861
+[10:29:52] no-dip watchlist 145 names | 138 in funnel (of 246 with bars, 138 warm) | 7 closed | holding TATATECH | NET Rs 1,758
+[10:31:12] feed: 140 symbols fetched, 2 failed, 59s
+[10:31:12] quote batch 1: 429 -- backing off 2.5s, one retry
+[10:31:16] circuit band REJECTED for MOTHERSON: price 162.71 outside band 80000.0-120000.0 (wrong scrip?)
+[10:31:16] circuit bands: 141 of 145 names (1 rejected as implausible)
+[10:31:29]   COFORGE      10:19:30->10:23:30 1820.40->1823.10 +0.15% displaced by NAZARA Rs 234
+[10:31:29]   LTM          10:22:00->10:30:00 4132.10->4122.50 -0.23% eye exit    Rs -711
+[10:31:29]   NAZARA       10:24:00->10:30:00 399.95->400.45 +0.13% eye exit    Rs 177
+[10:31:29] no-dip watchlist 146 names | 138 in funnel (of 247 with bars, 138 warm) | 8 closed | flat | NET Rs 1,024
+[10:32:50] feed: 141 symbols fetched, 2 failed, 60s
+[10:32:50] quote batch 1: 429 -- backing off 2.5s, one retry
+[10:32:55] circuit band REJECTED for MOTHERSON: price 162.55 outside band 80000.0-120000.0 (wrong scrip?)
+[10:32:55] circuit bands: 142 of 146 names (1 rejected as implausible)
+[10:33:08]   HTEL         10:22:00->10:31:30 76.20->75.69 -0.67% eye exit    Rs 282
+[10:33:08]   NAZARA       10:24:00->10:31:30 399.95->399.90 -0.01% eye exit    Rs -167
+[10:33:08] no-dip watchlist 146 names | 139 in funnel (of 249 with bars, 139 warm) | 8 closed | flat | NET Rs 1,673
+[10:34:26] feed: 141 symbols fetched, 2 failed, 58s
+[10:34:26] circuit band REJECTED for MOTHERSON: price 162.51 outside band 80000.0-120000.0 (wrong scrip?)
+[10:34:26] circuit bands: 142 of 146 names (1 rejected as implausible)
+[10:34:40]   HTEL         10:22:00->10:33:00 76.20->75.77 -0.56% eye exit    Rs 229
+[10:34:40]   NAZARA       10:24:00->10:33:00 399.95->399.15 -0.20% eye exit    Rs -636
+[10:34:40] no-dip watchlist 147 names | 139 in funnel (of 249 with bars, 139 warm) | 8 closed | flat | NET Rs 1,152
+[10:36:01] feed: 142 symbols fetched, 2 failed, 60s
+[10:36:02] quote batch 1: 429 -- backing off 2.5s, one retry
+[10:36:06] quote batch 1 HTTP 429: {"data":{"805":"Too many requests. Further requests may result in the user being blocked."},"status":"failed"}
+[10:36:06] circuit bands: 142 of 147 names
+[10:36:17]   HTEL         10:22:00->10:35:00 76.20->75.59 -0.80% eye exit    Rs 347
+[10:36:17]   ARCIL        10:33:30->10:35:00 147.19->147.06 -0.09% eye exit    Rs -97
+[10:36:17] no-dip watchlist 147 names | 140 in funnel (of 251 with bars, 140 warm) | 9 closed | flat | NET Rs 1,173
+[10:37:36] feed: 142 symbols fetched, 2 failed, 59s
+[10:37:36] quote batch 1: 429 -- backing off 2.5s, one retry
+[10:37:40] circuit band REJECTED for MOTHERSON: price 162.31 outside band 80000.0-120000.0 (wrong scrip?)
+[10:37:40] circuit bands: 143 of 147 names (1 rejected as implausible)
+[10:37:53] LIVE: LIVE_NO_NEW_ENTRIES=YES -- 2 new signal(s) not taken
+[10:37:53]   DIAMONDYD    10:33:30->10:35:30 1089.30->1093.30 +0.37% eye exit    Rs 780
+[10:37:53] no-dip watchlist 148 names | 140 in funnel (of 251 with bars, 140 warm) | 9 closed | holding RAIN,DMART | NET Rs 1,235
+[10:39:16] feed: 144 symbols fetched, 2 failed, 61s
+[10:39:16] circuit band REJECTED for MOTHERSON: price 162.4 outside band 80000.0-120000.0 (wrong scrip?)
+[10:39:16] circuit bands: 145 of 149 names (1 rejected as implausible)
+[10:39:30]   CYIENT       10:35:30->10:38:00 1110.20->1109.20 -0.09% eye exit    Rs -361
+[10:39:30]   DMART        10:36:00->10:38:00 3852.00->3852.80 +0.02% eye exit    Rs -83
+[10:39:30] no-dip watchlist 149 names | 142 in funnel (of 254 with bars, 142 warm) | 11 closed | flat | NET Rs 1,606
+[10:40:50] feed: 144 symbols fetched, 2 failed, 60s
+[10:40:50] quote batch 1: 429 -- backing off 2.5s, one retry
+[10:40:54] circuit band REJECTED for MOTHERSON: price 162.38 outside band 80000.0-120000.0 (wrong scrip?)
+[10:40:54] circuit bands: 145 of 149 names (1 rejected as implausible)
+[10:41:08]   HTEL         10:22:00->10:33:30 76.20->75.74 -0.60% displaced by TFCILTD Rs 249
+[10:41:08]   TFCILTD      10:34:00->10:39:30 147.98->147.57 -0.28% eye exit    Rs -828
+[10:41:08]   DMART        10:36:00->10:39:30 3852.00->3852.60 +0.02% eye exit    Rs -96
+[10:41:08] no-dip watchlist 150 names | 143 in funnel (of 256 with bars, 143 warm) | 11 closed | flat | NET Rs 1,027
+[10:42:30] feed: 146 symbols fetched, 2 failed, 60s
+[10:42:30] quote batch 1: 429 -- backing off 2.5s, one retry
+[10:42:34] quote batch 1 HTTP 429: {"data":{"805":"Too many requests. Further requests may result in the user being blocked."},"status":"failed"}
+[10:42:34] circuit bands: 145 of 151 names
+[10:42:48] LIVE: LIVE_NO_NEW_ENTRIES=YES -- 1 new signal(s) not taken
+[10:42:48]   DMART        10:36:00->10:41:00 3852.00->3854.10 +0.05% eye exit    Rs -0
+[10:42:48] no-dip watchlist 152 names | 145 in funnel (of 257 with bars, 145 warm) | 11 closed | holding CUB | NET Rs 831
+[10:43:03] retired the previous engine (pid 41112)
+[10:43:06] paper_live 20260930: warm-up 227 symbols. Waiting for START.
+[10:43:07] leverage: MIS sheet 4899 scrips (3077 at 1x)
+[10:43:52] feed: 149 symbols fetched, 2 failed, 43s
+[10:43:52] circuit bands failed: UnboundLocalError cannot access local variable 'tape' where it is not associated with a value
+[10:44:00] live_exec: PAPER routing in force (mode=PAPER, armed=True)
+[10:44:00]   PINELABS     10:05:30->10:05:30 175.56->174.94 -0.35% displaced by LTM Rs -1,018
+[10:44:00]   HEROMOTORS   10:05:30->10:06:00 146.75->146.50 -0.17% displaced by AEGISLOG Rs -138
+[10:44:00]   LTM          10:06:00->10:08:30 4087.30->4093.70 +0.16% displaced by CYIENT Rs 255
+[10:44:00]   AEGISLOG     10:06:30->10:19:00 1352.00->1356.90 +0.36% displaced by COFORGE Rs 766
+[10:44:00]   CYIENT       10:09:00->10:21:30 1095.40->1102.40 +0.64% displaced by HTEL Rs 1,460
+[10:44:00]   COFORGE      10:19:30->10:23:30 1820.40->1823.10 +0.15% displaced by NAZARA Rs 234
+[10:44:00]   NAZARA       10:24:00->10:33:00 399.95->399.15 -0.20% eye exit    Rs -636
+[10:44:00]   HTEL         10:22:00->10:33:30 76.20->75.74 -0.60% displaced by TFCILTD Rs 249
+[10:44:00]   DIAMONDYD    10:33:30->10:35:30 1089.30->1093.30 +0.37% eye exit    Rs 780
+[10:44:00]   TFCILTD      10:34:00->10:39:30 147.98->147.57 -0.28% eye exit    Rs -828
+[10:44:00]   DMART        10:36:00->10:43:00 3852.00->3856.30 +0.11% eye exit    Rs 141
+[10:44:00]   CUB          10:40:00->10:43:00 224.00->224.48 +0.21% eye exit    Rs 400
+[10:44:00] no-dip watchlist 155 names | 147 in funnel (of 259 with bars, 147 warm) | 12 closed | flat | NET Rs 1,664
+[10:44:23] no-dip watchlist 155 names | 147 in funnel (of 259 with bars, 147 warm) | 12 closed | flat | NET Rs 1,664
+[10:45:27] feed: 150 symbols fetched, 2 failed, 44s
+[10:45:27] quote batch 1: 429 -- backing off 2.5s, one retry
+[10:45:30] quote batch 1 HTTP 429: {"data":{"805":"Too many requests. Further requests may result in the user being blocked."},"status":"failed"}
+[10:45:30] circuit bands: 0 of 155 names
+[10:45:36]   TFCILTD      10:34:00->10:38:00 147.98->148.03 +0.03% displaced by RPTECH Rs -51
+[10:45:36]   DMART        10:36:00->10:44:30 3852.00->3854.00 +0.05% eye exit    Rs -7
+[10:45:36]   RPTECH       10:38:30->10:44:30 951.05->953.45 +0.25% eye exit    Rs 493
+[10:45:36] no-dip watchlist 155 names | 148 in funnel (of 260 with bars, 148 warm) | 12 closed | flat | NET Rs 2,387
+[10:46:00]   RPTECH       10:38:30->10:45:00 951.05->950.15 -0.09% eye exit    Rs -371
+[10:46:00] no-dip watchlist 155 names | 148 in funnel (of 260 with bars, 148 warm) | 12 closed | flat | NET Rs 1,522
+[10:47:04] feed: 150 symbols fetched, 2 failed, 44s
+[10:47:04] quote batch 1: 429 -- backing off 2.5s, one retry
+[10:47:08] quote batch 1 HTTP 429: {"data":{"805":"Too many requests. Further requests may result in the user being blocked."},"status":"failed"}
+[10:47:08] circuit bands: 0 of 155 names
+[10:47:15]   DMART        10:36:00->10:45:00 3852.00->3852.40 +0.01% eye exit    Rs -109
+[10:47:15]   RPTECH       10:38:30->10:46:00 951.05->951.85 +0.08% eye exit    Rs 74
+[10:47:15] no-dip watchlist 155 names | 148 in funnel (of 260 with bars, 148 warm) | 12 closed | holding CUB | NET Rs 1,685
+[10:47:39]   RPTECH       10:38:30->10:46:30 951.05->954.15 +0.33% eye exit    Rs 676
+[10:47:39] no-dip watchlist 155 names | 148 in funnel (of 260 with bars, 148 warm) | 12 closed | holding CUB | NET Rs 2,287
+[10:48:43] feed: 150 symbols fetched, 2 failed, 44s
+[10:48:43] circuit band REJECTED for MOTHERSON: price 162.02 outside band 80000.0-120000.0 (wrong scrip?)
+[10:48:43] circuit bands: 151 of 155 names (1 rejected as implausible)
+[10:48:51]   DMART        10:36:00->10:40:30 3852.00->3856.10 +0.11% displaced by XTRANET Rs 128
+[10:48:51]   XTRANET      10:41:00->10:43:30 282.36->283.40 +0.37% circuit guard Rs 131
+[10:48:51]   RPTECH       10:38:30->10:47:30 951.05->960.75 +1.02% eye exit    Rs 2,405
+[10:48:51]   HEROMOTORS   10:44:30->10:47:30 148.00->148.80 +0.54% eye exit    Rs 216
+[10:48:51] no-dip watchlist 155 names | 148 in funnel (of 260 with bars, 148 warm) | 14 closed | flat | NET Rs 4,780
+[10:49:02] retired the previous engine (pid 28204)
+[10:49:05] paper_live 20260930: warm-up 227 symbols. Waiting for START.
+[10:49:06] leverage: MIS sheet 4899 scrips (3077 at 1x)
+[10:49:14] feed: 18 symbols fetched, 0 failed, 5s
+[10:49:14] circuit bands failed: UnboundLocalError cannot access local variable 'tape' where it is not associated with a value
+[10:49:20] live_exec: PAPER routing in force (mode=PAPER, armed=True)
+[10:49:20]   PINELABS     10:05:30->10:05:30 175.56->174.94 -0.35% displaced by LTM Rs -1,018
+[10:49:20]   HEROMOTORS   10:05:30->10:06:00 146.75->146.50 -0.17% displaced by AEGISLOG Rs -138
+[10:49:20]   LTM          10:06:00->10:08:30 4087.30->4093.70 +0.16% displaced by CYIENT Rs 255
+[10:49:20]   AEGISLOG     10:06:30->10:19:00 1352.00->1356.90 +0.36% displaced by COFORGE Rs 766
+[10:49:20]   CYIENT       10:09:00->10:21:30 1095.40->1102.40 +0.64% displaced by HTEL Rs 1,460
+[10:49:20]   COFORGE      10:19:30->10:23:30 1820.40->1823.10 +0.15% displaced by NAZARA Rs 234
+[10:49:20]   NAZARA       10:24:00->10:33:00 399.95->399.15 -0.20% eye exit    Rs -636
+[10:49:20]   HTEL         10:22:00->10:33:30 76.20->75.74 -0.60% displaced by TFCILTD Rs 249
+[10:49:20]   DIAMONDYD    10:33:30->10:35:30 1089.30->1093.30 +0.37% eye exit    Rs 780
+[10:49:20]   TFCILTD      10:34:00->10:38:00 147.98->148.03 +0.03% displaced by RPTECH Rs -51
+[10:49:20]   DMART        10:36:00->10:39:30 3852.00->3854.00 +0.05% displaced by CUB Rs -7
+[10:49:20]   CUB          10:40:00->10:48:00 224.00->225.15 +0.51% eye exit    Rs 1,147
+[10:49:20]   RPTECH       10:38:30->10:48:30 951.05->965.25 +1.49% eye exit    Rs 3,584
+[10:49:20] no-dip watchlist 155 names | 148 in funnel (of 260 with bars, 148 warm) | 13 closed | holding MBAPL,CUB | NET Rs 5,504
+[10:49:42] no-dip watchlist 155 names | 148 in funnel (of 260 with bars, 148 warm) | 13 closed | holding MBAPL,CUB | NET Rs 5,504
+[10:50:03] no-dip watchlist 155 names | 148 in funnel (of 260 with bars, 148 warm) | 13 closed | holding MBAPL,CUB | NET Rs 5,504
+[10:50:25] no-dip watchlist 155 names | 148 in funnel (of 260 with bars, 148 warm) | 13 closed | holding MBAPL,CUB | NET Rs 5,504
+[10:50:51] feed: 18 symbols fetched, 0 failed, 5s
+[10:50:51] circuit band REJECTED for MOTHERSON: price 161.74 outside band 80000.0-120000.0 (wrong scrip?)
+[10:50:51] circuit bands: 151 of 155 names (1 rejected as implausible)
+[10:50:53]   MBAPL        10:48:30->10:50:30 171.93->171.75 -0.10% eye exit    Rs -397
+[10:50:53]   CUB          10:49:00->10:50:30 225.78->225.34 -0.19% eye exit    Rs -623
+[10:50:53] no-dip watchlist 155 names | 148 in funnel (of 260 with bars, 148 warm) | 15 closed | flat | NET Rs 5,604
+[10:51:15] no-dip watchlist 155 names | 148 in funnel (of 260 with bars, 148 warm) | 15 closed | flat | NET Rs 5,604
+[10:51:36] no-dip watchlist 155 names | 148 in funnel (of 260 with bars, 148 warm) | 15 closed | flat | NET Rs 5,604
+[10:51:58]   CUB          10:40:00->10:45:30 224.00->224.90 +0.40% displaced by VALIANTORG Rs 868
+[10:51:58]   VALIANTORG   10:46:00->10:51:30 460.05->459.00 -0.23% eye exit    Rs -706
+[10:51:58] no-dip watchlist 155 names | 148 in funnel (of 260 with bars, 148 warm) | 15 closed | flat | NET Rs 5,017
+[10:52:24] feed: 18 symbols fetched, 0 failed, 5s
+[10:52:25] circuit band REJECTED for MOTHERSON: price 162.17 outside band 80000.0-120000.0 (wrong scrip?)
+[10:52:25] circuit bands: 152 of 156 names (1 rejected as implausible)
+[10:52:27]   VALIANTORG   10:46:00->10:52:00 460.05->462.75 +0.59% eye exit    Rs 1,330
+[10:52:27] no-dip watchlist 156 names | 149 in funnel (of 262 with bars, 149 warm) | 15 closed | holding FORCEMOT | NET Rs 7,421
+[10:52:48] no-dip watchlist 156 names | 149 in funnel (of 262 with bars, 149 warm) | 15 closed | holding FORCEMOT | NET Rs 7,421
+[10:53:09] no-dip watchlist 156 names | 149 in funnel (of 262 with bars, 149 warm) | 15 closed | holding FORCEMOT | NET Rs 7,421
+[10:53:31] no-dip watchlist 156 names | 149 in funnel (of 263 with bars, 149 warm) | 15 closed | holding FORCEMOT | NET Rs 7,448
+[10:53:57] feed: 18 symbols fetched, 0 failed, 5s
+[10:54:36] feed: 133 symbols fetched, 2 failed, 39s
+[10:54:37] quote batch 1: 429 -- backing off 2.5s, one retry
+[10:54:39] circuit band REJECTED for MOTHERSON: price 162.14 outside band 80000.0-120000.0 (wrong scrip?)
+[10:54:39] circuit bands: 152 of 156 names (1 rejected as implausible)
+[10:54:48]   CUB          10:40:00->10:44:00 224.00->224.44 +0.20% displaced by HEROMOTORS Rs 355
+[10:54:48]   HEROMOTORS   10:44:30->10:53:00 148.00->149.00 +0.68% eye exit    Rs 284
+[10:54:48]   RPTECH       10:38:30->10:53:30 951.05->972.10 +2.21% eye exit    Rs 5,378
+[10:54:48] no-dip watchlist 156 names | 149 in funnel (of 263 with bars, 149 warm) | 14 closed | holding LLOYDSENT | NET Rs 7,775
+[10:55:14]   RPTECH       10:38:30->10:54:00 951.05->972.00 +2.20% eye exit    Rs 5,352
+[10:55:14] no-dip watchlist 156 names | 149 in funnel (of 263 with bars, 149 warm) | 14 closed | holding LLOYDSENT | NET Rs 7,500
+[10:55:40] feed: 19 symbols fetched, 0 failed, 6s
+[10:55:40] circuit band REJECTED for MOTHERSON: price 162.3 outside band 80000.0-120000.0 (wrong scrip?)
+[10:55:40] circuit bands: 152 of 156 names (1 rejected as implausible)
+[10:55:44]   HEROMOTORS   10:44:30->10:49:30 148.00->149.30 +0.88% displaced by MIDHANI Rs 385
+[10:55:44]   MIDHANI      10:50:00->10:55:30 434.00->437.50 +0.81% eye exit    Rs 1,880
+[10:55:44] no-dip watchlist 156 names | 149 in funnel (of 263 with bars, 149 warm) | 15 closed | holding TVSELECT | NET Rs 10,000
+[10:56:07] no-dip watchlist 156 names | 149 in funnel (of 263 with bars, 149 warm) | 15 closed | holding TVSELECT | NET Rs 10,000
+[10:56:29] no-dip watchlist 156 names | 149 in funnel (of 263 with bars, 149 warm) | 15 closed | holding TVSELECT | NET Rs 10,000
+[10:56:53] no-dip watchlist 156 names | 149 in funnel (of 263 with bars, 149 warm) | 15 closed | holding TVSELECT | NET Rs 10,000
+[10:57:20] feed: 18 symbols fetched, 0 failed, 5s
+[10:57:20] circuit band REJECTED for MOTHERSON: price 162.18 outside band 80000.0-120000.0 (wrong scrip?)
+[10:57:20] circuit bands: 152 of 156 names (1 rejected as implausible)
+[10:57:23]   HEROMOTORS   10:44:30->10:47:30 148.00->148.80 +0.54% displaced by MIDHANI Rs 216
+[10:57:23]   RPTECH       10:38:30->10:50:30 951.05->963.90 +1.35% displaced by VALIANTORG Rs 3,230
+[10:57:23]   MIDHANI      10:48:00->10:57:00 433.10->438.40 +1.22% eye exit    Rs 2,921
+[10:57:23]   VALIANTORG   10:51:00->10:57:00 460.00->454.90 -1.11% eye exit    Rs 2,634
+[10:57:23] no-dip watchlist 156 names | 149 in funnel (of 263 with bars, 149 warm) | 16 closed | flat | NET Rs 11,250
+[10:57:45]   VALIANTORG   10:51:00->10:57:30 460.00->450.90 -1.98% eye exit    Rs 4,806
+[10:57:45] no-dip watchlist 156 names | 149 in funnel (of 263 with bars, 149 warm) | 16 closed | flat | NET Rs 13,423
+[10:58:12] no-dip watchlist 156 names | 149 in funnel (of 263 with bars, 149 warm) | 16 closed | flat | NET Rs 13,423
+[10:58:33] no-dip watchlist 157 names | 149 in funnel (of 263 with bars, 149 warm) | 16 closed | flat | NET Rs 13,423
+[10:59:00] feed: 19 symbols fetched, 0 failed, 5s
+[10:59:00] quote batch 1: 429 -- backing off 2.5s, one retry
+[10:59:03] circuit band REJECTED for MOTHERSON: price 162.3 outside band 80000.0-120000.0 (wrong scrip?)
+[10:59:03] circuit bands: 153 of 157 names (1 rejected as implausible)
+[10:59:05]   MIDHANI      10:48:00->10:58:30 433.10->437.80 +1.09% eye exit    Rs 2,575
+[10:59:05]   VALIANTORG   10:51:00->10:58:30 460.00->451.75 -1.79% eye exit    Rs 4,344
+[10:59:05] no-dip watchlist 157 names | 150 in funnel (of 264 with bars, 150 warm) | 16 closed | flat | NET Rs 12,615
+[10:59:27] no-dip watchlist 157 names | 150 in funnel (of 264 with bars, 150 warm) | 16 closed | flat | NET Rs 12,615
+[10:59:48] no-dip watchlist 157 names | 150 in funnel (of 265 with bars, 150 warm) | 16 closed | flat | NET Rs 12,615
+[11:00:09] no-dip watchlist 157 names | 150 in funnel (of 265 with bars, 150 warm) | 16 closed | flat | NET Rs 12,615
+[11:00:35] feed: 19 symbols fetched, 0 failed, 6s
+[11:01:14] feed: 133 symbols fetched, 2 failed, 39s
+[11:01:14] circuit band REJECTED for MOTHERSON: price 162.06 outside band 80000.0-120000.0 (wrong scrip?)
+[11:01:14] circuit bands: 153 of 157 names (1 rejected as implausible)
+[11:01:22]   MIDHANI      10:48:00->10:59:00 433.10->437.40 +0.99% eye exit    Rs 2,345
+[11:01:22]   RPTECH       10:38:30->11:00:00 951.05->988.75 +3.96% eye exit    Rs 9,739
+[11:01:22] no-dip watchlist 157 names | 150 in funnel (of 267 with bars, 150 warm) | 15 closed | holding VESUVIUS | NET Rs 14,155
+[11:01:47]   RPTECH       10:38:30->11:01:00 951.05->987.75 +3.86% eye exit    Rs 9,477
+[11:01:47]   VESUVIUS     10:59:30->11:01:00 435.90->434.10 -0.41% eye exit    Rs 896
+[11:01:47] no-dip watchlist 157 names | 150 in funnel (of 267 with bars, 150 warm) | 16 closed | flat | NET Rs 15,183
+[11:02:13] feed: 19 symbols fetched, 0 failed, 6s
+[11:02:13] quote batch 1: 429 -- backing off 2.5s, one retry
+[11:02:17] circuit band REJECTED for MOTHERSON: price 161.9 outside band 80000.0-120000.0 (wrong scrip?)
+[11:02:17] circuit bands: 153 of 157 names (1 rejected as implausible)
+[11:02:21] no-dip watchlist 157 names | 150 in funnel (of 267 with bars, 150 warm) | 16 closed | holding CUB,RITES | NET Rs 15,342
+[11:02:43] no-dip watchlist 157 names | 150 in funnel (of 267 with bars, 150 warm) | 16 closed | holding CUB,RITES | NET Rs 15,342
+[11:03:04] no-dip watchlist 157 names | 150 in funnel (of 267 with bars, 150 warm) | 16 closed | holding CUB,RITES | NET Rs 15,342
+[11:03:26] no-dip watchlist 157 names | 150 in funnel (of 267 with bars, 150 warm) | 16 closed | holding CUB,RITES | NET Rs 15,342
+[11:03:52] feed: 19 symbols fetched, 0 failed, 6s
+[11:03:52] circuit band REJECTED for MOTHERSON: price 161.99 outside band 80000.0-120000.0 (wrong scrip?)
+[11:03:52] circuit bands: 153 of 157 names (1 rejected as implausible)
+[11:03:54]   CUB          11:01:30->11:03:30 227.73->227.40 -0.14% eye exit    Rs -498
+[11:03:54]   RITES        11:02:00->11:03:30 199.98->199.88 -0.05% eye exit    Rs -261
+[11:03:54] no-dip watchlist 157 names | 150 in funnel (of 267 with bars, 150 warm) | 18 closed | flat | NET Rs 14,424
+[11:04:16] no-dip watchlist 157 names | 150 in funnel (of 267 with bars, 150 warm) | 18 closed | flat | NET Rs 14,424
+[11:04:37] no-dip watchlist 157 names | 150 in funnel (of 267 with bars, 150 warm) | 18 closed | flat | NET Rs 14,424
+[11:04:59] no-dip watchlist 157 names | 150 in funnel (of 268 with bars, 150 warm) | 18 closed | flat | NET Rs 14,424
+[11:05:25] feed: 19 symbols fetched, 0 failed, 6s
+[11:05:25] quote batch 1: 429 -- backing off 2.5s, one retry
+[11:05:29] circuit band REJECTED for MOTHERSON: price 161.9 outside band 80000.0-120000.0 (wrong scrip?)
+[11:05:29] circuit bands: 153 of 157 names (1 rejected as implausible)
+[11:05:31]   CUB          11:01:30->11:04:30 227.73->227.41 -0.14% eye exit    Rs -487
+[11:05:31]   RITES        11:02:00->11:05:00 199.98->199.77 -0.11% eye exit    Rs -398
+[11:05:31] no-dip watchlist 157 names | 150 in funnel (of 268 with bars, 150 warm) | 18 closed | flat | NET Rs 14,298
+[11:05:53] no-dip watchlist 157 names | 150 in funnel (of 268 with bars, 150 warm) | 18 closed | flat | NET Rs 14,298
+[11:06:15] no-dip watchlist 157 names | 150 in funnel (of 268 with bars, 150 warm) | 18 closed | flat | NET Rs 14,298
+[11:06:37] no-dip watchlist 157 names | 150 in funnel (of 268 with bars, 150 warm) | 18 closed | flat | NET Rs 14,298
+[11:07:04] feed: 19 symbols fetched, 0 failed, 6s
+[11:07:43] feed: 134 symbols fetched, 2 failed, 39s
+[11:07:43] circuit band REJECTED for MOTHERSON: price 161.84 outside band 80000.0-120000.0 (wrong scrip?)
+[11:07:43] circuit bands: 154 of 158 names (1 rejected as implausible)
+[11:07:51]   RPTECH       10:38:30->11:06:30 951.05->992.00 +4.31% eye exit    Rs 10,590
+[11:07:51]   VESUVIUS     10:59:30->11:06:30 435.90->434.60 -0.30% eye exit    Rs 609
+[11:07:51] no-dip watchlist 158 names | 151 in funnel (of 270 with bars, 151 warm) | 16 closed | flat | NET Rs 16,009
+[11:08:16]   RPTECH       10:38:30->11:07:30 951.05->994.90 +4.61% eye exit    Rs 11,350
+[11:08:16]   VESUVIUS     10:59:30->11:07:30 435.90->434.70 -0.28% eye exit    Rs 552
+[11:08:16] no-dip watchlist 158 names | 151 in funnel (of 270 with bars, 151 warm) | 16 closed | flat | NET Rs 16,711
+[11:08:42] feed: 19 symbols fetched, 0 failed, 6s
+[11:08:42] quote batch 1: 429 -- backing off 2.5s, one retry
+[11:08:46] circuit band REJECTED for MOTHERSON: price 161.71 outside band 80000.0-120000.0 (wrong scrip?)
+[11:08:46] circuit bands: 154 of 158 names (1 rejected as implausible)
+[11:08:49] no-dip watchlist 158 names | 151 in funnel (of 270 with bars, 151 warm) | 16 closed | holding RCF | NET Rs 16,508
+[11:09:10] no-dip watchlist 158 names | 151 in funnel (of 270 with bars, 151 warm) | 16 closed | holding RCF | NET Rs 16,508
+[11:09:32] no-dip watchlist 158 names | 151 in funnel (of 270 with bars, 151 warm) | 16 closed | holding RCF | NET Rs 16,508
+[11:09:53] no-dip watchlist 158 names | 151 in funnel (of 270 with bars, 151 warm) | 16 closed | holding RCF | NET Rs 16,508
+[11:10:20] feed: 19 symbols fetched, 0 failed, 6s
+[11:10:20] circuit band REJECTED for MOTHERSON: price 161.65 outside band 80000.0-120000.0 (wrong scrip?)
+[11:10:20] circuit bands: 154 of 158 names (1 rejected as implausible)
+[11:10:22]   RPTECH       10:38:30->11:04:00 951.05->986.00 +3.67% displaced by TVSELECT Rs 9,019
+[11:10:22]   TVSELECT     11:04:30->11:10:00 426.00->426.05 +0.01% eye exit    Rs -106
+[11:10:22]   RCF          11:08:00->11:10:00 110.65->110.51 -0.13% eye exit    Rs -452
+[11:10:22] no-dip watchlist 158 names | 151 in funnel (of 270 with bars, 151 warm) | 18 closed | flat | NET Rs 13,822
+[11:10:44] no-dip watchlist 158 names | 151 in funnel (of 271 with bars, 151 warm) | 18 closed | flat | NET Rs 13,822
+[11:11:05] no-dip watchlist 159 names | 151 in funnel (of 271 with bars, 151 warm) | 18 closed | flat | NET Rs 13,822
+[11:11:27] no-dip watchlist 160 names | 151 in funnel (of 271 with bars, 151 warm) | 18 closed | flat | NET Rs 13,822
+[11:11:53] feed: 19 symbols fetched, 0 failed, 6s
+[11:11:54] circuit band REJECTED for MOTHERSON: price 161.56 outside band 80000.0-120000.0 (wrong scrip?)
+[11:11:54] circuit bands: 156 of 160 names (1 rejected as implausible)
+[11:11:56]   TVSELECT     11:04:30->11:10:30 426.00->425.95 -0.01% eye exit    Rs -165
+[11:11:56]   RCF          11:08:00->11:11:00 110.65->110.53 -0.11% eye exit    Rs -407
+[11:11:56] no-dip watchlist 160 names | 153 in funnel (of 273 with bars, 153 warm) | 18 closed | holding TVSELECT | NET Rs 13,585
+[11:12:17] no-dip watchlist 160 names | 153 in funnel (of 273 with bars, 153 warm) | 18 closed | holding TVSELECT | NET Rs 13,585
+[11:12:39] no-dip watchlist 160 names | 153 in funnel (of 273 with bars, 153 warm) | 18 closed | holding TVSELECT | NET Rs 13,585
+[11:13:01] no-dip watchlist 160 names | 153 in funnel (of 273 with bars, 153 warm) | 18 closed | holding TVSELECT | NET Rs 13,585
+[11:13:27] feed: 19 symbols fetched, 0 failed, 6s
+[11:14:07] feed: 136 symbols fetched, 2 failed, 40s
+[11:14:07] circuit band REJECTED for MOTHERSON: price 161.42 outside band 80000.0-120000.0 (wrong scrip?)
+[11:14:07] circuit bands: 156 of 160 names (1 rejected as implausible)
+[11:14:15]   VESUVIUS     10:59:30->11:07:00 435.90->434.85 -0.24% displaced by GVPIL Rs 466
+[11:14:15]   RPTECH       10:38:30->11:13:00 951.05->999.60 +5.10% eye exit    Rs 12,581
+[11:14:15]   GVPIL        11:07:30->11:13:00 696.95->698.00 +0.15% eye exit    Rs 240
+[11:14:15] no-dip watchlist 161 names | 153 in funnel (of 273 with bars, 153 warm) | 17 closed | flat | NET Rs 18,097
+[11:14:40]   RPTECH       10:38:30->11:13:30 951.05->999.85 +5.13% eye exit    Rs 12,646
+[11:14:40] no-dip watchlist 161 names | 153 in funnel (of 273 with bars, 153 warm) | 17 closed | flat | NET Rs 18,162
+[11:15:06] feed: 19 symbols fetched, 0 failed, 6s
+[11:15:06] quote batch 1: 429 -- backing off 2.5s, one retry
+[11:15:11] circuit band REJECTED for MOTHERSON: price 161.35 outside band 80000.0-120000.0 (wrong scrip?)
+[11:15:11] circuit bands: 157 of 161 names (1 rejected as implausible)
+[11:15:13] no-dip watchlist 161 names | 153 in funnel (of 273 with bars, 153 warm) | 17 closed | holding GMRP&UI | NET Rs 18,002
+[11:15:34] no-dip watchlist 161 names | 153 in funnel (of 273 with bars, 153 warm) | 17 closed | holding GMRP&UI | NET Rs 18,002
+[11:15:56] no-dip watchlist 161 names | 153 in funnel (of 274 with bars, 153 warm) | 17 closed | holding GMRP&UI | NET Rs 18,002
+[11:16:18] no-dip watchlist 161 names | 153 in funnel (of 274 with bars, 153 warm) | 17 closed | holding GMRP&UI | NET Rs 18,002
+[11:16:44] feed: 19 symbols fetched, 0 failed, 6s
+[11:16:44] circuit band REJECTED for MOTHERSON: price 161.18 outside band 80000.0-120000.0 (wrong scrip?)
+[11:16:44] circuit bands: 157 of 161 names (1 rejected as implausible)
+[11:16:46]   GMRP&UI      11:13:30->11:15:00 102.33->102.06 -0.26% eye exit    Rs -795
+[11:16:46] no-dip watchlist 161 names | 153 in funnel (of 274 with bars, 153 warm) | 18 closed | flat | NET Rs 17,367
+[11:17:08] no-dip watchlist 161 names | 153 in funnel (of 274 with bars, 153 warm) | 18 closed | flat | NET Rs 17,367
+[11:17:30] no-dip watchlist 161 names | 153 in funnel (of 274 with bars, 153 warm) | 18 closed | flat | NET Rs 17,367
+[11:17:51] no-dip watchlist 161 names | 153 in funnel (of 274 with bars, 153 warm) | 18 closed | flat | NET Rs 17,367
+[11:18:18] feed: 19 symbols fetched, 0 failed, 6s
+[11:18:18] quote batch 1: 429 -- backing off 2.5s, one retry
+[11:18:22] circuit band REJECTED for MOTHERSON: price 161.22 outside band 80000.0-120000.0 (wrong scrip?)
+[11:18:22] circuit bands: 157 of 161 names (1 rejected as implausible)
+[11:18:24] no-dip watchlist 161 names | 153 in funnel (of 274 with bars, 153 warm) | 18 closed | holding THELEELA | NET Rs 18,228
+[11:18:46] no-dip watchlist 161 names | 153 in funnel (of 274 with bars, 153 warm) | 18 closed | holding THELEELA | NET Rs 18,228
+[11:19:07] no-dip watchlist 161 names | 153 in funnel (of 274 with bars, 153 warm) | 18 closed | holding THELEELA | NET Rs 18,228
+[11:19:29] no-dip watchlist 161 names | 153 in funnel (of 274 with bars, 153 warm) | 18 closed | holding THELEELA | NET Rs 18,228
+[11:19:55] feed: 19 symbols fetched, 0 failed, 6s
+[11:20:36] feed: 137 symbols fetched, 2 failed, 40s
+[11:20:36] quote batch 1: 429 -- backing off 2.5s, one retry
+[11:20:40] circuit band REJECTED for MOTHERSON: price 161.25 outside band 80000.0-120000.0 (wrong scrip?)
+[11:20:40] circuit bands: 157 of 161 names (1 rejected as implausible)
+[11:20:48]   RPTECH       10:38:30->11:12:30 951.05->997.55 +4.89% displaced by KARAMTARA Rs 12,044
+[11:20:48]   KARAMTARA    11:13:00->11:16:00 392.00->393.37 +0.35% circuit guard Rs 121
+[11:20:48]   GVPIL        11:07:30->11:17:00 696.95->696.95 +0.00% eye exit    Rs -136
+[11:20:48]   KARAMTARA    11:17:30->11:17:30 394.65->394.00 -0.16% circuit guard Rs -135
+[11:20:48]   TPLPLASTEH   11:16:30->11:19:30 74.30->73.85 -0.61% eye exit    Rs 1,378
+[11:20:48]   BANKBARODA   11:18:00->11:19:30 234.26->234.33 +0.03% eye exit    Rs -61
+[11:20:48] no-dip watchlist 161 names | 154 in funnel (of 276 with bars, 154 warm) | 21 closed | flat | NET Rs 18,488
+[11:21:14]   GVPIL        11:07:30->11:14:00 696.95->698.40 +0.21% displaced by RPTECH Rs 383
+[11:21:14]   RPTECH       11:14:30->11:20:00 996.20->1000.65 +0.45% eye exit    Rs -1,248
+[11:21:14]   TPLPLASTEH   11:16:30->11:20:00 74.30->74.03 -0.36% eye exit    Rs 773
+[11:21:14] no-dip watchlist 161 names | 154 in funnel (of 277 with bars, 154 warm) | 20 closed | flat | NET Rs 17,349
+[11:21:41] feed: 19 symbols fetched, 0 failed, 6s
+[11:21:41] quote batch 1: 429 -- backing off 2.5s, one retry
+[11:21:45] quote batch 1 HTTP 429: {"data":{"805":"Too many requests. Further requests may result in the user being blocked."},"status":"failed"}
+[11:21:45] circuit bands: 157 of 161 names
+[11:21:47] no-dip watchlist 161 names | 154 in funnel (of 278 with bars, 154 warm) | 20 closed | holding PRESTIGE,CUB | NET Rs 17,138
+[11:22:09] no-dip watchlist 162 names | 155 in funnel (of 278 with bars, 155 warm) | 20 closed | holding PRESTIGE,CUB | NET Rs 17,138
+[11:22:31] no-dip watchlist 162 names | 155 in funnel (of 278 with bars, 155 warm) | 20 closed | holding PRESTIGE,CUB | NET Rs 17,138
+[11:22:52]   PRESTIGE     11:20:30->11:22:30 1459.70->1459.70 +0.00% eye exit    Rs -136
+[11:22:52] no-dip watchlist 162 names | 155 in funnel (of 278 with bars, 155 warm) | 21 closed | holding CUB | NET Rs 17,121
+[11:23:19] feed: 19 symbols fetched, 0 failed, 6s
+[11:23:19] circuit band REJECTED for MOTHERSON: price 161.37 outside band 80000.0-120000.0 (wrong scrip?)
+[11:23:19] circuit bands: 158 of 162 names (1 rejected as implausible)
+[11:23:21]   RPTECH       11:14:30->11:16:30 996.20->981.95 -1.43% displaced by THELEELA Rs 3,427
+[11:23:21]   THELEELA     11:17:00->11:22:30 563.40->565.50 +0.37% eye exit    Rs 794
+[11:23:21]   PRESTIGE     11:20:30->11:23:00 1459.70->1458.80 -0.06% eye exit    Rs -290
+[11:23:21] no-dip watchlist 162 names | 155 in funnel (of 279 with bars, 155 warm) | 22 closed | flat | NET Rs 22,529
+[11:23:43] no-dip watchlist 162 names | 155 in funnel (of 279 with bars, 155 warm) | 22 closed | flat | NET Rs 22,529
+[11:24:05] no-dip watchlist 162 names | 155 in funnel (of 279 with bars, 155 warm) | 22 closed | flat | NET Rs 22,529
+[11:24:26]   PRESTIGE     11:20:30->11:24:00 1459.70->1459.20 -0.03% eye exit    Rs -221
+[11:24:26] no-dip watchlist 162 names | 155 in funnel (of 279 with bars, 155 warm) | 22 closed | flat | NET Rs 22,597
+[11:24:53] feed: 19 symbols fetched, 0 failed, 6s
+[11:24:53] circuit band REJECTED for MOTHERSON: price 161.33 outside band 80000.0-120000.0 (wrong scrip?)
+[11:24:53] circuit bands: 158 of 162 names (1 rejected as implausible)
+[11:24:55]   PRESTIGE     11:20:30->11:24:30 1459.70->1459.00 -0.05% eye exit    Rs -255
+[11:24:55] no-dip watchlist 162 names | 155 in funnel (of 279 with bars, 155 warm) | 22 closed | holding JKCEMENT | NET Rs 22,428
+[11:25:17] no-dip watchlist 162 names | 155 in funnel (of 280 with bars, 155 warm) | 22 closed | holding JKCEMENT | NET Rs 22,428
+[11:25:39]   PRESTIGE     11:20:30->11:25:00 1459.70->1458.90 -0.05% eye exit    Rs -272
+[11:25:39] no-dip watchlist 162 names | 155 in funnel (of 280 with bars, 155 warm) | 22 closed | holding JKCEMENT | NET Rs 22,410
+[11:26:00] no-dip watchlist 163 names | 156 in funnel (of 280 with bars, 156 warm) | 22 closed | holding JKCEMENT | NET Rs 22,410
+[11:26:28] feed: 20 symbols fetched, 0 failed, 6s
+[11:27:09] feed: 138 symbols fetched, 2 failed, 40s
+[11:27:09] quote batch 1: 429 -- backing off 2.5s, one retry
+[11:27:13] quote batch 1 HTTP 429: {"data":{"805":"Too many requests. Further requests may result in the user being blocked."},"status":"failed"}
+[11:27:13] circuit bands: 158 of 163 names
+[11:27:21]   RPTECH       10:38:30->11:10:30 951.05->998.10 +4.95% displaced by KARAMTARA Rs 12,188
+[11:27:21]   KARAMTARA    11:11:00->11:15:30 389.30->392.25 +0.76% displaced by CUPID Rs 324
+[11:27:21]   RPTECH       11:14:30->11:17:30 996.20->990.80 -0.54% displaced by BANKBARODA Rs 1,215
+[11:27:21]   BANKBARODA   11:18:00->11:25:00 234.26->234.24 -0.01% eye exit    Rs -157
+[11:27:21]   CUPID        11:16:00->11:25:30 308.85->306.60 -0.73% eye exit    Rs 310
+[11:27:21]   HEROMOTORS   11:25:30->11:25:30 152.58->152.58 +0.00% circuit guard Rs -53
+[11:27:21] no-dip watchlist 164 names | 156 in funnel (of 280 with bars, 156 warm) | 22 closed | holding ESTER | NET Rs 18,069
+[11:27:47]   UJJIVANSFB   11:25:30->11:27:00 67.04->67.08 +0.06% eye exit    Rs 13
+[11:27:47] no-dip watchlist 164 names | 156 in funnel (of 281 with bars, 156 warm) | 22 closed | holding ESTER | NET Rs 18,135
+[11:28:14] feed: 21 symbols fetched, 0 failed, 6s
+[11:28:14] circuit band REJECTED for MOTHERSON: price 161.35 outside band 80000.0-120000.0 (wrong scrip?)
+[11:28:14] circuit bands: 160 of 164 names (1 rejected as implausible)
+[11:28:17]   BANKBARODA   11:18:00->11:22:00 234.26->234.25 -0.00% displaced by XTRANET Rs -146
+[11:28:17]   XTRANET      11:22:30->11:24:00 282.83->283.50 +0.24% circuit guard Rs 65
+[11:28:17]   GOKEX        11:25:30->11:28:00 702.75->703.20 +0.06% eye exit    Rs 24
+[11:28:17]   ESTER        11:26:00->11:28:00 97.56->98.08 +0.53% eye exit    Rs -1,468
+[11:28:17] no-dip watchlist 164 names | 157 in funnel (of 282 with bars, 157 warm) | 24 closed | flat | NET Rs 18,170
+[11:28:39] no-dip watchlist 164 names | 157 in funnel (of 282 with bars, 157 warm) | 24 closed | flat | NET Rs 18,170
+[11:29:00] no-dip watchlist 164 names | 157 in funnel (of 282 with bars, 157 warm) | 24 closed | flat | NET Rs 18,170
+[11:29:22] no-dip watchlist 164 names | 157 in funnel (of 282 with bars, 157 warm) | 24 closed | flat | NET Rs 18,170
+[11:29:49] feed: 20 symbols fetched, 0 failed, 6s
+[11:29:49] circuit band REJECTED for MOTHERSON: price 161.48 outside band 80000.0-120000.0 (wrong scrip?)
+[11:29:49] circuit bands: 161 of 165 names (1 rejected as implausible)
+[11:29:52]   XTRANET      11:29:00->11:29:00 285.00->285.00 +0.00% circuit guard Rs -53
+[11:29:52] no-dip watchlist 165 names | 158 in funnel (of 282 with bars, 158 warm) | 25 closed | holding THELEELA | NET Rs 18,153
+[11:30:13] no-dip watchlist 165 names | 158 in funnel (of 282 with bars, 158 warm) | 25 closed | holding THELEELA | NET Rs 18,153
+[11:30:35] no-dip watchlist 165 names | 158 in funnel (of 282 with bars, 158 warm) | 25 closed | holding THELEELA | NET Rs 18,153
+[11:30:57] no-dip watchlist 165 names | 158 in funnel (of 282 with bars, 158 warm) | 25 closed | holding THELEELA | NET Rs 18,153
+[11:31:23] feed: 20 symbols fetched, 0 failed, 6s
+[11:31:24] circuit band REJECTED for MOTHERSON: price 161.7 outside band 80000.0-120000.0 (wrong scrip?)
+[11:31:24] circuit bands: 161 of 165 names (1 rejected as implausible)
+[11:31:26]   THELEELA     11:28:30->11:31:00 566.55->566.85 +0.05% eye exit    Rs -3
+[11:31:26] no-dip watchlist 165 names | 158 in funnel (of 282 with bars, 158 warm) | 26 closed | holding IRCON | NET Rs 20,391
+[11:31:48] no-dip watchlist 165 names | 158 in funnel (of 282 with bars, 158 warm) | 26 closed | holding IRCON | NET Rs 20,391
+[11:32:09] no-dip watchlist 165 names | 158 in funnel (of 282 with bars, 158 warm) | 26 closed | holding IRCON,MOTHERSON | NET Rs 20,147
+[11:32:33] no-dip watchlist 165 names | 158 in funnel (of 282 with bars, 158 warm) | 26 closed | holding IRCON,MOTHERSON | NET Rs 20,147
+[11:33:00] feed: 20 symbols fetched, 1 failed, 6s
+[11:33:41] feed: 140 symbols fetched, 1 failed, 41s
+[11:33:41] quote batch 1: 429 -- backing off 2.5s, one retry
+[11:33:46] circuit band REJECTED for MOTHERSON: price 161.82 outside band 80000.0-120000.0 (wrong scrip?)
+[11:33:46] circuit bands: 161 of 165 names (1 rejected as implausible)
+[11:33:56]   CUPID        11:16:00->11:23:00 308.85->306.50 -0.76% displaced by AVANTEL Rs 326
+[11:33:56]   AVANTEL      11:23:30->11:31:00 153.00->153.30 +0.20% eye exit    Rs 354
+[11:33:56]   UJJIVANSFB   11:25:30->11:32:30 67.04->67.16 +0.18% eye exit    Rs 312
+[11:33:56] no-dip watchlist 166 names | 159 in funnel (of 282 with bars, 159 warm) | 24 closed | holding MOTHERSON | NET Rs 20,052
+[11:34:23]   AVANTEL      11:23:30->11:27:00 153.00->153.24 +0.16% displaced by LLOYDSENT Rs 256
+[11:34:23]   LLOYDSENT    11:27:30->11:33:00 80.19->80.41 +0.27% eye exit    Rs 550
+[11:34:23]   UJJIVANSFB   11:25:30->11:33:30 67.04->67.23 +0.28% eye exit    Rs 572
+[11:34:23] no-dip watchlist 166 names | 159 in funnel (of 282 with bars, 159 warm) | 25 closed | flat | NET Rs 21,008
+[11:34:50] feed: 20 symbols fetched, 0 failed, 6s
+[11:34:51] circuit band REJECTED for MOTHERSON: price 161.82 outside band 80000.0-120000.0 (wrong scrip?)
+[11:34:51] circuit bands: 162 of 166 names (1 rejected as implausible)
+[11:34:54] no-dip watchlist 166 names | 159 in funnel (of 282 with bars, 159 warm) | 25 closed | holding KRISHANA | NET Rs 20,860
+[11:35:17] no-dip watchlist 166 names | 159 in funnel (of 282 with bars, 159 warm) | 25 closed | holding KRISHANA | NET Rs 20,860
+[11:35:40] no-dip watchlist 166 names | 159 in funnel (of 282 with bars, 159 warm) | 25 closed | holding KRISHANA | NET Rs 20,860
+[11:36:03] no-dip watchlist 166 names | 159 in funnel (of 282 with bars, 159 warm) | 25 closed | holding KRISHANA | NET Rs 20,860
+[11:36:30] feed: 20 symbols fetched, 0 failed, 6s
+[11:36:31] circuit band REJECTED for MOTHERSON: price 161.7 outside band 80000.0-120000.0 (wrong scrip?)
+[11:36:31] circuit bands: 162 of 166 names (1 rejected as implausible)
+[11:36:35]   LLOYDSENT    11:27:30->11:27:30 80.19->80.19 +0.00% displaced by IRCON Rs -136
+[11:36:35]   IRCON        11:28:00->11:36:00 105.51->111.24 +5.43% eye exit    Rs 13,435
+[11:36:35] no-dip watchlist 166 names | 159 in funnel (of 283 with bars, 159 warm) | 26 closed | holding JKCEMENT | NET Rs 33,522
+[11:36:57] no-dip watchlist 166 names | 159 in funnel (of 283 with bars, 159 warm) | 26 closed | holding JKCEMENT | NET Rs 33,522
+[11:37:19] no-dip watchlist 166 names | 159 in funnel (of 283 with bars, 159 warm) | 26 closed | holding JKCEMENT | NET Rs 33,522
+[11:37:41] no-dip watchlist 167 names | 159 in funnel (of 283 with bars, 159 warm) | 26 closed | holding JKCEMENT,VALIANTORG | NET Rs 33,696
+[11:38:09] feed: 21 symbols fetched, 0 failed, 6s
+[11:38:09] quote batch 1: 429 -- backing off 2.5s, one retry
+[11:38:13] quote batch 1 HTTP 429: {"data":{"805":"Too many requests. Further requests may result in the user being blocked."},"status":"failed"}
+[11:38:13] circuit bands: 162 of 168 names
+[11:38:16]   UJJIVANSFB   11:25:30->11:31:00 67.04->67.10 +0.09% displaced by KRISHANA Rs 88
+[11:38:16]   IRCON        11:28:00->11:38:00 105.51->112.20 +6.34% eye exit    Rs 15,708
+[11:38:16]   KRISHANA     11:31:30->11:38:00 191.29->191.39 +0.05% eye exit    Rs -5
+[11:38:16] no-dip watchlist 168 names | 161 in funnel (of 285 with bars, 161 warm) | 27 closed | flat | NET Rs 35,541
+[11:38:38] no-dip watchlist 168 names | 161 in funnel (of 285 with bars, 161 warm) | 27 closed | flat | NET Rs 35,541
+[11:39:00] no-dip watchlist 168 names | 161 in funnel (of 285 with bars, 161 warm) | 27 closed | flat | NET Rs 35,541
+[11:39:22] no-dip watchlist 168 names | 161 in funnel (of 285 with bars, 161 warm) | 27 closed | flat | NET Rs 35,541
+[11:39:48] feed: 20 symbols fetched, 0 failed, 6s
+[11:40:30] feed: 143 symbols fetched, 2 failed, 42s
+[11:40:30] quote batch 1: 429 -- backing off 2.5s, one retry
+[11:40:34] quote batch 1 HTTP 429: {"data":{"805":"Too many requests. Further requests may result in the user being blocked."},"status":"failed"}
+[11:40:34] circuit bands: 162 of 168 names
+[11:40:43]   UJJIVANSFB   11:25:30->11:39:30 67.04->67.62 +0.87% eye exit    Rs 2,026
+[11:40:43]   IRCON        11:28:00->11:39:30 105.51->111.71 +5.88% eye exit    Rs 14,548
+[11:40:43] no-dip watchlist 169 names | 161 in funnel (of 285 with bars, 161 warm) | 26 closed | flat | NET Rs 36,325
+[11:41:09]   UJJIVANSFB   11:25:30->11:40:00 67.04->67.61 +0.85% eye exit    Rs 1,989
+[11:41:09] no-dip watchlist 169 names | 161 in funnel (of 285 with bars, 161 warm) | 26 closed | holding OMNI | NET Rs 36,130
+[11:41:37] feed: 21 symbols fetched, 0 failed, 7s
+[11:41:37] quote batch 1: 429 -- backing off 2.5s, one retry
+[11:41:41] quote batch 1 HTTP 429: {"data":{"805":"Too many requests. Further requests may result in the user being blocked."},"status":"failed"}
+[11:41:41] circuit bands: 162 of 170 names
+[11:41:44]   IRCON        11:28:00->11:41:00 105.51->111.85 +6.01% eye exit    Rs 14,879
+[11:41:44] no-dip watchlist 170 names | 163 in funnel (of 287 with bars, 163 warm) | 26 closed | holding RITES | NET Rs 37,145
+[11:42:07]   IRCON        11:28:00->11:41:30 105.51->111.90 +6.06% eye exit    Rs 14,998
+[11:42:07] no-dip watchlist 170 names | 163 in funnel (of 287 with bars, 163 warm) | 26 closed | holding RITES | NET Rs 37,129
+[11:42:28] no-dip watchlist 171 names | 164 in funnel (of 287 with bars, 164 warm) | 26 closed | holding RITES | NET Rs 37,129
+[11:42:51] no-dip watchlist 171 names | 164 in funnel (of 287 with bars, 164 warm) | 26 closed | holding RITES | NET Rs 37,129
+[11:43:18] feed: 20 symbols fetched, 0 failed, 6s
+[11:43:18] circuit band REJECTED for MOTHERSON: price 162.03 outside band 80000.0-120000.0 (wrong scrip?)
+[11:43:18] circuit bands: 167 of 171 names (1 rejected as implausible)
+[11:43:21]   UJJIVANSFB   11:25:30->11:36:00 67.04->67.47 +0.64% displaced by RITES Rs 1,467
+[11:43:21]   IRCON        11:28:00->11:43:00 105.51->112.47 +6.60% eye exit    Rs 16,348
+[11:43:21]   RITES        11:36:30->11:43:00 200.57->203.64 +1.53% eye exit    Rs 3,688
+[11:43:21] no-dip watchlist 171 names | 164 in funnel (of 287 with bars, 164 warm) | 27 closed | flat | NET Rs 41,254
+[11:43:43] no-dip watchlist 171 names | 164 in funnel (of 287 with bars, 164 warm) | 27 closed | flat | NET Rs 41,254
+[11:44:05] no-dip watchlist 171 names | 164 in funnel (of 287 with bars, 164 warm) | 27 closed | flat | NET Rs 41,254
+[11:44:27] no-dip watchlist 171 names | 164 in funnel (of 287 with bars, 164 warm) | 27 closed | flat | NET Rs 41,254
+[11:44:54] feed: 20 symbols fetched, 0 failed, 6s
+[11:44:54] circuit band REJECTED for MOTHERSON: price 162.22 outside band 80000.0-120000.0 (wrong scrip?)
+[11:44:54] circuit bands: 167 of 171 names (1 rejected as implausible)
+[11:44:56]   IRCON        11:28:00->11:44:30 105.51->112.75 +6.86% eye exit    Rs 17,011
+[11:44:56]   RITES        11:36:30->11:44:30 200.57->205.07 +2.24% eye exit    Rs 5,470
+[11:44:56] no-dip watchlist 171 names | 164 in funnel (of 287 with bars, 164 warm) | 27 closed | flat | NET Rs 43,698
+[11:45:18] no-dip watchlist 172 names | 164 in funnel (of 287 with bars, 164 warm) | 27 closed | flat | NET Rs 43,698
+[11:45:40] no-dip watchlist 172 names | 164 in funnel (of 287 with bars, 164 warm) | 27 closed | flat | NET Rs 43,698
+[11:46:03] no-dip watchlist 172 names | 164 in funnel (of 287 with bars, 164 warm) | 27 closed | flat | NET Rs 43,698
+[11:46:31] feed: 20 symbols fetched, 0 failed, 6s
+[11:47:16] feed: 147 symbols fetched, 2 failed, 45s
+[11:47:16] circuit band REJECTED for MOTHERSON: price 162.25 outside band 80000.0-120000.0 (wrong scrip?)
+[11:47:16] circuit bands: 168 of 172 names (1 rejected as implausible)
+[11:47:26]   IRCON        11:28:00->11:46:00 105.51->114.00 +8.05% eye exit    Rs 19,971
+[11:47:26]   BLEL         11:36:30->11:46:00 504.70->509.05 +0.86% eye exit    Rs 2,017
+[11:47:26] no-dip watchlist 173 names | 165 in funnel (of 288 with bars, 165 warm) | 27 closed | flat | NET Rs 43,206
+[11:47:53]   UJJIVANSFB   11:25:30->11:33:00 67.04->67.16 +0.18% displaced by IRFC Rs 312
+[11:47:53]   IRFC         11:33:30->11:46:30 79.55->80.35 +1.01% eye exit    Rs 2,377
+[11:47:53] no-dip watchlist 173 names | 166 in funnel (of 289 with bars, 166 warm) | 27 closed | holding UNIONBANK,MOTHERSON | NET Rs 42,037
+[11:48:21] feed: 21 symbols fetched, 1 failed, 6s
+[11:48:21] circuit band REJECTED for MOTHERSON: price 162.66 outside band 80000.0-120000.0 (wrong scrip?)
+[11:48:21] circuit bands: 169 of 173 names (1 rejected as implausible)
+[11:48:24]   IRCON        11:28:00->11:48:00 105.51->115.88 +9.83% eye exit    Rs 24,424
+[11:48:24] no-dip watchlist 173 names | 166 in funnel (of 289 with bars, 166 warm) | 27 closed | holding FORCEMOT | NET Rs 46,687
+[11:48:46] no-dip watchlist 173 names | 166 in funnel (of 289 with bars, 166 warm) | 27 closed | holding FORCEMOT | NET Rs 46,687
+[11:49:08]   IRFC         11:33:30->11:42:30 79.55->79.99 +0.55% displaced by MOTHERSON Rs 1,246
+[11:49:08]   MOTHERSON    11:43:00->11:48:30 162.16->162.81 +0.40% eye exit    Rs 866
+[11:49:08] no-dip watchlist 173 names | 166 in funnel (of 289 with bars, 166 warm) | 28 closed | flat | NET Rs 46,598
+[11:49:30] no-dip watchlist 173 names | 166 in funnel (of 289 with bars, 166 warm) | 28 closed | holding PRESTIGE | NET Rs 46,462
+[11:49:57] feed: 20 symbols fetched, 0 failed, 6s
+[11:49:57] circuit band REJECTED for MOTHERSON: price 162.81 outside band 80000.0-120000.0 (wrong scrip?)
+[11:49:57] circuit bands: 169 of 173 names (1 rejected as implausible)
+[11:50:00]   MOTHERSON    11:43:00->11:49:00 162.16->162.78 +0.38% eye exit    Rs 819
+[11:50:00]   IRCON        11:28:00->11:49:30 105.51->116.34 +10.26% eye exit    Rs 25,513
+[11:50:00] no-dip watchlist 173 names | 166 in funnel (of 289 with bars, 166 warm) | 28 closed | flat | NET Rs 47,641
+[11:50:22]   MOTHERSON    11:43:00->11:49:30 162.16->162.80 +0.39% eye exit    Rs 850
+[11:50:22] no-dip watchlist 173 names | 166 in funnel (of 289 with bars, 166 warm) | 28 closed | flat | NET Rs 47,672
+[11:50:44] no-dip watchlist 173 names | 166 in funnel (of 289 with bars, 166 warm) | 28 closed | flat | NET Rs 47,672
+[11:51:06] no-dip watchlist 173 names | 166 in funnel (of 289 with bars, 166 warm) | 28 closed | flat | NET Rs 47,672
+[11:51:33] feed: 20 symbols fetched, 0 failed, 6s
+[11:51:33] quote batch 1: 429 -- backing off 2.5s, one retry
+[11:51:37] circuit band REJECTED for MOTHERSON: price 162.86 outside band 80000.0-120000.0 (wrong scrip?)
+[11:51:37] circuit bands: 169 of 173 names (1 rejected as implausible)
+[11:51:40]   IRFC         11:33:30->11:38:00 79.55->79.86 +0.39% displaced by RITES Rs 838
+[11:51:40]   IRCON        11:28:00->11:51:00 105.51->116.65 +10.56% eye exit    Rs 26,247
+[11:51:40]   RITES        11:38:30->11:51:00 201.70->211.40 +4.81% eye exit    Rs 11,879
+[11:51:40] no-dip watchlist 174 names | 166 in funnel (of 289 with bars, 166 warm) | 28 closed | flat | NET Rs 59,026
+[11:52:02]   RITES        11:38:30->11:51:30 201.70->211.08 +4.65% eye exit    Rs 11,483
+[11:52:02] no-dip watchlist 174 names | 166 in funnel (of 289 with bars, 166 warm) | 28 closed | flat | NET Rs 58,630
+[11:52:24] no-dip watchlist 174 names | 166 in funnel (of 289 with bars, 166 warm) | 28 closed | flat | NET Rs 58,630
+[11:52:46] no-dip watchlist 174 names | 166 in funnel (of 289 with bars, 166 warm) | 28 closed | flat | NET Rs 58,630
+[11:53:13] feed: 20 symbols fetched, 0 failed, 6s
+[11:53:57] feed: 149 symbols fetched, 2 failed, 43s
+[11:53:57] quote batch 1: 429 -- backing off 2.5s, one retry
+[11:54:01] circuit band REJECTED for MOTHERSON: price 162.56 outside band 80000.0-120000.0 (wrong scrip?)
+[11:54:01] circuit bands: 170 of 174 names (1 rejected as implausible)
+[11:54:10]   IRCON        11:28:00->11:53:00 105.51->119.06 +12.84% eye exit    Rs 31,955
+[11:54:10]   IRFC         11:33:30->11:53:00 79.55->80.85 +1.63% eye exit    Rs 3,948
+[11:54:10] no-dip watchlist 175 names | 167 in funnel (of 290 with bars, 167 warm) | 27 closed | flat | NET Rs 55,965
+[11:54:35]   IRFC         11:33:30->11:53:30 79.55->80.84 +1.62% eye exit    Rs 3,916
+[11:54:35] no-dip watchlist 175 names | 167 in funnel (of 290 with bars, 167 warm) | 27 closed | holding TEXRAIL | NET Rs 55,890
+[11:55:02] feed: 21 symbols fetched, 0 failed, 6s
+[11:55:03] circuit band REJECTED for MOTHERSON: price 162.71 outside band 80000.0-120000.0 (wrong scrip?)
+[11:55:03] circuit bands: 171 of 175 names (1 rejected as implausible)
+[11:55:06]   IRCON        11:28:00->11:54:30 105.51->119.10 +12.88% eye exit    Rs 32,050
+[11:55:06] no-dip watchlist 175 names | 168 in funnel (of 291 with bars, 168 warm) | 27 closed | flat | NET Rs 56,028
+[11:55:28] no-dip watchlist 175 names | 168 in funnel (of 291 with bars, 168 warm) | 27 closed | flat | NET Rs 56,028
+[11:55:51] no-dip watchlist 175 names | 168 in funnel (of 291 with bars, 168 warm) | 27 closed | flat | NET Rs 56,028
+[11:56:14] no-dip watchlist 175 names | 168 in funnel (of 291 with bars, 168 warm) | 27 closed | flat | NET Rs 56,028
+[11:56:41] feed: 20 symbols fetched, 0 failed, 6s
+[11:56:41] circuit band REJECTED for MOTHERSON: price 162.55 outside band 80000.0-120000.0 (wrong scrip?)
+[11:56:41] circuit bands: 171 of 175 names (1 rejected as implausible)
+[11:56:44]   IRFC         11:33:30->11:47:30 79.55->80.45 +1.13% displaced by RVNL Rs 2,691
+[11:56:44]   IRCON        11:28:00->11:56:30 105.51->119.18 +12.96% eye exit    Rs 32,239
+[11:56:44]   RVNL         11:48:00->11:56:30 205.61->208.99 +1.64% eye exit    Rs 3,970
+[11:56:44] no-dip watchlist 175 names | 168 in funnel (of 291 with bars, 168 warm) | 28 closed | flat | NET Rs 58,962
+[11:57:07] no-dip watchlist 175 names | 168 in funnel (of 291 with bars, 168 warm) | 28 closed | flat | NET Rs 58,962
+[11:57:29] no-dip watchlist 175 names | 168 in funnel (of 291 with bars, 168 warm) | 28 closed | flat | NET Rs 58,962
+[11:57:52] no-dip watchlist 175 names | 168 in funnel (of 291 with bars, 168 warm) | 28 closed | flat | NET Rs 58,962
+[11:58:19] feed: 20 symbols fetched, 0 failed, 6s
+[11:58:19] circuit band REJECTED for MOTHERSON: price 162.61 outside band 80000.0-120000.0 (wrong scrip?)
+[11:58:19] circuit bands: 171 of 175 names (1 rejected as implausible)
+[11:58:22]   IRFC         11:33:30->11:45:30 79.55->80.14 +0.74% displaced by RVNL Rs 1,717
+[11:58:22]   IRCON        11:28:00->11:57:00 105.51->119.87 +13.61% eye exit    Rs 33,873
+[11:58:22]   RVNL         11:46:00->11:58:00 205.10->208.39 +1.60% eye exit    Rs 3,870
+[11:58:22] no-dip watchlist 175 names | 168 in funnel (of 291 with bars, 168 warm) | 28 closed | flat | NET Rs 59,523
+[11:58:44] no-dip watchlist 175 names | 168 in funnel (of 292 with bars, 168 warm) | 28 closed | flat | NET Rs 59,523
+[11:59:06] no-dip watchlist 175 names | 168 in funnel (of 292 with bars, 168 warm) | 28 closed | flat | NET Rs 59,523
+[11:59:28] no-dip watchlist 176 names | 168 in funnel (of 292 with bars, 168 warm) | 28 closed | flat | NET Rs 59,523
+[11:59:56] feed: 20 symbols fetched, 0 failed, 6s
+[12:00:40] feed: 152 symbols fetched, 2 failed, 44s
+[12:00:40] circuit band REJECTED for MOTHERSON: price 162.6 outside band 80000.0-120000.0 (wrong scrip?)
+[12:00:40] circuit bands: 173 of 177 names (1 rejected as implausible)
+[12:00:50]   IRCON        11:28:00->11:52:30 105.51->118.97 +12.76% displaced by RVNL Rs 31,742
+[12:00:50]   IRFC         11:33:30->11:59:30 79.55->80.67 +1.41% eye exit    Rs 3,382
+[12:00:50]   RVNL         11:53:00->11:59:30 208.44->207.49 -0.46% eye exit    Rs -1,275
+[12:00:50] no-dip watchlist 178 names | 171 in funnel (of 295 with bars, 171 warm) | 28 closed | flat | NET Rs 53,912
+[12:01:16]   IRFC         11:33:30->12:00:00 79.55->80.72 +1.47% eye exit    Rs 3,539
+[12:01:16] no-dip watchlist 178 names | 171 in funnel (of 295 with bars, 171 warm) | 28 closed | holding RELIANCE,ICICIGI | NET Rs 53,839
+[12:01:44] feed: 22 symbols fetched, 0 failed, 6s
+[12:01:44] circuit band REJECTED for MOTHERSON: price 162.55 outside band 80000.0-120000.0 (wrong scrip?)
+[12:01:44] circuit bands: 174 of 178 names (1 rejected as implausible)
+[12:01:48]   RAILTEL      11:53:00->12:00:30 275.00->278.35 +1.22% eye exit    Rs 2,908
+[12:01:48] no-dip watchlist 178 names | 171 in funnel (of 295 with bars, 171 warm) | 28 closed | holding ICICIGI | NET Rs 58,323
+[12:02:10] no-dip watchlist 179 names | 172 in funnel (of 295 with bars, 172 warm) | 28 closed | holding ICICIGI | NET Rs 58,323
+[12:02:32] no-dip watchlist 179 names | 172 in funnel (of 295 with bars, 172 warm) | 28 closed | holding ICICIGI | NET Rs 58,323
+[12:02:55] no-dip watchlist 179 names | 172 in funnel (of 295 with bars, 172 warm) | 28 closed | holding ICICIGI | NET Rs 58,323
+[12:03:22] feed: 21 symbols fetched, 0 failed, 6s
+[12:03:22] circuit band REJECTED for MOTHERSON: price 162.57 outside band 80000.0-120000.0 (wrong scrip?)
+[12:03:22] circuit bands: 175 of 179 names (1 rejected as implausible)
+[12:03:25]   IRFC         11:33:30->11:56:00 79.55->81.03 +1.86% displaced by ALICON Rs 4,513
+[12:03:25]   ALICON       11:56:30->12:03:00 783.55->782.15 -0.18% eye exit    Rs 311
+[12:03:25] no-dip watchlist 179 names | 172 in funnel (of 295 with bars, 172 warm) | 29 closed | holding BDL | NET Rs 59,445
+[12:03:48] no-dip watchlist 179 names | 172 in funnel (of 295 with bars, 172 warm) | 29 closed | holding BDL | NET Rs 59,445
+[12:04:09] no-dip watchlist 179 names | 172 in funnel (of 295 with bars, 172 warm) | 29 closed | holding BDL | NET Rs 59,445
+[12:04:32] no-dip watchlist 179 names | 172 in funnel (of 295 with bars, 172 warm) | 29 closed | holding BDL | NET Rs 59,445
+[12:04:59] feed: 20 symbols fetched, 0 failed, 6s
+[12:04:59] circuit band REJECTED for MOTHERSON: price 162.7 outside band 80000.0-120000.0 (wrong scrip?)
+[12:04:59] circuit bands: 175 of 179 names (1 rejected as implausible)
+[12:05:02]   ALICON       11:56:30->12:04:30 783.55->777.75 -0.74% eye exit    Rs 1,715
+[12:05:02]   BDL          12:02:30->12:04:30 1121.60->1122.70 +0.10% eye exit    Rs 109
+[12:05:02] no-dip watchlist 179 names | 172 in funnel (of 295 with bars, 172 warm) | 30 closed | flat | NET Rs 61,048
+[12:05:25] no-dip watchlist 179 names | 172 in funnel (of 295 with bars, 172 warm) | 30 closed | flat | NET Rs 61,048
+[12:05:47] no-dip watchlist 179 names | 172 in funnel (of 295 with bars, 172 warm) | 30 closed | flat | NET Rs 61,048
+[12:06:10] no-dip watchlist 179 names | 172 in funnel (of 295 with bars, 172 warm) | 30 closed | flat | NET Rs 61,048
+[12:06:38] feed: 20 symbols fetched, 0 failed, 6s
+[12:07:24] feed: 154 symbols fetched, 2 failed, 45s
+[12:07:24] quote batch 1: 429 -- backing off 2.5s, one retry
+[12:07:28] quote batch 1 HTTP 429: {"data":{"805":"Too many requests. Further requests may result in the user being blocked."},"status":"failed"}
+[12:07:28] circuit bands: 175 of 179 names
+[12:07:39]   RAILTEL      11:53:00->11:56:00 275.00->278.25 +1.18% displaced by ALICON Rs 2,818
+[12:07:39]   IRFC         11:33:30->11:59:00 79.55->80.69 +1.43% displaced by SAMMAANCAP Rs 3,445
+[12:07:39]   ALICON       11:56:30->12:05:00 783.55->780.25 -0.42% eye exit    Rs 917
+[12:07:39]   SAMMAANCAP   11:59:30->12:06:30 137.88->137.92 +0.03% eye exit    Rs -63
+[12:07:39] no-dip watchlist 179 names | 172 in funnel (of 295 with bars, 172 warm) | 30 closed | holding SBC | NET Rs 58,784
+[12:08:07]   IRFC         11:33:30->11:58:30 79.55->80.93 +1.73% displaced by TEXRAIL Rs 4,199
+[12:08:07]   TEXRAIL      11:59:00->12:07:00 134.50->133.37 -0.84% eye exit    Rs 1,964
+[12:08:07]   SBC          12:05:30->12:07:00 58.13->58.14 +0.02% eye exit    Rs -93
+[12:08:07] no-dip watchlist 180 names | 172 in funnel (of 295 with bars, 172 warm) | 31 closed | flat | NET Rs 61,608
+[12:08:34] feed: 20 symbols fetched, 0 failed, 6s
+[12:08:35] circuit band REJECTED for MOTHERSON: price 163.4 outside band 80000.0-120000.0 (wrong scrip?)
+[12:08:35] circuit bands: 176 of 180 names (1 rejected as implausible)
+[12:08:37] no-dip watchlist 180 names | 173 in funnel (of 296 with bars, 173 warm) | 31 closed | flat | NET Rs 61,608
+[12:09:00] no-dip watchlist 180 names | 173 in funnel (of 296 with bars, 173 warm) | 31 closed | flat | NET Rs 61,608
+[12:09:22] no-dip watchlist 180 names | 173 in funnel (of 296 with bars, 173 warm) | 31 closed | flat | NET Rs 61,608
+[12:09:45] no-dip watchlist 180 names | 173 in funnel (of 296 with bars, 173 warm) | 31 closed | flat | NET Rs 61,608
+[12:10:12] feed: 20 symbols fetched, 0 failed, 6s
+[12:10:12] quote batch 1: 429 -- backing off 2.5s, one retry
+[12:10:16] circuit band REJECTED for MOTHERSON: price 163.44 outside band 80000.0-120000.0 (wrong scrip?)
+[12:10:16] circuit bands: 177 of 181 names (1 rejected as implausible)
+[12:10:19]   ALICON       11:56:30->12:03:30 783.55->780.90 -0.34% displaced by LCCPROJECT Rs 710
+[12:10:19]   LCCPROJECT   12:04:00->12:09:30 154.08->154.99 +0.59% eye exit    Rs 242
+[12:10:19] no-dip watchlist 181 names | 174 in funnel (of 298 with bars, 174 warm) | 31 closed | holding WSTCSTPAPR | NET Rs 61,600
+[12:10:42] no-dip watchlist 181 names | 174 in funnel (of 298 with bars, 174 warm) | 31 closed | holding WSTCSTPAPR | NET Rs 61,600
+[12:11:04] no-dip watchlist 181 names | 174 in funnel (of 298 with bars, 174 warm) | 31 closed | holding WSTCSTPAPR | NET Rs 61,600
+[12:11:26] no-dip watchlist 181 names | 174 in funnel (of 298 with bars, 174 warm) | 31 closed | holding WSTCSTPAPR | NET Rs 61,600
+[12:11:53] feed: 20 symbols fetched, 0 failed, 6s
+[12:11:53] circuit band REJECTED for MOTHERSON: price 163.38 outside band 80000.0-120000.0 (wrong scrip?)
+[12:11:53] circuit bands: 177 of 181 names (1 rejected as implausible)
+[12:11:56]   LCCPROJECT   12:04:00->12:11:30 154.08->154.78 +0.45% eye exit    Rs 174
+[12:11:56]   WSTCSTPAPR   12:10:00->12:11:30 748.00->747.45 -0.07% eye exit    Rs -319
+[12:11:56] no-dip watchlist 181 names | 174 in funnel (of 298 with bars, 174 warm) | 32 closed | flat | NET Rs 61,348
+[12:12:19] no-dip watchlist 183 names | 175 in funnel (of 298 with bars, 175 warm) | 32 closed | flat | NET Rs 61,348
+[12:12:42] no-dip watchlist 183 names | 175 in funnel (of 298 with bars, 175 warm) | 32 closed | flat | NET Rs 61,348
+[12:13:05] no-dip watchlist 183 names | 175 in funnel (of 298 with bars, 175 warm) | 32 closed | flat | NET Rs 61,348
+[12:13:32] feed: 20 symbols fetched, 0 failed, 6s
+[12:14:18] feed: 158 symbols fetched, 2 failed, 46s
+[12:14:19] circuit band REJECTED for MOTHERSON: price 163.09 outside band 80000.0-120000.0 (wrong scrip?)
+[12:14:19] circuit bands: 179 of 183 names (1 rejected as implausible)
+[12:14:28]   ALICON       11:56:30->11:59:30 783.55->781.90 -0.21% displaced by ARSSBL Rs 391
+[12:14:28]   ARSSBL       12:00:00->12:03:30 521.00->520.70 -0.06% displaced by LCCPROJECT Rs -279
+[12:14:28]   KAJARIACER   11:59:00->12:13:00 1252.60->1260.30 +0.61% eye exit    Rs 1,396
+[12:14:28]   LCCPROJECT   12:04:00->12:13:00 154.08->154.51 +0.28% eye exit    Rs 86
+[12:14:28] no-dip watchlist 184 names | 177 in funnel (of 299 with bars, 177 warm) | 32 closed | flat | NET Rs 60,414
+[12:14:55]   KAJARIACER   11:59:00->12:13:30 1252.60->1260.00 +0.59% eye exit    Rs 1,337
+[12:14:55] no-dip watchlist 184 names | 177 in funnel (of 299 with bars, 177 warm) | 32 closed | holding MAHABANK | NET Rs 60,281
+[12:15:22] feed: 21 symbols fetched, 0 failed, 6s
+[12:15:22] quote batch 1: 429 -- backing off 2.5s, one retry
+[12:15:27] quote batch 1 HTTP 429: {"data":{"805":"Too many requests. Further requests may result in the user being blocked."},"status":"failed"}
+[12:15:27] circuit bands: 179 of 184 names
+[12:15:30]   MAHABANK     12:13:30->12:15:00 80.66->80.67 +0.01% eye exit    Rs -105
+[12:15:30] no-dip watchlist 184 names | 177 in funnel (of 299 with bars, 177 warm) | 33 closed | flat | NET Rs 60,250
+[12:15:53] no-dip watchlist 184 names | 177 in funnel (of 299 with bars, 177 warm) | 33 closed | flat | NET Rs 60,250
+[12:16:17] no-dip watchlist 184 names | 177 in funnel (of 299 with bars, 177 warm) | 33 closed | flat | NET Rs 60,250
+[12:16:40] no-dip watchlist 184 names | 177 in funnel (of 299 with bars, 177 warm) | 33 closed | flat | NET Rs 60,250
+[12:17:06] feed: 20 symbols fetched, 0 failed, 6s
+[12:17:07] circuit band REJECTED for MOTHERSON: price 162.91 outside band 80000.0-120000.0 (wrong scrip?)
+[12:17:07] circuit bands: 180 of 184 names (1 rejected as implausible)
+[12:17:10]   RVNL         12:13:30->12:17:00 206.72->206.10 -0.30% eye exit    Rs -885
+[12:17:10]   THELEELA     12:15:30->12:17:00 575.90->578.35 +0.43% eye exit    Rs 927
+[12:17:10] no-dip watchlist 184 names | 177 in funnel (of 299 with bars, 177 warm) | 34 closed | flat | NET Rs 60,396
+[12:17:32] no-dip watchlist 184 names | 177 in funnel (of 299 with bars, 177 warm) | 34 closed | flat | NET Rs 60,396
+[12:17:54] no-dip watchlist 184 names | 177 in funnel (of 299 with bars, 177 warm) | 34 closed | flat | NET Rs 60,396
+[12:18:16] no-dip watchlist 184 names | 177 in funnel (of 299 with bars, 177 warm) | 34 closed | flat | NET Rs 60,396
+[12:18:43] feed: 20 symbols fetched, 0 failed, 6s
+[12:18:43] circuit band REJECTED for MOTHERSON: price 163.0 outside band 80000.0-120000.0 (wrong scrip?)
+[12:18:43] circuit bands: 180 of 184 names (1 rejected as implausible)
+[12:18:47]   ALICON       12:15:30->12:17:00 773.40->780.00 +0.85% eye exit    Rs -2,268
+[12:18:47]   THELEELA     12:12:00->12:17:30 573.95->582.65 +1.52% circuit guard Rs 3,648
+[12:18:47] no-dip watchlist 184 names | 177 in funnel (of 299 with bars, 177 warm) | 34 closed | holding GPPL,ABSMARINE | NET Rs 61,610
+[12:19:09] no-dip watchlist 184 names | 177 in funnel (of 299 with bars, 177 warm) | 34 closed | holding GPPL,ABSMARINE | NET Rs 61,610
+[12:19:31] no-dip watchlist 184 names | 177 in funnel (of 299 with bars, 177 warm) | 34 closed | holding GPPL,ABSMARINE | NET Rs 61,610
+[12:19:55] no-dip watchlist 185 names | 177 in funnel (of 299 with bars, 177 warm) | 34 closed | holding GPPL,ABSMARINE | NET Rs 61,610
+[12:20:22] feed: 20 symbols fetched, 0 failed, 6s
+[12:21:09] feed: 160 symbols fetched, 2 failed, 46s
+[12:21:09] quote batch 1: 429 -- backing off 2.5s, one retry
+[12:21:13] quote batch 1 HTTP 429: {"data":{"805":"Too many requests. Further requests may result in the user being blocked."},"status":"failed"}
+[12:21:13] circuit bands: 180 of 185 names
+[12:21:23]   LCCPROJECT   12:04:00->12:10:00 154.08->154.82 +0.48% displaced by DELTACORP Rs 187
+[12:21:23]   KAJARIACER   11:59:00->12:10:30 1252.60->1262.00 +0.75% displaced by BLEL Rs 1,735
+[12:21:23]   DELTACORP    12:10:30->12:20:00 86.25->84.90 -1.57% eye exit    Rs 3,777
+[12:21:23]   BLEL         12:11:00->12:20:00 508.40->513.65 +1.03% eye exit    Rs 2,441
+[12:21:23] no-dip watchlist 186 names | 179 in funnel (of 301 with bars, 179 warm) | 34 closed | flat | NET Rs 67,071
+[12:21:48]   DELTACORP    12:10:30->12:20:30 86.25->84.90 -1.57% eye exit    Rs 3,777
+[12:21:48] no-dip watchlist 186 names | 179 in funnel (of 302 with bars, 179 warm) | 34 closed | holding TEXRAIL,SUNTV | NET Rs 67,044
+[12:22:16] feed: 22 symbols fetched, 0 failed, 6s
+[12:22:16] quote batch 1: 429 -- backing off 2.5s, one retry
+[12:22:20] circuit band REJECTED for MOTHERSON: price 163.2 outside band 80000.0-120000.0 (wrong scrip?)
+[12:22:20] circuit bands: 182 of 186 names (1 rejected as implausible)
+[12:22:23]   TEXRAIL      12:20:30->12:22:00 132.87->133.35 +0.36% eye exit    Rs 767
+[12:22:23] no-dip watchlist 186 names | 179 in funnel (of 302 with bars, 179 warm) | 35 closed | holding SUNTV | NET Rs 68,039
+[12:22:46] no-dip watchlist 186 names | 179 in funnel (of 302 with bars, 179 warm) | 35 closed | holding SUNTV | NET Rs 68,039
+[12:23:09] no-dip watchlist 186 names | 179 in funnel (of 302 with bars, 179 warm) | 35 closed | holding SUNTV,PRESTIGE | NET Rs 67,921
+[12:23:30] no-dip watchlist 186 names | 179 in funnel (of 302 with bars, 179 warm) | 35 closed | holding SUNTV,PRESTIGE | NET Rs 67,921
+[12:23:58] feed: 22 symbols fetched, 0 failed, 6s
+[12:23:58] circuit band REJECTED for MOTHERSON: price 163.26 outside band 80000.0-120000.0 (wrong scrip?)
+[12:23:58] circuit bands: 182 of 186 names (1 rejected as implausible)
+[12:24:01]   BLEL         12:11:00->12:15:00 508.40->507.00 -0.28% displaced by THELEELA Rs -823
+[12:24:02]   THELEELA     12:15:30->12:17:30 575.90->582.65 +1.17% circuit guard Rs 2,793
+[12:24:02]   GPPL         12:18:00->12:22:30 165.55->165.52 -0.02% eye exit    Rs -181
+[12:24:02]   SUNTV        12:21:00->12:23:30 628.70->629.70 +0.16% eye exit    Rs -533
+[12:24:02] no-dip watchlist 186 names | 179 in funnel (of 302 with bars, 179 warm) | 37 closed | holding RAILTEL | NET Rs 65,704
+[12:24:24] no-dip watchlist 186 names | 179 in funnel (of 302 with bars, 179 warm) | 37 closed | holding RAILTEL | NET Rs 65,704
+[12:24:47] no-dip watchlist 186 names | 179 in funnel (of 302 with bars, 179 warm) | 37 closed | holding RAILTEL | NET Rs 65,704
+[12:25:09] no-dip watchlist 186 names | 179 in funnel (of 303 with bars, 179 warm) | 37 closed | holding RAILTEL | NET Rs 65,704
+[12:25:36] feed: 20 symbols fetched, 0 failed, 6s
+[12:25:36] circuit band REJECTED for MOTHERSON: price 163.29 outside band 80000.0-120000.0 (wrong scrip?)
+[12:25:36] circuit bands: 183 of 187 names (1 rejected as implausible)
+[12:25:40]   DELTACORP    12:10:30->12:18:00 86.25->85.23 -1.18% displaced by WHIRLPOOL Rs 2,820
+[12:25:40]   WHIRLPOOL    12:18:30->12:25:00 927.10->939.45 +1.33% eye exit    Rs 3,186
+[12:25:40]   RAILTEL      12:23:00->12:25:00 274.00->273.60 -0.15% eye exit    Rs -500
+[12:25:40] no-dip watchlist 187 names | 180 in funnel (of 303 with bars, 180 warm) | 38 closed | flat | NET Rs 68,147
+[12:26:11]   WHIRLPOOL    12:18:30->12:25:30 927.10->940.00 +1.39% eye exit    Rs 3,334
+[12:26:11]   RAILTEL      12:23:00->12:25:30 274.00->273.50 -0.18% eye exit    Rs -592
+[12:26:11] no-dip watchlist 187 names | 180 in funnel (of 303 with bars, 180 warm) | 38 closed | flat | NET Rs 68,204
+[12:26:35]   GPPL         12:18:00->12:19:30 165.55->165.50 -0.03% displaced by MOTHERSON Rs -211
+[12:26:35]   MOTHERSON    12:20:00->12:25:30 163.09->163.27 +0.11% eye exit    Rs 140
+[12:26:35] no-dip watchlist 187 names | 180 in funnel (of 303 with bars, 180 warm) | 38 closed | flat | NET Rs 68,905
+[12:26:57]   MOTHERSON    12:20:00->12:26:00 163.09->163.27 +0.11% eye exit    Rs 140
+[12:26:57] no-dip watchlist 187 names | 180 in funnel (of 303 with bars, 180 warm) | 38 closed | flat | NET Rs 68,905
+[12:27:24] feed: 20 symbols fetched, 0 failed, 6s
+[12:28:12] feed: 162 symbols fetched, 2 failed, 47s
+[12:28:12] circuit band REJECTED for MOTHERSON: price 163.27 outside band 80000.0-120000.0 (wrong scrip?)
+[12:28:12] circuit bands: 183 of 187 names (1 rejected as implausible)
+[12:28:23]   AVANTEL      11:23:30->11:23:30 153.00->153.08 +0.05% displaced by HDFCBANK Rs -5
+[12:28:23]   UJJIVANSFB   11:25:30->11:27:30 67.04->67.08 +0.06% displaced by IRCON Rs 13
+[12:28:23]   HDFCBANK     11:24:00->11:33:00 716.25->717.45 +0.17% displaced by IRFC Rs 283
+[12:28:23]   BLEL         12:11:00->12:21:00 508.40->510.10 +0.33% displaced by RITES Rs 699
+[12:28:23]   DELTACORP    12:10:30->12:26:00 86.25->85.24 -1.17% eye exit    Rs 2,791
+[12:28:23]   RITES        12:21:30->12:27:00 215.40->216.27 +0.40% eye exit    Rs 873
+[12:28:23] no-dip watchlist 189 names | 181 in funnel (of 303 with bars, 181 warm) | 35 closed | holding ADANIPOWER | NET Rs 64,682
+[12:28:52]   CHENNPETRO   12:20:30->12:27:30 1463.00->1465.90 +0.20% eye exit    Rs 358
+[12:28:52] no-dip watchlist 189 names | 181 in funnel (of 303 with bars, 181 warm) | 35 closed | holding ADANIPOWER | NET Rs 65,688
+[12:29:19] feed: 21 symbols fetched, 0 failed, 6s
+[12:29:20] circuit band REJECTED for MOTHERSON: price 163.29 outside band 80000.0-120000.0 (wrong scrip?)
+[12:29:20] circuit bands: 185 of 189 names (1 rejected as implausible)
+[12:29:24]   ALICON       12:20:30->12:29:00 787.10->809.80 +2.88% eye exit    Rs 7,058
+[12:29:24]   ADANIPOWER   12:26:30->12:29:00 204.06->203.85 -0.10% eye exit    Rs -393
+[12:29:24] no-dip watchlist 189 names | 182 in funnel (of 304 with bars, 182 warm) | 36 closed | flat | NET Rs 72,389
+[12:29:47] no-dip watchlist 189 names | 182 in funnel (of 304 with bars, 182 warm) | 36 closed | flat | NET Rs 72,389
+[12:30:09] no-dip watchlist 189 names | 182 in funnel (of 304 with bars, 182 warm) | 36 closed | flat | NET Rs 72,389
+[12:30:31] no-dip watchlist 189 names | 182 in funnel (of 304 with bars, 182 warm) | 36 closed | flat | NET Rs 72,389
+[12:30:59] feed: 20 symbols fetched, 0 failed, 6s
+[12:30:59] circuit band REJECTED for MOTHERSON: price 163.24 outside band 80000.0-120000.0 (wrong scrip?)
+[12:30:59] circuit bands: 185 of 189 names (1 rejected as implausible)
+[12:31:02]   ALICON       12:20:30->12:30:30 787.10->811.60 +3.11% eye exit    Rs 7,629
+[12:31:02] no-dip watchlist 189 names | 182 in funnel (of 304 with bars, 182 warm) | 36 closed | holding IRCON | NET Rs 72,553
+[12:31:25] no-dip watchlist 189 names | 182 in funnel (of 304 with bars, 182 warm) | 36 closed | holding VARROC | NET Rs 72,421
+[12:31:47] no-dip watchlist 189 names | 182 in funnel (of 304 with bars, 182 warm) | 36 closed | holding VARROC | NET Rs 72,752
+[12:32:09] no-dip watchlist 190 names | 183 in funnel (of 305 with bars, 183 warm) | 36 closed | holding VARROC | NET Rs 72,550
+[12:32:37] feed: 21 symbols fetched, 0 failed, 6s
+[12:32:37] quote batch 1: 429 -- backing off 2.5s, one retry
+[12:32:41] circuit band REJECTED for MOTHERSON: price 163.34 outside band 80000.0-120000.0 (wrong scrip?)
+[12:32:41] circuit bands: 186 of 190 names (1 rejected as implausible)
+[12:32:45]   DELTACORP    12:10:30->12:22:30 86.25->85.27 -1.14% displaced by VARROC Rs 2,704
+[12:32:45]   ALICON       12:20:30->12:32:00 787.10->818.45 +3.98% eye exit    Rs 9,799
+[12:32:45]   VARROC       12:23:00->12:32:00 859.00->865.40 +0.75% eye exit    Rs 1,726
+[12:32:45] no-dip watchlist 190 names | 183 in funnel (of 305 with bars, 183 warm) | 36 closed | flat | NET Rs 77,162
+[12:33:09]   ALICON       12:20:30->12:32:30 787.10->818.45 +3.98% eye exit    Rs 9,799
+[12:33:09]   VARROC       12:23:00->12:32:30 859.00->865.25 +0.73% eye exit    Rs 1,682
+[12:33:09] no-dip watchlist 191 names | 183 in funnel (of 305 with bars, 183 warm) | 36 closed | flat | NET Rs 77,119
+[12:33:31] no-dip watchlist 191 names | 183 in funnel (of 305 with bars, 183 warm) | 36 closed | flat | NET Rs 77,119
+[12:33:53] no-dip watchlist 191 names | 183 in funnel (of 305 with bars, 183 warm) | 36 closed | holding VALIANTORG | NET Rs 77,012
+[12:34:21] feed: 21 symbols fetched, 0 failed, 6s
+[12:35:09] feed: 165 symbols fetched, 2 failed, 48s
+[12:35:09] quote batch 1: 429 -- backing off 2.5s, one retry
+[12:35:13] circuit band REJECTED for MOTHERSON: price 163.45 outside band 80000.0-120000.0 (wrong scrip?)
+[12:35:13] circuit bands: 187 of 191 names (1 rejected as implausible)
+[12:35:25]   BLEL         12:11:00->12:12:00 508.40->509.20 +0.16% displaced by ECLERX Rs 257
+[12:35:25]   ECLERX       12:12:30->12:32:00 1834.50->1834.20 -0.02% eye exit    Rs -176
+[12:35:25]   ALICON       12:20:30->12:34:00 787.10->809.45 +2.84% eye exit    Rs 6,947
+[12:35:25]   SAMMAANCAP   12:32:30->12:34:00 138.10->137.87 -0.17% eye exit    Rs -552
+[12:35:25] no-dip watchlist 191 names | 184 in funnel (of 306 with bars, 184 warm) | 37 closed | flat | NET Rs 70,965
+[12:35:52] feed: 20 symbols fetched, 0 failed, 6s
+[12:35:52] quote batch 1: 429 -- backing off 2.5s, one retry
+[12:35:56] quote batch 1 HTTP 429: {"data":{"805":"Too many requests. Further requests may result in the user being blocked."},"status":"failed"}
+[12:35:56] circuit bands: 187 of 191 names
+[12:36:07]   ECLERX       12:12:30->12:25:30 1834.50->1840.40 +0.32% displaced by WHIRLPOOL Rs 667
+[12:36:07]   ALICON       12:20:30->12:35:30 787.10->823.20 +4.59% eye exit    Rs 11,305
+[12:36:07]   WHIRLPOOL    12:26:00->12:35:30 936.05->915.40 -2.21% eye exit    Rs 5,378
+[12:36:07] no-dip watchlist 191 names | 184 in funnel (of 306 with bars, 184 warm) | 37 closed | flat | NET Rs 82,095
+[12:36:31] no-dip watchlist 191 names | 184 in funnel (of 306 with bars, 184 warm) | 37 closed | flat | NET Rs 82,095
+[12:36:53] no-dip watchlist 191 names | 184 in funnel (of 306 with bars, 184 warm) | 37 closed | flat | NET Rs 82,095
+[12:37:16] no-dip watchlist 191 names | 184 in funnel (of 306 with bars, 184 warm) | 37 closed | flat | NET Rs 82,095
+[12:37:43] feed: 20 symbols fetched, 0 failed, 6s
+[12:37:43] circuit band REJECTED for MOTHERSON: price 163.25 outside band 80000.0-120000.0 (wrong scrip?)
+[12:37:43] circuit bands: 188 of 192 names (1 rejected as implausible)
+[12:37:46]   ALICON       12:20:30->12:37:30 787.10->819.15 +4.07% eye exit    Rs 10,021
+[12:37:46]   WHIRLPOOL    12:26:00->12:37:30 936.05->915.25 -2.22% eye exit    Rs 5,418
+[12:37:46] no-dip watchlist 192 names | 185 in funnel (of 306 with bars, 185 warm) | 37 closed | flat | NET Rs 80,852
+[12:38:09] no-dip watchlist 193 names | 185 in funnel (of 306 with bars, 185 warm) | 37 closed | flat | NET Rs 80,852
+[12:38:31] no-dip watchlist 193 names | 185 in funnel (of 306 with bars, 185 warm) | 37 closed | holding HTEL | NET Rs 80,832
+[12:38:53] no-dip watchlist 193 names | 185 in funnel (of 306 with bars, 185 warm) | 37 closed | holding HTEL | NET Rs 80,832
+[12:39:21] feed: 21 symbols fetched, 0 failed, 6s
+[12:39:21] circuit band REJECTED for MOTHERSON: price 163.28 outside band 80000.0-120000.0 (wrong scrip?)
+[12:39:21] circuit bands: 189 of 193 names (1 rejected as implausible)
+[12:39:25]   ALICON       12:20:30->12:38:00 787.10->841.80 +6.95% circuit guard Rs 17,199
+[12:39:25]   WHIRLPOOL    12:26:00->12:39:00 936.05->913.95 -2.36% eye exit    Rs 5,765
+[12:39:25] no-dip watchlist 193 names | 186 in funnel (of 307 with bars, 186 warm) | 37 closed | holding ALICON | NET Rs 89,558
+[12:39:48] no-dip watchlist 194 names | 187 in funnel (of 307 with bars, 187 warm) | 37 closed | holding C2C | NET Rs 88,439
+[12:40:10] no-dip watchlist 194 names | 187 in funnel (of 307 with bars, 187 warm) | 37 closed | holding C2C,CARBORUNIV | NET Rs 88,494
+[12:40:32] no-dip watchlist 194 names | 187 in funnel (of 307 with bars, 187 warm) | 37 closed | holding C2C,CARBORUNIV | NET Rs 88,494
+[12:41:01] feed: 22 symbols fetched, 0 failed, 6s
+[12:41:49] feed: 167 symbols fetched, 2 failed, 48s
+[12:41:49] circuit band REJECTED for MOTHERSON: price 163.28 outside band 80000.0-120000.0 (wrong scrip?)
+[12:41:49] circuit bands: 190 of 194 names (1 rejected as implausible)
+[12:42:01]   ECLERX       12:12:30->12:22:30 1834.50->1839.40 +0.27% displaced by VARROC Rs 531
+[12:42:01]   VARROC       12:23:00->12:39:30 859.00->864.25 +0.61% eye exit    Rs 1,392
+[12:42:01]   SAMBHV       12:38:30->12:40:30 165.73->165.84 +0.07% eye exit    Rs 30
+[12:42:01] no-dip watchlist 194 names | 187 in funnel (of 307 with bars, 187 warm) | 38 closed | holding RITES | NET Rs 84,953
+[12:42:29]   SAMBHV       12:38:30->12:41:00 165.73->165.86 +0.08% eye exit    Rs 60
+[12:42:29]   RITES        12:40:00->12:41:30 218.14->217.00 -0.52% eye exit    Rs 1,171
+[12:42:29] no-dip watchlist 194 names | 187 in funnel (of 307 with bars, 187 warm) | 39 closed | flat | NET Rs 85,098
+[12:42:56] feed: 20 symbols fetched, 0 failed, 6s
+[12:42:56] circuit band REJECTED for MOTHERSON: price 163.24 outside band 80000.0-120000.0 (wrong scrip?)
+[12:42:56] circuit bands: 190 of 194 names (1 rejected as implausible)
+[12:43:00]   ALICON       12:38:30->12:41:30 842.00->832.30 -1.15% eye exit    Rs -3,006
+[12:43:00] no-dip watchlist 194 names | 187 in funnel (of 308 with bars, 187 warm) | 39 closed | flat | NET Rs 82,032
+[12:43:24] no-dip watchlist 194 names | 187 in funnel (of 308 with bars, 187 warm) | 39 closed | flat | NET Rs 82,032
+[12:43:46] no-dip watchlist 195 names | 188 in funnel (of 308 with bars, 188 warm) | 39 closed | flat | NET Rs 82,032
+[12:44:09] no-dip watchlist 195 names | 188 in funnel (of 308 with bars, 188 warm) | 39 closed | flat | NET Rs 82,032
+[12:44:36] feed: 20 symbols fetched, 0 failed, 6s
+[12:44:37] quote batch 1: 429 -- backing off 2.5s, one retry
+[12:44:41] circuit band REJECTED for MOTHERSON: price 163.29 outside band 80000.0-120000.0 (wrong scrip?)
+[12:44:41] circuit bands: 191 of 195 names (1 rejected as implausible)
+[12:44:44] no-dip watchlist 195 names | 188 in funnel (of 308 with bars, 188 warm) | 39 closed | flat | NET Rs 82,032
+[12:45:08] no-dip watchlist 195 names | 188 in funnel (of 308 with bars, 188 warm) | 39 closed | flat | NET Rs 82,032
+[12:45:31] no-dip watchlist 195 names | 188 in funnel (of 308 with bars, 188 warm) | 39 closed | flat | NET Rs 82,032
+[12:45:54] no-dip watchlist 195 names | 188 in funnel (of 308 with bars, 188 warm) | 39 closed | holding HTEL | NET Rs 81,867
+[12:46:22] feed: 21 symbols fetched, 0 failed, 6s
+[12:46:22] circuit band REJECTED for MOTHERSON: price 163.35 outside band 80000.0-120000.0 (wrong scrip?)
+[12:46:22] circuit bands: 191 of 195 names (1 rejected as implausible)
+[12:46:34]   ABSMARINE    12:42:30->12:45:30 350.00->352.00 +0.57% eye exit    Rs 231
+[12:46:34] no-dip watchlist 195 names | 188 in funnel (of 307 with bars, 188 warm) | 40 closed | holding HTEL | NET Rs 82,164
+[12:46:59]   HTEL         12:45:00->12:46:30 75.67->75.56 -0.15% eye exit    Rs -126
+[12:46:59] no-dip watchlist 195 names | 188 in funnel (of 308 with bars, 188 warm) | 41 closed | flat | NET Rs 82,137
+[12:47:21] no-dip watchlist 195 names | 188 in funnel (of 308 with bars, 188 warm) | 41 closed | holding MOTHERSON | NET Rs 82,001
+[12:47:43] no-dip watchlist 195 names | 188 in funnel (of 308 with bars, 188 warm) | 41 closed | holding MOTHERSON,PRESTIGE | NET Rs 81,755
+[12:48:11] feed: 21 symbols fetched, 1 failed, 6s
+[12:49:00] feed: 169 symbols fetched, 1 failed, 49s
+[12:49:00] circuit band REJECTED for MOTHERSON: price 163.51 outside band 80000.0-120000.0 (wrong scrip?)
+[12:49:00] circuit bands: 191 of 195 names (1 rejected as implausible)
+[12:49:13]   VARROC       12:23:00->12:25:30 859.00->862.00 +0.35% displaced by WHIRLPOOL Rs 737
+[12:49:13]   WHIRLPOOL    12:26:00->12:48:00 936.05->907.90 -3.01% eye exit    Rs 7,381
+[12:49:13]   CARBORUNIV   12:38:30->12:48:00 1248.70->1260.10 +0.91% eye exit    Rs 2,144
+[12:49:13] no-dip watchlist 196 names | 188 in funnel (of 308 with bars, 188 warm) | 39 closed | flat | NET Rs 92,737
+[12:49:42] no-dip watchlist 196 names | 188 in funnel (of 308 with bars, 188 warm) | 39 closed | holding PVRINOX | NET Rs 94,021
+[12:50:10] feed: 21 symbols fetched, 0 failed, 6s
+[12:50:10] circuit band REJECTED for MOTHERSON: price 163.55 outside band 80000.0-120000.0 (wrong scrip?)
+[12:50:10] circuit bands: 192 of 196 names (1 rejected as implausible)
+[12:50:15]   PVRINOX      12:48:30->12:50:00 1244.90->1248.40 +0.28% eye exit    Rs 564
+[12:50:15] no-dip watchlist 196 names | 189 in funnel (of 309 with bars, 189 warm) | 40 closed | flat | NET Rs 93,007
+[12:50:38] no-dip watchlist 196 names | 189 in funnel (of 309 with bars, 189 warm) | 40 closed | flat | NET Rs 93,007
+[12:51:01] no-dip watchlist 196 names | 189 in funnel (of 309 with bars, 189 warm) | 40 closed | flat | NET Rs 93,007
+[12:51:23] no-dip watchlist 196 names | 189 in funnel (of 309 with bars, 189 warm) | 40 closed | flat | NET Rs 93,007
+[12:51:50] feed: 20 symbols fetched, 0 failed, 6s
+[12:51:50] quote batch 1: 429 -- backing off 2.5s, one retry
+[12:51:54] circuit band REJECTED for MOTHERSON: price 163.45 outside band 80000.0-120000.0 (wrong scrip?)
+[12:51:54] circuit bands: 192 of 196 names (1 rejected as implausible)
+[12:51:58]   WHIRLPOOL    12:26:00->12:41:00 936.05->909.35 -2.85% displaced by RAILTEL Rs 6,994
+[12:51:58]   RAILTEL      12:41:30->12:51:30 275.45->272.95 -0.91% eye exit    Rs 2,132
+[12:51:58] no-dip watchlist 196 names | 189 in funnel (of 309 with bars, 189 warm) | 41 closed | holding ALICON | NET Rs 95,635
+[12:52:22] no-dip watchlist 196 names | 189 in funnel (of 309 with bars, 189 warm) | 41 closed | holding ALICON | NET Rs 95,635
+[12:52:44]   CARBORUNIV   12:38:30->12:46:00 1248.70->1260.20 +0.92% displaced by MOTHERSON Rs 2,164
+[12:52:44]   MOTHERSON    12:46:30->12:52:00 163.50->163.50 +0.00% eye exit    Rs -136
+[12:52:44] no-dip watchlist 196 names | 189 in funnel (of 309 with bars, 189 warm) | 41 closed | flat | NET Rs 94,366
+[12:53:06] no-dip watchlist 196 names | 189 in funnel (of 309 with bars, 189 warm) | 41 closed | flat | NET Rs 94,366
+[12:53:34] feed: 20 symbols fetched, 0 failed, 6s
+[12:53:34] quote batch 1: 429 -- backing off 2.5s, one retry
+[12:53:38] quote batch 1 HTTP 429: {"data":{"805":"Too many requests. Further requests may result in the user being blocked."},"status":"failed"}
+[12:53:38] circuit bands: 192 of 196 names
+[12:53:41]   RAILTEL      12:41:30->12:53:00 275.45->273.00 -0.89% eye exit    Rs 2,087
+[12:53:41] no-dip watchlist 196 names | 189 in funnel (of 309 with bars, 189 warm) | 41 closed | flat | NET Rs 94,320
+[12:54:05] no-dip watchlist 196 names | 189 in funnel (of 309 with bars, 189 warm) | 41 closed | flat | NET Rs 94,320
+[12:54:27] no-dip watchlist 197 names | 190 in funnel (of 309 with bars, 190 warm) | 41 closed | flat | NET Rs 94,320
+[12:54:50] no-dip watchlist 197 names | 190 in funnel (of 309 with bars, 190 warm) | 41 closed | flat | NET Rs 94,320
+[12:55:18] feed: 20 symbols fetched, 0 failed, 6s
+[12:56:09] feed: 173 symbols fetched, 2 failed, 50s
+[12:56:09] circuit band REJECTED for MOTHERSON: price 163.57 outside band 80000.0-120000.0 (wrong scrip?)
+[12:56:09] circuit bands: 194 of 198 names (1 rejected as implausible)
+[12:56:23]   CARBORUNIV   12:38:30->12:44:00 1248.70->1258.10 +0.75% displaced by RATEGAIN Rs 1,744
+[12:56:23]   RAILTEL      12:41:30->12:53:30 275.45->273.30 -0.78% eye exit    Rs 1,814
+[12:56:23]   RATEGAIN     12:44:30->12:55:00 853.55->856.00 +0.29% eye exit    Rs 580
+[12:56:23] no-dip watchlist 198 names | 191 in funnel (of 310 with bars, 191 warm) | 41 closed | holding TRANSRAILL | NET Rs 96,250
+[12:56:51] feed: 21 symbols fetched, 0 failed, 6s
+[12:56:51] quote batch 1: 429 -- backing off 2.5s, one retry
+[12:56:55] circuit band REJECTED for MOTHERSON: price 163.59 outside band 80000.0-120000.0 (wrong scrip?)
+[12:56:55] circuit bands: 194 of 198 names (1 rejected as implausible)
+[12:57:06]   RAILTEL      12:41:30->12:49:30 275.45->272.60 -1.03% displaced by IRFC Rs 2,449
+[12:57:06]   RATEGAIN     12:44:30->12:55:30 853.55->856.00 +0.29% eye exit    Rs 580
+[12:57:06]   IRFC         12:50:00->12:55:30 80.67->80.92 +0.31% eye exit    Rs 639
+[12:57:06] no-dip watchlist 198 names | 191 in funnel (of 310 with bars, 191 warm) | 42 closed | flat | NET Rs 95,618
+[12:57:30] no-dip watchlist 198 names | 191 in funnel (of 310 with bars, 191 warm) | 42 closed | flat | NET Rs 95,618
+[12:57:53] no-dip watchlist 198 names | 191 in funnel (of 310 with bars, 191 warm) | 42 closed | flat | NET Rs 95,618
+[12:58:15] no-dip watchlist 198 names | 191 in funnel (of 310 with bars, 191 warm) | 42 closed | flat | NET Rs 95,618
+[12:58:43] feed: 20 symbols fetched, 0 failed, 6s
+[12:58:43] circuit band REJECTED for MOTHERSON: price 163.59 outside band 80000.0-120000.0 (wrong scrip?)
+[12:58:43] circuit bands: 194 of 198 names (1 rejected as implausible)
+[12:58:46]   FOSECOIND    12:56:30->12:58:00 6611.50->6606.00 -0.08% eye exit    Rs -337
+[12:58:46]   RAILTEL      12:57:00->12:58:30 273.50->273.45 -0.02% eye exit    Rs -181
+[12:58:46] no-dip watchlist 198 names | 191 in funnel (of 310 with bars, 191 warm) | 44 closed | holding BRIGADE | NET Rs 94,747
+[12:59:10] no-dip watchlist 198 names | 191 in funnel (of 310 with bars, 191 warm) | 44 closed | holding BRIGADE | NET Rs 94,747
+[12:59:33] no-dip watchlist 198 names | 191 in funnel (of 310 with bars, 191 warm) | 44 closed | holding BRIGADE | NET Rs 94,747
+[12:59:56] no-dip watchlist 198 names | 191 in funnel (of 311 with bars, 191 warm) | 44 closed | holding BRIGADE | NET Rs 94,747
+[13:00:23] feed: 20 symbols fetched, 0 failed, 6s
+[13:00:23] circuit band REJECTED for MOTHERSON: price 163.51 outside band 80000.0-120000.0 (wrong scrip?)
+[13:00:23] circuit bands: 195 of 199 names (1 rejected as implausible)
+[13:00:27]   RATEGAIN     12:44:30->12:54:00 853.55->856.80 +0.38% displaced by FOSECOIND Rs 813
+[13:00:27]   FOSECOIND    12:54:30->13:00:00 6574.00->6618.50 +0.68% eye exit    Rs 1,555
+[13:00:27]   HSCL         12:57:00->13:00:00 684.15->683.90 -0.04% eye exit    Rs -227
+[13:00:27] no-dip watchlist 199 names | 192 in funnel (of 312 with bars, 192 warm) | 44 closed | flat | NET Rs 97,179
+[13:00:51] no-dip watchlist 199 names | 192 in funnel (of 312 with bars, 192 warm) | 44 closed | flat | NET Rs 97,179
+[13:01:14] no-dip watchlist 199 names | 192 in funnel (of 312 with bars, 192 warm) | 44 closed | flat | NET Rs 97,179
+[13:01:37] no-dip watchlist 199 names | 192 in funnel (of 312 with bars, 192 warm) | 44 closed | flat | NET Rs 97,179
+[13:02:04] feed: 20 symbols fetched, 0 failed, 6s
+[13:02:55] feed: 174 symbols fetched, 2 failed, 51s
+[13:02:55] circuit band REJECTED for MOTHERSON: price 163.6 outside band 80000.0-120000.0 (wrong scrip?)
+[13:02:55] circuit bands: 195 of 199 names (1 rejected as implausible)
+[13:03:09]   RAILTEL      12:41:30->12:47:30 275.45->273.00 -0.89% displaced by ECLERX Rs 2,087
+[13:03:09]   RATEGAIN     12:44:30->12:49:30 853.55->854.65 +0.13% displaced by IRFC Rs 186
+[13:03:09]   ECLERX       12:48:00->12:50:00 1843.50->1843.90 +0.02% displaced by FERMENTA Rs -81
+[13:03:09]   IRFC         12:50:00->13:00:00 80.67->80.89 +0.27% eye exit    Rs 546
+[13:03:09]   FERMENTA     12:50:30->13:01:30 545.50->549.10 +0.66% eye exit    Rs 1,513
+[13:03:09] no-dip watchlist 199 names | 192 in funnel (of 312 with bars, 192 warm) | 44 closed | holding EDELWEISS | NET Rs 96,186
+[13:03:37] feed: 21 symbols fetched, 0 failed, 6s
+[13:03:37] circuit band REJECTED for MOTHERSON: price 163.56 outside band 80000.0-120000.0 (wrong scrip?)
+[13:03:37] circuit bands: 195 of 199 names (1 rejected as implausible)
+[13:03:45]   IRFC         12:50:00->12:54:00 80.67->80.87 +0.25% displaced by FOSECOIND Rs 484
+[13:03:45]   TRANSRAILL   12:50:30->13:02:30 469.25->487.40 +3.87% eye exit    Rs 9,517
+[13:03:45]   FOSECOIND    12:54:30->13:03:00 6574.00->6578.50 +0.07% eye exit    Rs 35
+[13:03:45] no-dip watchlist 199 names | 192 in funnel (of 312 with bars, 192 warm) | 45 closed | flat | NET Rs 104,177
+[13:04:09] no-dip watchlist 199 names | 192 in funnel (of 312 with bars, 192 warm) | 45 closed | flat | NET Rs 104,177
+[13:04:31] no-dip watchlist 199 names | 192 in funnel (of 312 with bars, 192 warm) | 45 closed | flat | NET Rs 104,177
+[13:04:55] no-dip watchlist 199 names | 192 in funnel (of 312 with bars, 192 warm) | 45 closed | flat | NET Rs 104,177
+[13:05:22] feed: 20 symbols fetched, 0 failed, 6s
+[13:05:22] quote batch 1: 429 -- backing off 2.5s, one retry
+[13:05:26] circuit band REJECTED for MOTHERSON: price 163.52 outside band 80000.0-120000.0 (wrong scrip?)
+[13:05:26] circuit bands: 195 of 199 names (1 rejected as implausible)
+[13:05:30]   TRANSRAILL   12:50:30->12:58:00 469.25->491.15 +4.67% displaced by BRIGADE Rs 11,512
+[13:05:30]   FOSECOIND    12:54:30->13:03:30 6574.00->6540.00 -0.52% eye exit    Rs -1,427
+[13:05:30]   BRIGADE      12:58:30->13:05:00 577.60->577.10 -0.09% eye exit    Rs -352
+[13:05:30] no-dip watchlist 199 names | 192 in funnel (of 312 with bars, 192 warm) | 46 closed | holding GPPL | NET Rs 104,221
+[13:05:55] no-dip watchlist 199 names | 192 in funnel (of 312 with bars, 192 warm) | 46 closed | holding GPPL | NET Rs 104,221
+[13:06:22] no-dip watchlist 199 names | 192 in funnel (of 312 with bars, 192 warm) | 46 closed | holding GPPL | NET Rs 104,221
+[13:06:55] no-dip watchlist 199 names | 192 in funnel (of 312 with bars, 192 warm) | 46 closed | holding GPPL | NET Rs 104,221
+[13:07:22] feed: 20 symbols fetched, 0 failed, 6s
+[13:07:22] quote batch 1: 429 -- backing off 2.5s, one retry
+[13:07:26] circuit band REJECTED for MOTHERSON: price 163.44 outside band 80000.0-120000.0 (wrong scrip?)
+[13:07:26] circuit bands: 195 of 199 names (1 rejected as implausible)
+[13:07:29]   BRIGADE      12:58:30->13:05:30 577.60->577.45 -0.03% eye exit    Rs -200
+[13:07:29]   GPPL         13:04:30->13:07:00 166.29->166.36 +0.04% eye exit    Rs -31
+[13:07:29] no-dip watchlist 199 names | 192 in funnel (of 312 with bars, 192 warm) | 47 closed | holding BRIGADE | NET Rs 104,342
+[13:07:52] no-dip watchlist 199 names | 192 in funnel (of 312 with bars, 192 warm) | 47 closed | holding BRIGADE | NET Rs 104,342
+[13:08:15] no-dip watchlist 199 names | 192 in funnel (of 312 with bars, 192 warm) | 47 closed | holding BRIGADE | NET Rs 104,342
+[13:08:39] no-dip watchlist 199 names | 192 in funnel (of 312 with bars, 192 warm) | 47 closed | holding BRIGADE | NET Rs 104,342
+[13:09:06] feed: 20 symbols fetched, 0 failed, 6s
+[13:09:56] feed: 174 symbols fetched, 2 failed, 50s
+[13:09:57] circuit band REJECTED for MOTHERSON: price 163.45 outside band 80000.0-120000.0 (wrong scrip?)
+[13:09:57] circuit bands: 195 of 199 names (1 rejected as implausible)
+[13:10:08]   FOSECOIND    12:54:30->12:55:30 6574.00->6580.50 +0.10% displaced by KOTAKBANK Rs 111
+[13:10:08]   TRANSRAILL   12:50:30->12:59:30 469.25->491.85 +4.82% displaced by FIVESTAR Rs 11,884
+[13:10:08]   FIVESTAR     13:00:00->13:07:30 515.20->516.35 +0.22% eye exit    Rs 422
+[13:10:08]   KOTAKBANK    12:56:00->13:08:30 417.75->418.95 +0.29% eye exit    Rs 582
+[13:10:08] no-dip watchlist 199 names | 192 in funnel (of 312 with bars, 192 warm) | 47 closed | holding GMRP&UI | NET Rs 107,463
+[13:10:39]   KOTAKBANK    12:56:00->13:09:30 417.75->419.00 +0.30% eye exit    Rs 612
+[13:10:39] no-dip watchlist 199 names | 192 in funnel (of 312 with bars, 192 warm) | 47 closed | holding GMRP&UI | NET Rs 107,613
+[13:11:07] feed: 21 symbols fetched, 0 failed, 6s
+[13:11:07] circuit band REJECTED for MOTHERSON: price 163.45 outside band 80000.0-120000.0 (wrong scrip?)
+[13:11:07] circuit bands: 195 of 199 names (1 rejected as implausible)
+[13:11:10]   FIVESTAR     13:00:00->13:01:30 515.20->515.15 -0.01% displaced by GPPL Rs -160
+[13:11:10]   GPPL         13:02:00->13:10:30 166.10->166.48 +0.23% eye exit    Rs 436
+[13:11:10] no-dip watchlist 199 names | 192 in funnel (of 312 with bars, 192 warm) | 48 closed | holding GMRP&UI | NET Rs 107,062
+[13:11:33] no-dip watchlist 199 names | 192 in funnel (of 312 with bars, 192 warm) | 48 closed | holding GMRP&UI | NET Rs 107,062
+[13:11:56] no-dip watchlist 199 names | 192 in funnel (of 312 with bars, 192 warm) | 48 closed | holding GMRP&UI | NET Rs 107,062
+[13:12:20] no-dip watchlist 199 names | 192 in funnel (of 312 with bars, 192 warm) | 48 closed | holding GMRP&UI | NET Rs 107,062
+[13:12:48] feed: 21 symbols fetched, 0 failed, 6s
+[13:12:48] quote batch 1: 429 -- backing off 2.5s, one retry
+[13:12:52] circuit band REJECTED for MOTHERSON: price 163.48 outside band 80000.0-120000.0 (wrong scrip?)
+[13:12:52] circuit bands: 195 of 199 names (1 rejected as implausible)
+[13:12:55]   KOTAKBANK    12:56:00->13:06:30 417.75->418.25 +0.12% displaced by BRIGADE Rs 163
+[13:12:55]   GPPL         13:02:00->13:12:30 166.10->166.45 +0.21% eye exit    Rs 391
+[13:12:55]   BRIGADE      13:07:00->13:12:30 577.85->579.45 +0.28% eye exit    Rs 555
+[13:12:55] no-dip watchlist 199 names | 192 in funnel (of 312 with bars, 192 warm) | 49 closed | flat | NET Rs 107,569
+[13:13:19] no-dip watchlist 199 names | 192 in funnel (of 313 with bars, 192 warm) | 49 closed | flat | NET Rs 107,569
+[13:13:41] no-dip watchlist 199 names | 192 in funnel (of 313 with bars, 192 warm) | 49 closed | flat | NET Rs 107,569
+[13:14:05] no-dip watchlist 199 names | 192 in funnel (of 313 with bars, 192 warm) | 49 closed | flat | NET Rs 107,569
+[13:14:32] feed: 20 symbols fetched, 0 failed, 6s
+[13:14:32] circuit band REJECTED for MOTHERSON: price 163.5 outside band 80000.0-120000.0 (wrong scrip?)
+[13:14:32] circuit bands: 195 of 199 names (1 rejected as implausible)
+[13:14:36]   GPPL         13:02:00->13:14:00 166.10->166.51 +0.25% eye exit    Rs 481
+[13:14:36]   BRIGADE      13:07:00->13:14:00 577.85->579.00 +0.20% eye exit    Rs 361
+[13:14:36] no-dip watchlist 199 names | 192 in funnel (of 313 with bars, 192 warm) | 49 closed | flat | NET Rs 107,465
+[13:14:59] no-dip watchlist 199 names | 192 in funnel (of 313 with bars, 192 warm) | 49 closed | flat | NET Rs 107,465
+[13:15:22] no-dip watchlist 199 names | 192 in funnel (of 313 with bars, 192 warm) | 49 closed | holding 3BBLACKBIO | NET Rs 107,329
+[13:15:46] no-dip watchlist 199 names | 192 in funnel (of 313 with bars, 192 warm) | 49 closed | holding 3BBLACKBIO,VALIANTORG | NET Rs 108,665
+[13:16:15] feed: 22 symbols fetched, 0 failed, 6s
+[13:17:05] feed: 172 symbols fetched, 2 failed, 50s
+[13:17:05] circuit band REJECTED for MOTHERSON: price 163.42 outside band 80000.0-120000.0 (wrong scrip?)
+[13:17:05] circuit bands: 195 of 199 names (1 rejected as implausible)
+[13:17:17]   KOTAKBANK    12:56:00->13:10:00 417.75->418.20 +0.11% displaced by MOREPENLAB Rs 133
+[13:17:17]   GPPL         13:02:00->13:15:30 166.10->166.59 +0.30% eye exit    Rs 601
+[13:17:17]   MOREPENLAB   13:10:30->13:16:00 125.70->128.09 +1.90% eye exit    Rs 4,614
+[13:17:17] no-dip watchlist 199 names | 192 in funnel (of 313 with bars, 192 warm) | 49 closed | holding KAJARIACER | NET Rs 111,533
+[13:17:45] feed: 21 symbols fetched, 0 failed, 6s
+[13:17:45] circuit band REJECTED for MOTHERSON: price 163.33 outside band 80000.0-120000.0 (wrong scrip?)
+[13:17:45] circuit bands: 195 of 199 names (1 rejected as implausible)
+[13:17:57]   MOREPENLAB   13:10:30->13:16:30 125.70->127.22 +1.21% eye exit    Rs 2,885
+[13:17:57]   GPPL         13:02:00->13:17:30 166.10->166.55 +0.27% eye exit    Rs 541
+[13:17:57]   ALICON       13:17:30->13:17:30 865.20->865.45 +0.03% circuit guard Rs -63
+[13:17:57] no-dip watchlist 199 names | 192 in funnel (of 313 with bars, 192 warm) | 50 closed | flat | NET Rs 109,956
+[13:18:19] no-dip watchlist 199 names | 192 in funnel (of 313 with bars, 192 warm) | 50 closed | flat | NET Rs 109,956
+[13:18:42] no-dip watchlist 199 names | 192 in funnel (of 313 with bars, 192 warm) | 50 closed | flat | NET Rs 109,956
+[13:19:04] no-dip watchlist 200 names | 193 in funnel (of 313 with bars, 193 warm) | 50 closed | flat | NET Rs 109,956
+[13:19:32] feed: 20 symbols fetched, 0 failed, 6s
+[13:19:32] quote batch 1: 429 -- backing off 2.5s, one retry
+[13:19:36] circuit band REJECTED for MOTHERSON: price 163.36 outside band 80000.0-120000.0 (wrong scrip?)
+[13:19:36] circuit bands: 196 of 200 names (1 rejected as implausible)
+[13:19:41]   GPPL         13:02:00->13:19:00 166.10->166.53 +0.26% eye exit    Rs 511
+[13:19:41] no-dip watchlist 200 names | 193 in funnel (of 313 with bars, 193 warm) | 50 closed | holding WHIRLPOOL | NET Rs 111,857
+[13:20:03] no-dip watchlist 200 names | 193 in funnel (of 313 with bars, 193 warm) | 50 closed | holding WHIRLPOOL | NET Rs 111,939
+[13:20:26] no-dip watchlist 200 names | 193 in funnel (of 313 with bars, 193 warm) | 50 closed | holding WHIRLPOOL,PRESTIGE | NET Rs 111,803
+[13:20:49] no-dip watchlist 200 names | 193 in funnel (of 313 with bars, 193 warm) | 50 closed | holding WHIRLPOOL,PRESTIGE | NET Rs 111,803
+[13:21:17] feed: 21 symbols fetched, 0 failed, 6s
+[13:21:17] quote batch 1: 429 -- backing off 2.5s, one retry
+[13:21:21] circuit band REJECTED for MOTHERSON: price 163.47 outside band 80000.0-120000.0 (wrong scrip?)
+[13:21:21] circuit bands: 196 of 200 names (1 rejected as implausible)
+[13:21:26]   MOREPENLAB   13:10:30->13:14:00 125.70->126.55 +0.68% displaced by 3BBLACKBIO Rs 1,554
+[13:21:26]   3BBLACKBIO   13:14:30->13:20:30 1722.60->1711.30 -0.66% eye exit    Rs 1,503
+[13:21:26]   GPPL         13:02:00->13:21:00 166.10->166.50 +0.24% eye exit    Rs 466
+[13:21:26] no-dip watchlist 200 names | 193 in funnel (of 313 with bars, 193 warm) | 50 closed | flat | NET Rs 110,115
+[13:21:49]   3BBLACKBIO   13:14:30->13:21:30 1722.60->1710.00 -0.73% eye exit    Rs 1,691
+[13:21:49] no-dip watchlist 200 names | 193 in funnel (of 313 with bars, 193 warm) | 50 closed | flat | NET Rs 110,304
+[13:22:12] no-dip watchlist 200 names | 193 in funnel (of 313 with bars, 193 warm) | 50 closed | flat | NET Rs 110,304
+[13:22:35] no-dip watchlist 200 names | 193 in funnel (of 313 with bars, 193 warm) | 50 closed | flat | NET Rs 110,304
+[13:23:02] feed: 20 symbols fetched, 0 failed, 6s
+[13:23:53] feed: 175 symbols fetched, 2 failed, 51s
+[13:23:53] circuit band REJECTED for MOTHERSON: price 163.48 outside band 80000.0-120000.0 (wrong scrip?)
+[13:23:53] circuit bands: 196 of 200 names (1 rejected as implausible)
+[13:24:06]   MOREPENLAB   13:10:30->13:21:00 125.70->127.47 +1.41% eye exit    Rs 3,382
+[13:24:06]   GPPL         13:02:00->13:21:30 166.10->166.54 +0.26% eye exit    Rs 526
+[13:24:06] no-dip watchlist 200 names | 193 in funnel (of 313 with bars, 193 warm) | 49 closed | holding WIPRO,UNIONBANK | NET Rs 110,406
+[13:24:34] feed: 22 symbols fetched, 0 failed, 6s
+[13:24:34] circuit band REJECTED for MOTHERSON: price 163.72 outside band 80000.0-120000.0 (wrong scrip?)
+[13:24:34] circuit bands: 196 of 200 names (1 rejected as implausible)
+[13:24:45]   TRANSRAILL   13:17:00->13:23:30 481.80->480.30 -0.31% eye exit    Rs 641
+[13:24:45]   UNIONBANK    13:22:00->13:24:00 171.72->171.76 +0.02% eye exit    Rs -78
+[13:24:45] no-dip watchlist 200 names | 193 in funnel (of 314 with bars, 193 warm) | 51 closed | flat | NET Rs 110,687
+[13:25:09]   3BBLACKBIO   13:14:30->13:24:30 1722.60->1711.50 -0.64% eye exit    Rs 1,474
+[13:25:09]   UNIONBANK    13:22:00->13:24:30 171.72->171.77 +0.03% eye exit    Rs -63
+[13:25:09] no-dip watchlist 200 names | 193 in funnel (of 314 with bars, 193 warm) | 51 closed | flat | NET Rs 110,083
+[13:25:33] no-dip watchlist 200 names | 193 in funnel (of 314 with bars, 193 warm) | 51 closed | flat | NET Rs 110,083
+[13:25:56] no-dip watchlist 200 names | 193 in funnel (of 314 with bars, 193 warm) | 51 closed | flat | NET Rs 110,083
+[13:26:24] feed: 20 symbols fetched, 0 failed, 6s
+[13:26:24] circuit band REJECTED for MOTHERSON: price 163.86 outside band 80000.0-120000.0 (wrong scrip?)
+[13:26:24] circuit bands: 196 of 200 names (1 rejected as implausible)
+[13:26:30]   GPPL         13:02:00->13:19:30 166.10->166.55 +0.27% displaced by PRESTIGE Rs 541
+[13:26:30]   3BBLACKBIO   13:14:30->13:25:30 1722.60->1710.40 -0.71% eye exit    Rs 1,633
+[13:26:30]   PRESTIGE     13:20:00->13:25:30 1469.80->1473.90 +0.28% eye exit    Rs 561
+[13:26:30] no-dip watchlist 200 names | 193 in funnel (of 314 with bars, 193 warm) | 51 closed | holding GPPL | NET Rs 110,641
+[13:27:05]   3BBLACKBIO   13:14:30->13:26:00 1722.60->1710.40 -0.71% eye exit    Rs 1,633
+[13:27:05]   PRESTIGE     13:20:00->13:26:30 1469.80->1472.00 +0.15% eye exit    Rs 238
+[13:27:05] no-dip watchlist 200 names | 193 in funnel (of 314 with bars, 193 warm) | 51 closed | flat | NET Rs 110,559
+[13:27:29] no-dip watchlist 201 names | 194 in funnel (of 314 with bars, 194 warm) | 51 closed | flat | NET Rs 110,559
+[13:27:56] feed: 20 symbols fetched, 0 failed, 6s
+[13:27:56] circuit band REJECTED for MOTHERSON: price 163.8 outside band 80000.0-120000.0 (wrong scrip?)
+[13:27:56] circuit bands: 197 of 201 names (1 rejected as implausible)
+[13:27:59]   3BBLACKBIO   13:14:30->13:27:00 1722.60->1707.50 -0.88% eye exit    Rs 2,054
+[13:27:59]   PRESTIGE     13:20:00->13:27:30 1469.80->1473.30 +0.24% eye exit    Rs 459
+[13:27:59] no-dip watchlist 201 names | 194 in funnel (of 314 with bars, 194 warm) | 51 closed | flat | NET Rs 111,201
+[13:28:22] no-dip watchlist 201 names | 194 in funnel (of 314 with bars, 194 warm) | 51 closed | flat | NET Rs 111,201
+[13:28:45]   PRESTIGE     13:20:00->13:28:00 1469.80->1473.00 +0.22% eye exit    Rs 408
+[13:28:45] no-dip watchlist 201 names | 194 in funnel (of 314 with bars, 194 warm) | 51 closed | flat | NET Rs 111,150
+[13:29:09] no-dip watchlist 201 names | 194 in funnel (of 314 with bars, 194 warm) | 51 closed | flat | NET Rs 111,150
+[13:29:36] feed: 20 symbols fetched, 0 failed, 6s
+[13:30:28] feed: 176 symbols fetched, 2 failed, 51s
+[13:30:28] circuit band REJECTED for MOTHERSON: price 163.75 outside band 80000.0-120000.0 (wrong scrip?)
+[13:30:28] circuit bands: 197 of 201 names (1 rejected as implausible)
+[13:30:40]   MOREPENLAB   13:10:30->13:11:00 125.70->126.18 +0.38% displaced by KAJARIACER Rs 818
+[13:30:40]   KAJARIACER   13:11:30->13:29:00 1242.80->1248.00 +0.42% eye exit    Rs 909
+[13:30:40]   DELTACORP    13:27:30->13:29:00 84.61->84.65 +0.05% eye exit    Rs -254
+[13:30:40] no-dip watchlist 201 names | 194 in funnel (of 314 with bars, 194 warm) | 52 closed | flat | NET Rs 110,601
+[13:31:08] feed: 20 symbols fetched, 0 failed, 6s
+[13:31:08] circuit band REJECTED for MOTHERSON: price 163.72 outside band 80000.0-120000.0 (wrong scrip?)
+[13:31:08] circuit bands: 197 of 201 names (1 rejected as implausible)
+[13:31:21]   3BBLACKBIO   13:14:30->13:20:00 1722.60->1711.30 -0.66% displaced by JWL Rs 1,503
+[13:31:21]   KAJARIACER   13:11:30->13:29:30 1242.80->1249.00 +0.50% eye exit    Rs 1,110
+[13:31:21]   JWL          13:20:30->13:31:00 240.30->244.05 +1.56% eye exit    Rs 3,763
+[13:31:21] no-dip watchlist 201 names | 194 in funnel (of 315 with bars, 194 warm) | 52 closed | flat | NET Rs 114,268
+[13:31:44] no-dip watchlist 201 names | 194 in funnel (of 315 with bars, 194 warm) | 52 closed | flat | NET Rs 114,268
+[13:32:07] no-dip watchlist 201 names | 194 in funnel (of 315 with bars, 194 warm) | 52 closed | holding PRESTIGE | NET Rs 114,234
+[13:32:30] no-dip watchlist 201 names | 194 in funnel (of 315 with bars, 194 warm) | 52 closed | holding PRESTIGE | NET Rs 114,234
+[13:32:58] feed: 21 symbols fetched, 0 failed, 6s
+[13:32:58] quote batch 1: 429 -- backing off 2.5s, one retry
+[13:33:02] quote batch 1 HTTP 429: {"data":{"805":"Too many requests. Further requests may result in the user being blocked."},"status":"failed"}
+[13:33:02] circuit bands: 197 of 201 names
+[13:33:08]   KAJARIACER   13:11:30->13:25:00 1242.80->1249.40 +0.53% displaced by THERMAX Rs 1,190
+[13:33:08]   JWL          13:20:30->13:31:30 240.30->242.86 +1.07% eye exit    Rs 2,526
+[13:33:08]   THERMAX      13:25:30->13:32:30 3405.40->3405.60 +0.01% eye exit    Rs -121
+[13:33:08] no-dip watchlist 201 names | 194 in funnel (of 315 with bars, 194 warm) | 53 closed | flat | NET Rs 112,991
+[13:33:31] no-dip watchlist 201 names | 194 in funnel (of 315 with bars, 194 warm) | 53 closed | holding 3BBLACKBIO | NET Rs 112,840
+[13:33:53] no-dip watchlist 202 names | 194 in funnel (of 315 with bars, 194 warm) | 53 closed | holding 3BBLACKBIO,PRESTIGE | NET Rs 112,704
+[13:34:22]   3BBLACKBIO   13:32:30->13:34:00 1712.00->1718.00 +0.35% eye exit    Rs 740
+[13:34:22] no-dip watchlist 202 names | 194 in funnel (of 315 with bars, 194 warm) | 54 closed | holding PRESTIGE | NET Rs 113,595
+[13:34:51] feed: 21 symbols fetched, 0 failed, 6s
+[13:34:51] circuit band REJECTED for MOTHERSON: price 163.73 outside band 80000.0-120000.0 (wrong scrip?)
+[13:34:51] circuit bands: 198 of 202 names (1 rejected as implausible)
+[13:34:56]   THERMAX      13:25:30->13:34:30 3405.40->3407.00 +0.05% eye exit    Rs -19
+[13:34:56] no-dip watchlist 202 names | 195 in funnel (of 316 with bars, 195 warm) | 54 closed | flat | NET Rs 113,833
+[13:35:19]   3BBLACKBIO   13:32:30->13:34:30 1712.00->1717.50 +0.32% eye exit    Rs 667
+[13:35:19] no-dip watchlist 202 names | 195 in funnel (of 316 with bars, 195 warm) | 54 closed | holding PRESTIGE | NET Rs 113,574
+[13:35:42] no-dip watchlist 202 names | 195 in funnel (of 316 with bars, 195 warm) | 54 closed | holding PRESTIGE | NET Rs 113,574
+[13:36:08]   3BBLACKBIO   13:32:30->13:35:00 1712.00->1720.20 +0.48% eye exit    Rs 1,061
+[13:36:08] no-dip watchlist 202 names | 195 in funnel (of 317 with bars, 195 warm) | 54 closed | holding PRESTIGE | NET Rs 114,001
+[13:36:36] feed: 21 symbols fetched, 0 failed, 6s
+[13:37:27] feed: 176 symbols fetched, 2 failed, 51s
+[13:37:27] quote batch 1: 429 -- backing off 2.5s, one retry
+[13:37:31] quote batch 1 HTTP 429: {"data":{"805":"Too many requests. Further requests may result in the user being blocked."},"status":"failed"}
+[13:37:31] circuit bands: 198 of 202 names
+[13:37:45]   KAJARIACER   13:11:30->13:36:00 1242.80->1248.30 +0.44% eye exit    Rs 969
+[13:37:45]   CUPID        13:20:30->13:36:00 310.90->311.10 +0.06% eye exit    Rs -21
+[13:37:45] no-dip watchlist 202 names | 195 in funnel (of 317 with bars, 195 warm) | 52 closed | flat | NET Rs 110,344
+[13:38:13] feed: 20 symbols fetched, 0 failed, 6s
+[13:38:13] quote batch 1: 429 -- backing off 2.5s, one retry
+[13:38:17] circuit band REJECTED for MOTHERSON: price 163.64 outside band 80000.0-120000.0 (wrong scrip?)
+[13:38:17] circuit bands: 199 of 203 names (1 rejected as implausible)
+[13:38:28]   KAJARIACER   13:11:30->13:37:00 1242.80->1249.30 +0.52% eye exit    Rs 1,170
+[13:38:28]   KMCSHIL      13:36:30->13:38:00 173.07->173.21 +0.08% eye exit    Rs 66
+[13:38:28] no-dip watchlist 203 names | 196 in funnel (of 318 with bars, 196 warm) | 53 closed | flat | NET Rs 110,611
+[13:38:52] no-dip watchlist 203 names | 196 in funnel (of 318 with bars, 196 warm) | 53 closed | flat | NET Rs 110,611
+[13:39:16] no-dip watchlist 203 names | 196 in funnel (of 318 with bars, 196 warm) | 53 closed | flat | NET Rs 110,611
+[13:39:43] feed: 20 symbols fetched, 0 failed, 6s
+[13:39:43] quote batch 1: 429 -- backing off 2.5s, one retry
+[13:39:47] quote batch 1 HTTP 429: {"data":{"805":"Too many requests. Further requests may result in the user being blocked."},"status":"failed"}
+[13:39:47] circuit bands: 199 of 203 names
+[13:39:51]   CUPID        13:20:30->13:30:30 310.90->311.20 +0.10% displaced by PRESTIGE Rs -5
+[13:39:51]   PRESTIGE     13:31:00->13:39:00 1475.70->1479.90 +0.28% eye exit    Rs 574
+[13:39:51] no-dip watchlist 203 names | 196 in funnel (of 318 with bars, 196 warm) | 53 closed | holding GALAPREC | NET Rs 110,831
+[13:40:14] no-dip watchlist 203 names | 196 in funnel (of 318 with bars, 196 warm) | 53 closed | holding GALAPREC | NET Rs 110,831
+[13:40:37]   PRESTIGE     13:31:00->13:40:00 1475.70->1480.90 +0.35% eye exit    Rs 743
+[13:40:37] no-dip watchlist 203 names | 196 in funnel (of 318 with bars, 196 warm) | 53 closed | holding GALAPREC | NET Rs 111,000
+[13:41:02] no-dip watchlist 203 names | 196 in funnel (of 318 with bars, 196 warm) | 53 closed | holding GALAPREC | NET Rs 111,000
+[13:41:29] feed: 20 symbols fetched, 0 failed, 6s
+[13:41:29] quote batch 1: 429 -- backing off 2.5s, one retry
+[13:41:35] quote batch 1 HTTP 429: {"data":{"805":"Too many requests. Further requests may result in the user being blocked."},"status":"failed"}
+[13:41:35] circuit bands: 199 of 203 names
+[13:41:38]   PRESTIGE     13:31:00->13:40:30 1475.70->1481.20 +0.37% eye exit    Rs 794
+[13:41:38]   GALAPREC     13:38:30->13:41:00 1189.40->1186.30 -0.26% eye exit    Rs -787
+[13:41:38] no-dip watchlist 203 names | 196 in funnel (of 318 with bars, 196 warm) | 54 closed | flat | NET Rs 110,568
+[13:42:09] no-dip watchlist 203 names | 196 in funnel (of 318 with bars, 196 warm) | 54 closed | flat | NET Rs 110,568
+[13:42:34] no-dip watchlist 203 names | 196 in funnel (of 318 with bars, 196 warm) | 54 closed | flat | NET Rs 110,568
+[13:43:03] feed: 20 symbols fetched, 0 failed, 6s
+[13:43:54] feed: 179 symbols fetched, 1 failed, 52s
+[13:43:54] circuit band REJECTED for MOTHERSON: price 163.57 outside band 80000.0-120000.0 (wrong scrip?)
+[13:43:54] circuit bands: 199 of 203 names (1 rejected as implausible)
+[13:44:05]   PRESTIGE     13:31:00->13:36:30 1475.70->1485.90 +0.69% displaced by JWL Rs 1,588
+[13:44:05]   KAJARIACER   13:11:30->13:42:30 1242.80->1247.20 +0.35% eye exit    Rs 748
+[13:44:05]   JWL          13:37:00->13:42:30 241.03->241.07 +0.02% eye exit    Rs -177
+[13:44:05] no-dip watchlist 203 names | 196 in funnel (of 319 with bars, 196 warm) | 54 closed | flat | NET Rs 111,549
+[13:44:33] feed: 20 symbols fetched, 0 failed, 6s
+[13:44:33] circuit band REJECTED for MOTHERSON: price 163.59 outside band 80000.0-120000.0 (wrong scrip?)
+[13:44:33] circuit bands: 199 of 203 names (1 rejected as implausible)
+[13:44:49]   PRESTIGE     13:31:00->13:35:30 1475.70->1484.00 +0.56% displaced by GALAPREC Rs 1,267
+[13:44:49]   KAJARIACER   13:11:30->13:43:00 1242.80->1247.80 +0.40% eye exit    Rs 869
+[13:44:49]   GALAPREC     13:36:00->13:43:30 1187.70->1190.00 +0.19% eye exit    Rs 347
+[13:44:49] no-dip watchlist 203 names | 196 in funnel (of 320 with bars, 196 warm) | 54 closed | holding PNBGILTS,GODIGIT | NET Rs 112,750
+[13:45:12] no-dip watchlist 203 names | 196 in funnel (of 320 with bars, 196 warm) | 54 closed | holding PNBGILTS,GODIGIT | NET Rs 112,750
+[13:45:35] no-dip watchlist 203 names | 196 in funnel (of 320 with bars, 196 warm) | 54 closed | holding PNBGILTS,GODIGIT | NET Rs 112,750
+[13:46:00] no-dip watchlist 203 names | 196 in funnel (of 320 with bars, 196 warm) | 54 closed | holding PNBGILTS,GODIGIT | NET Rs 112,750
+[13:46:28] feed: 20 symbols fetched, 0 failed, 6s
+[13:46:28] circuit band REJECTED for MOTHERSON: price 163.06 outside band 80000.0-120000.0 (wrong scrip?)
+[13:46:28] circuit bands: 199 of 203 names (1 rejected as implausible)
+[13:46:35]   KAJARIACER   13:11:30->13:38:30 1242.80->1249.20 +0.51% displaced by PNBGILTS Rs 1,150
+[13:46:35]   GALAPREC     13:36:00->13:46:00 1187.70->1193.00 +0.45% eye exit    Rs 977
+[13:46:35]   PNBGILTS     13:39:00->13:46:00 78.06->76.44 -2.08% eye exit    Rs 5,052
+[13:46:35] no-dip watchlist 203 names | 196 in funnel (of 320 with bars, 196 warm) | 55 closed | flat | NET Rs 117,836
+[13:46:59] no-dip watchlist 203 names | 196 in funnel (of 320 with bars, 196 warm) | 55 closed | flat | NET Rs 117,836
+[13:47:24] no-dip watchlist 204 names | 196 in funnel (of 320 with bars, 196 warm) | 55 closed | flat | NET Rs 117,836
+[13:47:46] no-dip watchlist 204 names | 196 in funnel (of 321 with bars, 196 warm) | 55 closed | flat | NET Rs 117,836
+[13:48:15] feed: 20 symbols fetched, 0 failed, 6s
+[13:48:15] quote batch 1: 429 -- backing off 2.5s, one retry
+[13:48:19] quote batch 1 HTTP 429: {"data":{"805":"Too many requests. Further requests may result in the user being blocked."},"status":"failed"}
+[13:48:19] circuit bands: 199 of 204 names
+[13:48:23]   GALAPREC     13:36:00->13:47:30 1187.70->1193.40 +0.48% eye exit    Rs 1,061
+[13:48:23]   PNBGILTS     13:39:00->13:48:00 78.06->76.35 -2.19% eye exit    Rs 5,340
+[13:48:23] no-dip watchlist 204 names | 197 in funnel (of 322 with bars, 197 warm) | 55 closed | flat | NET Rs 118,208
+[13:48:47] no-dip watchlist 204 names | 197 in funnel (of 322 with bars, 197 warm) | 55 closed | flat | NET Rs 118,208
+[13:49:11] no-dip watchlist 204 names | 197 in funnel (of 322 with bars, 197 warm) | 55 closed | flat | NET Rs 118,208
+[13:49:34] no-dip watchlist 204 names | 197 in funnel (of 322 with bars, 197 warm) | 55 closed | flat | NET Rs 118,208
+[13:50:01] feed: 20 symbols fetched, 0 failed, 6s
+[13:50:53] feed: 180 symbols fetched, 1 failed, 52s
+[13:50:53] quote batch 1: 429 -- backing off 2.5s, one retry
+[13:50:57] quote batch 1 HTTP 429: {"data":{"805":"Too many requests. Further requests may result in the user being blocked."},"status":"failed"}
+[13:50:57] circuit bands: 199 of 204 names
+[13:51:13]   DELTACORP    13:37:30->13:47:30 84.31->83.67 -0.76% eye exit    Rs 1,762
+[13:51:13]   GALAPREC     13:36:00->13:49:30 1187.70->1195.00 +0.61% eye exit    Rs 1,397
+[13:51:13]   PVRINOX      13:48:00->13:49:30 1250.00->1248.50 -0.12% eye exit    Rs -436
+[13:51:13] no-dip watchlist 204 names | 197 in funnel (of 323 with bars, 197 warm) | 56 closed | flat | NET Rs 114,470
+[13:51:41] feed: 20 symbols fetched, 0 failed, 6s
+[13:51:41] quote batch 1: 429 -- backing off 2.5s, one retry
+[13:51:45] circuit band REJECTED for MOTHERSON: price 163.3 outside band 80000.0-120000.0 (wrong scrip?)
+[13:51:45] circuit bands: 200 of 204 names (1 rejected as implausible)
+[13:51:55]   DELTACORP    13:37:30->13:43:00 84.31->83.08 -1.46% displaced by PNBGILTS Rs 3,511
+[13:51:55]   GALAPREC     13:36:00->13:51:00 1187.70->1195.00 +0.61% eye exit    Rs 1,397
+[13:51:55]   PNBGILTS     13:43:30->13:51:30 76.98->76.08 -1.17% eye exit    Rs 2,787
+[13:51:55] no-dip watchlist 204 names | 197 in funnel (of 323 with bars, 197 warm) | 56 closed | flat | NET Rs 119,442
+[13:52:19] no-dip watchlist 204 names | 197 in funnel (of 324 with bars, 197 warm) | 56 closed | flat | NET Rs 119,442
+[13:52:44] no-dip watchlist 204 names | 197 in funnel (of 324 with bars, 197 warm) | 56 closed | flat | NET Rs 119,442
+[13:53:11] feed: 20 symbols fetched, 0 failed, 6s
+[13:53:11] circuit band REJECTED for MOTHERSON: price 163.32 outside band 80000.0-120000.0 (wrong scrip?)
+[13:53:11] circuit bands: 200 of 204 names (1 rejected as implausible)
+[13:53:16]   DELTACORP    13:37:30->13:38:30 84.31->83.90 -0.49% displaced by PNBGILTS Rs 1,080
+[13:53:16]   GALAPREC     13:36:00->13:52:30 1187.70->1196.60 +0.75% eye exit    Rs 1,733
+[13:53:16]   PNBGILTS     13:39:00->13:53:00 78.06->75.95 -2.70% eye exit    Rs 6,621
+[13:53:16] no-dip watchlist 204 names | 197 in funnel (of 324 with bars, 197 warm) | 56 closed | flat | NET Rs 121,180
+[13:53:38] no-dip watchlist 204 names | 197 in funnel (of 324 with bars, 197 warm) | 56 closed | flat | NET Rs 121,180
+[13:54:02] no-dip watchlist 204 names | 197 in funnel (of 324 with bars, 197 warm) | 56 closed | flat | NET Rs 121,180
+[13:54:25] no-dip watchlist 204 names | 197 in funnel (of 324 with bars, 197 warm) | 56 closed | flat | NET Rs 121,180
+[13:54:53] feed: 20 symbols fetched, 0 failed, 6s
+[13:54:53] quote batch 1: 429 -- backing off 2.5s, one retry
+[13:54:57] quote batch 1 HTTP 429: {"data":{"805":"Too many requests. Further requests may result in the user being blocked."},"status":"failed"}
+[13:54:57] circuit bands: 200 of 204 names
+[13:55:03]   GALAPREC     13:36:00->13:54:30 1187.70->1197.30 +0.81% eye exit    Rs 1,880
+[13:55:03]   PNBGILTS     13:39:00->13:54:30 78.06->75.65 -3.09% eye exit    Rs 7,582
+[13:55:03] no-dip watchlist 204 names | 197 in funnel (of 324 with bars, 197 warm) | 56 closed | flat | NET Rs 122,288
+[13:55:26] no-dip watchlist 204 names | 197 in funnel (of 324 with bars, 197 warm) | 56 closed | flat | NET Rs 122,288
+[13:55:50] no-dip watchlist 204 names | 197 in funnel (of 324 with bars, 197 warm) | 56 closed | flat | NET Rs 122,288
+[13:56:15] no-dip watchlist 205 names | 197 in funnel (of 324 with bars, 197 warm) | 56 closed | flat | NET Rs 122,288
+[13:56:44] feed: 20 symbols fetched, 0 failed, 6s
+[13:57:36] feed: 182 symbols fetched, 1 failed, 52s
+[13:57:36] circuit band REJECTED for MOTHERSON: price 163.41 outside band 80000.0-120000.0 (wrong scrip?)
+[13:57:36] circuit bands: 202 of 206 names (1 rejected as implausible)
+[13:57:50]   GALAPREC     13:36:00->13:56:30 1187.70->1200.00 +1.04% eye exit    Rs 2,447
+[13:57:50]   PNBGILTS     13:39:00->13:56:30 78.06->75.89 -2.78% eye exit    Rs 6,813
+[13:57:50] no-dip watchlist 207 names | 200 in funnel (of 327 with bars, 200 warm) | 56 closed | flat | NET Rs 122,086
+[13:58:18] feed: 20 symbols fetched, 0 failed, 6s
+[13:58:19] circuit band REJECTED for MOTHERSON: price 163.66 outside band 80000.0-120000.0 (wrong scrip?)
+[13:58:19] circuit bands: 203 of 207 names (1 rejected as implausible)
+[13:58:28]   PNBGILTS     13:39:00->13:57:00 78.06->75.89 -2.78% eye exit    Rs 6,813
+[13:58:28]   GALAPREC     13:36:00->13:58:00 1187.70->1198.80 +0.93% eye exit    Rs 2,195
+[13:58:28] no-dip watchlist 207 names | 200 in funnel (of 327 with bars, 200 warm) | 56 closed | flat | NET Rs 121,834
+[13:58:53] no-dip watchlist 207 names | 200 in funnel (of 327 with bars, 200 warm) | 56 closed | flat | NET Rs 121,834
+[13:59:16] no-dip watchlist 207 names | 200 in funnel (of 327 with bars, 200 warm) | 56 closed | flat | NET Rs 121,834
+[13:59:39] no-dip watchlist 207 names | 200 in funnel (of 327 with bars, 200 warm) | 56 closed | holding 3BBLACKBIO | NET Rs 121,844
+[14:00:07] feed: 21 symbols fetched, 0 failed, 6s
+[14:00:08] circuit band REJECTED for MOTHERSON: price 163.63 outside band 80000.0-120000.0 (wrong scrip?)
+[14:00:08] circuit bands: 203 of 207 names (1 rejected as implausible)
+[14:00:12]   GALAPREC     13:36:00->13:59:30 1187.70->1190.00 +0.19% eye exit    Rs 347
+[14:00:12] no-dip watchlist 207 names | 200 in funnel (of 327 with bars, 200 warm) | 56 closed | holding 3BBLACKBIO | NET Rs 119,866
+[14:00:37]   PNCINFRA     13:58:30->14:00:00 134.71->134.60 -0.08% eye exit    Rs -340
+[14:00:37] no-dip watchlist 207 names | 200 in funnel (of 327 with bars, 200 warm) | 57 closed | flat | NET Rs 119,647
+[14:01:01] no-dip watchlist 208 names | 200 in funnel (of 328 with bars, 200 warm) | 57 closed | flat | NET Rs 119,647
+[14:01:24]   3BBLACKBIO   13:58:30->14:00:00 1722.90->1723.00 +0.01% eye exit    Rs -121
+[14:01:24] no-dip watchlist 208 names | 200 in funnel (of 328 with bars, 200 warm) | 57 closed | flat | NET Rs 119,866
+[14:01:52] feed: 20 symbols fetched, 0 failed, 6s
+[14:01:52] circuit band REJECTED for MOTHERSON: price 163.47 outside band 80000.0-120000.0 (wrong scrip?)
+[14:01:52] circuit bands: 204 of 208 names (1 rejected as implausible)
+[14:01:57]   GALAPREC     13:36:00->14:00:30 1187.70->1188.30 +0.05% eye exit    Rs -10
+[14:01:57]   SUNSHINE     13:58:30->14:01:00 456.30->455.95 -0.08% eye exit    Rs -159
+[14:01:57] no-dip watchlist 208 names | 201 in funnel (of 329 with bars, 201 warm) | 57 closed | flat | NET Rs 119,471
+[14:02:30] no-dip watchlist 208 names | 201 in funnel (of 329 with bars, 201 warm) | 57 closed | flat | NET Rs 119,471
+[14:02:56] no-dip watchlist 209 names | 202 in funnel (of 329 with bars, 202 warm) | 57 closed | flat | NET Rs 119,471
+[14:03:24] feed: 20 symbols fetched, 0 failed, 6s
+[14:04:17] feed: 185 symbols fetched, 1 failed, 53s
+[14:04:17] quote batch 1: 429 -- backing off 2.5s, one retry
+[14:04:22] quote batch 1 HTTP 429: {"data":{"805":"Too many requests. Further requests may result in the user being blocked."},"status":"failed"}
+[14:04:22] circuit bands: 204 of 209 names
+[14:04:36]   GALAPREC     13:36:00->13:55:30 1187.70->1197.00 +0.78% displaced by THERMAX Rs 1,817
+[14:04:36]   UNIONBANK    13:48:30->14:02:00 171.32->171.38 +0.04% eye exit    Rs -48
+[14:04:36]   THERMAX      13:56:00->14:03:00 3395.60->3397.60 +0.06% eye exit    Rs 11
+[14:04:36] no-dip watchlist 209 names | 202 in funnel (of 329 with bars, 202 warm) | 58 closed | flat | NET Rs 120,266
+[14:05:04] feed: 20 symbols fetched, 0 failed, 6s
+[14:05:04] quote batch 1: 429 -- backing off 2.5s, one retry
+[14:05:08] circuit band REJECTED for MOTHERSON: price 163.44 outside band 80000.0-120000.0 (wrong scrip?)
+[14:05:08] circuit bands: 205 of 209 names (1 rejected as implausible)
+[14:05:22] no-dip watchlist 210 names | 203 in funnel (of 329 with bars, 203 warm) | 58 closed | flat | NET Rs 120,266
+[14:05:46] no-dip watchlist 210 names | 203 in funnel (of 329 with bars, 203 warm) | 58 closed | flat | NET Rs 120,266
+[14:06:11] no-dip watchlist 210 names | 203 in funnel (of 329 with bars, 203 warm) | 58 closed | flat | NET Rs 120,266
+[14:06:41] feed: 20 symbols fetched, 0 failed, 6s
+[14:06:41] quote batch 1: 429 -- backing off 2.5s, one retry
+[14:06:45] circuit band REJECTED for MOTHERSON: price 163.44 outside band 80000.0-120000.0 (wrong scrip?)
+[14:06:45] circuit bands: 206 of 210 names (1 rejected as implausible)
+[14:06:51]   UNIONBANK    13:48:30->13:58:00 171.32->171.55 +0.13% displaced by LTTS Rs 200
+[14:06:51]   LTTS         13:58:30->14:06:30 3198.00->3228.20 +0.94% eye exit    Rs 2,219
+[14:06:51] no-dip watchlist 210 names | 203 in funnel (of 329 with bars, 203 warm) | 59 closed | flat | NET Rs 122,734
+[14:07:16] no-dip watchlist 210 names | 203 in funnel (of 329 with bars, 203 warm) | 59 closed | flat | NET Rs 122,734
+[14:07:39] no-dip watchlist 210 names | 203 in funnel (of 329 with bars, 203 warm) | 59 closed | flat | NET Rs 122,734
+[14:08:02] no-dip watchlist 210 names | 203 in funnel (of 329 with bars, 203 warm) | 59 closed | flat | NET Rs 122,734
+[14:08:30] feed: 20 symbols fetched, 0 failed, 6s
+[14:08:30] circuit band REJECTED for MOTHERSON: price 163.44 outside band 80000.0-120000.0 (wrong scrip?)
+[14:08:30] circuit bands: 206 of 210 names (1 rejected as implausible)
+[14:08:34]   LTTS         13:58:30->14:08:00 3198.00->3227.50 +0.92% eye exit    Rs 2,165
+[14:08:34] no-dip watchlist 210 names | 203 in funnel (of 329 with bars, 203 warm) | 59 closed | flat | NET Rs 122,679
+[14:08:59] no-dip watchlist 210 names | 203 in funnel (of 329 with bars, 203 warm) | 59 closed | flat | NET Rs 122,679
+[14:09:23] no-dip watchlist 210 names | 203 in funnel (of 329 with bars, 203 warm) | 59 closed | flat | NET Rs 122,679
+[14:09:47] no-dip watchlist 210 names | 203 in funnel (of 329 with bars, 203 warm) | 59 closed | flat | NET Rs 122,679
+[14:10:15] feed: 20 symbols fetched, 0 failed, 6s
+[14:11:08] feed: 186 symbols fetched, 1 failed, 54s
+[14:11:08] circuit band REJECTED for MOTHERSON: price 163.44 outside band 80000.0-120000.0 (wrong scrip?)
+[14:11:08] circuit bands: 206 of 210 names (1 rejected as implausible)
+[14:11:26]   UNIONBANK    13:48:30->13:57:30 171.32->171.45 +0.08% displaced by AEGISLOG Rs 54
+[14:11:26]   THERMAX      13:56:00->13:58:00 3395.60->3397.00 +0.04% displaced by LTTS Rs -33
+[14:11:26]   AEGISLOG     13:58:00->14:08:30 1389.00->1391.50 +0.18% eye exit    Rs 312
+[14:11:26]   LTTS         13:58:30->14:10:00 3198.00->3229.20 +0.98% eye exit    Rs 2,297
+[14:11:26] no-dip watchlist 210 names | 203 in funnel (of 329 with bars, 203 warm) | 60 closed | flat | NET Rs 122,934
+[14:11:54] feed: 20 symbols fetched, 0 failed, 6s
+[14:11:54] quote batch 1: 429 -- backing off 2.5s, one retry
+[14:11:58] quote batch 1 HTTP 429: {"data":{"805":"Too many requests. Further requests may result in the user being blocked."},"status":"failed"}
+[14:11:58] circuit bands: 206 of 210 names
+[14:12:08] no-dip watchlist 210 names | 203 in funnel (of 329 with bars, 203 warm) | 60 closed | flat | NET Rs 122,786
+[14:12:31] no-dip watchlist 210 names | 203 in funnel (of 329 with bars, 203 warm) | 60 closed | flat | NET Rs 122,786
+[14:12:56] no-dip watchlist 210 names | 203 in funnel (of 329 with bars, 203 warm) | 60 closed | flat | NET Rs 122,786
+[14:13:21] no-dip watchlist 210 names | 203 in funnel (of 329 with bars, 203 warm) | 60 closed | flat | NET Rs 122,786
+[14:13:49] feed: 20 symbols fetched, 0 failed, 6s
+[14:13:49] circuit band REJECTED for MOTHERSON: price 163.44 outside band 80000.0-120000.0 (wrong scrip?)
+[14:13:49] circuit bands: 206 of 210 names (1 rejected as implausible)
+[14:13:54] no-dip watchlist 210 names | 203 in funnel (of 329 with bars, 203 warm) | 60 closed | flat | NET Rs 122,786
+[14:14:17] no-dip watchlist 210 names | 203 in funnel (of 329 with bars, 203 warm) | 60 closed | flat | NET Rs 122,786
+[14:14:40] no-dip watchlist 210 names | 203 in funnel (of 329 with bars, 203 warm) | 60 closed | flat | NET Rs 122,786
+[14:15:04] no-dip watchlist 210 names | 203 in funnel (of 329 with bars, 203 warm) | 60 closed | flat | NET Rs 122,786
+[14:15:33] feed: 20 symbols fetched, 0 failed, 6s
+[14:15:33] circuit band REJECTED for MOTHERSON: price 163.44 outside band 80000.0-120000.0 (wrong scrip?)
+[14:15:33] circuit bands: 206 of 210 names (1 rejected as implausible)
+[14:15:41]   GPPL         13:02:00->13:16:30 166.10->166.59 +0.30% displaced by TRANSRAILL Rs 601
+[14:15:41]   TRANSRAILL   13:17:00->13:20:00 481.80->481.40 -0.08% displaced by CUPID Rs 72
+[14:15:41] no-dip watchlist 210 names | 203 in funnel (of 329 with bars, 203 warm) | 60 closed | flat | NET Rs 121,475
+[14:16:05] no-dip watchlist 210 names | 203 in funnel (of 329 with bars, 203 warm) | 60 closed | flat | NET Rs 122,786
+[14:16:29] no-dip watchlist 210 names | 203 in funnel (of 329 with bars, 203 warm) | 60 closed | flat | NET Rs 122,786
+[14:16:54] no-dip watchlist 210 names | 203 in funnel (of 329 with bars, 203 warm) | 60 closed | flat | NET Rs 122,786
+[14:17:23] feed: 20 symbols fetched, 0 failed, 7s
+[14:18:17] feed: 186 symbols fetched, 1 failed, 54s
+[14:18:17] circuit band REJECTED for MOTHERSON: price 163.44 outside band 80000.0-120000.0 (wrong scrip?)
+[14:18:17] circuit bands: 206 of 210 names (1 rejected as implausible)
+[14:18:32] no-dip watchlist 210 names | 203 in funnel (of 329 with bars, 203 warm) | 60 closed | flat | NET Rs 122,786
+[14:19:00] feed: 20 symbols fetched, 0 failed, 6s
+[14:19:00] circuit band REJECTED for MOTHERSON: price 163.44 outside band 80000.0-120000.0 (wrong scrip?)
+[14:19:00] circuit bands: 206 of 210 names (1 rejected as implausible)
+[14:19:11] no-dip watchlist 210 names | 203 in funnel (of 329 with bars, 203 warm) | 60 closed | flat | NET Rs 122,786
+[14:19:35] no-dip watchlist 210 names | 203 in funnel (of 329 with bars, 203 warm) | 60 closed | flat | NET Rs 122,786
+[14:20:00] no-dip watchlist 210 names | 203 in funnel (of 329 with bars, 203 warm) | 60 closed | flat | NET Rs 122,786
+[14:20:23] no-dip watchlist 210 names | 203 in funnel (of 329 with bars, 203 warm) | 60 closed | flat | NET Rs 122,786
+[14:20:51] feed: 20 symbols fetched, 0 failed, 6s
+[14:20:51] circuit band REJECTED for MOTHERSON: price 163.44 outside band 80000.0-120000.0 (wrong scrip?)
+[14:20:51] circuit bands: 206 of 210 names (1 rejected as implausible)
+[14:20:56] no-dip watchlist 210 names | 203 in funnel (of 329 with bars, 203 warm) | 60 closed | flat | NET Rs 122,786
+[14:21:19] no-dip watchlist 210 names | 203 in funnel (of 329 with bars, 203 warm) | 60 closed | flat | NET Rs 122,786
+[14:21:44] no-dip watchlist 210 names | 203 in funnel (of 329 with bars, 203 warm) | 60 closed | flat | NET Rs 122,786
+[14:22:09] no-dip watchlist 212 names | 203 in funnel (of 329 with bars, 203 warm) | 60 closed | flat | NET Rs 122,786
+[14:22:37] feed: 20 symbols fetched, 0 failed, 6s
+[14:22:37] circuit band REJECTED for MOTHERSON: price 163.44 outside band 80000.0-120000.0 (wrong scrip?)
+[14:22:37] circuit bands: 208 of 212 names (1 rejected as implausible)
+[14:22:42] no-dip watchlist 212 names | 205 in funnel (of 331 with bars, 205 warm) | 60 closed | flat | NET Rs 122,786
+[14:23:14] no-dip watchlist 212 names | 205 in funnel (of 331 with bars, 205 warm) | 60 closed | flat | NET Rs 122,786
+[14:23:39] no-dip watchlist 212 names | 205 in funnel (of 331 with bars, 205 warm) | 60 closed | flat | NET Rs 122,786
+[14:24:03] no-dip watchlist 212 names | 205 in funnel (of 331 with bars, 205 warm) | 60 closed | flat | NET Rs 122,786
+[14:24:31] feed: 20 symbols fetched, 0 failed, 6s
+[14:25:25] feed: 188 symbols fetched, 1 failed, 54s
+[14:25:25] quote batch 1: 429 -- backing off 2.5s, one retry
+[14:25:30] circuit band REJECTED for MOTHERSON: price 163.44 outside band 80000.0-120000.0 (wrong scrip?)
+[14:25:30] circuit bands: 208 of 212 names (1 rejected as implausible)
+[14:25:47] no-dip watchlist 212 names | 205 in funnel (of 331 with bars, 205 warm) | 60 closed | flat | NET Rs 122,786
+[14:26:16] feed: 20 symbols fetched, 0 failed, 6s
+[14:26:16] circuit band REJECTED for MOTHERSON: price 163.44 outside band 80000.0-120000.0 (wrong scrip?)
+[14:26:16] circuit bands: 208 of 212 names (1 rejected as implausible)
+[14:26:36] no-dip watchlist 212 names | 205 in funnel (of 332 with bars, 205 warm) | 60 closed | flat | NET Rs 122,786
+[14:27:01] no-dip watchlist 213 names | 206 in funnel (of 332 with bars, 206 warm) | 60 closed | flat | NET Rs 122,786
+[14:27:24] no-dip watchlist 213 names | 206 in funnel (of 332 with bars, 206 warm) | 60 closed | flat | NET Rs 122,786
+[14:27:52] feed: 20 symbols fetched, 0 failed, 6s
+[14:27:52] circuit band REJECTED for MOTHERSON: price 163.44 outside band 80000.0-120000.0 (wrong scrip?)
+[14:27:52] circuit bands: 209 of 213 names (1 rejected as implausible)
+[14:28:00] no-dip watchlist 213 names | 206 in funnel (of 332 with bars, 206 warm) | 60 closed | flat | NET Rs 122,786
+[14:28:24] no-dip watchlist 213 names | 206 in funnel (of 332 with bars, 206 warm) | 60 closed | flat | NET Rs 122,786
+[14:28:50] no-dip watchlist 213 names | 206 in funnel (of 332 with bars, 206 warm) | 60 closed | flat | NET Rs 122,786
+[14:29:13] no-dip watchlist 213 names | 206 in funnel (of 332 with bars, 206 warm) | 60 closed | flat | NET Rs 122,786
+[14:29:40] feed: 20 symbols fetched, 0 failed, 6s
+[14:29:40] quote batch 1: 429 -- backing off 2.5s, one retry
+[14:29:44] circuit band REJECTED for MOTHERSON: price 163.44 outside band 80000.0-120000.0 (wrong scrip?)
+[14:29:44] circuit bands: 209 of 213 names (1 rejected as implausible)
+[14:29:49] no-dip watchlist 213 names | 206 in funnel (of 332 with bars, 206 warm) | 60 closed | flat | NET Rs 122,786
+[14:30:13] no-dip watchlist 213 names | 206 in funnel (of 332 with bars, 206 warm) | 60 closed | flat | NET Rs 122,786
+[14:30:38] no-dip watchlist 213 names | 206 in funnel (of 332 with bars, 206 warm) | 60 closed | flat | NET Rs 122,786
+[14:31:01] no-dip watchlist 213 names | 206 in funnel (of 332 with bars, 206 warm) | 60 closed | flat | NET Rs 122,786
+[14:31:28] feed: 20 symbols fetched, 0 failed, 6s
+[14:32:23] feed: 189 symbols fetched, 1 failed, 54s
+[14:32:23] quote batch 1: 429 -- backing off 2.5s, one retry
+[14:32:27] circuit band REJECTED for MOTHERSON: price 163.44 outside band 80000.0-120000.0 (wrong scrip?)
+[14:32:27] circuit bands: 209 of 213 names (1 rejected as implausible)
+[14:32:45] no-dip watchlist 213 names | 206 in funnel (of 332 with bars, 206 warm) | 60 closed | flat | NET Rs 122,786
+[14:33:13] feed: 20 symbols fetched, 0 failed, 6s
+[14:33:13] circuit band REJECTED for MOTHERSON: price 163.44 outside band 80000.0-120000.0 (wrong scrip?)
+[14:33:13] circuit bands: 209 of 213 names (1 rejected as implausible)
+[14:33:25] no-dip watchlist 213 names | 206 in funnel (of 332 with bars, 206 warm) | 60 closed | flat | NET Rs 122,786
+[14:33:49] no-dip watchlist 213 names | 206 in funnel (of 332 with bars, 206 warm) | 60 closed | flat | NET Rs 122,786
+[14:34:12] no-dip watchlist 213 names | 206 in funnel (of 332 with bars, 206 warm) | 60 closed | flat | NET Rs 122,786
+[14:34:37] no-dip watchlist 213 names | 206 in funnel (of 332 with bars, 206 warm) | 60 closed | flat | NET Rs 122,786
+[14:35:06] feed: 20 symbols fetched, 0 failed, 6s
+[14:35:06] circuit band REJECTED for MOTHERSON: price 163.44 outside band 80000.0-120000.0 (wrong scrip?)
+[14:35:06] circuit bands: 209 of 213 names (1 rejected as implausible)
+[14:35:12] no-dip watchlist 213 names | 206 in funnel (of 332 with bars, 206 warm) | 60 closed | flat | NET Rs 122,786
+[14:35:37] no-dip watchlist 213 names | 206 in funnel (of 333 with bars, 206 warm) | 60 closed | flat | NET Rs 122,786
+[14:36:01] no-dip watchlist 214 names | 206 in funnel (of 333 with bars, 206 warm) | 60 closed | flat | NET Rs 122,786
+[14:36:27] no-dip watchlist 214 names | 206 in funnel (of 333 with bars, 206 warm) | 60 closed | flat | NET Rs 122,786
+[14:36:56] feed: 20 symbols fetched, 0 failed, 6s
+[14:36:56] circuit band REJECTED for MOTHERSON: price 163.44 outside band 80000.0-120000.0 (wrong scrip?)
+[14:36:56] circuit bands: 210 of 214 names (1 rejected as implausible)
+[14:37:02] no-dip watchlist 214 names | 206 in funnel (of 333 with bars, 206 warm) | 60 closed | flat | NET Rs 122,786
+[14:37:39] no-dip watchlist 214 names | 206 in funnel (of 334 with bars, 206 warm) | 60 closed | flat | NET Rs 122,786
+[14:38:03] no-dip watchlist 214 names | 207 in funnel (of 335 with bars, 207 warm) | 60 closed | flat | NET Rs 122,786
+[14:38:30] feed: 20 symbols fetched, 0 failed, 6s
+[14:39:26] feed: 190 symbols fetched, 1 failed, 55s
+[14:39:26] circuit band REJECTED for MOTHERSON: price 163.44 outside band 80000.0-120000.0 (wrong scrip?)
+[14:39:26] circuit bands: 210 of 214 names (1 rejected as implausible)
+[14:39:46] no-dip watchlist 214 names | 207 in funnel (of 335 with bars, 207 warm) | 60 closed | flat | NET Rs 122,786
+[14:40:13] feed: 20 symbols fetched, 0 failed, 6s
+[14:40:13] circuit band REJECTED for MOTHERSON: price 163.44 outside band 80000.0-120000.0 (wrong scrip?)
+[14:40:13] circuit bands: 210 of 214 names (1 rejected as implausible)
+[14:40:25] no-dip watchlist 214 names | 207 in funnel (of 335 with bars, 207 warm) | 60 closed | flat | NET Rs 122,786
+[14:40:50] no-dip watchlist 214 names | 207 in funnel (of 336 with bars, 207 warm) | 60 closed | flat | NET Rs 122,786
+[14:41:14] no-dip watchlist 214 names | 207 in funnel (of 336 with bars, 207 warm) | 60 closed | flat | NET Rs 122,786
+[14:41:41] no-dip watchlist 214 names | 207 in funnel (of 336 with bars, 207 warm) | 60 closed | flat | NET Rs 122,786
+[14:42:08] feed: 20 symbols fetched, 0 failed, 6s
+[14:42:08] circuit band REJECTED for MOTHERSON: price 163.44 outside band 80000.0-120000.0 (wrong scrip?)
+[14:42:08] circuit bands: 210 of 214 names (1 rejected as implausible)
+[14:42:13] no-dip watchlist 214 names | 207 in funnel (of 336 with bars, 207 warm) | 60 closed | flat | NET Rs 122,786
+[14:42:36] no-dip watchlist 214 names | 207 in funnel (of 336 with bars, 207 warm) | 60 closed | flat | NET Rs 122,786
+[14:43:00] no-dip watchlist 214 names | 207 in funnel (of 336 with bars, 207 warm) | 60 closed | flat | NET Rs 122,786
+[14:43:24] no-dip watchlist 214 names | 207 in funnel (of 337 with bars, 207 warm) | 60 closed | flat | NET Rs 122,786
+[14:43:53] feed: 20 symbols fetched, 0 failed, 6s
+[14:43:53] quote batch 1: 429 -- backing off 2.5s, one retry
+[14:43:57] circuit band REJECTED for MOTHERSON: price 163.44 outside band 80000.0-120000.0 (wrong scrip?)
+[14:43:57] circuit bands: 210 of 214 names (1 rejected as implausible)
+[14:44:04] no-dip watchlist 214 names | 207 in funnel (of 337 with bars, 207 warm) | 60 closed | flat | NET Rs 122,786
+[14:44:27] no-dip watchlist 214 names | 207 in funnel (of 337 with bars, 207 warm) | 60 closed | flat | NET Rs 122,786
+[14:44:51] no-dip watchlist 214 names | 207 in funnel (of 337 with bars, 207 warm) | 60 closed | flat | NET Rs 122,786
+[14:45:15] no-dip watchlist 214 names | 207 in funnel (of 338 with bars, 207 warm) | 60 closed | flat | NET Rs 122,786
+[14:45:43] feed: 20 symbols fetched, 0 failed, 6s
+[14:46:38] feed: 190 symbols fetched, 1 failed, 55s
+[14:46:38] quote batch 1: 429 -- backing off 2.5s, one retry
+[14:46:42] circuit band REJECTED for MOTHERSON: price 163.44 outside band 80000.0-120000.0 (wrong scrip?)
+[14:46:42] circuit bands: 210 of 214 names (1 rejected as implausible)
+[14:47:03] no-dip watchlist 215 names | 208 in funnel (of 338 with bars, 208 warm) | 60 closed | flat | NET Rs 122,786
+[14:47:32] feed: 20 symbols fetched, 0 failed, 6s
+[14:47:32] quote batch 1: 429 -- backing off 2.5s, one retry
+[14:47:36] circuit band REJECTED for MOTHERSON: price 163.44 outside band 80000.0-120000.0 (wrong scrip?)
+[14:47:36] circuit bands: 211 of 215 names (1 rejected as implausible)
+[14:47:52] no-dip watchlist 215 names | 208 in funnel (of 338 with bars, 208 warm) | 60 closed | flat | NET Rs 122,786
+[14:48:17] no-dip watchlist 215 names | 208 in funnel (of 338 with bars, 208 warm) | 60 closed | flat | NET Rs 122,786
+[14:48:43] no-dip watchlist 215 names | 208 in funnel (of 338 with bars, 208 warm) | 60 closed | flat | NET Rs 122,786
+[14:49:12] feed: 20 symbols fetched, 0 failed, 6s
+[14:49:12] circuit band REJECTED for MOTHERSON: price 163.44 outside band 80000.0-120000.0 (wrong scrip?)
+[14:49:12] circuit bands: 211 of 215 names (1 rejected as implausible)
+[14:49:20] no-dip watchlist 215 names | 208 in funnel (of 338 with bars, 208 warm) | 60 closed | flat | NET Rs 122,786
+[14:49:46] no-dip watchlist 215 names | 208 in funnel (of 338 with bars, 208 warm) | 60 closed | flat | NET Rs 122,786
+[14:50:11] no-dip watchlist 215 names | 208 in funnel (of 338 with bars, 208 warm) | 60 closed | flat | NET Rs 122,786
+[14:50:37] no-dip watchlist 215 names | 208 in funnel (of 338 with bars, 208 warm) | 60 closed | flat | NET Rs 122,786
+[14:51:06] feed: 20 symbols fetched, 0 failed, 6s
+[14:51:06] quote batch 1: 429 -- backing off 2.5s, one retry
+[14:51:10] circuit band REJECTED for MOTHERSON: price 163.44 outside band 80000.0-120000.0 (wrong scrip?)
+[14:51:10] circuit bands: 211 of 215 names (1 rejected as implausible)
+[14:51:18] no-dip watchlist 215 names | 208 in funnel (of 339 with bars, 208 warm) | 60 closed | flat | NET Rs 122,786
+[14:51:42] no-dip watchlist 215 names | 208 in funnel (of 339 with bars, 208 warm) | 60 closed | flat | NET Rs 122,786
+[14:52:09] no-dip watchlist 216 names | 208 in funnel (of 339 with bars, 208 warm) | 60 closed | flat | NET Rs 122,786
+[14:52:38] feed: 20 symbols fetched, 0 failed, 6s
+[14:53:35] feed: 193 symbols fetched, 1 failed, 56s
+[14:53:35] circuit band REJECTED for MOTHERSON: price 163.44 outside band 80000.0-120000.0 (wrong scrip?)
+[14:53:35] circuit bands: 213 of 217 names (1 rejected as implausible)
+[14:53:56] no-dip watchlist 217 names | 210 in funnel (of 341 with bars, 210 warm) | 60 closed | flat | NET Rs 122,786
+[14:54:24] feed: 20 symbols fetched, 0 failed, 6s
+[14:54:24] quote batch 1: 429 -- backing off 2.5s, one retry
+[14:54:28] circuit band REJECTED for MOTHERSON: price 163.44 outside band 80000.0-120000.0 (wrong scrip?)
+[14:54:28] circuit bands: 213 of 217 names (1 rejected as implausible)
+[14:54:42] no-dip watchlist 217 names | 210 in funnel (of 341 with bars, 210 warm) | 60 closed | flat | NET Rs 122,786
+[14:55:19] no-dip watchlist 217 names | 210 in funnel (of 341 with bars, 210 warm) | 60 closed | flat | NET Rs 122,786
+[14:55:46] no-dip watchlist 218 names | 210 in funnel (of 341 with bars, 210 warm) | 60 closed | flat | NET Rs 122,786
+[14:56:16] feed: 20 symbols fetched, 0 failed, 6s
+[14:56:16] quote batch 1: 429 -- backing off 2.5s, one retry
+[14:56:20] circuit band REJECTED for MOTHERSON: price 163.44 outside band 80000.0-120000.0 (wrong scrip?)
+[14:56:20] circuit bands: 214 of 218 names (1 rejected as implausible)
+[14:56:28] no-dip watchlist 218 names | 211 in funnel (of 342 with bars, 211 warm) | 60 closed | flat | NET Rs 122,786
+[14:56:52] no-dip watchlist 218 names | 211 in funnel (of 342 with bars, 211 warm) | 60 closed | flat | NET Rs 122,786
+[14:57:18] no-dip watchlist 218 names | 211 in funnel (of 342 with bars, 211 warm) | 60 closed | flat | NET Rs 122,786
+[14:57:47] feed: 20 symbols fetched, 0 failed, 6s
+[14:57:47] circuit band REJECTED for MOTHERSON: price 163.44 outside band 80000.0-120000.0 (wrong scrip?)
+[14:57:47] circuit bands: 214 of 218 names (1 rejected as implausible)
+[14:57:54] no-dip watchlist 218 names | 211 in funnel (of 342 with bars, 211 warm) | 60 closed | flat | NET Rs 122,786
+[14:58:19] no-dip watchlist 218 names | 211 in funnel (of 342 with bars, 211 warm) | 60 closed | flat | NET Rs 122,786
+[14:58:44] no-dip watchlist 218 names | 211 in funnel (of 342 with bars, 211 warm) | 60 closed | flat | NET Rs 122,786
+[14:59:08] no-dip watchlist 218 names | 211 in funnel (of 342 with bars, 211 warm) | 60 closed | flat | NET Rs 122,786
+[14:59:36] feed: 20 symbols fetched, 0 failed, 6s
+[15:00:31] feed: 194 symbols fetched, 1 failed, 56s
+[15:00:32] circuit band REJECTED for MOTHERSON: price 163.44 outside band 80000.0-120000.0 (wrong scrip?)
+[15:00:32] circuit bands: 214 of 218 names (1 rejected as implausible)
+[15:00:55] no-dip watchlist 219 names | 211 in funnel (of 342 with bars, 211 warm) | 60 closed | flat | NET Rs 122,786
+[15:01:23] feed: 20 symbols fetched, 0 failed, 6s
+[15:01:23] quote batch 1: 429 -- backing off 2.5s, one retry
+[15:01:27] circuit band REJECTED for MOTHERSON: price 163.44 outside band 80000.0-120000.0 (wrong scrip?)
+[15:01:27] circuit bands: 215 of 219 names (1 rejected as implausible)
+[15:01:41] no-dip watchlist 220 names | 213 in funnel (of 343 with bars, 213 warm) | 60 closed | flat | NET Rs 122,786
+[15:02:05] no-dip watchlist 220 names | 213 in funnel (of 343 with bars, 213 warm) | 60 closed | flat | NET Rs 122,786
+[15:02:30] no-dip watchlist 220 names | 213 in funnel (of 343 with bars, 213 warm) | 60 closed | flat | NET Rs 122,786
+[15:02:59] feed: 20 symbols fetched, 0 failed, 6s
+[15:02:59] circuit band REJECTED for MOTHERSON: price 163.44 outside band 80000.0-120000.0 (wrong scrip?)
+[15:02:59] circuit bands: 216 of 220 names (1 rejected as implausible)
+[15:03:07] no-dip watchlist 220 names | 213 in funnel (of 343 with bars, 213 warm) | 60 closed | flat | NET Rs 122,786
+[15:03:30] no-dip watchlist 220 names | 213 in funnel (of 343 with bars, 213 warm) | 60 closed | flat | NET Rs 122,786
+[15:03:54] no-dip watchlist 220 names | 213 in funnel (of 343 with bars, 213 warm) | 60 closed | flat | NET Rs 122,786
+[15:04:19] no-dip watchlist 220 names | 213 in funnel (of 343 with bars, 213 warm) | 60 closed | flat | NET Rs 122,786
+[15:04:46] feed: 20 symbols fetched, 0 failed, 6s
+[15:04:47] circuit band REJECTED for MOTHERSON: price 163.44 outside band 80000.0-120000.0 (wrong scrip?)
+[15:04:47] circuit bands: 216 of 220 names (1 rejected as implausible)
+[15:04:55] no-dip watchlist 220 names | 213 in funnel (of 343 with bars, 213 warm) | 60 closed | flat | NET Rs 122,786
+[15:05:24] no-dip watchlist 220 names | 213 in funnel (of 343 with bars, 213 warm) | 60 closed | flat | NET Rs 122,786
+[15:06:00] no-dip watchlist 220 names | 213 in funnel (of 343 with bars, 213 warm) | 60 closed | flat | NET Rs 122,786
+[15:06:28] feed: 20 symbols fetched, 0 failed, 6s
+[15:07:26] feed: 197 symbols fetched, 1 failed, 57s
+[15:07:26] circuit band REJECTED for MOTHERSON: price 163.44 outside band 80000.0-120000.0 (wrong scrip?)
+[15:07:26] circuit bands: 217 of 221 names (1 rejected as implausible)
+[15:07:48] no-dip watchlist 221 names | 214 in funnel (of 344 with bars, 214 warm) | 60 closed | flat | NET Rs 122,786
+[15:08:16] feed: 20 symbols fetched, 0 failed, 6s
+[15:08:16] circuit band REJECTED for MOTHERSON: price 163.44 outside band 80000.0-120000.0 (wrong scrip?)
+[15:08:16] circuit bands: 217 of 221 names (1 rejected as implausible)
+[15:08:32] no-dip watchlist 221 names | 214 in funnel (of 344 with bars, 214 warm) | 60 closed | flat | NET Rs 122,786
+[15:08:55] no-dip watchlist 221 names | 214 in funnel (of 344 with bars, 214 warm) | 60 closed | flat | NET Rs 122,786
+[15:09:19] no-dip watchlist 223 names | 214 in funnel (of 344 with bars, 214 warm) | 60 closed | flat | NET Rs 122,786
+[15:09:48] feed: 20 symbols fetched, 0 failed, 6s
+[15:09:48] circuit band REJECTED for MOTHERSON: price 163.44 outside band 80000.0-120000.0 (wrong scrip?)
+[15:09:48] circuit bands: 219 of 223 names (1 rejected as implausible)
+[15:09:56] no-dip watchlist 223 names | 216 in funnel (of 346 with bars, 216 warm) | 60 closed | flat | NET Rs 122,786
+[15:10:22] no-dip watchlist 223 names | 216 in funnel (of 346 with bars, 216 warm) | 60 closed | flat | NET Rs 122,786
+[15:10:46] no-dip watchlist 225 names | 216 in funnel (of 346 with bars, 216 warm) | 60 closed | flat | NET Rs 122,786
+[15:11:10] no-dip watchlist 225 names | 216 in funnel (of 346 with bars, 216 warm) | 60 closed | flat | NET Rs 122,786
+[15:11:38] feed: 20 symbols fetched, 0 failed, 6s
+[15:11:38] circuit band REJECTED for MOTHERSON: price 163.44 outside band 80000.0-120000.0 (wrong scrip?)
+[15:11:38] circuit bands: 221 of 225 names (1 rejected as implausible)
+[15:11:44] no-dip watchlist 225 names | 218 in funnel (of 348 with bars, 218 warm) | 60 closed | flat | NET Rs 122,786
+[15:12:10] no-dip watchlist 225 names | 218 in funnel (of 349 with bars, 218 warm) | 60 closed | flat | NET Rs 122,786
+[15:12:35] no-dip watchlist 225 names | 218 in funnel (of 349 with bars, 218 warm) | 60 closed | flat | NET Rs 122,786
+[15:13:01] no-dip watchlist 225 names | 218 in funnel (of 349 with bars, 218 warm) | 60 closed | flat | NET Rs 122,786
+[15:13:28] feed: 20 symbols fetched, 0 failed, 6s
+[15:14:26] feed: 201 symbols fetched, 1 failed, 58s
+[15:14:26] quote batch 1: 429 -- backing off 2.5s, one retry
+[15:14:30] circuit band REJECTED for MOTHERSON: price 163.44 outside band 80000.0-120000.0 (wrong scrip?)
+[15:14:30] circuit bands: 221 of 225 names (1 rejected as implausible)
+[15:14:52] no-dip watchlist 225 names | 218 in funnel (of 350 with bars, 218 warm) | 60 closed | flat | NET Rs 122,786
+[15:15:22] feed: 20 symbols fetched, 0 failed, 6s
+[15:15:22] circuit band REJECTED for MOTHERSON: price 163.44 outside band 80000.0-120000.0 (wrong scrip?)
+[15:15:22] circuit bands: 222 of 226 names (1 rejected as implausible)
+[15:15:40] no-dip watchlist 226 names | 219 in funnel (of 351 with bars, 219 warm) | 60 closed | flat | NET Rs 122,786
+[15:16:04] no-dip watchlist 226 names | 219 in funnel (of 351 with bars, 219 warm) | 60 closed | flat | NET Rs 122,786
+[15:16:31] no-dip watchlist 226 names | 219 in funnel (of 350 with bars, 219 warm) | 60 closed | flat | NET Rs 122,786
+[15:17:00] feed: 20 symbols fetched, 0 failed, 6s
+[15:17:00] circuit band REJECTED for MOTHERSON: price 163.44 outside band 80000.0-120000.0 (wrong scrip?)
+[15:17:00] circuit bands: 222 of 226 names (1 rejected as implausible)
+[15:17:07] no-dip watchlist 227 names | 219 in funnel (of 351 with bars, 219 warm) | 60 closed | flat | NET Rs 122,786
+[15:17:40] no-dip watchlist 227 names | 219 in funnel (of 351 with bars, 219 warm) | 60 closed | flat | NET Rs 122,786
+[15:18:12] no-dip watchlist 227 names | 219 in funnel (of 351 with bars, 219 warm) | 60 closed | flat | NET Rs 122,786
+[15:18:40] feed: 20 symbols fetched, 0 failed, 6s
+[15:18:40] circuit band REJECTED for MOTHERSON: price 163.44 outside band 80000.0-120000.0 (wrong scrip?)
+[15:18:40] circuit bands: 224 of 228 names (1 rejected as implausible)
+[15:18:45]   RPTECH       11:14:30->11:17:00 996.20->985.25 -1.10% displaced by AUGMONT Rs 2,602
+[15:18:45]   AUGMONT      11:17:30->11:20:00 1056.15->1058.40 +0.21% displaced by SHANKESH Rs 395
+[15:18:45]   CUPID        11:16:00->11:22:00 308.85->306.25 -0.84% displaced by XTRANET Rs 366
+[15:18:45]   SHANKESH     11:20:30->11:23:00 92.59->92.99 +0.43% displaced by AVANTEL Rs 944
+[15:18:45] no-dip watchlist 228 names | 221 in funnel (of 352 with bars, 221 warm) | 61 closed | flat | NET Rs 125,699
+[15:19:10] no-dip watchlist 228 names | 221 in funnel (of 352 with bars, 221 warm) | 61 closed | flat | NET Rs 125,699
+[15:19:35] no-dip watchlist 228 names | 221 in funnel (of 352 with bars, 221 warm) | 61 closed | flat | NET Rs 125,699
+[15:20:01] no-dip watchlist 228 names | 221 in funnel (of 352 with bars, 221 warm) | 61 closed | flat | NET Rs 125,699
+[15:20:29] feed: 20 symbols fetched, 0 failed, 6s
+[15:21:28] feed: 204 symbols fetched, 1 failed, 59s
+[15:21:28] quote batch 1: 429 -- backing off 2.5s, one retry
+[15:21:32] quote batch 1 HTTP 429: {"data":{"805":"Too many requests. Further requests may result in the user being blocked."},"status":"failed"}
+[15:21:32] circuit bands: 224 of 228 names
+[15:21:51] no-dip watchlist 230 names | 221 in funnel (of 352 with bars, 221 warm) | 60 closed | flat | NET Rs 122,786
+[15:22:20] feed: 20 symbols fetched, 0 failed, 6s
+[15:22:20] quote batch 1: 429 -- backing off 2.5s, one retry
+[15:22:24] circuit band REJECTED for MOTHERSON: price 163.44 outside band 80000.0-120000.0 (wrong scrip?)
+[15:22:24] circuit bands: 226 of 230 names (1 rejected as implausible)
+[15:22:44] no-dip watchlist 230 names | 222 in funnel (of 353 with bars, 222 warm) | 60 closed | flat | NET Rs 122,786
+[15:23:07] no-dip watchlist 230 names | 222 in funnel (of 354 with bars, 222 warm) | 60 closed | flat | NET Rs 122,786
+[15:23:32] no-dip watchlist 230 names | 222 in funnel (of 355 with bars, 222 warm) | 60 closed | flat | NET Rs 122,786
+[15:24:00] feed: 20 symbols fetched, 0 failed, 6s
+[15:24:00] quote batch 1: 429 -- backing off 2.5s, one retry
+[15:24:04] circuit band REJECTED for MOTHERSON: price 163.44 outside band 80000.0-120000.0 (wrong scrip?)
+[15:24:04] circuit bands: 226 of 230 names (1 rejected as implausible)
+[15:24:10] no-dip watchlist 230 names | 222 in funnel (of 358 with bars, 222 warm) | 60 closed | flat | NET Rs 122,786
+[15:24:35] no-dip watchlist 230 names | 222 in funnel (of 358 with bars, 222 warm) | 60 closed | flat | NET Rs 122,786
+[15:25:01] no-dip watchlist 231 names | 222 in funnel (of 358 with bars, 222 warm) | 60 closed | flat | NET Rs 122,786
+[15:25:25] no-dip watchlist 231 names | 222 in funnel (of 358 with bars, 222 warm) | 60 closed | flat | NET Rs 122,786
+[15:25:54] feed: 20 symbols fetched, 0 failed, 6s
+[15:25:54] quote batch 1: 429 -- backing off 2.5s, one retry
+[15:25:58] circuit band REJECTED for MOTHERSON: price 163.44 outside band 80000.0-120000.0 (wrong scrip?)
+[15:25:58] circuit bands: 227 of 231 names (1 rejected as implausible)
+[15:26:05] no-dip watchlist 231 names | 223 in funnel (of 359 with bars, 223 warm) | 60 closed | flat | NET Rs 122,786
+[15:26:32] no-dip watchlist 232 names | 223 in funnel (of 359 with bars, 223 warm) | 60 closed | flat | NET Rs 122,786
+[15:26:58] no-dip watchlist 232 names | 223 in funnel (of 359 with bars, 223 warm) | 60 closed | flat | NET Rs 122,786
+[15:27:28] feed: 20 symbols fetched, 0 failed, 6s
+[15:28:29] feed: 208 symbols fetched, 1 failed, 60s
+[15:28:29] circuit band REJECTED for MOTHERSON: price 163.44 outside band 80000.0-120000.0 (wrong scrip?)
+[15:28:29] circuit bands: 228 of 232 names (1 rejected as implausible)
+[15:28:47] no-dip watchlist 232 names | 225 in funnel (of 361 with bars, 225 warm) | 60 closed | flat | NET Rs 122,786
+[15:29:15] feed: 20 symbols fetched, 0 failed, 6s
+[15:29:15] circuit band REJECTED for MOTHERSON: price 163.44 outside band 80000.0-120000.0 (wrong scrip?)
+[15:29:15] circuit bands: 228 of 232 names (1 rejected as implausible)
+[15:29:34] no-dip watchlist 232 names | 225 in funnel (of 361 with bars, 225 warm) | 60 closed | flat | NET Rs 122,786
+[15:30:00] no-dip watchlist 232 names | 225 in funnel (of 361 with bars, 225 warm) | 60 closed | flat | NET Rs 122,786
+[15:30:29] no-dip watchlist 232 names | 225 in funnel (of 361 with bars, 225 warm) | 60 closed | flat | NET Rs 122,786
+[15:30:56] feed: 20 symbols fetched, 0 failed, 6s
+[15:30:56] quote batch 1: 429 -- backing off 2.5s, one retry
+[15:31:01] circuit band REJECTED for MOTHERSON: price 163.44 outside band 80000.0-120000.0 (wrong scrip?)
+[15:31:01] circuit bands: 228 of 232 names (1 rejected as implausible)
+[15:31:15] no-dip watchlist 232 names | 225 in funnel (of 361 with bars, 225 warm) | 60 closed | flat | NET Rs 122,786
+[15:31:35] session over

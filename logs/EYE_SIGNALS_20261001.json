@@ -1,0 +1,66 @@
+{
+ "clock": "1238",
+ "cycles": 259,
+ "err": "",
+ "open": [
+  {
+   "sym": "TEXRAIL",
+   "side": 1,
+   "ti": "1233",
+   "score": 1.751,
+   "px": 126.85,
+   "ang": 5.2
+  },
+  {
+   "sym": "HUDCO",
+   "side": 1,
+   "ti": "1236",
+   "score": 1.564,
+   "px": 163.35,
+   "ang": 12.6
+  }
+ ],
+ "closing": {
+  "ACC": "1102",
+  "ACMESOLAR": "1042",
+  "ADANIPORTS": "1201",
+  "AFIL": "1216",
+  "BAJAJ-AUTO": "1233",
+  "BFUTILITIE": "1148",
+  "CUPID": "0947",
+  "ELECTCAST": "1218",
+  "FABTECH": "1215",
+  "FORCEMOT": "1135",
+  "GNRL": "1224",
+  "HAMPTON": "1109",
+  "HILINFRA": "0936",
+  "HUDCO": "1221",
+  "INTERARCH": "1225",
+  "IXIGO": "1140",
+  "JAYESH": "0944",
+  "JIOFIN": "1203",
+  "KOTIC": "1203",
+  "LINDEINDIA": "1117",
+  "MAHLIFE": "1224",
+  "MILKYMIST": "1004",
+  "MOBIKWIK": "1148",
+  "NCC": "1158",
+  "NECCLTD": "1152",
+  "NLCINDIA": "1234",
+  "RML": "1217",
+  "RNBDENIMS": "1235",
+  "RSL": "1148",
+  "SEPC": "1152",
+  "SMLMAH": "0939",
+  "TECHD": "0928",
+  "TECHM": "1157",
+  "TRANSRAILL": "0916",
+  "VARROC": "1234",
+  "YESBANK": "1140"
+ },
+ "tape": 38,
+ "holding": [
+  "HUDCO",
+  "TEXRAIL"
+ ]
+}
